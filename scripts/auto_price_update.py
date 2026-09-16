@@ -20,7 +20,30 @@ CHANGES_FILE = Path('/tmp/price_changes.json')
 # Matches: $29.95  $34.95/mo  $1,950  $249
 PRICE_RE = re.compile(r'\$[\d,]+(?:\.\d{2})?(?:/mo(?:nth)?)?')
 
+# A price update is rejected if it's more than 3x higher or less than 1/3 of
+# the old price — catches the LLM picking up the wrong product/bundle/page
+# rather than a genuine price change, before it gets auto-pushed live.
+MAX_PRICE_RATIO = 3.0
+
 client = anthropic.Anthropic(api_key=os.environ['ANTHROPIC_API_KEY'])
+
+
+def _price_value(price: str) -> float | None:
+    """Extract the numeric amount from a price string like '$34.95/mo'."""
+    match = re.search(r'[\d,]+(?:\.\d{2})?', price)
+    if not match:
+        return None
+    return float(match.group(0).replace(',', ''))
+
+
+def is_plausible_change(old_price: str, new_price: str) -> bool:
+    """Reject implausible swings (wrong product/bundle picked up by search)."""
+    old_val = _price_value(old_price)
+    new_val = _price_value(new_price)
+    if old_val is None or new_val is None or old_val == 0:
+        return True
+    ratio = new_val / old_val
+    return (1 / MAX_PRICE_RATIO) <= ratio <= MAX_PRICE_RATIO
 
 
 def find_current_price(product_name: str, check_url: str, current_price: str) -> str | None:
@@ -95,6 +118,10 @@ def main():
 
             if new_price == old_price:
                 print('unchanged')
+                continue
+
+            if not is_plausible_change(old_price, new_price):
+                print(f'implausible change ({old_price} → {new_price}) — skipped, needs manual review')
                 continue
 
             print(f'UPDATED → {new_price}')
