@@ -43,4 +43,4 @@ jobs:
             --title "$TITLE" \
             --body-file /tmp/issue_body.md \
             --label "seo-report" \
-            --assignee "${{ github.repository_owner }}"
+            --assignee "abhikarmaker"

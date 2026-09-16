@@ -26,4 +26,4 @@ jobs:
             --title "$TITLE" \
             --body-file /tmp/issue_body.md \
             --label "price-check" \
-            --assignee "${{ github.repository_owner }}"
+            --assignee "abhikarmaker"
