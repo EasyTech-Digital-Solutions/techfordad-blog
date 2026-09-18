@@ -32,6 +32,7 @@
   --green:   #16A34A;
   --red:     #DC2626;
   --amber-text: #9C6500; /* darker amber for text-on-light use — meets WCAG AA 4.5:1, unlike --amber's 2.2:1 */
+  --muted-on-amber: #4B5563; /* darker than --muted — --muted only hits 4.43:1 on --amber-light, just under AA's 4.5:1 */
   --radius:  10px;
   --shadow:  0 2px 16px rgba(27,58,107,0.08);
 }
@@ -319,7 +320,7 @@ section { padding: 64px 24px; }
 /* ===== WHY TRUST US ===== */
 .why-us { background: var(--navy); color: var(--white); }
 .why-us .section-header h2 { color: var(--white); }
-.why-us .section-label { color: var(--amber-text); }
+.why-us .section-label { color: var(--amber); }
 
 .why-grid {
   display: grid;
@@ -351,7 +352,7 @@ section { padding: 64px 24px; }
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem; color: var(--navy); margin-bottom: 10px;
 }
-.newsletter p { color: var(--muted); margin-bottom: 24px; }
+.newsletter p { color: var(--muted-on-amber); margin-bottom: 24px; }
 
 .email-form {
   display: flex; gap: 10px; max-width: 440px; margin: 0 auto;
@@ -374,7 +375,7 @@ section { padding: 64px 24px; }
   transition: background 0.2s;
 }
 .email-form button:hover { background: var(--amber); color: var(--navy); }
-.email-note { font-size: 0.78rem; color: var(--muted); margin-top: 10px; }
+.email-note { font-size: 0.78rem; color: var(--muted-on-amber); margin-top: 10px; }
 
 /* ===== FOOTER ===== */
 footer {
