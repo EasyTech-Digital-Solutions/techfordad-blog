@@ -1,4 +1,21 @@
 User-agent: *
 Allow: /
 
+# Legacy "tech for dads" content, pre-dates the current senior-tech focus.
+# Already noindexed page-by-page; disallowed here too so crawlers stop
+# re-visiting orphaned pages with no inbound links from current content.
+Disallow: /page/
+Disallow: /author/
+Disallow: /category/
+Disallow: /digital-storytelling-how-dads-are-using-tech-to-create-bedtime-stories-for-the-future/
+Disallow: /mastering-the-grill-latest-tech-gadgets-for-bbq-loving-dads/
+Disallow: /reconnecting-with-your-teenagers-how-tech-can-bridge-the-generation-gap/
+Disallow: /rekindling-old-hobbies-technology-for-dads-vintage-record-collection/
+Disallow: /remote-work-efficiency-tech-tools-to-aid-working-dads-at-home/
+Disallow: /smart-homes-perfecting-your-dad-cave-with-automation/
+Disallow: /the-ultimate-trio-top-webinar-platforms-of-2023/
+Disallow: /top-5-best-fathers-day-gifts-for-dad-2023/
+Disallow: /top-8-tech-devices-for-dads/
+Disallow: /waterfall-incense-burner/
+
 Sitemap: https://www.techfordad.com/sitemap.xml
