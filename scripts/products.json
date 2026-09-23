@@ -319,5 +319,36 @@
         "check_url": "https://www.amazon.com/s?k=iRobot+Roomba+i3+"
       }
     ]
+  },
+  {
+    "article": "Best Home Security Systems for Seniors",
+    "file": "blog/best-home-security-for-seniors.html",
+    "products": [
+      {
+        "name": "SimpliSafe Core Monitoring",
+        "price": "$32.99/mo",
+        "check_url": "https://simplisafe.com"
+      },
+      {
+        "name": "Ring Alarm Protect Plus",
+        "price": "$20/mo",
+        "check_url": "https://ring.com/plans"
+      },
+      {
+        "name": "ADT Monitoring Plan",
+        "price": "$49.99/mo",
+        "check_url": "https://www.adt.com"
+      },
+      {
+        "name": "Vivint Smart Security",
+        "price": "$49.99/mo",
+        "check_url": "https://www.vivint.com/senior-alert-systems"
+      },
+      {
+        "name": "Cove Basic Monitoring",
+        "price": "$17.99/mo",
+        "check_url": "https://www.covesmart.com"
+      }
+    ]
   }
 ]
