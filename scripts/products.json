@@ -14,7 +14,7 @@
         "check_url": "https://www.bayalarmmedical.com"
       },
       {
-        "name": "Lively Mobile Plus",
+        "name": "Lively Mobile2",
         "price": "$24.99/mo",
         "check_url": "https://www.lively.com"
       },
@@ -25,7 +25,7 @@
       },
       {
         "name": "Medical Alert Classic",
-        "price": "$19.95/mo",
+        "price": "$29.95/mo",
         "check_url": "https://www.medicalalert.com"
       }
     ]
@@ -36,12 +36,17 @@
     "products": [
       {
         "name": "Life Alert Home (base plan)",
-        "price": "$29.95/mo",
+        "price": "$49.95/mo",
         "check_url": "https://www.lifealert.com"
       },
       {
-        "name": "Life Alert Help + 3-button",
-        "price": "$49.95/mo",
+        "name": "Life Alert Home + Mobile GPS",
+        "price": "$69.95/mo",
+        "check_url": "https://www.lifealert.com"
+      },
+      {
+        "name": "Life Alert Home + Mobile + Fall Detection",
+        "price": "$89.95/mo",
         "check_url": "https://www.lifealert.com"
       },
       {
@@ -62,11 +67,11 @@
       },
       {
         "name": "Medical Alert Classic",
-        "price": "$19.95/mo",
+        "price": "$29.95/mo",
         "check_url": "https://www.medicalalert.com"
       },
       {
-        "name": "Lively Mobile Plus",
+        "name": "Lively Mobile2",
         "price": "$24.99/mo",
         "check_url": "https://www.lively.com"
       },
@@ -118,13 +123,13 @@
         "check_url": "https://www.lively.com"
       },
       {
-        "name": "Jitterbug Smart4",
-        "price": "$149",
+        "name": "Jitterbug Smart5",
+        "price": "$120",
         "check_url": "https://www.lively.com"
       },
       {
-        "name": "iPhone SE 4",
-        "price": "$429",
+        "name": "Apple iPhone SE 4 (2025)",
+        "price": "$499",
         "check_url": "https://www.apple.com/iphone/"
       },
       {
@@ -170,19 +175,14 @@
     "file": "blog/how-to-set-up-ipad-for-elderly-parent.html",
     "products": [
       {
-        "name": "Apple iPad (base, 11th Gen)",
-        "price": "$329",
-        "check_url": "https://www.apple.com/ipad/"
+        "name": "Apple iPad (11th generation)",
+        "price": "$449",
+        "check_url": "https://www.apple.com/shop/buy-ipad/ipad"
       },
       {
-        "name": "Apple iPad Pro",
-        "price": "$999+",
-        "check_url": "https://www.apple.com/ipad/"
-      },
-      {
-        "name": "Apple iPad Mini",
-        "price": "$499",
-        "check_url": "https://www.apple.com/ipad/"
+        "name": "Apple iPad Air 13-inch",
+        "price": "$799",
+        "check_url": "https://www.apple.com/shop/buy-ipad/ipad-air"
       }
     ]
   },
@@ -201,18 +201,18 @@
         "check_url": "https://www.amazon.com/s?k=Jiobit+smart+tag"
       },
       {
-        "name": "Tracki GPS Tracker",
-        "price": "$19.99 + $14.99/mo",
+        "name": "Tracki GPS Tracker (unlimited plan)",
+        "price": "$19.95/mo",
         "check_url": "https://www.amazon.com/s?k=Tracki+GPS+tracker"
       },
       {
         "name": "Apple AirTag 2",
-        "price": "$29\u2013$99",
+        "price": "$29",
         "check_url": "https://www.apple.com/airtag/"
       },
       {
-        "name": "LandAirSea 54",
-        "price": "$39.99 + plan",
+        "name": "LandAirSea 54 (monthly plan)",
+        "price": "$24.95/mo",
         "check_url": "https://www.amazon.com/s?k=LandAirSea+54+GPS"
       }
     ]
@@ -222,7 +222,7 @@
     "file": "blog/best-blood-pressure-monitors-for-seniors.html",
     "products": [
       {
-        "name": "Omron Platinum BP5450",
+        "name": "Omron Platinum BP5465",
         "price": "$79",
         "check_url": "https://www.amazon.com/s?k=Omron+Platinum+BP5450"
       },
@@ -233,7 +233,7 @@
       },
       {
         "name": "Withings BPM Connect",
-        "price": "$99",
+        "price": "$130",
         "check_url": "https://www.amazon.com/s?k=Withings+BPM+Connect"
       },
       {
@@ -253,29 +253,29 @@
     "file": "blog/best-hearing-aids-for-seniors.html",
     "products": [
       {
-        "name": "Sony CRE-10 OTC",
-        "price": "$999",
-        "check_url": "https://www.amazon.com/s?k=Sony+CRE-10+hearing+aid"
+        "name": "ELEHEAR Beyond Pro OTC Hearing Aids",
+        "price": "$599/pair",
+        "check_url": "https://www.elehear.com"
       },
       {
         "name": "Jabra Enhance Select 300",
-        "price": "$799",
-        "check_url": "https://www.jabra.com"
+        "price": "$1,695/pair",
+        "check_url": "https://www.jabraenhance.com"
       },
       {
-        "name": "Lexie B2 Plus (Bose)",
-        "price": "$799",
-        "check_url": "https://www.lexiehearing.com"
+        "name": "Sennheiser All-Day Clear",
+        "price": "$999.95/pair",
+        "check_url": "https://www.sennheiser-hearing.com"
       },
       {
-        "name": "Audien Atom Pro",
-        "price": "$299",
-        "check_url": "https://www.audienear.com"
+        "name": "Audien Atom Pro 2",
+        "price": "$289/pair",
+        "check_url": "https://www.audienhearing.com"
       },
       {
-        "name": "Eargo 7",
-        "price": "$1,950",
-        "check_url": "https://www.eargo.com"
+        "name": "MDHearing NEO XS PRO",
+        "price": "$497/pair",
+        "check_url": "https://www.mdhearing.com"
       }
     ]
   },
@@ -299,13 +299,8 @@
         "check_url": "https://www.amazon.com/s?k=Google+Nest+Learning+Thermostat"
       },
       {
-        "name": "Amazon Alexa Together (plan)",
-        "price": "$19.99/mo",
-        "check_url": "https://www.amazon.com/s?k=Alexa+Together"
-      },
-      {
-        "name": "Schlage Encode Smart Lock",
-        "price": "$249",
+        "name": "Schlage Encode Plus Smart Lock",
+        "price": "$319",
         "check_url": "https://www.amazon.com/s?k=Schlage+Encode+Smart+Lock"
       },
       {

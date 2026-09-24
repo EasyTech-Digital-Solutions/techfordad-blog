@@ -79,19 +79,28 @@ def find_current_price(product_name: str, check_url: str, current_price: str) ->
     return None
 
 
-def patch_html(filepath: Path, old_price: str, new_price: str) -> bool:
-    """Replace occurrences of old_price with new_price in an HTML file.
+AMOUNT_RE = re.compile(r'\$[\d,]+(?:\.\d{2})?')
 
-    Matches are boundary-checked so old_price can't match as a substring of a
+
+def patch_html(filepath: Path, old_price: str, new_price: str) -> bool:
+    """Replace occurrences of old_price's dollar amount with new_price's in an HTML file.
+
+    Only the amount is swapped, so every form the article uses ("$19.99",
+    "$19.99/mo", "$19.99/month", "$19.99/pair") is updated and its suffix kept.
+    Matches are boundary-checked so the amount can't match as a substring of a
     larger, unrelated price (e.g. "$249" inside "$2490" or "$99" inside "$99.99").
     """
     if not filepath.exists():
         return False
-    content = filepath.read_text()
-    pattern = re.compile(r'(?<![\d,.])' + re.escape(old_price) + r'(?!\.?\d)')
-    updated, count = pattern.subn(new_price, content)
+    old_amount = AMOUNT_RE.match(old_price)
+    new_amount = AMOUNT_RE.match(new_price)
+    if not old_amount or not new_amount:
+        return False
+    content = filepath.read_text(encoding='utf-8')
+    pattern = re.compile(r'(?<![\d,.])' + re.escape(old_amount.group(0)) + r'(?!\.?\d)')
+    updated, count = pattern.subn(new_amount.group(0), content)
     if count:
-        filepath.write_text(updated)
+        filepath.write_text(updated, encoding='utf-8')
         return True
     return False
 
@@ -116,7 +125,7 @@ def main():
                 print('could not determine — skipped')
                 continue
 
-            if new_price == old_price:
+            if _price_value(new_price) == _price_value(old_price):
                 print('unchanged')
                 continue
 
