@@ -13,6 +13,7 @@ Checks:
   the visible "Updated <Month Year>" badge agree, title <= 60 and meta
   description <= 160 chars, og:image file exists.
 """
+import html as htmllib
 import json
 import re
 import subprocess
@@ -71,11 +72,12 @@ def check_page(rel):
         if (badge.group(1), badge.group(2)) != (month, modified.group(1)):
             problems.append(f'{rel}: badge "Updated {badge.group(1)} {badge.group(2)}" != dateModified {modified.group(1)}-{modified.group(2)}')
     title = re.search(r'<title>(.*?)</title>', html, re.S)
-    if title and len(title.group(1).strip()) > 60:
-        problems.append(f'{rel}: title is {len(title.group(1).strip())} chars (max 60)')
+    # Count characters as displayed (&amp; is one character in search results)
+    if title and len(htmllib.unescape(title.group(1).strip())) > 60:
+        problems.append(f'{rel}: title is {len(htmllib.unescape(title.group(1).strip()))} chars (max 60)')
     desc = re.search(r'<meta name="description" content="([^"]*)"', html)
-    if desc and len(desc.group(1)) > 160:
-        problems.append(f'{rel}: meta description is {len(desc.group(1))} chars (max 160)')
+    if desc and len(htmllib.unescape(desc.group(1))) > 160:
+        problems.append(f'{rel}: meta description is {len(htmllib.unescape(desc.group(1)))} chars (max 160)')
     og = re.search(r'property="og:image" content="https://www\.techfordad\.com/([^"]+)"', html)
     if og and not (ROOT / og.group(1)).exists():
         problems.append(f'{rel}: og:image {og.group(1)} does not exist')

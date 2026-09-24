@@ -9,6 +9,7 @@ so each one is researched once and fixed everywhere.
     python3 scripts/audit_inventory.py            # markdown report to stdout
     python3 scripts/audit_inventory.py --json     # machine-readable
 """
+import html as htmllib
 import json
 import re
 import sys
@@ -71,8 +72,8 @@ def page_meta(path: Path, html: str) -> dict:
     desc = grab(r'<meta name="description" content="([^"]*)"')
     return {
         'title': title,
-        'title_len': len(title or ''),
-        'description_len': len(desc or ''),
+        'title_len': len(htmllib.unescape(title or '')),
+        'description_len': len(htmllib.unescape(desc or '')),
         'date_modified': grab(r'"dateModified"\s*:\s*"([^"]+)"'),
         'updated_badge': grab(r'Updated (\w+ \d{4})'),
         'og_image': og,
