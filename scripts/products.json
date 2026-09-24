@@ -87,24 +87,24 @@
         "check_url": "https://www.lively.com"
       },
       {
-        "name": "Apple iPhone SE (4th Gen, 2025)",
-        "price": "$429",
-        "check_url": "https://www.apple.com/iphone/"
+        "name": "Apple iPhone 17e",
+        "price": "$599",
+        "check_url": "https://www.apple.com/shop/buy-iphone"
       },
       {
-        "name": "Jitterbug Smart3",
-        "price": "$149.99",
+        "name": "Jitterbug Smart5 by Lively",
+        "price": "$119.99",
         "check_url": "https://www.lively.com"
       },
       {
         "name": "Doro 7050",
         "price": "$49.99",
-        "check_url": "https://www.amazon.com/s?k=Doro+7050+senior+phone"
+        "check_url": "https://www.amazon.com/s?k=Doro+7050"
       },
       {
-        "name": "Samsung Galaxy A16",
-        "price": "$199",
-        "check_url": "https://www.amazon.com/s?k=Samsung+Galaxy+A16"
+        "name": "Samsung Galaxy A16 5G",
+        "price": "$149",
+        "check_url": "https://www.samsung.com/us/"
       }
     ]
   },
@@ -144,29 +144,24 @@
     "file": "blog/best-tablets-for-seniors.html",
     "products": [
       {
-        "name": "Apple iPad 11th Gen (M3)",
-        "price": "$349",
-        "check_url": "https://www.apple.com/ipad/"
+        "name": "Apple iPad (11th generation)",
+        "price": "$449",
+        "check_url": "https://www.apple.com/shop/buy-ipad/ipad"
       },
       {
-        "name": "Amazon Fire HD 10",
-        "price": "$139.99",
-        "check_url": "https://www.amazon.com/s?k=Amazon+Fire+HD+10+tablet"
-      },
-      {
-        "name": "Apple iPad Mini 7th Gen",
+        "name": "Apple iPad mini",
         "price": "$499",
-        "check_url": "https://www.apple.com/ipad/"
+        "check_url": "https://www.apple.com/shop/buy-ipad/ipad-mini"
       },
       {
         "name": "Samsung Galaxy Tab A9+",
-        "price": "$219",
-        "check_url": "https://www.amazon.com/s?k=Samsung+Galaxy+Tab+A9+"
+        "price": "$149",
+        "check_url": "https://www.samsung.com/us/"
       },
       {
         "name": "Amazon Fire HD 8",
-        "price": "$99.99",
-        "check_url": "https://www.amazon.com/s?k=Amazon+Fire+HD+8+tablet"
+        "price": "$99",
+        "check_url": "https://www.amazon.com/s?k=Fire+HD+8"
       }
     ]
   },
@@ -364,6 +359,16 @@
         "name": "Bay Alarm Medical SOS Mobile",
         "price": "$27.95/mo",
         "check_url": "https://www.bayalarmmedical.com"
+      },
+      {
+        "name": "Jitterbug Flip2 by Lively",
+        "price": "$99.99",
+        "check_url": "https://www.lively.com"
+      },
+      {
+        "name": "Apple iPad (11th generation)",
+        "price": "$449",
+        "check_url": "https://www.apple.com/shop/buy-ipad/ipad"
       }
     ]
   }
