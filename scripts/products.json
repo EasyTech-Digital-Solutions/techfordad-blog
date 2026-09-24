@@ -155,7 +155,7 @@
       },
       {
         "name": "Amazon Fire HD 8",
-        "price": "$99",
+        "price": "$129.99",
         "check_url": "https://www.amazon.com/s?k=Fire+HD+8"
       }
     ]
@@ -171,7 +171,7 @@
       },
       {
         "name": "Apple iPad Air 13-inch",
-        "price": "$799",
+        "price": "$949",
         "check_url": "https://www.apple.com/shop/buy-ipad/ipad-air"
       }
     ]
@@ -264,7 +264,7 @@
       },
       {
         "name": "MDHearing NEO XS PRO",
-        "price": "$497/pair",
+        "price": "$597/pair",
         "check_url": "https://www.mdhearing.com"
       }
     ]
