@@ -350,5 +350,21 @@
         "check_url": "https://www.covesmart.com"
       }
     ]
+  },
+  {
+    "article": "Homepage Top Picks",
+    "file": "index.html",
+    "products": [
+      {
+        "name": "Medical Guardian MGHome Cellular",
+        "price": "$34.95/mo",
+        "check_url": "https://www.medicalguardian.com"
+      },
+      {
+        "name": "Bay Alarm Medical SOS Mobile",
+        "price": "$27.95/mo",
+        "check_url": "https://www.bayalarmmedical.com"
+      }
+    ]
   }
 ]

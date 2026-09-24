@@ -31,7 +31,7 @@ jobs:
         run: |
           git config user.name "TechForDad Price Bot"
           git config user.email "techfordad7@gmail.com"
-          git add blog/ scripts/products.json
+          git add blog/ index.html scripts/products.json
           if git diff --staged --quiet; then
             echo "no_changes=true" >> $GITHUB_ENV
           else
