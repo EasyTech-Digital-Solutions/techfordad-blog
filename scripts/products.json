@@ -9,11 +9,6 @@
         "check_url": "https://www.medicalguardian.com"
       },
       {
-        "name": "Bay Alarm Medical SOS Mobile",
-        "price": "$27.95/mo",
-        "check_url": "https://www.bayalarmmedical.com"
-      },
-      {
         "name": "Lively Mobile2",
         "price": "$24.99/mo",
         "check_url": "https://www.lively.com"
@@ -74,11 +69,6 @@
         "name": "Lively Mobile2",
         "price": "$24.99/mo",
         "check_url": "https://www.lively.com"
-      },
-      {
-        "name": "Bay Alarm Medical SOS Mobile",
-        "price": "$27.95/mo",
-        "check_url": "https://www.bayalarmmedical.com"
       }
     ]
   },
@@ -88,12 +78,12 @@
     "products": [
       {
         "name": "Jitterbug Flip2 by Lively",
-        "price": "$99.99",
+        "price": "$79.99",
         "check_url": "https://www.lively.com"
       },
       {
         "name": "Apple iPhone 17e",
-        "price": "$599",
+        "price": "$699",
         "check_url": "https://www.apple.com/shop/buy-iphone"
       },
       {
@@ -119,7 +109,7 @@
     "products": [
       {
         "name": "Jitterbug Flip2",
-        "price": "$99",
+        "price": "$80",
         "check_url": "https://www.lively.com"
       },
       {
@@ -128,9 +118,9 @@
         "check_url": "https://www.lively.com"
       },
       {
-        "name": "Apple iPhone SE 4 (2025)",
-        "price": "$499",
-        "check_url": "https://www.apple.com/iphone/"
+        "name": "Apple iPhone 17e",
+        "price": "$699",
+        "check_url": "https://www.apple.com/shop/buy-iphone/iphone-17e"
       },
       {
         "name": "Lively Preferred plan",
@@ -284,18 +274,18 @@
     "file": "blog/best-smart-home-devices-for-seniors.html",
     "products": [
       {
-        "name": "Amazon Echo Show 8 (3rd Gen)",
-        "price": "$149",
+        "name": "Amazon Echo Show 8 (2025)",
+        "price": "$199.99",
         "check_url": "https://www.amazon.com/s?k=Echo+Show+8+3rd+gen"
       },
       {
-        "name": "Ring Video Doorbell (4th Gen)",
-        "price": "$99",
-        "check_url": "https://www.amazon.com/s?k=Ring+Video+Doorbell+4th+gen"
+        "name": "Ring Battery Doorbell 2K",
+        "price": "$99.99",
+        "check_url": "https://ring.com/products/battery-doorbell-2nd-gen"
       },
       {
         "name": "Google Nest Learning Thermostat",
-        "price": "$249",
+        "price": "$279.99",
         "check_url": "https://www.amazon.com/s?k=Google+Nest+Learning+Thermostat"
       },
       {
@@ -351,13 +341,8 @@
         "check_url": "https://www.medicalguardian.com"
       },
       {
-        "name": "Bay Alarm Medical SOS Mobile",
-        "price": "$27.95/mo",
-        "check_url": "https://www.bayalarmmedical.com"
-      },
-      {
         "name": "Jitterbug Flip2 by Lively",
-        "price": "$99.99",
+        "price": "$79.99",
         "check_url": "https://www.lively.com"
       },
       {
