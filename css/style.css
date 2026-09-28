@@ -243,8 +243,12 @@ section { padding: 64px 24px; }
 .card-img.blue  { background: linear-gradient(135deg, #e8f0fe, #c7d7fd); }
 .card-img.green { background: linear-gradient(135deg, #d1fae5, #a7f3d0); }
 .card-img.amber { background: linear-gradient(135deg, #fff4e0, #fde68a); }
+.card-img.card-photo { background: var(--navy); }
+.card-img.card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .card-body { padding: 20px 22px 24px; }
+
+.flag { display: inline-block; height: 11px; width: auto; vertical-align: -1px; margin-right: 6px; }
 
 .card-tag {
   font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
@@ -296,6 +300,7 @@ section { padding: 64px 24px; }
 }
 
 .pick-icon { font-size: 2.8rem; margin-bottom: 12px; }
+.pick-icon img { width: 100%; height: 120px; object-fit: cover; border-radius: 8px; display: block; }
 .pick-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
 .pick-card p { font-size: 0.82rem; color: var(--muted); margin-bottom: 14px; }
 
