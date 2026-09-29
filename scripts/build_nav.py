@@ -19,7 +19,7 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ASSET_VERSION = "20260929"
+ASSET_VERSION = "20260930"
 
 # Short menu labels. Anything not listed falls back to a cleaned-up page title.
 LABELS = {
@@ -130,6 +130,20 @@ def render(base, usa, canada, indent):
     ])
 
 
+SEASON_RE = re.compile(r'[ \t]*<script src="[^"]*js/season\.js[^"]*"></script>[ \t]*\n?')
+CSS_LINK_RE = re.compile(r'([ \t]*)<link rel="stylesheet" href="((?:\.\./|/)?)css/style\.css[^"]*"\s*/?>[ \t]*\n')
+
+
+def inject_season_script(text):
+    """Load js/season.js right after the stylesheet so the seasonal theme is set before first paint."""
+    text = SEASON_RE.sub("", text)
+    m = CSS_LINK_RE.search(text)
+    if not m:
+        return text
+    tag = f'{m.group(1)}<script src="{m.group(2)}js/season.js?v={ASSET_VERSION}"></script>\n'
+    return text[:m.end()] + tag + text[m.end():]
+
+
 def process(path, usa, canada):
     text = read(path)
     m = NAV_RE.search(text)
@@ -158,6 +172,7 @@ def process(path, usa, canada):
     new = text[:m.start(2)] + new_inner + text[m.end(2):]
     new = re.sub(r'(css/style\.css)(\?v=\d+)?"', rf'\1?v={ASSET_VERSION}"', new)
     new = re.sub(r'(js/main\.js)(\?v=\d+)?"', rf'\1?v={ASSET_VERSION}"', new)
+    new = inject_season_script(new)
     if new != text:
         write(path, new)
         return True
