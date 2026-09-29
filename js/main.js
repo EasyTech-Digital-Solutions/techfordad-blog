@@ -83,6 +83,27 @@ if (navToggle && siteNav) {
   });
 }
 
+// Reviews dropdown — opens on hover via CSS (desktop), and on click/tap/keyboard here.
+document.querySelectorAll('.nav-dropdown').forEach(dd => {
+  const btn = dd.querySelector('.nav-dropdown-toggle');
+  if (!btn) return;
+  const setOpen = open => {
+    dd.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+  };
+  btn.addEventListener('click', () => setOpen(!dd.classList.contains('open')));
+  document.addEventListener('click', e => {
+    if (!dd.contains(e.target)) setOpen(false);
+  });
+  dd.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && dd.classList.contains('open')) {
+      setOpen(false);
+      btn.focus();
+    }
+  });
+  dd.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+});
+
 // Auto-updating copyright year
 document.querySelectorAll('#year').forEach(el => {
   el.textContent = new Date().getFullYear();

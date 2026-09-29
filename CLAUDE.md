@@ -11,6 +11,7 @@ Every new `blog/*.html` article (weekly automated posts included) must ship with
 3. **A hero image.** See "Hero images" below — this step has been skipped on past articles and left them with a text-only hero and a broken/fallback `og:image`. Don't skip it.
 4. **A card in `blog/index.html`** linking to the new article (match the existing `.card` markup; add `data-country="ca"` for Canada variants).
 5. **A `sitemap.xml` entry** for the new URL.
+6. **Run `python3 scripts/build_nav.py`.** The header's "All Reviews" dropdown is generated from `blog/*.html` (files ending `-canada.html` go under Canada, `noindex` pages are left out) and copied into every page. Re-run it after adding or removing an article so the menu and the cache-busting `?v=` on `style.css`/`main.js` stay in sync.
 
 ## Hero images
 
