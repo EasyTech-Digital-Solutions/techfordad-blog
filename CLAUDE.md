@@ -26,4 +26,5 @@ Every article hero should have a real photo, not just text on the navy backgroun
 ## Content conventions
 
 - US and Canada variants are separate files (`best-x-for-seniors.html` / `best-x-for-seniors-canada.html`), Canada pages use `lang="en-CA"` and CAD pricing.
+- **Amazon affiliate tags:** US pages (amazon.com) use `tag=techfordad0b-20`; Canada pages (amazon.ca) use `tag=abhikar91-20`. These are the only two registered Associates tags. Never invent another (`techfordad-ca-20` was made up by past weekly runs and earns nothing). Before finishing, grep the new article for `tag=` and confirm every link uses the right one.
 - Product prices are tracked in `scripts/products.json` and auto-updated weekly by `scripts/auto_price_update.py` (GitHub Action `auto-price-update.yml`) — if an article's price claims should stay current, add its products to that file.
