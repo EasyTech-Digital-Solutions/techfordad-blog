@@ -23,6 +23,9 @@ def clean(x): return html.unescape(re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',x or '
 def verify(asin):
     s,t=page(asin)
     if s!=200: return dict(asin=asin,status=s)
+    if len(t)<20000 or 'captcha' in t.lower():
+        # Amazon serves a tiny robot-check page when it rate-limits; wait several minutes and retry.
+        return dict(asin=asin,status='blocked')
     g=lambda p,f=re.S:(re.search(p,t,f) or [None,None])[1]
     title=clean(g(r'id="productTitle"[^>]*>(.*?)</span>'))
     # buy-box price: first a-offscreen inside the core price block

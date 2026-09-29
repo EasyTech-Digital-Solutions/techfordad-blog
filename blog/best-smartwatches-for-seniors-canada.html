@@ -21,8 +21,8 @@
 
   <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin/>
   <link rel="preload" href="/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin/>
-  <link rel="stylesheet" href="../css/style.css?v=20260930"/>
-  <script src="../js/season.js?v=20260930"></script>
+  <link rel="stylesheet" href="../css/style.css?v=20261001"/>
+  <script src="../js/season.js?v=20261001"></script>
 
   <script type="application/ld+json">
   {
@@ -119,6 +119,15 @@
 </head>
 <body>
 
+<!-- gift-bar -->
+<div class="gift-bar" id="gift-bar" role="region" aria-label="Gift guides announcement">
+  <div class="gift-bar-inner">
+    <p class="gift-bar-text"><strong>Gift season:</strong> tech gifts your parents will actually use.</p>
+    <a class="gift-bar-link" href="../gift-guides/index.html">See the gift guides <span aria-hidden="true">&rarr;</span></a>
+    <button type="button" class="gift-bar-close" aria-label="Dismiss this announcement">&times;</button>
+  </div>
+</div>
+<!-- /gift-bar -->
 <header>
   <div class="header-inner">
     <a href="../index.html" class="logo"><div class="logo-icon">★</div>TechForDad</a>
@@ -172,8 +181,45 @@
         </div>
       </div>
       <!-- /nav-dropdown -->
-      <a href="../guides/index.html">Guides</a>
-      <a href="../about.html">About</a>
+      <!-- gift-dropdown -->
+      <div class="nav-dropdown nav-dropdown-gifts">
+        <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Gift Guides <span class="caret" aria-hidden="true"></span></button>
+        <div class="nav-dropdown-menu">
+          <a class="nav-dropdown-all" href="../gift-guides/index.html">Browse all gift guides &rarr;</a>
+          <a href="../gift-guides/tech-gifts-for-elderly-parents.html">Tech Gifts for Elderly Parents</a>
+          <a href="../gift-guides/safety-tech-for-elderly-parents-who-live-alone.html">Safety Tech for Parents Who Live Alone</a>
+          <a href="../gift-guides/tech-gifts-for-someone-with-dementia.html">Tech Gifts for Someone With Dementia</a>
+          <a href="../gift-guides/tech-gifts-for-seniors-under-50.html">Tech Gifts Under $50</a>
+          <a href="../gift-guides/gifts-for-elderly-parents-who-have-everything.html">Gifts for Parents Who Have Everything</a>
+        </div>
+      </div>
+      <!-- /gift-dropdown -->
+      <!-- guides-dropdown -->
+      <div class="nav-dropdown nav-dropdown-guides">
+        <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guides <span class="caret" aria-hidden="true"></span></button>
+        <div class="nav-dropdown-menu">
+          <a class="nav-dropdown-all" href="../guides/index.html">Browse all guides &rarr;</a>
+          <a href="../guides/home-safety-checklist.html">Home safety checklist</a>
+          <a href="../guides/fall-prevention-tech.html">Fall prevention technology</a>
+          <a href="../guides/7-tech-essentials-checklist.html">7 tech essentials for a senior home</a>
+          <a href="../guides/gps-trackers.html">GPS trackers for dementia</a>
+          <a href="../guides/hearing-aids.html">Hearing aid buying guide</a>
+          <a href="../guides/caregiver-resources.html">Caregiver resources</a>
+        </div>
+      </div>
+      <!-- /guides-dropdown -->
+      <!-- about-dropdown -->
+      <div class="nav-dropdown nav-dropdown-about">
+        <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">About <span class="caret" aria-hidden="true"></span></button>
+        <div class="nav-dropdown-menu">
+          <a href="../about.html">About Us</a>
+          <a href="../our-story.html">Our Story</a>
+          <a href="../contact.html">Contact</a>
+          <a href="../privacy-policy.html">Privacy Policy</a>
+          <a href="../affiliate-disclosure.html">Affiliate Disclosure</a>
+        </div>
+      </div>
+      <!-- /about-dropdown -->
       <a href="../index.html#newsletter" class="nav-cta">Free Guide</a>
     </nav>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -189,7 +235,7 @@
 </div>
 
 <div class="article-hero">
-  <img src="../images/heroes/hero-smartwatches-canada.jpg" alt="An Apple Watch on a wrist" width="860" height="480" loading="lazy">
+  <img src="../images/heroes/hero-smartwatches-canada.jpg" alt="An Apple Watch on a wrist" width="860" height="480" fetchpriority="high">
   <div class="article-hero-inner">
     <span class="card-tag"><img class="flag" src="../images/flag-ca.svg" alt="Canada" width="12" height="11">CANADA EDITION · UPDATED SEPTEMBER 2026</span>
     <h1>Best Smartwatches for Seniors in Canada 2026: Reviewed &amp; Ranked</h1>
@@ -664,6 +710,6 @@
   </div>
 </footer>
 
-<script src="../js/main.js?v=20260930" defer></script>
+<script src="../js/main.js?v=20261001" defer></script>
 </body>
 </html>

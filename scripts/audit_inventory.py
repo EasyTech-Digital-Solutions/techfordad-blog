@@ -92,8 +92,11 @@ def normalize(name: str) -> str:
 
 
 def main():
-    pages = sorted((ROOT / 'blog').glob('*.html')) + sorted((ROOT / 'guides').glob('*.html'))
-    pages = [p for p in pages if p.name != 'index.html'] + [ROOT / 'index.html']
+    pages = (sorted((ROOT / 'blog').glob('*.html')) + sorted((ROOT / 'guides').glob('*.html'))
+             + sorted((ROOT / 'gift-guides').glob('*.html')))
+    # skip section index pages and redirect stubs (e.g. the old guides/best-senior-gifts.html)
+    pages = [p for p in pages if p.name != 'index.html'
+             and 'http-equiv="refresh"' not in p.read_text(encoding='utf-8')] + [ROOT / 'index.html']
     report, products = [], defaultdict(list)
     for p in pages:
         html = p.read_text(encoding='utf-8')

@@ -84,14 +84,25 @@ if (navToggle && siteNav) {
 }
 
 // Reviews dropdown — opens on hover via CSS (desktop), and on click/tap/keyboard here.
-document.querySelectorAll('.nav-dropdown').forEach(dd => {
+// Only one menu is open at a time: opening or hovering one closes the others.
+const navDropdowns = Array.from(document.querySelectorAll('.nav-dropdown'));
+const canHover = window.matchMedia('(hover: hover) and (min-width: 1081px)');
+navDropdowns.forEach(dd => {
   const btn = dd.querySelector('.nav-dropdown-toggle');
   if (!btn) return;
   const setOpen = open => {
     dd.classList.toggle('open', open);
     btn.setAttribute('aria-expanded', String(open));
   };
-  btn.addEventListener('click', () => setOpen(!dd.classList.contains('open')));
+  dd._setOpen = setOpen;
+  const closeOthers = () => navDropdowns.forEach(o => { if (o !== dd && o._setOpen) o._setOpen(false); });
+  btn.addEventListener('click', () => {
+    const willOpen = !dd.classList.contains('open');
+    if (willOpen) closeOthers();
+    setOpen(willOpen);
+  });
+  dd.addEventListener('mouseenter', () => { if (canHover.matches) closeOthers(); });
+  dd.addEventListener('focusin', closeOthers);
   document.addEventListener('click', e => {
     if (!dd.contains(e.target)) setOpen(false);
   });
@@ -103,6 +114,23 @@ document.querySelectorAll('.nav-dropdown').forEach(dd => {
   });
   dd.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
 });
+
+// Gift announcement bar: dismiss and remember for 14 days (js/season.js reads this before first paint).
+document.querySelectorAll('.gift-bar-close').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.documentElement.setAttribute('data-gift-bar', 'closed');
+    try { localStorage.setItem('giftBarClosed', String(Date.now())); } catch (e) { /* storage blocked */ }
+  });
+});
+
+// Homepage gift block: in gift season move it up, just above "Our Top Picks".
+(function () {
+  const gift = document.querySelector('.gift-feature');
+  const top = document.querySelector('.top-picks');
+  if (gift && top && document.documentElement.getAttribute('data-gifts') === 'peak') {
+    top.parentNode.insertBefore(gift, top);
+  }
+})();
 
 // Auto-updating copyright year
 document.querySelectorAll('#year').forEach(el => {

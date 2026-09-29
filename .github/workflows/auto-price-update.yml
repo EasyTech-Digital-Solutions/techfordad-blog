@@ -30,7 +30,7 @@ jobs:
       - name: Commit and push if prices changed
         run: |
           git config user.name "TechForDad Price Bot"
-          git config user.email "techfordad7@gmail.com"
+          git config user.email "hello@techfordad.com"
           git add blog/ index.html scripts/products.json
           if git diff --staged --quiet; then
             echo "no_changes=true" >> $GITHUB_ENV

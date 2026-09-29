@@ -1,2 +1,5 @@
 admin.js
 .DS_Store
+__pycache__/
+*.pyc
+_t_*.html
