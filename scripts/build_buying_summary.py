@@ -46,7 +46,7 @@ PAGES = {
     "blog/best-blood-pressure-monitors-canada.html": ("ca", ["omron-10", "omron-3", "omron-afib", "ad-medical", "withings"]),
     "blog/best-cordless-phones-for-seniors-canada.html": ("ca", ["vtech", "panasonic", "clarity", "att", "budget"]),
     "blog/best-gps-trackers-for-seniors-canada.html": ("ca", ["lifeline", "lil-tracker", "angelsense", "tracki", "telus"]),
-    "blog/best-hearing-aids-canada.html": ("ca", ["phonak", "resound", "oticon", "costco", "jabra"]),
+    "blog/best-hearing-aids-canada.html": ("ca", ["phonak", "resound", "oticon", "costco"]),
     "blog/best-home-security-for-seniors-canada.html": ("ca", ["telus", "ring", "abode", "rogers", "local"]),
     "blog/best-smartwatches-for-seniors-canada.html": ("ca", ["apple-watch-series-12", "apple-watch-se", "samsung-galaxy-watch", "lifeline-smartwatch", "garmin-venu"]),
     "blog/best-video-doorbells-for-seniors-canada.html": ("ca", ["ring-battery", "ring-plus", "google-nest", "eufy", "arlo"]),

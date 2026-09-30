@@ -101,11 +101,11 @@
         {"kind": "maker", "title": "Omron (Canada): Monitor with AFib Screening (BP7365CAN)", "url": "https://omronhealthcare.com/en-ca/products/blood-pressure-monitor-bp7365can", "used_for": "Features and AFib screening"},
         {"kind": "authority", "title": "Hypertension Canada: Recommended devices (public list)", "url": "https://hypertension.ca/public/recommended-devices", "used_for": "The list to check that a monitor is validated"},
         {"kind": "authority", "title": "Hypertension Canada: Device Recommendation Program", "url": "https://hypertension.ca/device-recommendation-program/", "used_for": "How devices are reviewed and recommended"},
-        {"kind": "authority", "title": "Hypertension Canada: Experts concerned over inaccurate blood pressure devices", "url": "https://hypertension.ca/news/experts-concerned-over-inaccurate-blood-pressure-devices/", "used_for": "Why many home monitors are not validated"},
+        {"kind": "authority", "title": "Hypertension Canada: Experts concerned over inaccurate blood pressure devices", "url": "https://hypertension.ca/news/experts-concerned-over-inaccurate-blood-pressure-devices/", "used_for": "Hypertension Canada's president on there being no requirement for blood pressure devices to be tested for accuracy"},
         {"kind": "authority", "title": "Heart & Stroke: Atrial fibrillation", "url": "https://www.heartandstroke.ca/heart-disease/conditions/atrial-fibrillation", "used_for": "How AFib risk rises with age"},
         {"kind": "official", "title": "Health Canada: Medical Devices Active Licence Listing", "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/licences/medical-devices-active-licence-listing.html", "used_for": "Where to look up whether a medical device is licensed in Canada", "skip_verify": true}
       ],
-      "note": "A&D's Canadian online shop currently shows \"Opening soon\" and Withings' Canadian site no longer shows a product page for the BPM Connect, so confirm that the A&D UA-767FAM and the Withings monitor are available in Canada before you buy. Hypertension Canada's list above is the place to check that a monitor is validated."
+      "note": "A&D's Canadian online shop currently shows \"Opening soon\" and Withings' Canadian site no longer shows a product page for the BPM Connect, so confirm that the A&D UA-767FAM and the Withings monitor are available in Canada before you buy. Hypertension Canada's list above is the place to check that a monitor is validated. At the time of writing, four of the five monitors on this page appear on that list; the Withings BPM Connect does not."
     },
     "blog/best-hearing-aids-for-seniors.html": {
       "sources": [
@@ -132,7 +132,7 @@
         {"kind": "official", "title": "B.C. Government: Over-the-counter hearing aids", "url": "https://news.gov.bc.ca/releases/2026HLTH0059-000716", "used_for": "British Columbia's decision on over-the-counter hearing aids", "skip_verify": true},
         {"kind": "official", "title": "Health Canada: Medical Devices Active Licence Listing", "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/licences/medical-devices-active-licence-listing.html", "used_for": "Where to look up whether a medical device is licensed in Canada", "skip_verify": true}
       ],
-      "note": "Jabra Enhance says its service is for people living in the United States, and the US version of this guide lists the Select 300 as discontinued, so check that the Jabra pick is available to you before relying on it. Funding amounts and rules change: confirm with your province and your audiologist."
+      "note": "Funding amounts and rules change: confirm with your province and your audiologist."
     },
     "guides/hearing-aids.html": {
       "sources": [
@@ -155,7 +155,7 @@
         {"kind": "maker", "title": "Bay Alarm Medical: SOS Smartwatch", "url": "https://www.bayalarmmedical.com/medical-alert-system/sos-smartwatch/", "used_for": "Standalone watch, monitoring and fall detection"},
         {"kind": "independent", "title": "NCOA: Best medical alert watches", "url": "https://www.ncoa.org/product-resources/medical-alert-systems/best-medical-alert-watches/", "used_for": "NCOA's reviews of medical alert watches, to compare with ours"}
       ],
-      "note": "Garmin's own manual says the Venu 4 can be set to detect falls as well as incidents, so check its current features on Garmin's page before relying on this page's Garmin comparison."
+      "note": "Garmin says the Venu 4's fall detection messages your emergency contacts through a paired phone and does not contact emergency services."
     },
     "blog/best-smartwatches-for-seniors-canada.html": {
       "sources": [
@@ -167,7 +167,7 @@
         {"kind": "maker", "title": "Lifeline Canada: On the Go Smartwatch", "url": "https://www.lifeline.ca/en/products/lifeline-on-the-go-smartwatch/", "used_for": "Monitoring, fall detection and 4G connection"},
         {"kind": "official", "title": "Health Canada: Medical Devices Active Licence Listing", "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/licences/medical-devices-active-licence-listing.html", "used_for": "Where to look up whether a medical device is licensed in Canada", "skip_verify": true}
       ],
-      "note": "Garmin's own support page says its watches can offer fall detection as well as incident detection, so check the current Venu 4 features before relying on this page's Garmin comparison."
+      "note": "Garmin says the Venu 4's fall detection messages your emergency contacts through a paired phone and does not contact emergency services."
     },
     "guides/fall-prevention-tech.html": {
       "sources": [
