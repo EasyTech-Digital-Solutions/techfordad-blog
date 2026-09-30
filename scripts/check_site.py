@@ -86,7 +86,7 @@ def check_page(rel):
 def main():
     if '--all' in sys.argv:
         pages = [p.relative_to(ROOT).as_posix() for p in
-                 [*ROOT.glob('blog/*.html'), *ROOT.glob('guides/*.html'), ROOT / 'index.html']]
+                 [*ROOT.glob('blog/*.html'), *ROOT.glob('guides/*.html'), *ROOT.glob('gift-guides/*.html'), ROOT / 'index.html']]
     else:
         changed = git('diff', '--name-only', 'HEAD').split() + git('ls-files', '--others', '--exclude-standard').split()
         pages = [f for f in changed if f.endswith('.html') and (ROOT / f).exists()]
