@@ -1,0 +1,86 @@
+{
+  "checked": "2026-09-30",
+  "_about": "Sources shown at the bottom of a guide (scripts/build_sources.py writes them). Add only links you have opened and that really cover the topic. 'used_for' says what the page covers, never more. Run 'python3 scripts/build_sources.py --verify' before changing 'checked': it must only move forward after the links were re-checked. skip_verify marks sites that block scripted requests (CRTC, Canada.ca): the URL came from a web search, so open it in a browser to re-check it.",
+  "pages": {
+    "blog/best-medical-alert-systems.html": {
+      "sources": [
+        {"kind": "maker", "title": "Medical Guardian: MGHome Cellular", "url": "https://www.medicalguardian.com/medical-alert-systems/cellular-home-alert", "used_for": "Features, range, monitoring and the fall-detection add-on"},
+        {"kind": "maker", "title": "Bay Alarm Medical: SOS All-In-One 2", "url": "https://www.bayalarmmedical.com/medical-alert-system/sos-all-in-one-2/", "used_for": "Mobile GPS unit, battery life and fall detection"},
+        {"kind": "maker", "title": "Lively: Mobile2 All-in-One Medical Alert", "url": "https://shop.lively.com/products/lively-mobile2-all-in-one-medical-alert", "used_for": "Mobile device features and the fall-detection add-on"},
+        {"kind": "maker", "title": "Medical Alert", "url": "https://www.medicalalert.com/", "used_for": "The provider's own plans and equipment"},
+        {"kind": "maker", "title": "Apple: Apple Watch SE", "url": "https://www.apple.com/apple-watch-se-3/", "used_for": "Watch features and models"},
+        {"kind": "maker", "title": "Apple Support: Use Fall Detection with Apple Watch", "url": "https://support.apple.com/en-us/108896", "used_for": "How fall detection works and when it is on"},
+        {"kind": "independent", "title": "AARP: Best medical alerts with fall detection", "url": "https://www.aarp.org/caregiving/home-care/best-medical-alert-systems-with-fall-detection", "used_for": "AARP's own testing and picks, to compare with ours"},
+        {"kind": "independent", "title": "NCOA: Best medical alert systems with fall detection", "url": "https://www.ncoa.org/product-resources/medical-alert-systems/best-medical-alert-systems-with-fall-detection/", "used_for": "Another set of reviews, using NCOA's own testing method"},
+        {"kind": "independent", "title": "Consumer Reports: Best medical alert systems", "url": "https://www.consumerreports.org/health/medical-alert-systems/best-medical-alert-systems-a1136054281/", "used_for": "Consumer Reports' survey-based ratings of the main brands"}
+      ],
+      "note": "Response times on this page come from customer reviews, not lab tests. The independent reviews above are where to compare."
+    },
+    "blog/best-medical-alert-systems-canada.html": {
+      "sources": [
+        {"kind": "maker", "title": "MedicAlert Foundation Canada", "url": "https://www.medicalert.ca", "used_for": "Membership, medical ID and monitoring options"},
+        {"kind": "maker", "title": "TELUS Health: Medical Alert (LivingWell Companion)", "url": "https://www.telus.com/en/personal-health/medical-alert-systems", "used_for": "Devices, fall detection and current plan pricing"},
+        {"kind": "maker", "title": "Lifeline Canada", "url": "https://www.lifeline.ca/en/", "used_for": "Devices, monitoring and plans"},
+        {"kind": "maker", "title": "Apple (Canada): Apple Watch SE", "url": "https://www.apple.com/ca/apple-watch-se-3/", "used_for": "Watch features and Canadian models"},
+        {"kind": "maker", "title": "Apple Support (Canada): Use Fall Detection with Apple Watch", "url": "https://support.apple.com/en-ca/108896", "used_for": "How fall detection works and when it is on"},
+        {"kind": "official", "title": "Ontario: Assistive Devices Program", "url": "https://www.ontario.ca/page/assistive-devices-program", "used_for": "The Ontario program that funds some assistive devices"},
+        {"kind": "official", "title": "British Columbia: Home and community care", "url": "https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care", "used_for": "BC's home and community care services"},
+        {"kind": "official", "title": "Alberta: Continuing care", "url": "https://www.alberta.ca/continuing-care", "used_for": "Alberta's continuing care programs"}
+      ],
+      "note": "We did not find independent Canadian lab tests of these services, so the provider pages and provincial programs are the main sources. Funding rules change, so confirm with your province."
+    },
+    "blog/best-e-readers-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "Kobo: Libra Colour", "url": "https://ereader.kobo.com/en-us/products/kobo-libra-colour", "used_for": "Screen, page-turn buttons and features"},
+        {"kind": "maker", "title": "Kobo: Clara BW", "url": "https://ereader.kobo.com/en-us/products/kobo-clara-bw", "used_for": "Screen, size and features"},
+        {"kind": "maker", "title": "Libby by OverDrive", "url": "https://libbyapp.com/", "used_for": "The app for borrowing library books"},
+        {"kind": "maker", "title": "OverDrive: Libby and Kindle", "url": "https://resources.overdrive.com/library/libby-features/kindle/", "used_for": "How library books are sent to a Kindle in the US"},
+        {"kind": "independent", "title": "TechRadar: The best ereaders", "url": "https://www.techradar.com/best/best-ereader", "used_for": "TechRadar's tested picks, to compare with ours"},
+        {"kind": "independent", "title": "TechRadar: Kindle vs Kobo", "url": "https://www.techradar.com/versus/kindle-vs-kobo", "used_for": "A side-by-side of the two brands"}
+      ],
+      "note": "Kindle details come from Amazon's own product pages, which the Check Price buttons open."
+    },
+    "blog/best-e-readers-for-seniors-canada.html": {
+      "sources": [
+        {"kind": "maker", "title": "Kobo (Canada): Clara BW", "url": "https://ereader.kobo.com/en-ca/products/kobo-clara-bw", "used_for": "Screen, size and features"},
+        {"kind": "maker", "title": "Kobo (Canada): Libra Colour", "url": "https://ereader.kobo.com/en-ca/products/kobo-libra-colour", "used_for": "Screen, page-turn buttons and features"},
+        {"kind": "maker", "title": "Kobo (Canada): Clara Colour", "url": "https://ereader.kobo.com/en-ca/products/kobo-clara-colour", "used_for": "Colour screen and features"},
+        {"kind": "maker", "title": "Libby by OverDrive", "url": "https://libbyapp.com/", "used_for": "The app for borrowing library books"},
+        {"kind": "maker", "title": "Libby Help: Why can't I send a book to Kindle?", "url": "https://help.libbyapp.com/en-us/6027.htm", "used_for": "Library Kindle books are only offered by US libraries"},
+        {"kind": "independent", "title": "TechRadar: Kindle vs Kobo", "url": "https://www.techradar.com/versus/kindle-vs-kobo", "used_for": "A side-by-side of the two brands"},
+        {"kind": "independent", "title": "Tom's Guide: Kobo Clara Colour review", "url": "https://www.tomsguide.com/computing/e-readers/kobo-clara-colour-review", "used_for": "An independent review of the Clara Colour"}
+      ],
+      "note": "Kindle details come from Amazon.ca's own product pages, which the Check Price buttons open."
+    },
+    "blog/best-cell-phones-for-seniors-canada.html": {
+      "sources": [
+        {"kind": "maker", "title": "Apple (Canada): iPhone 16", "url": "https://www.apple.com/ca/shop/buy-iphone/iphone-16", "used_for": "Models, storage and Canadian pricing"},
+        {"kind": "maker", "title": "Apple (Canada): Accessibility", "url": "https://www.apple.com/ca/accessibility/", "used_for": "Text size, vision and hearing features to set up first"},
+        {"kind": "maker", "title": "Samsung Canada: Galaxy A36 5G support page", "url": "https://www.samsung.com/ca/support/model/SM-A366WZKAXAC/", "used_for": "Manuals and specifications for the A36"},
+        {"kind": "maker", "title": "Samsung Canada: Galaxy A16 5G", "url": "https://www.samsung.com/ca/smartphones/galaxy-a/galaxy-a16-5g-blue-black-128gb-sm-a166wzkaxac/", "used_for": "Specifications for the A16"},
+        {"kind": "maker", "title": "Doro: PhoneEasy 626 manual (Canadian English)", "url": "https://www.doro.com/globalassets/inriver/resources/manual_doro_phoneeasy_626_en_ca_v30r16650.pdf", "used_for": "Features of the Doro flip phone", "skip_verify": true},
+        {"kind": "maker", "title": "TELUS: Mobility for Good for seniors", "url": "https://www.telus.com/en/social-impact/connecting-canada/connecting-for-good-programs/seniors", "used_for": "Who qualifies and what the plan includes"},
+        {"kind": "maker", "title": "Rogers: Connected for Success", "url": "https://www.rogers.com/connected-for-success", "used_for": "Who qualifies and what the plan includes"},
+        {"kind": "maker", "title": "Chatr: Plans", "url": "https://www.chatrwireless.com/plans", "used_for": "Prepaid plans"},
+        {"kind": "maker", "title": "Lucky Mobile: Plans", "url": "https://www.luckymobile.ca/plans", "used_for": "Prepaid plans"},
+        {"kind": "official", "title": "CRTC: Protected by the Wireless Code", "url": "https://crtc.gc.ca/eng/phone/mobile/code.htm", "used_for": "Your rights on phone contracts and free unlocking", "skip_verify": true},
+        {"kind": "official", "title": "Government of Canada: Guaranteed Income Supplement", "url": "https://www.canada.ca/en/services/benefits/publicpensions/old-age-security/guaranteed-income-supplement.html", "used_for": "The income benefit that some carrier programs use to decide who qualifies", "skip_verify": true}
+      ],
+      "note": "We could not find a maker page for the Artfone C1+ 4G, so its details come from the Amazon.ca listing. Samsung Canada has removed its shopping pages for the Galaxy A36, so it may have been replaced by a newer model. Check availability before buying."
+    },
+    "blog/best-cell-phone-plans-for-seniors-canada.html": {
+      "sources": [
+        {"kind": "maker", "title": "TELUS: Mobility for Good for seniors", "url": "https://www.telus.com/en/social-impact/connecting-canada/connecting-for-good-programs/seniors", "used_for": "Who qualifies and what the plan includes"},
+        {"kind": "maker", "title": "Rogers: Connected for Success", "url": "https://www.rogers.com/connected-for-success", "used_for": "Who qualifies and what the plan includes"},
+        {"kind": "maker", "title": "Rogers: Plans and phones for adults 65+", "url": "https://www.rogers.com/mobility/seniors", "used_for": "The Rogers 65+ plans"},
+        {"kind": "maker", "title": "Chatr: Plans", "url": "https://www.chatrwireless.com/plans", "used_for": "Prepaid plans and prices"},
+        {"kind": "maker", "title": "Lucky Mobile: Plans", "url": "https://www.luckymobile.ca/plans", "used_for": "Prepaid plans and prices"},
+        {"kind": "maker", "title": "Bell: Cell phone plans", "url": "https://www.bell.ca/Mobility/Cell_phone_plans", "used_for": "Bell postpaid plans"},
+        {"kind": "maker", "title": "Virgin Plus: Phones and plans", "url": "https://www.virginplus.ca/en/home/index.html", "used_for": "Virgin Plus plans"},
+        {"kind": "official", "title": "CRTC: Protected by the Wireless Code", "url": "https://crtc.gc.ca/eng/phone/mobile/code.htm", "used_for": "Your rights when you switch or cancel", "skip_verify": true},
+        {"kind": "official", "title": "Government of Canada: Guaranteed Income Supplement", "url": "https://www.canada.ca/en/services/benefits/publicpensions/old-age-security/guaranteed-income-supplement.html", "used_for": "Eligibility for the income benefit that some carrier programs use", "skip_verify": true}
+      ],
+      "note": "Carrier prices and promotions change often and may differ by province. Check the carrier's page before you sign up."
+    }
+  }
+}
