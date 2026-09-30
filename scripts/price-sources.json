@@ -728,6 +728,33 @@
       "price": "USD kits $75-$399; Pro monitoring $26.99/mo",
       "verified": "2026-09-30",
       "note": "Monitoring figure is very close to site's $27.83/mo; kit range plausible after CAD conversion."
+    },
+    "Rogers Smart Home Monitoring": {
+      "method": "unverifiable",
+      "url": "https://www.rogers.com/home-security/plans",
+      "price": "Search results conflated with an unrelated Xfinity product; no reliable Rogers-specific figure found",
+      "verified": "2026-09-30"
+    },
+    "LifeStation Mobile medical alert system": {
+      "method": "news",
+      "url": "https://www.seniorliving.org/medical-alert-systems/lifestation/",
+      "price": "Mobile LTE $37.95-$47.95/mo; fall detection +$8-$16/mo",
+      "verified": "2026-09-30",
+      "note": "Matches site's $35-51/mo range and fall-detection figure closely."
+    },
+    "Wireless Video Doorbell with Indoor Monitor (generic)": {
+      "method": "news",
+      "url": "https://goabode.com/blog/best-doorbell-camera-no-subscription/",
+      "price": "Generic/off-brand units span $25.94-$139.99",
+      "verified": "2026-09-30",
+      "note": "Site's $69.99-$99.99 plausible for this unbranded category."
+    },
+    "KOPJIPPOM / BOOGIIO / SABLUTE / Nuklz large-print keyboards (individual listings)": {
+      "method": "unverifiable",
+      "url": "",
+      "price": "Amazon-only white-label keyboards; same as the already-tracked combined entry",
+      "verified": "2026-09-30",
+      "note": "Consistent with the existing 'Large-print keyboards' unverifiable entry."
     }
   }
 }
