@@ -704,7 +704,7 @@ def hub_page():
         <div class="card-img card-photo"><img src="../images/heroes/{g['hero']}" alt="" width="400" height="180" loading="lazy"></div>
         <div class="card-body">
           <span class="card-tag">Gift Guide</span>
-          <h3>{e(g['h1'])}</h3>
+          <h2>{e(g['h1'])}</h2>
           <p>{e(g['card'])}</p>
           <a href="{g['slug']}.html" class="card-link" aria-label="Read the guide: {e(g['h1'])}">Read the guide</a>
         </div>

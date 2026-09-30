@@ -321,6 +321,7 @@ section { padding: 64px 24px; }
   margin-bottom: 8px; display: block;
 }
 
+.card h2,
 .card h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem; color: var(--navy);
@@ -573,7 +574,7 @@ footer {
   max-width: 1140px; margin: 0 auto;
   padding: 48px 24px;
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: minmax(0, 1fr) 320px;
   gap: 48px;
   align-items: start;
 }
@@ -605,6 +606,12 @@ footer {
   color: var(--navy); margin-bottom: 12px;
 }
 .toc ol { padding-left: 18px; }
+.toc ol.toc-plain { list-style: none; padding-left: 0; }  /* items already carry their own "1." numbers */
+.toc .toc-title {
+  font-size: 0.8rem; font-weight: 700; line-height: normal;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--navy); margin-bottom: 12px;
+}
 .toc ol li { margin-bottom: 6px; }
 .toc ol li a { font-size: 0.88rem; color: var(--navy); font-weight: 500; }
 
@@ -685,6 +692,7 @@ footer {
   margin-bottom: 20px;
   box-shadow: var(--shadow);
 }
+.sidebar-box h3,
 .sidebar-box h4 {
   font-family: 'Playfair Display', serif;
   font-size: 1rem; color: var(--navy);
