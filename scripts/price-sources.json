@@ -136,10 +136,10 @@
     },
     "Amazon Fire HD 10": {
       "method": "news",
-      "url": "https://www.fingerlakes1.com/2026/07/05/amazon-fire-hd-10-gets-more-ram-alongside-a-price-increase-heres-what-buyers-should-know/",
-      "price": "$154.99",
-      "verified": "2026-09-24",
-      "note": "Only one source so far; confirm with a second."
+      "url": "https://www.techtimes.com/articles/320975/20260719/amazon-fire-hd-10-9999-full-hd-alexa-trade-offs-amazon-wont-advertise.htm",
+      "price": "$154.99 (current 4GB RAM model)",
+      "verified": "2026-09-30",
+      "note": "2nd source confirms exact match."
     },
     "Amazon Fire HD 8 (64GB)": {
       "method": "news",
@@ -424,10 +424,9 @@
     },
     "HP 17.3-inch Laptop AMD Ryzen 5 7430U": {
       "method": "news",
-      "url": "https://www.walmart.com/ip/HP-17-inch-Laptop-17-3-FHD-Display-AMD-Ryzen-5-7430U-Processor-16GB-RAM-512GB-SSD-AMD-Radeon-Graphics-Anti-glare-Wi-Fi-6-Win-11-Pro-Office-Lifetime-L/16430002204",
-      "price": "Configs range ~$480 (8GB/256GB) to ~$800 (16GB/512-1TB) to $1,300+ (32-64GB); site's $669 is plausible but not pinned to one exact config",
-      "verified": "2026-09-30",
-      "note": "Needs a 2nd source matching the exact configuration before calling it confirmed."
+      "url": "https://www.bestbuy.com/product/hp-17-3-fhd-ips-laptop-amd-ryzen-5-7430u-16gb-ram-512gb-ssd-windows-11-pro-natural-silver/J3X7ZPP8QW/sku/12514922",
+      "price": "$669.99 list (Best Buy), exact match",
+      "verified": "2026-09-30"
     },
     "Lenovo IdeaPad 5 15.6-inch": {
       "method": "news",
@@ -558,11 +557,11 @@
       "verified": "2026-09-30"
     },
     "Omron 10 Series Wireless (BP7450CAN)": {
-      "method": "news",
-      "url": "https://www.bestbuy.ca/en-ca/product/omron-10-series-arm-blood-pressure-monitor-bp7450can/18911270",
-      "price": "Wide retailer spread: $127.98 (Best Buy) to $330 CAD (specialty medical); site's $143-149 sits in the middle",
+      "method": "fetch",
+      "url": "https://www.londondrugs.com/products/omron-blood-pressure-monitor-10-series-upper-arm-bp7450can/p/L0806955",
+      "price": "$149.99 CAD (London Drugs)",
       "verified": "2026-09-30",
-      "note": "Needs a 2nd matching source before pinning down."
+      "note": "Resolved, matches site's range."
     },
     "Kobo Libra Colour (US)": {
       "method": "fetch",
@@ -658,9 +657,9 @@
     "Kasa Smart Plug (EP25) + Kasa Smart Bulb (KL135)": {
       "method": "news",
       "url": "https://camelcamelcamel.com/product/B08YP5MKY4",
-      "price": "Bulb ~$9-18; Plug ~$10-42 depending on pack size/retailer",
+      "price": "Bulb $9.05 single; Plug $18-20 single",
       "verified": "2026-09-30",
-      "note": "Site's ~$14/~$17 each is plausible but not pinned to one config."
+      "note": "Close to site's figures."
     },
     "Amazon Alexa Emergency Assist": {
       "method": "news",
@@ -689,10 +688,10 @@
     },
     "Fire TV Stick HD": {
       "method": "news",
-      "url": "https://cordcuttersnews.com/review-amazon-fire-tv-stick-hd-2026-model/",
-      "price": "$34.99 regular per most sources; site cites $40 from the same Aug 2026 price-hike list used for Kindle/Echo",
+      "url": "https://www.pocket-lint.com/amazon-just-quietly-raised-the-price-of-all-its-fire-sticks/",
+      "price": "$40 (raised from $35, Aug 21 2026)",
       "verified": "2026-09-30",
-      "note": "Similar to the Kindle case: not confident enough to override an already-sourced price-hike figure."
+      "note": "2nd source confirms the site was correct all along."
     },
     "Lenovo Chromebook Plus 14": {
       "method": "news",
@@ -892,6 +891,12 @@
       "price": "$199.99 (raised from $159.99 on Aug 21, 2026)",
       "verified": "2026-09-30",
       "note": "Exact match to site's figure; up to 52% hikes in Canada, consistent with the higher CAD figure."
+    },
+    "Ring Alarm Security Kit (Canada)": {
+      "method": "fetch",
+      "url": "https://www.amazon.ca/Ring-Alarm-8-piece-kit/dp/B07ZPMDF1M",
+      "price": "8-piece kit $349.99 CAD",
+      "verified": "2026-09-30"
     }
   }
 }
