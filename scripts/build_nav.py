@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_gift_guides  # noqa: E402  (source of truth for the gift guide list)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ASSET_VERSION = "20261001"
+ASSET_VERSION = "20261002"
 
 # Short menu labels. Anything not listed falls back to a cleaned-up page title.
 LABELS = {
@@ -323,6 +323,8 @@ def main():
         print(title + ": " + ", ".join(label for label, _ in items))
     import build_hreflang
     build_hreflang.main()
+    import build_related
+    build_related.main()
 
 
 if __name__ == "__main__":
