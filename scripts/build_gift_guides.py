@@ -871,8 +871,7 @@ def add_sitemap():
     for u in urls:
         if u in text:
             continue
-        pr = "0.9" if u.endswith("index.html") else "0.8"
-        entry = f"  <url>\n    <loc>{u}</loc>\n    <lastmod>{PUBLISHED}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>{pr}</priority>\n  </url>\n"
+        entry = f"  <url>\n    <loc>{u}</loc>\n    <lastmod>{PUBLISHED}</lastmod>\n  </url>\n"
         text = text.replace("</urlset>", entry + "</urlset>")
         added += 1
     with open(path, "w", encoding="utf-8", newline="") as f:
