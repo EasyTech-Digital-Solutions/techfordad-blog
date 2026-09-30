@@ -661,6 +661,73 @@
       "price": "Bulb ~$9-18; Plug ~$10-42 depending on pack size/retailer",
       "verified": "2026-09-30",
       "note": "Site's ~$14/~$17 each is plausible but not pinned to one config."
+    },
+    "Amazon Alexa Emergency Assist": {
+      "method": "news",
+      "url": "https://www.reviewed.com/accessibility/content/alexa-emergency-assist-review",
+      "price": "$5.99/mo (Prime) / $7.99/mo (non-Prime)",
+      "verified": "2026-09-30"
+    },
+    "Blink Mini 2 indoor camera": {
+      "method": "news",
+      "url": "https://www.bestbuy.com/product/blink-mini-2-home-security-pet-cameras-with-hd-video-color-night-view-motion-detection-two-way-audio-1-cam-black/J39HW6QJCY",
+      "price": "$39.99-$40",
+      "verified": "2026-09-30"
+    },
+    "WYZE Cam v4": {
+      "method": "fetch",
+      "url": "https://www.wyze.com/products/wyze-cam",
+      "price": "$44.98 (official Wyze store)",
+      "verified": "2026-09-30"
+    },
+    "eufy Indoor Cam S350 (4K)": {
+      "method": "news",
+      "url": "https://www.eufy.com/products/t8416121",
+      "price": "$139.99 RRP, frequently on sale ~$99.99",
+      "verified": "2026-09-30",
+      "note": "Site's $129.99 sits between the two; plausible."
+    },
+    "Fire TV Stick HD": {
+      "method": "news",
+      "url": "https://cordcuttersnews.com/review-amazon-fire-tv-stick-hd-2026-model/",
+      "price": "$34.99 regular per most sources; site cites $40 from the same Aug 2026 price-hike list used for Kindle/Echo",
+      "verified": "2026-09-30",
+      "note": "Similar to the Kindle case: not confident enough to override an already-sourced price-hike figure."
+    },
+    "Lenovo Chromebook Plus 14": {
+      "method": "news",
+      "url": "https://www.dealnews.com/products/Lenovo/Lenovo-Chromebook-Plus-14-inch-2-in-1-Touchscreen-Laptop/517314.html",
+      "price": "Standard model $650-$749; a 2-in-1 variant at $429. Site's $349 wasn't found anywhere.",
+      "verified": "2026-09-30",
+      "note": "Suspicious: $349 not matched by any source found. Needs a closer look, possibly wrong model/config."
+    },
+    "Arlo Video Doorbell 2K (2nd Gen, Canada)": {
+      "method": "news",
+      "url": "https://www.amazon.ca/Doorbell-Wireless-Option-Integrated-Notifications/dp/B0DNTZN481",
+      "price": "$99.99 CAD (Amazon.ca); $84.99 CAD (Best Buy); $79.97 CAD (Staples)",
+      "verified": "2026-09-30",
+      "note": "Fixed on site: was shown as $199.99 CAD, roughly double across 3 retailers."
+    },
+    "Blink Video Doorbell (US)": {
+      "method": "news",
+      "url": "https://www.homedepot.com/b/Electrical-Doorbells-Doorbell-Cameras/Blink/N-5yc1vZcg19Zrko",
+      "price": "$49.99 base; subscription $3.99/mo single device",
+      "verified": "2026-09-30",
+      "note": "Matches site's $49.99 / ~$3/mo closely."
+    },
+    "Ring Alarm Security Kit": {
+      "method": "news",
+      "url": "https://www.securitycompasshq.com/pricing/ring",
+      "price": "USD kits $199.99-$449; AI Pro monitoring $19.99/mo",
+      "verified": "2026-09-30",
+      "note": "Site's CAD figures not directly confirmed; monitoring upper bound matches."
+    },
+    "Abode Home Security System": {
+      "method": "news",
+      "url": "https://www.security.org/home-security-systems/abode/",
+      "price": "USD kits $75-$399; Pro monitoring $26.99/mo",
+      "verified": "2026-09-30",
+      "note": "Monitoring figure is very close to site's $27.83/mo; kit range plausible after CAD conversion."
     }
   }
 }
