@@ -595,6 +595,72 @@
       "price": "Device ~$229 USD one-time; plans $39.99-$64.99/mo USD (US pricing found; CAD-specific not confirmed)",
       "verified": "2026-09-30",
       "note": "Site's CAD figures are plausible after currency conversion but not directly sourced."
+    },
+    "SMPL Simple TV Remote": {
+      "method": "news",
+      "url": "https://www.rehabmart.com/product/simpl-universal-big-button-tv-remote-55857.html",
+      "price": "Wide spread $14.99-$62.55; new retail typically $23.95-$39.99",
+      "verified": "2026-09-30",
+      "note": "Site's $28 is plausible but not pinned exactly."
+    },
+    "GE Universal Remote for Seniors (Model 71262)": {
+      "method": "unverifiable",
+      "url": "https://www.amazon.com/GE-electrical-Universal-Compatible-71262/dp/B0C62L1FPT",
+      "price": "Currently unavailable on Amazon; no reliable price found this pass",
+      "verified": "2026-09-30"
+    },
+    "UltraPro BigEZ OneTouch Universal TV Remote (Model 85053)": {
+      "method": "news",
+      "url": "https://byjasco.com/products/ultrapro-2-device-onetouch-replacement-universal-remote-backlit-with-big-button",
+      "price": "$16.98-$16.99 on byjasco.com (manufacturer)",
+      "verified": "2026-09-30",
+      "note": "Conflicts with the already-tracked 'GE BigEZ 84666 / UltraPro 85053' entry's $10.99 (same domain, 6 days earlier). Needs reconciliation before editing the site."
+    },
+    "Medcenter Monthly Pill Organizer with Talking Alarm": {
+      "method": "fetch",
+      "url": "https://www.epill.com/medcenter.html",
+      "price": "$149.95 (epill.com, list $164); other retailers cluster $77-170",
+      "verified": "2026-09-30",
+      "note": "Fixed on site: was shown as $25-35, a large and consistent error across 6+ sources."
+    },
+    "Withings Sleep Analyzer": {
+      "method": "news",
+      "url": "https://www.withings.com/en-us/products/sleep",
+      "price": "$199.95 official; retail typically $130-180",
+      "verified": "2026-09-30",
+      "note": "Site's $169.95 sits within the commonly cited range."
+    },
+    "OZI Sleep": {
+      "method": "news",
+      "url": "https://ozisleep.com/",
+      "price": "$199 one-time; no monthly fee for standard features per manufacturer",
+      "verified": "2026-09-30",
+      "note": "Site's cautious 'may require a plan' hedge isn't contradicted; left as-is."
+    },
+    "Garmin Vivosmart 5": {
+      "method": "news",
+      "url": "https://us.smartprix.com/fitness_bands/garmin-vivosmart-5-fitness-band-ppd17qb9xu7f",
+      "price": "$149.99",
+      "verified": "2026-09-30"
+    },
+    "Garmin Venu 4 (US)": {
+      "method": "news",
+      "url": "https://www.bestbuy.com/product/garmin-venu-4-gps-smartwatch-41-mm-fiber-reinforced-polymer-silver-2025/JXF9YF5FRC",
+      "price": "$499.99 (41mm)",
+      "verified": "2026-09-30"
+    },
+    "Garmin Venu 4 (Canada)": {
+      "method": "news",
+      "url": "https://www.bestbuy.ca/en-ca/product/garmin-venu-4-41mm-health-and-fitness-gps-smartwatch/19465983",
+      "price": "$769.99 CAD (41mm)",
+      "verified": "2026-09-30"
+    },
+    "Kasa Smart Plug (EP25) + Kasa Smart Bulb (KL135)": {
+      "method": "news",
+      "url": "https://camelcamelcamel.com/product/B08YP5MKY4",
+      "price": "Bulb ~$9-18; Plug ~$10-42 depending on pack size/retailer",
+      "verified": "2026-09-30",
+      "note": "Site's ~$14/~$17 each is plausible but not pinned to one config."
     }
   }
 }
