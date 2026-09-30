@@ -1,6 +1,6 @@
 {
   "checked": "2026-09-30",
-  "_about": "Sources shown at the bottom of a guide (scripts/build_sources.py writes them). Add only links you have opened and that really cover the topic. 'used_for' says what the page covers, never more. Run 'python3 scripts/build_sources.py --verify' before changing 'checked': it must only move forward after the links were re-checked. skip_verify marks sites that block scripted requests (CRTC, Canada.ca): the URL came from a web search, so open it in a browser to re-check it.",
+  "_about": "Sources shown at the bottom of a guide (scripts/build_sources.py writes them). Add only links you have opened and that really cover the topic. 'used_for' says what the page covers, never more. Run 'python3 scripts/build_sources.py --verify' before changing 'checked': it must only move forward after the links were re-checked. skip_verify marks sites that block scripted requests (CRTC, Canada.ca, CDC, some others): the URL came from a web search, so open it in a browser to re-check it. kind: maker (makers and providers), authority (health and medical organizations), independent (reviews and testing), official (government sources and programs).",
   "pages": {
     "blog/best-medical-alert-systems.html": {
       "sources": [
@@ -81,6 +81,105 @@
         {"kind": "official", "title": "Government of Canada: Guaranteed Income Supplement", "url": "https://www.canada.ca/en/services/benefits/publicpensions/old-age-security/guaranteed-income-supplement.html", "used_for": "Eligibility for the income benefit that some carrier programs use", "skip_verify": true}
       ],
       "note": "Carrier prices and promotions change often and may differ by province. Check the carrier's page before you sign up."
+    },
+    "blog/best-blood-pressure-monitors-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "Omron: Platinum Upper Arm Monitor (BP5465)", "url": "https://omronhealthcare.com/products/platinum-upper-arm-blood-pressure-monitor-bp5465", "used_for": "Features, AFib screening and warranty"},
+        {"kind": "maker", "title": "Omron: Gold Upper Arm Monitor", "url": "https://omronhealthcare.com/products/gold-upper-arm-blood-pressure-monitor-bp5360", "used_for": "Features of Omron's current Gold monitor"},
+        {"kind": "maker", "title": "Omron: 3 Series Upper Arm Monitor", "url": "https://omronhealthcare.com/products/3-series-upper-arm-blood-pressure-monitor-bp7150", "used_for": "Features of Omron's current 3 Series monitor"},
+        {"kind": "maker", "title": "Withings: BPM Connect", "url": "https://www.withings.com/en-us/products/bpm-connect", "used_for": "Wi-Fi syncing, battery and the clinical validation protocol"},
+        {"kind": "authority", "title": "American Heart Association: Home blood pressure monitoring", "url": "https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings/monitoring-your-blood-pressure-at-home", "used_for": "Why upper-arm monitors are recommended and why to choose a validated one", "skip_verify": true},
+        {"kind": "authority", "title": "Validate BP: US Blood Pressure Validated Device Listing", "url": "https://www.validatebp.org/", "used_for": "The free list to check that a monitor has been clinically validated"},
+        {"kind": "authority", "title": "American Medical Association: How BP devices are validated", "url": "https://www.ama-assn.org/public-health/prevention-wellness/validation-bp-measurement-devices-clinical-accuracy", "used_for": "What clinical validation means"}
+      ],
+      "note": "Omron's pages for the Gold and 3 Series monitors now show the newer BP5360 and BP7150, so the BP5350 and BP7100 named on this page may be older models: check which one you are buying. We could not confirm a current maker page for the Greater Goods 0602."
+    },
+    "blog/best-blood-pressure-monitors-canada.html": {
+      "sources": [
+        {"kind": "maker", "title": "Omron (Canada): 10 Series Wireless Upper Arm Monitor (BP7450CAN)", "url": "https://omronhealthcare.com/en-ca/products/10-series-wireless-upper-arm-blood-pressure-monitor-bp7450can", "used_for": "Features, cuff size and warranty"},
+        {"kind": "maker", "title": "Omron (Canada): 3 Series Upper Arm Monitor (BP7100CAN)", "url": "https://omronhealthcare.com/en-ca/products/3-series-upper-arm-blood-pressure-monitor-bp7100can", "used_for": "Features and warranty"},
+        {"kind": "maker", "title": "Omron (Canada): Monitor with AFib Screening (BP7365CAN)", "url": "https://omronhealthcare.com/en-ca/products/blood-pressure-monitor-bp7365can", "used_for": "Features and AFib screening"},
+        {"kind": "authority", "title": "Hypertension Canada: Recommended devices (public list)", "url": "https://hypertension.ca/public/recommended-devices", "used_for": "The list to check that a monitor is validated"},
+        {"kind": "authority", "title": "Hypertension Canada: Device Recommendation Program", "url": "https://hypertension.ca/device-recommendation-program/", "used_for": "How devices are reviewed and recommended"},
+        {"kind": "authority", "title": "Hypertension Canada: Experts concerned over inaccurate blood pressure devices", "url": "https://hypertension.ca/news/experts-concerned-over-inaccurate-blood-pressure-devices/", "used_for": "Why many home monitors are not validated"},
+        {"kind": "authority", "title": "Heart & Stroke: Atrial fibrillation", "url": "https://www.heartandstroke.ca/heart-disease/conditions/atrial-fibrillation", "used_for": "How AFib risk rises with age"},
+        {"kind": "official", "title": "Health Canada: Medical Devices Active Licence Listing", "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/licences/medical-devices-active-licence-listing.html", "used_for": "Where to look up whether a medical device is licensed in Canada", "skip_verify": true}
+      ],
+      "note": "A&D's Canadian online shop currently shows \"Opening soon\" and Withings' Canadian site no longer shows a product page for the BPM Connect, so confirm that the A&D UA-767FAM and the Withings monitor are available in Canada before you buy. Hypertension Canada's list above is the place to check that a monitor is validated."
+    },
+    "blog/best-hearing-aids-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "ELEHEAR: Beyond Pro", "url": "https://elehear.com/products/beyond-pro", "used_for": "Features, price and trial period"},
+        {"kind": "maker", "title": "Jabra Enhance: Select M2", "url": "https://www.jabraenhance.com/product/enhanceselectm2", "used_for": "Features and service"},
+        {"kind": "maker", "title": "Sennheiser: All-Day Clear", "url": "https://us.sennheiser-hearing.com/products/sennheiser-all-day-clear", "used_for": "Features, battery and trial period"},
+        {"kind": "maker", "title": "Audien: Atom Pro 2", "url": "https://audienhearing.com/products/atom-pro-2", "used_for": "Features and price"},
+        {"kind": "maker", "title": "MDHearing: NEO XS PRO", "url": "https://www.mdhearingaid.com/hearing-aids/mdhearing-neo-xs-pro/", "used_for": "Features of the smallest model"},
+        {"kind": "official", "title": "FDA: OTC hearing aids, what you should know", "url": "https://www.fda.gov/medical-devices/hearing-aids/otc-hearing-aids-what-you-should-know", "used_for": "Who OTC hearing aids are for and when they start on October 17, 2022"},
+        {"kind": "official", "title": "NIDCD (NIH): Over-the-counter hearing aids", "url": "https://www.nidcd.nih.gov/health/over-counter-hearing-aids", "used_for": "OTC compared with prescription, and when to see a professional"},
+        {"kind": "official", "title": "Medicare: Hearing aid coverage", "url": "https://www.medicare.gov/coverage/hearing-aids", "used_for": "What Original Medicare does and does not cover"},
+        {"kind": "official", "title": "VA: Hearing aids", "url": "https://www.prosthetics.va.gov/psas/hearing_aids.asp", "used_for": "Hearing aids for eligible veterans"}
+      ],
+      "note": "The FDA describes OTC hearing aids as its own regulated category for adults with mild to moderate hearing loss. See its page for exactly what that does and does not mean."
+    },
+    "blog/best-hearing-aids-canada.html": {
+      "sources": [
+        {"kind": "maker", "title": "Phonak (Canada): Audéo Infinio", "url": "https://www.phonak.com/en-ca/hearing-devices/hearing-aids/audeo-infinio", "used_for": "Models, battery life and features"},
+        {"kind": "maker", "title": "ReSound (Canada): Vivia", "url": "https://www.resound.com/en-ca/hearing-aids/resound-hearing-aids/resound-vivia", "used_for": "Features and battery life"},
+        {"kind": "maker", "title": "Oticon: Intent", "url": "https://www.oticon.com/products/hearing-aids/family/intent", "used_for": "Features and battery life"},
+        {"kind": "maker", "title": "Costco Canada: Hearing Aid Centre", "url": "https://www.costco.ca/f/-/hearing-aid-centre", "used_for": "Hearing tests and how to book"},
+        {"kind": "official", "title": "Ontario: Hearing devices (Assistive Devices Program)", "url": "https://www.ontario.ca/page/hearing-devices", "used_for": "The Ontario grant toward hearing aids and how to apply"},
+        {"kind": "official", "title": "Alberta: AADL benefits covered", "url": "https://www.alberta.ca/aadl-benefits-covered", "used_for": "Alberta's hearing aid funding and who qualifies"},
+        {"kind": "official", "title": "B.C. Government: Over-the-counter hearing aids", "url": "https://news.gov.bc.ca/releases/2026HLTH0059-000716", "used_for": "British Columbia's decision on over-the-counter hearing aids", "skip_verify": true},
+        {"kind": "official", "title": "Health Canada: Medical Devices Active Licence Listing", "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/licences/medical-devices-active-licence-listing.html", "used_for": "Where to look up whether a medical device is licensed in Canada", "skip_verify": true}
+      ],
+      "note": "Jabra Enhance says its service is for people living in the United States, and the US version of this guide lists the Select 300 as discontinued, so check that the Jabra pick is available to you before relying on it. Funding amounts and rules change: confirm with your province and your audiologist."
+    },
+    "guides/hearing-aids.html": {
+      "sources": [
+        {"kind": "official", "title": "FDA: OTC hearing aids, what you should know", "url": "https://www.fda.gov/medical-devices/hearing-aids/otc-hearing-aids-what-you-should-know", "used_for": "The 2022 OTC hearing aid category and who it is for"},
+        {"kind": "official", "title": "NIDCD (NIH): Over-the-counter hearing aids", "url": "https://www.nidcd.nih.gov/health/over-counter-hearing-aids", "used_for": "OTC compared with prescription, and warning signs to see a professional"},
+        {"kind": "official", "title": "Medicare: Hearing aid coverage", "url": "https://www.medicare.gov/coverage/hearing-aids", "used_for": "What Original Medicare does and does not cover"},
+        {"kind": "official", "title": "VA: Audiology services", "url": "https://www.rehab.va.gov/audiology/", "used_for": "Hearing care for eligible veterans"}
+      ],
+      "note": "Prices and coverage change often. Check the FDA, Medicare and VA pages above for the current rules."
+    },
+    "blog/best-smartwatches-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "Apple: Introducing Apple Watch Series 12", "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/", "used_for": "Series 12 features, including the ECG app and Fall Detection"},
+        {"kind": "maker", "title": "Apple Support: Use Fall Detection with Apple Watch", "url": "https://support.apple.com/en-us/108896", "used_for": "How fall detection works and when it is on"},
+        {"kind": "maker", "title": "Apple Support: Heart health notifications", "url": "https://support.apple.com/en-us/120276", "used_for": "How irregular rhythm notifications work"},
+        {"kind": "maker", "title": "Samsung: Use the Detect fall feature on your smart watch", "url": "https://www.samsung.com/us/support/answer/ANS10003423/", "used_for": "How Galaxy Watch fall detection works and when it is off by default"},
+        {"kind": "maker", "title": "Garmin Support: Setting up Incident Detection or Fall Detection", "url": "https://support.garmin.com/en-US/?faq=RfaXahBWkH8Q7pVFLsuUmA", "used_for": "What Garmin's incident and fall detection do"},
+        {"kind": "maker", "title": "Garmin: Venu 4 owner's manual, safety and tracking features", "url": "https://www8.garmin.com/manuals/webhelp/GUID-2CF5620C-E585-4E0A-9CC3-9565533EEE4D/EN-US/GUID-64F677A5-03E0-453F-BFE3-E1B93D6FA3FC.html", "used_for": "Safety features on the Venu 4"},
+        {"kind": "maker", "title": "Medical Guardian: MGMove smartwatch", "url": "https://www.medicalguardian.com/medical-alert-systems/smart-watch-alert-app", "used_for": "Monitoring, LTE and the fall-detection add-on"},
+        {"kind": "maker", "title": "Bay Alarm Medical: SOS Smartwatch", "url": "https://www.bayalarmmedical.com/medical-alert-system/sos-smartwatch/", "used_for": "Standalone watch, monitoring and fall detection"},
+        {"kind": "independent", "title": "NCOA: Best medical alert watches", "url": "https://www.ncoa.org/product-resources/medical-alert-systems/best-medical-alert-watches/", "used_for": "NCOA's reviews of medical alert watches, to compare with ours"}
+      ],
+      "note": "Garmin's own manual says the Venu 4 can be set to detect falls as well as incidents, so check its current features on Garmin's page before relying on this page's Garmin comparison."
+    },
+    "blog/best-smartwatches-for-seniors-canada.html": {
+      "sources": [
+        {"kind": "maker", "title": "Apple (Canada): Apple Watch SE", "url": "https://www.apple.com/ca/apple-watch-se-3/", "used_for": "Watch features and Canadian models"},
+        {"kind": "maker", "title": "Apple Support (Canada): Use Fall Detection with Apple Watch", "url": "https://support.apple.com/en-ca/108896", "used_for": "How fall detection works and when it is on"},
+        {"kind": "maker", "title": "Apple (Canada): ECG app and irregular rhythm notification", "url": "https://www.apple.com/ca/newsroom/2019/07/ecg-app-and-irregular-heart-rhythm-notification-available-today-on-apple-watch/", "used_for": "Apple's announcement that the ECG app is licensed for Canada"},
+        {"kind": "maker", "title": "Samsung Canada: Use the Detect falls feature on your Galaxy Watch", "url": "https://www.samsung.com/ca/support/mobile-devices/galaxy-watch-detect-falls/", "used_for": "How Galaxy Watch fall detection works"},
+        {"kind": "maker", "title": "Garmin Support: Setting up Incident Detection or Fall Detection", "url": "https://support.garmin.com/en-US/?faq=RfaXahBWkH8Q7pVFLsuUmA", "used_for": "What Garmin's incident and fall detection do"},
+        {"kind": "maker", "title": "Lifeline Canada: On the Go Smartwatch", "url": "https://www.lifeline.ca/en/products/lifeline-on-the-go-smartwatch/", "used_for": "Monitoring, fall detection and 4G connection"},
+        {"kind": "official", "title": "Health Canada: Medical Devices Active Licence Listing", "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/licences/medical-devices-active-licence-listing.html", "used_for": "Where to look up whether a medical device is licensed in Canada", "skip_verify": true}
+      ],
+      "note": "Garmin's own support page says its watches can offer fall detection as well as incident detection, so check the current Venu 4 features before relying on this page's Garmin comparison."
+    },
+    "guides/fall-prevention-tech.html": {
+      "sources": [
+        {"kind": "official", "title": "CDC: Facts about older adult falls", "url": "https://www.cdc.gov/falls/data-research/facts-stats/index.html", "used_for": "How common falls are and how often they cause injury", "skip_verify": true},
+        {"kind": "official", "title": "CDC STEADI: Patient and caregiver resources", "url": "https://www.cdc.gov/steadi/patient-resources/index.html", "used_for": "Checklists and guidance for preventing falls", "skip_verify": true},
+        {"kind": "official", "title": "Public Health Agency of Canada: Seniors' falls in Canada", "url": "https://www.canada.ca/en/public-health/services/publications/healthy-living/seniors-falls-canada-second-report.html", "used_for": "How falls affect Canadian seniors", "skip_verify": true},
+        {"kind": "official", "title": "Health Canada: Preventing falls in and around your home", "url": "https://www.canada.ca/en/health-canada/services/healthy-living/your-health/lifestyles/seniors-aging-preventing-falls-around-your-home.html", "used_for": "Practical steps to make a home safer", "skip_verify": true},
+        {"kind": "maker", "title": "Apple Support: Use Fall Detection with Apple Watch", "url": "https://support.apple.com/en-us/108896", "used_for": "How the watch detects a fall and when it calls for help"},
+        {"kind": "maker", "title": "Samsung: Use the Detect fall feature on your smart watch", "url": "https://www.samsung.com/us/support/answer/ANS10003423/", "used_for": "How Galaxy Watch fall detection works and its limits"},
+        {"kind": "independent", "title": "AARP: Best medical alerts with fall detection", "url": "https://www.aarp.org/caregiving/home-care/best-medical-alert-systems-with-fall-detection", "used_for": "AARP's testing of alert systems with fall detection"}
+      ],
+      "note": "Technology can help, but it cannot prevent every fall. Talk to a doctor about your parent's fall risk."
     }
   }
 }

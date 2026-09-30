@@ -21,7 +21,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "scripts" / "sources.json"
-KINDS = [("maker", "From the makers and providers"), ("independent", "Independent reviews and testing"), ("official", "Government programs and rules")]
+KINDS = [("maker", "From the makers and providers"), ("authority", "Health and medical organizations"), ("independent", "Independent reviews and testing"), ("official", "Government sources and programs")]
 BLOCK_RE = re.compile(r"[ \t]*<!-- sources -->.*?<!-- /sources -->[ \t]*\n?", re.S)
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 problems = []
@@ -99,7 +99,7 @@ def validate(data):
 
 
 def verify(data):
-    UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/126.0", "Accept": "text/html,*/*"}
+    UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36", "Accept": "text/html,application/xhtml+xml", "Accept-Language": "en-US,en;q=0.9"}
     jobs = {(rel, s["url"]): s for rel, e in data["pages"].items() for s in e["sources"]}
     urls = sorted({u for _, u in jobs})
 
