@@ -325,6 +325,8 @@ def main():
     build_hreflang.main()
     import build_related
     build_related.main()
+    import standardize_ctas
+    standardize_ctas.main()
 
 
 if __name__ == "__main__":

@@ -583,7 +583,7 @@ def product_card(n, p):
         <div class="product-specs">
 {specs}
         </div>
-        <a href="{amazon(p['asin'])}" target="_blank" rel="sponsored noopener" class="btn-check-price">Check price on Amazon →</a>
+        <a href="{amazon(p['asin'])}" target="_blank" rel="sponsored noopener" class="btn-check-price">Check Price on Amazon →</a>
       </div>
     </div>
 """
