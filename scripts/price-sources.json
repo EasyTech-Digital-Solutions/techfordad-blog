@@ -610,11 +610,11 @@
       "verified": "2026-09-30"
     },
     "UltraPro BigEZ OneTouch Universal TV Remote (Model 85053)": {
-      "method": "news",
+      "method": "fetch",
       "url": "https://byjasco.com/products/ultrapro-2-device-onetouch-replacement-universal-remote-backlit-with-big-button",
-      "price": "$16.98-$16.99 on byjasco.com (manufacturer)",
+      "price": "~$17 (manufacturer $16.99, retail list $16.98)",
       "verified": "2026-09-30",
-      "note": "Conflicts with the already-tracked 'GE BigEZ 84666 / UltraPro 85053' entry's $10.99 (same domain, 6 days earlier). Needs reconciliation before editing the site."
+      "note": "Fixed on site: was quoting an occasional sale price ($10.99-$11) as the regular price."
     },
     "Medcenter Monthly Pill Organizer with Talking Alarm": {
       "method": "fetch",
