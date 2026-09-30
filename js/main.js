@@ -22,11 +22,24 @@ function onAffiliateClick(e) {
   let url;
   try { url = new URL(a.href); } catch { return; }
   if (!/(^|\.)amazon\.(com|ca)$/.test(url.hostname)) return;
-  track('affiliate_click', {
-    store: url.hostname.replace(/^www\./, ''),
-    product: url.searchParams.get('k') || url.pathname,
-    link_class: a.className || '',
-    link_url: a.href
+
+  // Which numbered product button is this? (1-based position among the per-product buttons on the page)
+  const productButtons = [...document.querySelectorAll('a.btn-check-price[data-cta="product_section"]')];
+  const idx = productButtons.indexOf(a);
+
+  // Where on the page was it clicked? Buttons carry data-cta (product_section, comparison_table);
+  // other Amazon links are sidebar or inline links.
+  let ctaLocation = a.dataset.cta || 'inline';
+  if (!a.dataset.cta && a.closest('.sidebar-box')) ctaLocation = 'sidebar';
+  if (!a.dataset.cta && a.closest('table')) ctaLocation = 'comparison_table';
+
+  // Measures outbound clicks to Amazon only, not purchases or commission.
+  track('amazon_affiliate_click', {
+    product_name: a.dataset.product || a.textContent.trim().slice(0, 100),
+    article_slug: location.pathname.split('/').pop().replace(/\.html$/, '') || 'home',
+    product_position: idx > -1 ? idx + 1 : 0,   // 0 = not one of the numbered product buttons
+    cta_location: ctaLocation,
+    country: /\.ca$/.test(url.hostname) ? 'CA' : 'US'
   });
 }
 document.addEventListener('click', onAffiliateClick);
