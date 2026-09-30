@@ -501,6 +501,100 @@
       "url": "https://www.oticon.ca/",
       "price": "Sold through audiologists only; no manufacturer list price published",
       "verified": "2026-09-30"
+    },
+    "VTech SN5147 Amplified Cordless Phone": {
+      "method": "fetch",
+      "url": "https://www.vtechphones.com/store/pd/4143/SN5147-Amplified-Corded-Cordless-Phone-with-Answering-System-Big-Buttons-Extra-Loud-Ringer-Smart-Call-Blocker",
+      "price": "$114.95 (VTech official)",
+      "verified": "2026-09-30"
+    },
+    "VTech CS6224-11 DECT 6.0 Cordless Phone (Canada)": {
+      "method": "fetch",
+      "url": "https://www.walmart.ca/en/ip/VTech-DECT-6-0-Cordless-Answering-System-with-Caller-ID-Call-Waiting-CS6224-11-Black/6000202710418",
+      "price": "CAD$32.97",
+      "verified": "2026-09-30"
+    },
+    "AT&T CL82407 4-Handset System": {
+      "method": "fetch",
+      "url": "https://telephones.att.com/pd/3738/CL82407-4-handset-cordless-answering-system-with-smart-call-blocker",
+      "price": "$114.95 (AT&T official)",
+      "verified": "2026-09-30"
+    },
+    "AT&T EL52303 3-Handset Cordless Phone System (Canada)": {
+      "method": "news",
+      "url": "https://telephones.att.com/pd/2375/EL52303-3-handset-cordless-answering-system-with-caller-ID-call-waiting",
+      "price": "$72.95 USD official / $64.99 Walmart US; CAD$84.89 (Walmart.ca) plausible but not directly confirmed",
+      "verified": "2026-09-30",
+      "note": "Needs a CAD-specific source."
+    },
+    "Doro 7050": {
+      "method": "news",
+      "url": "https://www.bestbuy.com/site/reviews/doro-7050-with-512mb-memory-cell-phone-black-white-consumer-cellular/6293310",
+      "price": "$49.99 (Best Buy)",
+      "verified": "2026-09-30"
+    },
+    "Artfone C1+ 4G Senior Cell Phone (Canada)": {
+      "method": "news",
+      "url": "https://www.amazon.ca/artfone-Seniors%E4%B8%A8Unlocked-Button%E4%B8%A81800mAh-Battery%E4%B8%A8Charging-Reporting%E4%B8%A8Speed/dp/B0DFYKWSNZ",
+      "price": "$54.99 CAD (Amazon.ca)",
+      "verified": "2026-09-30"
+    },
+    "Omron BP-7365 with AFib Screening": {
+      "method": "news",
+      "url": "https://www.costco.ca/p/-/omron-bp-7365-blood-pressure-monitor-with-afib-screening-technology/4000406021",
+      "price": "$94.99 CAD at Costco Canada",
+      "verified": "2026-09-30"
+    },
+    "A&D Medical UA-767FAM Multi-User": {
+      "method": "news",
+      "url": "https://www.amazon.ca/LifeSource-Multi-User-Pressure-Monitor-UA-767FAM/dp/B01D8L9I8M",
+      "price": "$89.99 CAD (Amazon.ca and A&D official store)",
+      "verified": "2026-09-30"
+    },
+    "Greater Goods 0602": {
+      "method": "fetch",
+      "url": "https://shop.greatergoods.com/products/greater-goods-blood-pressure-monitor-cuff-kit-by-balance-digital-bp-meter-with-large-display-upper-arm-cuff-set-also-comes-with-tubing-and-device-bag-bp-monitor-new",
+      "price": "$39.99 (official store)",
+      "verified": "2026-09-30"
+    },
+    "Omron 10 Series Wireless (BP7450CAN)": {
+      "method": "news",
+      "url": "https://www.bestbuy.ca/en-ca/product/omron-10-series-arm-blood-pressure-monitor-bp7450can/18911270",
+      "price": "Wide retailer spread: $127.98 (Best Buy) to $330 CAD (specialty medical); site's $143-149 sits in the middle",
+      "verified": "2026-09-30",
+      "note": "Needs a 2nd matching source before pinning down."
+    },
+    "Kobo Libra Colour (US)": {
+      "method": "fetch",
+      "url": "https://ereader.kobo.com/en-us/products/kobo-libra-colour",
+      "price": "$259.99",
+      "verified": "2026-09-30"
+    },
+    "Amazon Kindle Scribe (2026, 32GB with front light)": {
+      "method": "news",
+      "url": "https://templacity.com/kindle-scribe/kindle-scribe-pricing/",
+      "price": "$499 (32GB with front light)",
+      "verified": "2026-09-30"
+    },
+    "Lenovo Tab M11 (Canada)": {
+      "method": "news",
+      "url": "https://www.bestbuy.ca/en-ca/product/lenovo-tab-m11-11-64gb-android-13-tablet-with-mediatek-helio-g88-8-core-processor-luna-grey/17744707",
+      "price": "Retailer spread $149.88 (Canada Computers) to $294.96 (Walmart, OOS); Best Buy $189.97. Site's $249 sits above two of three sources.",
+      "verified": "2026-09-30",
+      "note": "Possibly stale (site may be too high); needs a cleaner 2nd source before editing the live page."
+    },
+    "AngelSense GPS Tracker (US)": {
+      "method": "news",
+      "url": "https://neurolaunch.com/angelsense-review/",
+      "price": "From $39.99/mo (US base plan)",
+      "verified": "2026-09-30"
+    },
+    "AngelSense Guardian Kit (Canada)": {
+      "method": "news",
+      "url": "https://gpsdad.com/reviews/angelsense-review-2026/",
+      "price": "Device ~$229 USD one-time; plans $39.99-$64.99/mo USD (US pricing found; CAD-specific not confirmed)",
+      "verified": "2026-09-30",
+      "note": "Site's CAD figures are plausible after currency conversion but not directly sourced."
     }
   }
 }
