@@ -832,6 +832,66 @@
       "price": "$10-$11, 8,400+ reviews, confirmed in stock",
       "verified": "2026-09-30",
       "note": "Replaces the GE 71262 (dead Amazon listing) as the article's 4-device pick."
+    },
+    "Sennheiser All-Day Clear": {
+      "method": "news",
+      "url": "https://www.hearingtracker.com/hearing-aids/sennheiser-all-day-clear",
+      "price": "$999.95/pair list; sale $799.95/pair",
+      "verified": "2026-09-30"
+    },
+    "Tracki 4G Mini GPS Tracker (Canada)": {
+      "method": "news",
+      "url": "https://tracki.com/products/tracki-2025-4g-model-mini-real-time-gps-tracker-2-years-subscription-included",
+      "price": "Device $14.90-$39.90 CAD depending on variant; sub $9.95-$19.95 USD/mo",
+      "verified": "2026-09-30",
+      "note": "Site's ~$40 device / $14-20/mo CAD is within this spread."
+    },
+    "VTech CareLine SN5127 Amplified Cordless Phone (Canada)": {
+      "method": "news",
+      "url": "https://www.amazon.ca/VTech-SN5127-Dect_6-0-1-Handset-Telephone/dp/B07TB4RKT9",
+      "price": "$80-$119.99 CAD across retailers",
+      "verified": "2026-09-30",
+      "note": "Matches site's $80-100 range closely."
+    },
+    "Clarity XLC8 Amplified Bluetooth Cordless Phone (Canada)": {
+      "method": "fetch",
+      "url": "https://shop.omnihearing.ca/products/clarity-xlc8-amplified-bluetooth-cordless-phone",
+      "price": "$280-$290 CAD",
+      "verified": "2026-09-30",
+      "note": "Fixed on site: was $150-200 CAD, roughly half the real price."
+    },
+    "Clarity XLC3.4+": {
+      "method": "news",
+      "url": "https://www.diglo.com/clarity-professional-xlc34-amplified-phone;sku=CL-XLC3.4+;s=221;p=CL-XLC3.4+",
+      "price": "$159.95 list (Diglo, exact match); sale range $117-$140",
+      "verified": "2026-09-30"
+    },
+    "Doro PhoneEasy 626 (Canada)": {
+      "method": "news",
+      "url": "https://www.bestbuy.ca/en-ca/product/refurbished-good-doro-phoneeasy-626-unlocked-cell-phone/14880466",
+      "price": "$66-$119 CAD across new/refurbished listings",
+      "verified": "2026-09-30",
+      "note": "Overlaps site's $99-149 CAD range."
+    },
+    "VTech CS6124-2 (2-Handset)": {
+      "method": "unverifiable",
+      "url": "",
+      "price": "Search only resolved the single-handset CS6124 ($27.84-$41.99); the specific -2 variant not distinctly confirmed",
+      "verified": "2026-09-30"
+    },
+    "Lifeline On the Go (Canada)": {
+      "method": "fetch",
+      "url": "https://www.amazon.ca/Lifeline-Automatic-Monitoring-Technology-Communication/dp/B0DJ1S8422",
+      "price": "$35.95 CAD/mo, device $149.95 CAD",
+      "verified": "2026-09-30",
+      "note": "Exact match to site's figures."
+    },
+    "Amazon Kindle Paperwhite (16 GB, post-hike)": {
+      "method": "news",
+      "url": "https://blog.the-ebook-reader.com/2026/08/21/amazon-has-just-raised-the-price-of-kindles-by-40-50-each/",
+      "price": "$199.99 (raised from $159.99 on Aug 21, 2026)",
+      "verified": "2026-09-30",
+      "note": "Exact match to site's figure; up to 52% hikes in Canada, consistent with the higher CAD figure."
     }
   }
 }
