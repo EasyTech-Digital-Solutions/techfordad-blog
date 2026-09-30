@@ -701,7 +701,7 @@ def hub_page():
     cards = []
     for g in GUIDES:
         cards.append(f"""      <div class="card">
-        <div class="card-img card-photo"><img src="../images/heroes/{g['hero']}" alt="" width="400" height="180" loading="lazy"></div>
+        <div class="card-img card-photo"><img src="../images/cards/{g['hero'].rsplit('.', 1)[0]}.webp" alt="" width="400" height="180" loading="lazy"></div>
         <div class="card-body">
           <span class="card-tag">Gift Guide</span>
           <h2>{e(g['h1'])}</h2>
@@ -786,7 +786,7 @@ def home_block():
     tiles = []
     for g in GUIDES:
         tiles.append(f"""          <li><a class="gift-tile" href="gift-guides/{g['slug']}.html">
-            <span class="gift-tile-img"><img src="images/heroes/{g['hero']}" alt="" width="400" height="180" loading="lazy"></span>
+            <span class="gift-tile-img"><img src="images/cards/{g['hero'].rsplit('.', 1)[0]}.webp" alt="" width="400" height="180" loading="lazy"></span>
             <span class="gift-tile-body"><span class="gift-tile-title">{e(g['short'])}</span><span class="gift-chip">{e(CHIPS[g['slug']])}</span></span>
           </a></li>""")
     return f"""<section class="gift-feature" id="gift-guides">
@@ -812,7 +812,7 @@ def home_block():
 def update_homepage():
     path = os.path.join(ROOT, "index.html")
     with open(path, encoding="utf-8", newline="") as f:
-        text = f.read()
+        text = f.read().replace(chr(13) + chr(10), chr(10))  # Windows checkouts use CRLF
     new, n = HOME_SECTION_RE.subn(lambda _m: home_block(), text, count=1)
     if n and new != text:
         with open(path, "w", encoding="utf-8", newline="") as f:
@@ -848,7 +848,7 @@ def add_review_links():
         if not os.path.exists(path):
             continue
         with open(path, encoding="utf-8", newline="") as f:
-            text = f.read()
+            text = f.read().replace(chr(13) + chr(10), chr(10))  # Windows checkouts use CRLF
         text = LINK_RE.sub("", text)
         g = by_slug[slug]
         block = (f'    <!-- gift-links -->\n    <div class="gift-more">\n      <strong>See more gift ideas</strong>\n'
@@ -865,7 +865,7 @@ def add_review_links():
 def add_sitemap():
     path = os.path.join(ROOT, "sitemap.xml")
     with open(path, encoding="utf-8", newline="") as f:
-        text = f.read()
+        text = f.read().replace(chr(13) + chr(10), chr(10))  # Windows checkouts use CRLF
     urls = [f"{SITE}/gift-guides/index.html"] + [f"{SITE}/gift-guides/{g['slug']}.html" for g in GUIDES]
     added = 0
     for u in urls:

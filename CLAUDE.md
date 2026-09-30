@@ -23,7 +23,8 @@ Every article hero should have a real photo, not just text on the navy backgroun
 3. Wire it into the page in two places:
    - `<meta property="og:image" content="https://www.techfordad.com/images/heroes/hero-<topic>.jpg"/>` in the `<head>`.
    - `<img src="../images/heroes/hero-<topic>.jpg" alt="..." width="860" height="480" fetchpriority="high">` as the **first child** of `<div class="article-hero">`, before `.article-hero-inner`. (The CSS absolutely-positions it as a `background: cover`, so exact source dimensions don't matter — the `width`/`height` attributes are just layout-reservation hints and don't need to match the file's real pixel size. Use `fetchpriority="high"`, not `loading="lazy"`: the hero is the first thing visitors see, and lazy-loading it delays the page.)
-4. If no suitable photo exists yet, it's fine to ship the article with a text-only hero (many pages already work this way), but **come back and add one** — don't leave `og:image` pointing at a file that was never actually saved. If in doubt, point `og:image` at `images/og-default.svg` (the site's real fallback) rather than a hero filename that doesn't exist yet.
+4. **Run `python3 scripts/make_card_images.py`** so the new hero also gets a small WebP card thumbnail in `images/cards/` (the cards on the reviews index, homepage, gift hub and 404 load these, not the full hero). The card `<img>` in `blog/index.html` uses `../images/cards/hero-<topic>.webp`; the homepage and 404 use `images/cards/...`.
+5. If no suitable photo exists yet, it's fine to ship the article with a text-only hero (many pages already work this way), but **come back and add one** — don't leave `og:image` pointing at a file that was never actually saved. If in doubt, point `og:image` at `images/og-default.svg` (the site's real fallback) rather than a hero filename that doesn't exist yet.
 
 ## Content conventions
 
