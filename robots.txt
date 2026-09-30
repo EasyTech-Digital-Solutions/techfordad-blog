@@ -11,3 +11,4 @@ Disallow: /author/
 Disallow: /category/
 
 Sitemap: https://www.techfordad.com/sitemap.xml
+# verified one-hop apex redirect and security headers on 2026-09-30
