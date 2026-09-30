@@ -755,6 +755,83 @@
       "price": "Amazon-only white-label keyboards; same as the already-tracked combined entry",
       "verified": "2026-09-30",
       "note": "Consistent with the existing 'Large-print keyboards' unverifiable entry."
+    },
+    "Aura Carver Mat digital frame (10-inch)": {
+      "method": "news",
+      "url": "https://www.bestbuy.com/product/aura-home-aura-carver-mat-10-digital-wifi-photo-frame-charcoal-with-paper-mat-charcoal-dark/J3R84SYHTQ/sku/6669675",
+      "price": "$179-$179.99 with mat; $149 without",
+      "verified": "2026-09-30"
+    },
+    "Birdbuddy Pro smart bird feeder": {
+      "method": "news",
+      "url": "https://camelcamelcamel.com/product/B0DHY6B9GY",
+      "price": "List $299; sale range $168-$292; newer PRO model preorder $239",
+      "verified": "2026-09-30"
+    },
+    "Skylight Frame, 10-inch": {
+      "method": "news",
+      "url": "https://www.walmart.com/ip/Skylight-Frame-10-inch-Wifi-Digital-Picture-Frame-Email-Photos-from-Anywhere-Touch-Screen-Display/498550150",
+      "price": "$139-$140 (basic 8GB model)",
+      "verified": "2026-09-30"
+    },
+    "Avantree Ensemble TV headphones": {
+      "method": "news",
+      "url": "https://www.amazon.com/Avantree-Ensemble-Earpads-Headphones-Comfortable/dp/B0DZBWTV74",
+      "price": "$109.99",
+      "verified": "2026-09-30"
+    },
+    "AINFTIME day and date clock": {
+      "method": "news",
+      "url": "https://www.amazon.com/AINFTIME-Elderly-3-Calendar-Dementia-Alzheimers/dp/B0BKV7TVNL",
+      "price": "$26.99-$39.99 depending on size/color variant",
+      "verified": "2026-09-30",
+      "note": "Site's $29.99 falls within this spread."
+    },
+    "Ember Mug 2 (10 oz)": {
+      "method": "news",
+      "url": "https://www.bestbuy.com/product/ember-temperature-control-smart-mug2-10-oz-black/J3GTZXXQ2P",
+      "price": "$129.95 regular; sale ~$90",
+      "verified": "2026-09-30",
+      "note": "Site's $89.99 matches sale pricing, not the $129.95 regular price."
+    },
+    "Click & Grow indoor herb garden": {
+      "method": "news",
+      "url": "https://www.amazon.com/Click-Grow-Smart-Garden-Indoor/dp/B01MRVMKQH",
+      "price": "$99.95 (3-pod model)",
+      "verified": "2026-09-30"
+    },
+    "Nazano lighted magnifier": {
+      "method": "news",
+      "url": "https://us.amazon.com/Magnifying-Illuminated-Magnifier-Inspection-Degeneration/dp/B08PP4RJ5J",
+      "price": "$14.89 list ($9.35 typical sale)",
+      "verified": "2026-09-30"
+    },
+    "American Lifetime dementia clock": {
+      "method": "news",
+      "url": "https://www.amazon.com/American-Lifetime-Dementia-Digital-Seniors/dp/B01N47H0IG",
+      "price": "$54.95-$59.95 (8-inch)",
+      "verified": "2026-09-30"
+    },
+    "EZVALO 6-pack rechargeable motion-sensor night lights": {
+      "method": "news",
+      "url": "https://www.amazon.com/EZVALO-Charging-Rechargeable-Magnetic-Nightlight/dp/B0GHQHXV12",
+      "price": "$55.99, confirmed in stock, 4.7 stars/115 reviews",
+      "verified": "2026-09-30",
+      "note": "Replaces Lyridz (out of stock) in the no-budget-cap safety guide."
+    },
+    "AMIR 6-pack motion-sensor stair lights": {
+      "method": "news",
+      "url": "https://www.amazon.com/AMIR-Cordless-Battery-Powered-Hallway-Bathroom/dp/B0B8MR5X6Y",
+      "price": "$15.99",
+      "verified": "2026-09-30",
+      "note": "Replaces Lyridz (out of stock) in the under-$50 gift guide."
+    },
+    "GE 4-Device Backlit Universal Remote (Model 48843)": {
+      "method": "news",
+      "url": "https://www.amazon.com/GE-Universal-Panasonic-Streaming-4-Device/dp/B088Y2JFHB",
+      "price": "$10-$11, 8,400+ reviews, confirmed in stock",
+      "verified": "2026-09-30",
+      "note": "Replaces the GE 71262 (dead Amazon listing) as the article's 4-device pick."
     }
   }
 }
