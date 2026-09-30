@@ -221,6 +221,7 @@ ABOUT_ITEMS = [
     ("Our Story", "our-story.html"),
     ("Contact", "contact.html"),
     ("Privacy Policy", "privacy-policy.html"),
+    ("How We Review", "how-we-review.html"),
     ("Affiliate Disclosure", "affiliate-disclosure.html"),
 ]
 ABOUT_LINK_RE = re.compile(r'[ \t]*<a href="(?:\.\./|/)?about\.html">About</a>[ \t]*\n?')
