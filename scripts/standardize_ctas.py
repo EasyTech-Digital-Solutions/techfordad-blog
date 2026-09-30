@@ -59,10 +59,13 @@ def fix(path, check):
         attrs, dom, inner = m.group(1), m.group(2), m.group(3)
         if 'class="btn-check-price"' not in attrs:
             return m.group(0)
+        if 'data-cta="' in attrs and 'data-cta="product_section"' not in attrs:
+            return m.group(0)  # buttons placed by other scripts (e.g. after a table) carry their own label
         label = "Check Price on Amazon.ca →" if dom == "ca" else "Check Price on Amazon →"
-        attrs = re.sub(r'\s*aria-label="[^"]*"', "", attrs)
+        attrs = re.sub(r'\s*(?:aria-label|data-cta|data-product)="[^"]*"', "", attrs)
         name = product_name(old, m.start())
         if name:
+            attrs += f' data-cta="product_section" data-product="{html.escape(name, quote=True)}"'
             attrs += f' aria-label="Check Price on Amazon{".ca" if dom == "ca" else ""}: {html.escape(name, quote=True)}"'
         return f"<a {attrs}>{label}</a>"
 

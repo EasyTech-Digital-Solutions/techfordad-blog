@@ -94,6 +94,7 @@ def main():
     if '--all' in sys.argv:
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_hreflang.py'), '--check'], check=True)
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_related.py'), '--check'], check=True)
+        subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_buying_summary.py'), '--check'], check=True)
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'standardize_ctas.py'), '--check'], check=True)
     for rel in pages:
         check_page(rel)
