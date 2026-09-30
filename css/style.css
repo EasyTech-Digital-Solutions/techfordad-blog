@@ -1299,3 +1299,5 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
 .table-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: 4px 0 28px; }
 .table-cta .btn-check-price { margin: 0; padding: 12px 24px; min-height: 44px; }
 .table-cta span { color: var(--muted); font-size: .95rem; }
+.quick-info a { color: inherit; text-decoration: none; }
+.quick-info a:hover strong, .quick-info a:focus-visible strong { text-decoration: underline; }
