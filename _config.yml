@@ -1,0 +1,17 @@
+# GitHub Pages builds this site with Jekyll. This file changes nothing about how the pages look or
+# work: every page is plain HTML with no front matter, so Jekyll copies it as-is. It only keeps
+# internal files OUT of the published website. The repository is public and stays public, but the
+# site at techfordad.com should not serve project notes, build scripts or the admin panel.
+#
+# Anything listed here still lives in the repo (git, GitHub API and the weekly workflow are
+# unaffected); it just isn't published. Add any new internal file or folder here.
+exclude:
+  - CLAUDE.md
+  - ARCHITECTURE.md
+  - README.md
+  - docs
+  - scripts
+  - admin           # the admin panel is run locally, see admin/README.md
+  - newsletter-log.json
+  - Gemfile
+  - Gemfile.lock

@@ -1,0 +1,19 @@
+# Weekly pull requests when a pinned dependency has a newer version or a security fix.
+# Nothing is merged automatically: review the PR, then merge it (or close it).
+version: 2
+updates:
+  # Versions of the GitHub Actions used by the workflows (pinned to commit hashes)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"
+
+  # Python packages used by the price bot (scripts/requirements.txt)
+  - package-ecosystem: "pip"
+    directory: "/scripts"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "deps"
