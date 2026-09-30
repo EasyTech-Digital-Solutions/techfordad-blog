@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 TITLE = "Our Top Picks"
-BOX_RE = re.compile(r'(<div class="sidebar-box">\s*<h3>)(?:Quick Picks|Our Top Picks)(</h3>)(.*?)(?=<div class="sidebar-box">|<p class="disclaimer"|</aside>)', re.S)
+BOX_RE = re.compile(r'(<div class="sidebar-box">\s*<h3>)(?:Quick Picks|Our Picks|Our Top Picks)(</h3>)(.*?)(?=<div class="sidebar-box">|<p class="disclaimer"|</aside>)', re.S)
 ITEM_RE = re.compile(r'<div class="quick-pick">.*?</span>\s*</div>\s*</div>', re.S)
 NAME_RE = re.compile(r"<strong>(.*?)</strong>", re.S)
 problems = []
