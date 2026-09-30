@@ -66,7 +66,7 @@ PLAIN_RE = re.compile(r'[ \t]*<a href="((?:\.\./|/)?blog/)index\.html">All Revie
 
 def read(path):
     with open(path, encoding="utf-8", newline="") as f:
-        return f.read()
+        return f.read().replace("\r\n", "\n")  # Windows checkouts use CRLF; the patterns below expect LF
 
 
 def write(path, text):
@@ -320,6 +320,8 @@ def main():
     print(f"USA {len(usa)} | Canada {len(canada)} | pages updated {changed} | skipped {skipped}")
     for title, items in (("USA", usa), ("Canada", canada)):
         print(title + ": " + ", ".join(label for label, _ in items))
+    import build_hreflang
+    build_hreflang.main()
 
 
 if __name__ == "__main__":

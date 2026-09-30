@@ -91,6 +91,8 @@ def main():
         changed = git('diff', '--name-only', 'HEAD').split() + git('ls-files', '--others', '--exclude-standard').split()
         pages = [f for f in changed if f.endswith('.html') and (ROOT / f).exists()]
     check_products()
+    if '--all' in sys.argv:
+        subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_hreflang.py'), '--check'], check=True)
     for rel in pages:
         check_page(rel)
     if problems:
