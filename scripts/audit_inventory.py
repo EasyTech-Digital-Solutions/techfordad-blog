@@ -16,6 +16,9 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+
 ROOT = Path(__file__).parent.parent
 PRICE_RE = re.compile(r'(?:CA)?\$[\d,]+(?:\.\d{2})?(?:\s?CAD)?(?:/mo(?:nth)?|/year|/yr|/pair)?')
 PRICE_LABEL_RE = re.compile(r'price|cost|fee', re.I)
@@ -129,7 +132,7 @@ def main():
         if e['file'].startswith('blog/') and not e['hero_image']: flags.append('no hero image')
         if e['hero_image_exists'] is False: flags.append('hero image file missing')
         print(f'- {e["file"]} (modified {e["date_modified"]}, badge {e["updated_badge"]})'
-              + (f' — ⚠ {", ".join(flags)}' if flags else ''))
+              + (f' -- WARNING: {", ".join(flags)}' if flags else ''))
     print('\n## Every price mention, by page (includes guides and prose, not just cards)\n')
     for e in report:
         print(f'### {e["file"]}')

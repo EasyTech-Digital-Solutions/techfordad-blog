@@ -97,6 +97,7 @@ def main():
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_sources.py'), '--check'], check=True)
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_buying_summary.py'), '--check'], check=True)
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_product_schema.py'), '--check'], check=True)
+        subprocess.run([sys.executable, str(ROOT / 'scripts' / 'check_internal_links.py')], check=True)
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_sidebar_picks.py'), '--check'], check=True)
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'standardize_ctas.py'), '--check'], check=True)
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'amazon_registry.py')], check=True)
@@ -105,7 +106,7 @@ def main():
     if problems:
         print('\n'.join(f'✗ {p}' for p in problems))
         sys.exit(1)
-    print(f'✓ products.json and {len(pages)} page(s) OK')
+    print(f'OK: products.json and {len(pages)} page(s)')
 
 
 if __name__ == '__main__':
