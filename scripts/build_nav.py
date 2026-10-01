@@ -329,6 +329,8 @@ def main():
     build_sources.main()
     import build_buying_summary
     build_buying_summary.main()
+    import build_product_schema
+    build_product_schema.main()
     import build_sidebar_picks
     build_sidebar_picks.main()
     import standardize_ctas

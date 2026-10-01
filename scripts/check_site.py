@@ -96,6 +96,7 @@ def main():
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_related.py'), '--check'], check=True)
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_sources.py'), '--check'], check=True)
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_buying_summary.py'), '--check'], check=True)
+        subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_product_schema.py'), '--check'], check=True)
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_sidebar_picks.py'), '--check'], check=True)
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'standardize_ctas.py'), '--check'], check=True)
         subprocess.run([sys.executable, str(ROOT / 'scripts' / 'amazon_registry.py')], check=True)
