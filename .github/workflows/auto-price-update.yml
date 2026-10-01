@@ -1,9 +1,12 @@
 name: Auto Price Update
 
 on:
-  schedule:
-    - cron: '0 9 * * 6'   # Every Saturday at 9am UTC (1 hour after price-check issue)
-  workflow_dispatch:        # Manual trigger from Actions tab
+  # Weekly schedule retired 2026-09-30: superseded by the monthly claude.ai
+  # routine ("TechForDad — Monthly Content & Price Audit"), which does real
+  # WebFetch/news verification across all products instead of this bot's
+  # mechanical dollar-amount swap on a narrow products.json subset. Kept as
+  # workflow_dispatch only, for an occasional manual spot-fix.
+  workflow_dispatch:
 
 jobs:
   update-prices:
