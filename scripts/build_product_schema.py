@@ -21,7 +21,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PAGES = sorted((ROOT / "blog").glob("*.html"))
+PAGES = sorted((ROOT / "blog").glob("*.html")) + sorted((ROOT / "gift-guides").glob("*.html"))
 SITE = "https://www.techfordad.com"
 
 BLOCK_RE = re.compile(r'[ \t]*<!-- product-schema -->.*?<!-- /product-schema -->[ \t]*\r?\n?', re.S)
