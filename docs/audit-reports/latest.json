@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-10-01",
+  "status": "partial",
+  "groups_audited": ["medical alerts", "phones", "tablets/e-readers/laptops/keyboards", "smart home", "health", "GPS trackers", "guides", "gift guides"],
+  "groups_total": 8,
+  "groups_missed": [],
+  "changed": [],
+  "discontinued": [],
+  "needs_human_review": [
+    {"item": "This session's network egress policy", "note": "WebFetch and raw curl both returned blocked/403 for every external domain tried (techfordad.com, apple.com, rogers.com, resound.com, etc.) via a 'gateway answered 403 to CONNECT' policy denial. This made the Step 3h/3.5h live-site smoke test and any fresh 'fetch'-method price verification impossible this run. Substituted GitHub Pages deployment-run status (run 178, commit 3378514, conclusion: success) as an indirect health signal. A human or a future session with working WebFetch should load https://www.techfordad.com/ and one article in a real browser to confirm."},
+    {"item": "scripts/build_sources.py --verify", "note": "Ran but every one of 89 URLs came back URLError (0 OK) due to the same egress block, not real link rot (confirmed via direct curl: 403 CONNECT to multiple unrelated hosts). Results are not usable this run; 'checked' date in scripts/sources.json was correctly left untouched. Re-run in an environment with working outbound HTTPS."},
+    {"item": "AngelSense / Jiobit", "note": "Prices not published in page content; carried over from prior pass as unverifiable."},
+    {"item": "Large-print keyboards (KOPJIPPOM, BOOGIIO, SABLUTE, Nuklz)", "note": "Amazon-only white-label listings, can't be fetched; carried over as unverifiable."},
+    {"item": "Lifeline Canada", "note": "No CAD pricing published; quote-only by phone."},
+    {"item": "MedMinder Automatic Pill Dispenser", "note": "Pricing page unreachable; site's $125/mo figure unconfirmed."},
+    {"item": "Lil Tracker 4G Senior GPS Watch", "note": "No pricing shown on manufacturer site; phone/email quote only."},
+    {"item": "Telus SmartHome Security (formerly ADT Canada)", "note": "Pricing page unreachable (server error) in the prior pass."},
+    {"item": "SimpliSafe Home Security", "note": "Pricing is JS-rendered, can't be fetched."},
+    {"item": "ADT Home Security", "note": "Site blocks automated fetches."},
+    {"item": "Vivint Smart Security", "note": "Pricing page not found."},
+    {"item": "Cove Home Security", "note": "Pricing page not found."},
+    {"item": "Phonak Audéo Infinio (Canada)", "note": "Sold through audiologists only; no manufacturer list price published."},
+    {"item": "ReSound Vivia (Canada)", "note": "Sold through audiologists only; no manufacturer list price published."},
+    {"item": "Oticon Intent (Canada)", "note": "Sold through audiologists only; no manufacturer list price published."},
+    {"item": "GE Universal Remote for Seniors (Model 71262)", "note": "Currently unavailable on Amazon; no reliable price found."},
+    {"item": "Rogers Smart Home Monitoring", "note": "Search results conflated with an unrelated Xfinity product; no reliable figure found."},
+    {"item": "VTech CS6124-2 (2-Handset)", "note": "Search only resolved the single-handset CS6124; the -2 variant price not distinctly confirmed."}
+  ],
+  "content_freshness": [],
+  "images_needing_attention": [
+    "guides/7-tech-essentials-checklist.html — og:image is the site default (text-only hero is the documented fallback, not an error)",
+    "guides/caregiver-resources.html — og:image is the site default",
+    "guides/fall-prevention-tech.html — og:image is the site default",
+    "guides/gps-trackers.html — og:image is the site default",
+    "guides/hearing-aids.html — og:image is the site default",
+    "guides/home-safety-checklist.html — og:image is the site default",
+    "index.html — og:image is the site default"
+  ],
+  "site_health": {"checked": false, "ok": null, "note": "WebFetch to www.techfordad.com returned EGRESS_BLOCKED this session (confirmed not domain-specific: apple.com and others also blocked). Used GitHub Pages deployment-run success for this run's commit as a substitute signal; a real browser/WebFetch check is still needed."},
+  "coverage": {"verified_by_fetch": 0, "verified_by_news": 0, "unverified": 0},
+  "site_stats": {"products_compared_claim": 151, "source_links_failing": null, "gift_guides_last_checked": "2026-09-30"}
+}
