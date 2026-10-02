@@ -47,15 +47,15 @@
     toolbar.rows = tops.size;
   }
 
-  // Comparison table: under "comparison" (USA pages) or "Top Picks at a Glance" (Canada pages)
+  // Comparison table: the section under <h2 id="comparison">
+  const compare = document.querySelector('h2#comparison');
   const sectionHasTable = (h) => {
     for (let n = h.nextElementSibling; n && n.tagName !== 'H2'; n = n.nextElementSibling) {
       if (n.tagName === 'TABLE' || n.querySelector('table')) return true;
     }
     return false;
   };
-  const compare = ['comparison', 'top-picks'].map((id) => document.querySelector('h2#' + id)).find((h) => h && sectionHasTable(h)) || null;
-  const hasCompareTable = !!compare;
+  const hasCompareTable = !!compare && sectionHasTable(compare);
   const tableTools = $$('.table-tools');
   const hint = document.querySelector('.table-tools .table-hint');
   const scroller = (() => {

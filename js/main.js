@@ -287,10 +287,7 @@ document.querySelectorAll('#year').forEach(el => {
   host.insertBefore(bar, host.firstChild);
 
   // One-click print right where the reader is looking at the comparison table.
-  const hasTable = (nodes) => nodes.some(n => n.tagName === 'TABLE' || (n.querySelector && n.querySelector('table')));
-  let tableSection = section('comparison');
-  if (!hasTable(tableSection)) tableSection = section('top-picks');  // Canada pages put the table under "Top Picks at a Glance"
-  if (!hasTable(tableSection)) tableSection = [];
+  const tableSection = section('comparison');
   const wrap = tableSection.find(n => n.tagName === 'TABLE' || (n.querySelector && n.querySelector('table')));
   if (wrap) {
     const tools = document.createElement('div');

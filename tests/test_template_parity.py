@@ -12,6 +12,10 @@ import pages as P
 ARTICLE_KINDS = {"article-us", "article-ca"}
 # USA pages whose sidebar is deliberately different (a "Quick Guide" box instead of "Our Top Picks"). Canada has none.
 SIDEBAR_EXCEPTIONS = {"blog/medical-alert-no-monthly-fee.html"}
+# A how-to guide, not a product review: it has its own top-of-page notes instead of the review disclosure box.
+NOT_A_REVIEW = {"blog/how-to-set-up-ipad-for-elderly-parent.html"}
+# A head-to-head comparison: its cards are labelled J1, J2, i1 (one letter per product line), not ranked 1..N.
+LABELLED_CARDS = {"blog/jitterbug-vs-iphone-for-seniors.html"}
 
 
 def _article(html_page):
@@ -82,3 +86,109 @@ def test_table_of_contents_numbering_is_continuous(html_page):
     tail = numbers[first:]
     assert all(tail), f"entries after the first numbered one are not numbered: {[texts[first + i] for i, n in enumerate(tail) if not n]}"
     assert [int(n.group(1)) for n in tail] == list(range(1, len(tail) + 1)), f"numbering is not 1..{len(tail)} in order: {[int(n.group(1)) for n in tail]}"
+
+
+def test_summary_then_products_then_comparison_table(html_page):
+    """Reading order is the same on every article: 'Which one should you buy?', the product reviews, then the comparison table."""
+    t = _article(html_page)
+    if 'id="comparison"' not in t or 'class="product-card' not in t:
+        pytest.skip("page has no comparison table or no product cards")
+    first, last = t.find('<div class="product-card'), t.rfind('<div class="product-card')
+    comparison = t.find('<h2 id="comparison"')
+    assert comparison > last, "the comparison table must come AFTER the last product review (it sits before them on this page)"
+    summary = [i for i in (t.find('<h2 id="top-picks"'), t.find('<h2 id="which-one"')) if i != -1]
+    if summary:
+        assert min(summary) < first, "the 'Which One Should You Buy?' summary must come before the first product review"
+    assert t.count('id="comparison"') == 1 and t.count('id="top-picks"') <= 1, "duplicate section ids"
+
+
+# ---------------------------------------------------------------- component-level parity (inside the template)
+
+def _cards(t):
+    """Each product card as text, from its opening tag to the next section heading."""
+    out = []
+    for m in re.finditer(r'<div class="product-card[^"]*">', t):
+        end = t.find("<h2", m.end())
+        out.append(t[m.start():end if end != -1 else len(t)])
+    return out
+
+
+def test_product_cards_use_the_shared_structure(html_page):
+    """Rank number, title and badge on top; price/specs, Pros and Cons headings, and the buy button inside the card."""
+    t = _article(html_page)
+    cards = _cards(t)
+    if not cards:
+        pytest.skip("page has no product cards")
+    for legacy in ('class="product-price"', 'class="product-badge"', 'class="product-pros-cons"'):
+        assert legacy not in t, f"old card markup ({legacy}); use the shared card structure"
+    ranks = []
+    for n, card in enumerate(cards, 1):
+        for needle in ('class="product-header"', 'class="product-rank', 'class="product-title"', "<h3>", 'class="product-badge-small"',
+                       'class="product-body"', 'class="product-specs"', 'class="pros-cons"', "<h4>Pros</h4>", "<h4>Cons</h4>"):
+            assert needle in card, f"card {n} is missing {needle}"
+        label = re.search(r'class="product-rank(?: gold)?">([^<]+)<', card).group(1)
+        ranks.append(label if html_page in LABELLED_CARDS else int(label))
+    if html_page not in LABELLED_CARDS:
+        assert ranks == list(range(1, len(cards) + 1)), f"card numbers are not 1..{len(cards)} in order: {ranks}"
+        assert cards[0].startswith('<div class="product-card top-pick">'), "the first card is the highlighted top pick"
+        for n, card in enumerate(cards[1:], 2):
+            assert "top-pick" not in card.split(">", 1)[0], f"only the first card is the top pick (card {n})"
+    for n, card in enumerate(cards, 1):
+        if 'class="btn-check-price"' in card:
+            body = card[card.index('class="product-body"'):]
+            assert body.index('class="btn-check-price"') > body.index('class="pros-cons"'), f"card {n}: the buy button belongs after the pros and cons, inside the card"
+
+
+def test_buy_button_is_inside_its_card(html_page):
+    """A product's buy button sits in its card; none is left floating between a card and the next section."""
+    t = _article(html_page)
+    for n, m in enumerate(re.finditer(r'<div class="product-card[^"]*">', t), 1):
+        end = t.find("<h2", m.end())
+        seg = t[m.start():end if end != -1 else len(t)]
+        card_close = seg.find('class="product-body"')
+        if card_close == -1:
+            continue
+        after_card = seg[seg.rfind("</div>\n    </div>") + 6:] if "</div>\n    </div>" in seg else ""
+        assert 'class="btn-check-price"' not in after_card, f"card {n}: buy button sits outside the card"
+
+
+def test_comparison_table_uses_the_shared_markup(html_page):
+    t = _article(html_page)
+    if 'id="comparison"' not in t:
+        pytest.skip("no comparison table")
+    seg = t[t.index('id="comparison"'):]
+    seg = seg[:seg.index("<h2", 20)] if "<h2" in seg[20:] else seg
+    assert 'class="compare-table"' in seg and 'class="comparison-table' not in seg, "use <table class=\"compare-table\"> in a scrolling wrapper"
+    assert '<div style="overflow-x:auto;">' in seg, "the table sits in the standard scrolling wrapper"
+
+
+def test_disclosure_box_looks_the_same(html_page):
+    t = _article(html_page)
+    if html_page in NOT_A_REVIEW:
+        pytest.skip("how-to guide, not a review")
+    box = re.search(r'<div class="toc" style="([^"]*)">\s*<strong>Affiliate Disclosure', t)
+    assert box, "the affiliate disclosure box at the top is missing or uses non-standard markup"
+    assert box.group(1) == "background:#fffbeb; border-color:#f59e0b; font-size:0.9rem;"
+    assert 'class="affiliate-box"' not in t
+
+
+def test_hero_line_and_breadcrumb(html_page):
+    t = _article(html_page)
+    meta = re.search(r'<div class="article-meta">(.*?)</div>', t.replace("\n", " "), re.S)
+    assert meta, "hero has no meta line"
+    spans = re.findall(r"<span>(.*?)</span>", meta.group(1))
+    assert spans[0] == "By TechForDad" and spans[1].startswith("Updated "), spans
+    assert any(re.fullmatch(r"\d+ min read", s) for s in spans), f"hero line has no reading time: {spans}"
+    crumb = re.search(r'<div class="breadcrumb-inner">(.*?)</div>', t, re.S).group(1)
+    levels = crumb.count("<span>›</span>")
+    assert levels in (1, 2), f"unexpected breadcrumb depth: {crumb}"
+    if P.kind(html_page) == "article-ca":
+        assert levels == 1, "Canada pages use the same 'Home › Page' trail as the USA pages"
+
+
+def test_quick_tip_sits_before_the_summary(html_page):
+    t = _article(html_page)
+    if 'class="perk-line"' not in t:
+        pytest.skip("no quick tip")
+    marker = "<!-- buy-summary -->" if "<!-- buy-summary -->" in t else '<h2 id="top-picks"'
+    assert t.index('class="perk-line"') < t.index(marker), "the quick tip comes before 'Which One Should You Buy?', as on the USA pages"

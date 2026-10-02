@@ -182,10 +182,8 @@ def test_table_button_prints_only_the_table(page, toolbar_page, sessions):
     btn.click()
     pg.wait_for_timeout(200)
     printed = pg.evaluate("window.__prints[0]")
-    first = printed["keep"][0]
-    assert printed["summary"] is True and first in ("comparison", "top-picks"), printed  # Canada pages keep the table under "Top Picks at a Glance"
-    others = {"comparison", "top-picks", "which-one"} - {first}
-    assert not (others & set(printed["keep"])), f"table-only print must not include other sections: {printed['keep']}"
+    assert printed["summary"] is True and printed["keep"][0] == "comparison", printed
+    assert "top-picks" not in printed["keep"] and "which-one" not in printed["keep"], "table-only print must not include the picks list"
     assert abs(pg.evaluate("scrollY") - y) <= 5, "page jumped after the table print"
     pg.close()
 

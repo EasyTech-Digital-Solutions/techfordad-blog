@@ -742,6 +742,8 @@ footer {
 .check { color: var(--green); font-weight: 700; }
 .cross { color: var(--red); }
 
+.table-note { margin: 10px 0 22px; font-size: .92rem; color: var(--muted-on-amber, #4B5563); }
+
 /* ===== FAQ ===== */
 .faq-item {
   border: 1px solid var(--border);
