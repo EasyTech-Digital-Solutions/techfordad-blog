@@ -111,6 +111,9 @@ class _Quiet(http.server.SimpleHTTPRequestHandler):
 def site_url():
     handler = functools.partial(_Quiet, directory=str(ROOT))
     socketserver.ThreadingTCPServer.allow_reuse_address = True
+    # The default backlog is 5 pending connections; a page with dozens of images (the blog index) can overrun it, and a
+    # dropped connection looks like a broken image. 128 is plenty and removes that flake.
+    socketserver.ThreadingTCPServer.request_queue_size = 128
     server = socketserver.ThreadingTCPServer(("127.0.0.1", 0), handler)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
@@ -177,6 +180,10 @@ class Session:
             for (let y = 0; y < document.documentElement.scrollHeight; y += step) { scrollTo(0, y); await new Promise(r => setTimeout(r, 40)); }
             scrollTo(0, 0);
         }""")
+        try:  # let the images that scrolling just triggered finish loading before anything is measured
+            pg.wait_for_load_state("networkidle", timeout=4000)
+        except Exception:
+            pass
         pg.wait_for_timeout(150)
         return pg, console, errors, failed
 
