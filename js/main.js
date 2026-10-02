@@ -155,8 +155,11 @@ document.querySelectorAll('#year').forEach(el => {
 // page URL (never an affiliate link) so a text or email to a sibling stays clean.
 (function () {
   if (!/^\/(blog|gift-guides|guides)\/[^/]+\.html$/.test(location.pathname) || /\/index\.html$/.test(location.pathname)) return;
-  const host = document.querySelector('article.article-body, .article-body, .about-body');
+  // Gift guides nest their content in .article-inner (a centred 820px column); put the toolbar there.
+  const host = document.querySelector('.article-body .article-inner') ||
+    document.querySelector('article.article-body, .article-body, .about-body');
   if (!host) return;
+  host.classList.add('print-host');
 
   const canonical = document.querySelector('link[rel="canonical"]');
   const url = (canonical && canonical.href) || location.origin + location.pathname;
