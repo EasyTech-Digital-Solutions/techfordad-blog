@@ -182,8 +182,10 @@ def test_table_button_prints_only_the_table(page, toolbar_page, sessions):
     btn.click()
     pg.wait_for_timeout(200)
     printed = pg.evaluate("window.__prints[0]")
-    assert printed["summary"] is True and printed["keep"][0] == "comparison", printed
-    assert "top-picks" not in printed["keep"] and "which-one" not in printed["keep"], "table-only print must not include the picks list"
+    first = printed["keep"][0]
+    assert printed["summary"] is True and first in ("comparison", "top-picks"), printed  # Canada pages keep the table under "Top Picks at a Glance"
+    others = {"comparison", "top-picks", "which-one"} - {first}
+    assert not (others & set(printed["keep"])), f"table-only print must not include other sections: {printed['keep']}"
     assert abs(pg.evaluate("scrollY") - y) <= 5, "page jumped after the table print"
     pg.close()
 
@@ -196,7 +198,10 @@ def test_table_more_options_link_scrolls_to_the_toolbar(page, toolbar_page, sess
     link.scroll_into_view_if_needed()
     link.click()
     pg.wait_for_function("(() => { const r = document.querySelector('#page-tools').getBoundingClientRect(); return r.top >= 0 && r.bottom <= innerHeight; })()", timeout=5000)
-    assert pg.evaluate("document.activeElement.closest('.page-tools') !== null"), "keyboard focus should land in the toolbar"
+    try:  # focus moves a moment after the scroll starts
+        pg.wait_for_function("document.activeElement && document.activeElement.closest('.page-tools') !== null", timeout=3000)
+    except Exception:
+        raise AssertionError("keyboard focus should land in the toolbar")
     pg.close()
 
 
@@ -227,4 +232,21 @@ def test_skip_link_works_with_keyboard(sample_page, sessions):
     assert link.bounding_box()["y"] >= 0, "skip link must be visible while focused"
     pg.keyboard.press("Enter")
     assert pg.evaluate("document.activeElement.id") == "main", "after Enter, keyboard focus must be on the page content, not still on the link"
+    pg.close()
+
+
+def test_faq_works_from_the_keyboard(page, sessions):
+    """Questions are reachable with Tab and open with Enter or Space (they used to respond to the mouse only)."""
+    pg = _open(sessions, page)
+    q = pg.locator(".faq-item .faq-q")
+    if not q.count():
+        pytest.skip("page has no click-to-open FAQ")
+    first = q.first
+    assert first.get_attribute("role") == "button" and first.get_attribute("tabindex") == "0"
+    assert first.get_attribute("aria-expanded") == "false"
+    first.focus()
+    pg.keyboard.press("Enter")
+    assert first.get_attribute("aria-expanded") == "true" and "open" in first.locator("xpath=..").get_attribute("class")
+    pg.keyboard.press("Space")
+    assert first.get_attribute("aria-expanded") == "false"
     pg.close()

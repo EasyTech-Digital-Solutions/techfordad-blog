@@ -106,3 +106,16 @@ def test_membership_offers_are_complete(page, viewport, report):
     if viewport == "mobile":
         small = [b for b in perk["buttons"] if b["h"] and b["h"] < 43.5]
         assert not small, f"offer buttons under 44px: {small}"
+
+
+def test_articles_are_two_columns_on_desktop_and_stacked_on_phones(page, viewport, report):
+    """The sidebar sits beside the article on desktop and drops below it on a phone."""
+    if P.kind(page) not in {"article-us", "article-ca"}:
+        pytest.skip("not a USA/Canada article")
+    lay = report["layout"]
+    assert lay["article"] and lay["sidebar"], f"missing article column or sidebar: {lay}"
+    if viewport == "desktop":
+        assert lay["sideRight"], "sidebar should be to the right of the article on a desktop screen"
+    else:
+        assert lay["sideBelow"], "sidebar should sit below the article on a phone"
+    assert "Related Guides" in lay["boxes"]
