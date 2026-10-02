@@ -1,0 +1,8 @@
+{
+  "_readme": "Things that are wrong today and are tracked here instead of failing the suite. The tests compare against these lists in both directions: a NEW problem fails, and fixing one of these also fails until you delete its line here (so this file only ever shrinks). Do not add to it to make a failing test pass; fix the problem, or ask first.",
+  "inline_event_handlers": [
+    "blog/index.html",
+    "guides/index.html"
+  ],
+  "innerHTML_in_published_js": []
+}

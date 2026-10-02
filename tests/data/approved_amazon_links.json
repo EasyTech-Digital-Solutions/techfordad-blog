@@ -1,0 +1,19 @@
+{
+  "_readme": "Membership/bounty links that were generated with Amazon SiteStripe (Get Link) and verified in the browser. A link on the site whose data-cta starts with membership_ must match one of these exactly (host, path and offer-selecting parameters); only the tag may vary, by page type. To add or change one: generate it with SiteStripe, check the tag survives the redirect, then edit this file in the same pull request. Do not loosen the match.",
+  "us": [
+    {"name": "Amazon Prime",            "host": "www.amazon.com", "path": "/amazonprime", "params": {}},
+    {"name": "Prime Access",            "host": "www.amazon.com", "path": "/amazonprime", "params": {"primeCampaignId": "accessWlpPrimeRedir"}},
+    {"name": "Audible",                 "host": "www.amazon.com", "path": "/hz/audible/arya/mlp", "params": {"_encoding": "UTF8", "purchaseType": "STANDARD_MTRIAL", "SHOPPING_PORTAL_MODE": "AUGMENTED"}},
+    {"name": "Audible gift membership", "host": "www.amazon.com", "path": "/hz/audible/gift-membership-detail", "params": {}},
+    {"name": "Amazon Music Unlimited",  "host": "www.amazon.com", "path": "/music/unlimited", "params": {}},
+    {"name": "Kindle Unlimited",        "host": "www.amazon.com", "path": "/kindle-dbs/hz/subscribe/ku", "params": {}}
+  ],
+  "ca": [
+    {"name": "Amazon Prime",            "host": "www.amazon.ca", "path": "/gp/prime/pipeline/landing", "params": {"primeCampaignId": "prime_assoc_ft"}},
+    {"name": "Amazon Music Unlimited",  "host": "www.amazon.ca", "path": "/music/unlimited", "params": {}},
+    {"name": "Kindle Unlimited",        "host": "www.amazon.ca", "path": "/kindle-dbs/hz/subscribe/ku", "params": {"reroutedViaSP": "1"}}
+  ],
+  "discontinued": [
+    {"name": "Prime gift membership", "path": "/gp/prime/pipeline/prime_gifting_landing", "why": "Amazon ended Prime gifting (SiteStripe returns PRIME_GIFT_PURCHASE_SUNSET)"}
+  ]
+}

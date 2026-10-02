@@ -1,0 +1,8 @@
+{
+  "_readme": "Websites the pages are allowed to load code or send form data to. Anything else fails the suite (a new analytics/ad/widget script is a privacy and security decision, so it should be deliberate). Images, fonts and CSS are self-hosted.",
+  "script": ["www.googletagmanager.com", "pagead2.googlesyndication.com"],
+  "form_action": ["us2.list-manage.com"],
+  "stylesheet": [],
+  "iframe": [],
+  "image": []
+}

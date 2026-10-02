@@ -17,3 +17,11 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: "deps"
+
+  # Python packages used by the automated test suite (tests/requirements.txt)
+  - package-ecosystem: "pip"
+    directory: "/tests"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "deps"

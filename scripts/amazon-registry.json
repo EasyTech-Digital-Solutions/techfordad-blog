@@ -42,6 +42,32 @@
       ]
     },
     {
+      "id": "ca-amazon-music-unlimited",
+      "name": "Amazon Music Unlimited",
+      "country": "ca",
+      "url": "https://www.amazon.ca/music/unlimited",
+      "kind": "search",
+      "asin": null,
+      "price": null,
+      "used_in": [
+        "blog/best-tablets-for-seniors-canada.html"
+      ]
+    },
+    {
+      "id": "ca-amazon-prime",
+      "name": "Amazon Prime",
+      "country": "ca",
+      "url": "https://www.amazon.ca/gp/prime/pipeline/landing",
+      "kind": "search",
+      "asin": null,
+      "price": null,
+      "used_in": [
+        "blog/best-home-security-for-seniors-canada.html",
+        "blog/best-tablets-for-seniors-canada.html",
+        "blog/best-video-doorbells-for-seniors-canada.html"
+      ]
+    },
+    {
       "id": "ca-apple-ipad-11th-generation",
       "name": "Apple iPad (11th Generation)",
       "country": "ca",
@@ -196,6 +222,19 @@
       "price": null,
       "used_in": [
         "blog/best-smartwatches-for-seniors-canada.html"
+      ]
+    },
+    {
+      "id": "ca-kindle-unlimited",
+      "name": "Kindle Unlimited",
+      "country": "ca",
+      "url": "https://www.amazon.ca/kindle-dbs/hz/subscribe/ku",
+      "kind": "search",
+      "asin": null,
+      "price": null,
+      "used_in": [
+        "blog/best-e-readers-for-seniors-canada.html",
+        "blog/best-tablets-for-seniors-canada.html"
       ]
     },
     {
@@ -611,6 +650,39 @@
       ]
     },
     {
+      "id": "com-amazon-music-unlimited",
+      "name": "Amazon Music Unlimited",
+      "country": "us",
+      "url": "https://www.amazon.com/music/unlimited",
+      "kind": "search",
+      "asin": null,
+      "price": null,
+      "used_in": [
+        "blog/best-alexa-devices-for-seniors.html",
+        "gift-guides/tech-gifts-for-elderly-parents.html",
+        "gift-guides/tech-gifts-for-someone-with-dementia.html"
+      ]
+    },
+    {
+      "id": "com-amazon-prime",
+      "name": "Amazon Prime",
+      "country": "us",
+      "url": "https://www.amazon.com/amazonprime",
+      "kind": "search",
+      "asin": null,
+      "price": null,
+      "used_in": [
+        "blog/best-alexa-devices-for-seniors.html",
+        "blog/best-home-security-for-seniors.html",
+        "blog/best-smart-home-devices-for-seniors.html",
+        "blog/best-tablets-for-seniors.html",
+        "blog/best-video-doorbells-for-seniors.html",
+        "gift-guides/safety-tech-for-elderly-parents-who-live-alone.html",
+        "gift-guides/tech-gifts-for-elderly-parents.html",
+        "gift-guides/tech-gifts-for-seniors-under-50.html"
+      ]
+    },
+    {
       "id": "com-american-lifetime-dementia-clock",
       "name": "American Lifetime dementia clock",
       "country": "us",
@@ -792,6 +864,33 @@
       "price": null,
       "used_in": [
         "blog/best-cordless-phones-for-seniors.html"
+      ]
+    },
+    {
+      "id": "com-audible",
+      "name": "Audible",
+      "country": "us",
+      "url": "https://www.amazon.com/hz/audible/arya/mlp",
+      "kind": "search",
+      "asin": null,
+      "price": null,
+      "used_in": [
+        "blog/best-e-readers-for-seniors.html"
+      ]
+    },
+    {
+      "id": "com-audible-gift-membership",
+      "name": "Audible gift membership",
+      "country": "us",
+      "url": "https://www.amazon.com/hz/audible/gift-membership-detail",
+      "kind": "search",
+      "asin": null,
+      "price": null,
+      "used_in": [
+        "gift-guides/gifts-for-elderly-parents-who-have-everything.html",
+        "gift-guides/tech-gifts-for-elderly-parents.html",
+        "gift-guides/tech-gifts-for-seniors-under-50.html",
+        "gift-guides/tech-gifts-for-someone-with-dementia.html"
       ]
     },
     {
@@ -1421,6 +1520,19 @@
       "price": null,
       "used_in": [
         "gift-guides/tech-gifts-for-elderly-parents.html"
+      ]
+    },
+    {
+      "id": "com-kindle-unlimited",
+      "name": "Kindle Unlimited",
+      "country": "us",
+      "url": "https://www.amazon.com/kindle-dbs/hz/subscribe/ku",
+      "kind": "search",
+      "asin": null,
+      "price": null,
+      "used_in": [
+        "blog/best-e-readers-for-seniors.html",
+        "blog/best-tablets-for-seniors.html"
       ]
     },
     {
