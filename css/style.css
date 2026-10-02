@@ -1313,3 +1313,26 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
 .sources li a { color: var(--navy); font-weight: 600; }
 .sources li span { display: block; color: var(--muted); font-size: .9rem; }
 .sources-note { margin-top: 14px !important; padding: 10px 14px; background: var(--amber-light); border-radius: 8px; color: var(--muted-on-amber); }
+
+/* ===== MEMBERSHIP OFFERS (Prime / Audible / Music / Kindle Unlimited links) ===== */
+.perk-line { margin: 0 0 18px; padding: 12px 16px; background: var(--amber-light); border-left: 4px solid var(--amber); border-radius: var(--radius); line-height: 1.55; }
+.perk-line a, .card-perk a, .perk-fine a, .perk-cta a:not(.perk-btn) { color: var(--navy); font-weight: 700; text-decoration: underline; }
+.card-perk { margin: 8px 0 0; font-size: .88rem; line-height: 1.45; color: var(--muted); text-align: center; }
+.perk-note { margin: 28px 0; padding: 20px; background: var(--amber-light); border: 1px solid var(--border); border-left: 4px solid var(--amber); border-radius: var(--radius); }
+.perk-note h3 { margin: 0 0 6px; font-size: 1.15rem; color: var(--navy); }
+.perk-lead { margin: 0 0 12px; line-height: 1.55; }
+.perk-offers { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); }
+.perk-offer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; padding: 14px 16px; }
+.perk-offer + .perk-offer { border-top: 1px solid var(--border); }
+.perk-offer p { margin: 0; flex: 1 1 260px; line-height: 1.5; }
+.perk-offer strong { display: block; color: var(--navy); }
+.perk-offer span { display: block; font-size: .95rem; color: var(--muted); }
+.perk-btn { display: inline-block; text-align: center; background: var(--amber); color: var(--navy); padding: 11px 20px; min-height: 44px; border-radius: 6px; font-weight: 700; font-size: .9rem; white-space: nowrap; transition: background .2s; }
+.perk-btn:hover { background: var(--amber-hover); color: var(--navy); }
+.perk-fine { margin: 10px 0 0; font-size: .9rem; color: var(--muted-on-amber); }
+.perk-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; margin: 28px 0; padding: 16px 20px; background: var(--amber-light); border-left: 4px solid var(--amber); border-radius: var(--radius); }
+.perk-cta p { margin: 0; flex: 1 1 280px; line-height: 1.55; }
+
+/* Inline affiliate links in running text (e.g. "Check price on Amazon" after a list item) must read as links */
+.article-body a[rel~="sponsored"]:not([class]) { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.article-body a[rel~="sponsored"]:not([class]):hover { color: var(--amber-text); }
