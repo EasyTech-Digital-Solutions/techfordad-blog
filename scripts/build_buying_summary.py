@@ -21,7 +21,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# page -> (mode, [section ids in ranking order]); mode: "us" (Quick Picks list replaced), "ca" (after the top table),
+# page -> (mode, [section ids in ranking order]); mode: "us" (Quick Picks list replaced), "ca" (Canada: summary just before the first product, table after the products),
 # "us-insert" (no Quick Picks list: inserted just before the first product section)
 PAGES = {
     "blog/best-tablets-for-seniors.html": ("us", ["ipad", "fire-hd10", "ipad-mini", "samsung", "fire-8"]),
@@ -87,7 +87,7 @@ def section(text, sid):
     return (m.group(1), m.group(2)) if m else (None, None)
 
 
-def pick(text, sid):
+def pick(text, sid, country="us"):
     h2, body = section(text, sid)
     if h2 is None:
         problems.append(f"section #{sid} not found")
@@ -110,6 +110,9 @@ def pick(text, sid):
     m = re.search(r'<span class="spec-label">(?:Price|Monthly Cost|Cost)</span><span class="spec-val">(.*?)</span>', body, re.S)
     if m:
         price = plain(m.group(1))
+        if country == "ca":  # Canada pages: short "~$649 CAD" form; a price line without CAD (monthly fees etc.) shows no price here
+            pm = re.match(r"(.*?\d[\d,\.]*\s*CAD)", price)
+            price = pm.group(1) if pm else None
     else:
         m = re.search(r'class="product-price"[^>]*>(.*?)</div>', body, re.S)
         if m:
@@ -127,7 +130,7 @@ def pick(text, sid):
 
 def render_summary(picks, mode):
     lines = ["<!-- buy-summary -->"]
-    if mode == "us":
+    if mode in ("us", "ca"):
         lines.append(f'<h2 id="top-picks">{HEADING}</h2>')
     else:
         lines.append(f'<h2 id="which-one">{HEADING}</h2>')
@@ -166,16 +169,16 @@ def render_cta(top, country):
 
 def process(rel, check):
     mode, ids = PAGES[rel]
-    country = "ca" if mode == "ca" else "us"
+    country = "ca" if rel.endswith("-canada.html") else "us"
     path = ROOT / rel
     text = read(path)
     base = CTA_RE.sub("", BUY_RE.sub("", text))
-    picks = [pick(base, i) for i in ids]
+    picks = [pick(base, i, country) for i in ids]
     if any(p is None for p in picks):
         return
     # 1. decision section
     summary = render_summary(picks, mode)
-    if mode == "us-insert":
+    if mode in ("us-insert", "ca"):
         if BUY_RE.search(text):
             new = BUY_RE.sub(lambda _m: ("\n" if _m.group(0).startswith("\n") else "") + summary, text, count=1)
         else:
@@ -193,34 +196,19 @@ def process(rel, check):
             if not n:
                 problems.append(f"{rel}: Quick Picks list not found")
                 return
-    else:
-        new = CTA_RE.sub("", BUY_RE.sub("", text))
-        m = re.search(r'<div class="comparison-table-wrap">.*?</table>\s*</div>\n', new, re.S)
-        if not m:
-            problems.append(f"{rel}: comparison table not found")
-            return
-        new = new[:m.end()] + "\n" + summary + new[m.end():]
     # 2. CTA after the comparison table
     top = picks[0]
     new = CTA_RE.sub("", new)
     if top["url"]:
-        if country == "us":
-            i = new.find('<h2 id="comparison"')
-            j = new.find("</table>", i) if i != -1 else -1
-            if j == -1:
-                pass  # no comparison table on this page: decision section only
-            else:
-                k = j + len("</table>")
-                wrap = re.match(r"\s*</div>\n", new[k:])
-                k = k + wrap.end() if wrap else k
-                new = new[:k] + ("" if new[k - 1] == "\n" else "\n") + render_cta(top, country) + new[k:]
+        i = new.find('<h2 id="comparison"')
+        j = new.find("</table>", i) if i != -1 else -1
+        if j == -1:
+            pass  # no comparison table on this page: decision section only
         else:
-            m = re.search(r"<!-- /buy-summary -->", new)
-            i = new.find('<div class="comparison-table-wrap">')
-            k = new.find("</table>", i)
-            wrap = re.match(r"\s*</div>\n", new[k + 8:])
-            k = k + 8 + (wrap.end() if wrap else 0)
-            new = new[:k] + render_cta(top, country) + new[k:]
+            k = j + len("</table>")
+            wrap = re.match(r"\s*</div>\n", new[k:])
+            k = k + wrap.end() if wrap else k
+            new = new[:k] + ("" if new[k - 1] == "\n" else "\n") + render_cta(top, country) + new[k:]
     # 3. TOC label (US pages)
     new = re.sub(r'(<a href="#top-picks">)[^<]*(</a>)', rf"\g<1>{HEADING}\g<2>", new)
     if "--preview" in sys.argv:

@@ -1,12 +1,24 @@
-// FAQ Toggle
-document.querySelectorAll('.faq-q').forEach(q => {
-  q.addEventListener('click', () => {
+// FAQ Toggle: click or keyboard (Enter / Space). Questions are exposed as buttons so screen readers and Tab reach them.
+const faqQuestions = document.querySelectorAll('.faq-q');
+function syncFaq() {
+  faqQuestions.forEach(q => q.setAttribute('aria-expanded', q.parentElement.classList.contains('open') ? 'true' : 'false'));
+}
+faqQuestions.forEach(q => {
+  q.setAttribute('role', 'button');
+  q.setAttribute('tabindex', '0');
+  const toggle = () => {
     const item = q.parentElement;
     const isOpen = item.classList.contains('open');
     document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
     if (!isOpen) item.classList.add('open');
+    syncFaq();
+  };
+  q.addEventListener('click', toggle);
+  q.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
   });
 });
+syncFaq();
 
 // GA4 events — gtag is defined inline in each page's <head>; guard in case it's blocked.
 function track(name, params) {

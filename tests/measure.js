@@ -47,14 +47,15 @@
     toolbar.rows = tops.size;
   }
 
-  // Comparison table
+  // Comparison table: the section under <h2 id="comparison">
   const compare = document.querySelector('h2#comparison');
-  let hasCompareTable = false;
-  if (compare) {
-    for (let n = compare.nextElementSibling; n && n.tagName !== 'H2'; n = n.nextElementSibling) {
-      if (n.tagName === 'TABLE' || n.querySelector('table')) hasCompareTable = true;
+  const sectionHasTable = (h) => {
+    for (let n = h.nextElementSibling; n && n.tagName !== 'H2'; n = n.nextElementSibling) {
+      if (n.tagName === 'TABLE' || n.querySelector('table')) return true;
     }
-  }
+    return false;
+  };
+  const hasCompareTable = !!compare && sectionHasTable(compare);
   const tableTools = $$('.table-tools');
   const hint = document.querySelector('.table-tools .table-hint');
   const scroller = (() => {
@@ -104,6 +105,14 @@
     smallTargets,
     toolbar,
     hasCompareTable,
+    compareId: compare ? compare.id : null,
+    layout: (() => {
+      const art = document.querySelector('article.article-body');
+      const side = document.querySelector('aside.article-sidebar');
+      if (!art || !side) return { article: !!art, sidebar: !!side };
+      const a = art.getBoundingClientRect(), s = side.getBoundingClientRect();
+      return { article: true, sidebar: true, sideRight: s.left >= a.right - 1, sideBelow: s.top >= a.bottom - 1, boxes: [...side.querySelectorAll('.sidebar-box h3')].map((h) => h.textContent.trim()) };
+    })(),
     tableToolsCount: tableTools.length,
     hintVisible: !!hint && !hint.hidden,
     tableScrolls: scroller ? scroller.scrollWidth > scroller.clientWidth + 1 : null,

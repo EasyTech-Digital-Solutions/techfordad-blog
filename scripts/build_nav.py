@@ -325,6 +325,8 @@ def main():
     build_hreflang.main()
     import build_related
     build_related.main()
+    import build_ca_sidebar
+    build_ca_sidebar.main()
     import build_sources
     build_sources.main()
     import build_buying_summary
