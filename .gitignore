@@ -3,3 +3,8 @@ admin.js
 __pycache__/
 *.pyc
 _t_*.html
+
+# Test suite (see tests/README.md)
+.venv/
+.pytest_cache/
+tests/.cache/

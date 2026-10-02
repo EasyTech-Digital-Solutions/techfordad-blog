@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_gift_guides  # noqa: E402  (source of truth for the gift guide list)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ASSET_VERSION = "20261003"
+ASSET_VERSION = "20261005"
 
 # Short menu labels. Anything not listed falls back to a cleaned-up page title.
 LABELS = {
@@ -325,6 +325,8 @@ def main():
     build_hreflang.main()
     import build_related
     build_related.main()
+    import build_ca_sidebar
+    build_ca_sidebar.main()
     import build_sources
     build_sources.main()
     import build_buying_summary
@@ -337,5 +339,47 @@ def main():
     standardize_ctas.main()
 
 
+def check():
+    """Dry run: regenerate everything in a temporary copy of the site and report any file that would change.
+
+    Nothing in the real tree is touched. Exits 1 if a page (or css/js version string, nav, related block,
+    sources block and so on) is out of date, so `python3 scripts/build_nav.py --check` is safe to run anywhere.
+    """
+    import shutil
+    import subprocess
+    import tempfile
+
+    with tempfile.TemporaryDirectory() as tmp:
+        copy = os.path.join(tmp, "site")
+        shutil.copytree(ROOT, copy, ignore=shutil.ignore_patterns(
+            ".git", ".venv", "node_modules", "__pycache__", "*.jpg", "*.jpeg", "*.png", "*.webp", "*.svg", "*.woff2"))
+        run = subprocess.run([sys.executable, os.path.join(copy, "scripts", "build_nav.py")],
+                             capture_output=True, text=True)
+        if run.returncode:
+            print(run.stderr or run.stdout)
+            return 1
+        stale = []
+        for dirpath, dirs, files in os.walk(copy):
+            dirs[:] = [d for d in dirs if d not in (".git", ".venv", "__pycache__")]
+            for name in files:
+                new_path = os.path.join(dirpath, name)
+                rel = os.path.relpath(new_path, copy)
+                old_path = os.path.join(ROOT, rel)
+                if os.path.exists(old_path):
+                    with open(old_path, "rb") as a, open(new_path, "rb") as b:
+                        if a.read() != b.read():
+                            stale.append(rel)
+        if stale:
+            print("out of date (run python3 scripts/build_nav.py): " + ", ".join(sorted(stale)[:20]) +
+                  (f" and {len(stale) - 20} more" if len(stale) > 20 else ""))
+            return 1
+    print("nav and generated blocks OK")
+    return 0
+
+
 if __name__ == "__main__":
+    if "--check" in sys.argv[1:]:
+        sys.exit(check())
+    if len(sys.argv) > 1:
+        sys.exit("usage: build_nav.py [--check]   (no other arguments; it rewrites pages, so it never guesses)")
     main()

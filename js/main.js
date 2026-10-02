@@ -1,12 +1,24 @@
-// FAQ Toggle
-document.querySelectorAll('.faq-q').forEach(q => {
-  q.addEventListener('click', () => {
+// FAQ Toggle: click or keyboard (Enter / Space). Questions are exposed as buttons so screen readers and Tab reach them.
+const faqQuestions = document.querySelectorAll('.faq-q');
+function syncFaq() {
+  faqQuestions.forEach(q => q.setAttribute('aria-expanded', q.parentElement.classList.contains('open') ? 'true' : 'false'));
+}
+faqQuestions.forEach(q => {
+  q.setAttribute('role', 'button');
+  q.setAttribute('tabindex', '0');
+  const toggle = () => {
     const item = q.parentElement;
     const isOpen = item.classList.contains('open');
     document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
     if (!isOpen) item.classList.add('open');
+    syncFaq();
+  };
+  q.addEventListener('click', toggle);
+  q.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
   });
 });
+syncFaq();
 
 // GA4 events — gtag is defined inline in each page's <head>; guard in case it's blocked.
 function track(name, params) {
@@ -74,6 +86,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Move keyboard / screen-reader focus to the target too (the default jump did this; preventDefault stops it).
+      if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
     }
   });
 });
@@ -155,8 +170,11 @@ document.querySelectorAll('#year').forEach(el => {
 // page URL (never an affiliate link) so a text or email to a sibling stays clean.
 (function () {
   if (!/^\/(blog|gift-guides|guides)\/[^/]+\.html$/.test(location.pathname) || /\/index\.html$/.test(location.pathname)) return;
-  const host = document.querySelector('article.article-body, .article-body, .about-body');
+  // Gift guides nest their content in .article-inner (a centred 820px column); put the toolbar there.
+  const host = document.querySelector('.article-body .article-inner') ||
+    document.querySelector('article.article-body, .article-body, .about-body');
   if (!host) return;
+  host.classList.add('print-host');
 
   const canonical = document.querySelector('link[rel="canonical"]');
   const url = (canonical && canonical.href) || location.origin + location.pathname;

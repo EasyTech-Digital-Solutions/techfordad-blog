@@ -1,0 +1,4 @@
+{
+ "_readme": "Accessibility problems (axe-core rule -> number of elements) that exist today, per page. The suite fails if a page gets a NEW problem or MORE elements with an existing one. Fix problems and re-run with --update-baseline to shrink this file; never grow it to make a test pass.",
+ "pages": {}
+}

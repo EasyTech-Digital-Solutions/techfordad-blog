@@ -35,8 +35,8 @@
   --text:    #1A1A2E;
   --muted:   #6B7280;
   --border:  #E5E7EB;
-  --green:   #16A34A;
-  --red:     #DC2626;
+  --green:   #15803D;   /* 4.8:1 on the pale-green boxes; the old #16A34A was 3.1:1 */
+  --red:     #B91C1C;   /* 5.9:1 on the pale-red boxes; the old #DC2626 was 4.4:1 */
   --amber-text: #9C6500; /* darker amber for text-on-light use — meets WCAG AA 4.5:1, unlike --amber's 2.2:1 */
   --muted-on-amber: #4B5563; /* darker than --muted — --muted only hits 4.43:1 on --amber-light, just under AA's 4.5:1 */
   --radius:  10px;
@@ -667,8 +667,8 @@ footer {
 }
 .pros { background: #f0fdf4; }
 .cons { background: #fef2f2; }
-.pros h5 { color: var(--green); font-size: 0.78rem; text-transform: uppercase; margin-bottom: 6px; }
-.cons h5 { color: var(--red); font-size: 0.78rem; text-transform: uppercase; margin-bottom: 6px; }
+.pros h4 { color: var(--green); font-size: 0.78rem; text-transform: uppercase; margin-bottom: 6px; }
+.cons h4 { color: var(--red); font-size: 0.78rem; text-transform: uppercase; margin-bottom: 6px; }
 .pros ul, .cons ul { padding-left: 14px; }
 .pros ul li, .cons ul li { font-size: 0.82rem; margin-bottom: 4px; }
 
@@ -741,6 +741,8 @@ footer {
 .compare-table tr:hover td { background: var(--amber-light); }
 .check { color: var(--green); font-weight: 700; }
 .cross { color: var(--red); }
+
+.table-note { margin: 10px 0 22px; font-size: .92rem; color: var(--muted-on-amber, #4B5563); }
 
 /* ===== FAQ ===== */
 .faq-item {
@@ -973,7 +975,7 @@ footer {
 .author-box-content { flex: 1; }
 .author-box-name { font-weight: 700; font-size: 15px; margin-bottom: 6px; }
 .author-box-name a { color: var(--navy); text-decoration: underline; }
-.author-box-bio { font-size: 14px; color: var(--muted); line-height: 1.6; }
+.author-box-bio { font-size: 14px; color: var(--muted-on-amber); line-height: 1.6; }
 .author-box-bio a { color: var(--navy); }
 @media (max-width: 600px) {
   .author-box { flex-direction: column; gap: 14px; }
@@ -1255,7 +1257,7 @@ html[data-gifts="peak"] .gift-feature-actions { flex: 0 0 auto; align-items: fle
 
 /* A small red dot on the "Gift Guides" menu item during gift season */
 html[data-gifts="peak"] .nav-dropdown-gifts .nav-dropdown-toggle::before {
-  content: ""; width: 8px; height: 8px; border-radius: 50%; background: #DC2626; flex-shrink: 0;
+  content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--red); flex-shrink: 0;
 }
 
 /* Gift banner in season: stack text, tiles and button without the row-layout size hints */
@@ -1365,14 +1367,14 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
   .print-foot { margin: 24px 0 0; padding-top: 8px; border-top: 1px solid #999; font-size: 9pt; color: #444; }
   /* Chrome the reader doesn't need on paper */
   .gift-bar, header, footer, .breadcrumb, aside, .sidebar, .newsletter, .related-guides, .author-box,
-  .page-tools, .table-tools, .email-form, .article-hero > img, .toc:has(.toc-title),
+  .page-tools, .table-tools, .email-form, .article-hero > img, .toc:has(.toc-title), .toc-box,
   .btn-check-price, .table-cta, .perk-note, .perk-cta, .perk-line, .card-perk, .perk-btn { display: none !important; }
   /* Plain hero: just the title */
   .article-hero { background: none !important; min-height: 0; padding: 0 0 8px; color: #000; text-align: left; display: block; }
   .article-hero::after { display: none; }
   .article-hero * { color: #000 !important; text-shadow: none !important; }
   .article-layout { display: block; }
-  .article-body { max-width: none; padding: 0; }
+  .article-body, .article-inner { max-width: none; padding: 0; }
   /* Show every FAQ answer, keep cards and tables whole */
   .faq-a { display: block !important; }
   .faq-q::after { display: none !important; }
@@ -1384,7 +1386,7 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
   a { color: inherit !important; text-decoration: none; }
   html[data-season] body::before { display: none; }
   /* "Print quick comparison": keep only the sections main.js marked */
-  body.print-summary .article-body > *:not(.print-keep):not(.print-only) { display: none !important; }
+  body.print-summary .print-host > *:not(.print-keep):not(.print-only) { display: none !important; }
 }
 
 /* ===== PHONE TWEAKS (touch targets, readable list text, toolbar layout) ===== */
@@ -1408,3 +1410,27 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
   .product-header { flex-wrap: wrap; }
   .product-badge { white-space: normal; flex-shrink: 1; max-width: 100%; }
 }
+
+/* ===== ACCESSIBILITY ===== */
+/* Skip link: first thing a keyboard or screen-reader user reaches; invisible until focused. */
+.skip-link {
+  position: absolute; left: 12px; top: -64px; z-index: 1000;
+  background: var(--navy); color: var(--white); padding: 12px 18px; border-radius: 0 0 8px 8px;
+  font-weight: 700; text-decoration: none;
+}
+.faq-q:focus-visible { outline: 3px solid var(--amber); outline-offset: -3px; }
+.skip-link:focus { top: 0; outline: 3px solid var(--amber); outline-offset: 2px; color: var(--white); }
+/* Headings and <main> receive focus from in-page links and the skip link; no ring needed on a programmatic focus. */
+[tabindex="-1"]:focus { outline: none; }
+/* Text only a screen reader needs (e.g. the empty corner cell of a table). */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+/* Links inside running text are underlined: colour alone is not enough (WCAG 1.4.1). Lists of links that
+   already look like links (contents, related guides, sources) and styled buttons are left alone. */
+:is(.article-body, .article-inner, .about-body) :is(p, li, td, dd, .note, .faq-a, .affiliate-box) a:not([class]):not(.toc a):not(.toc-box a):not(.related-guides a):not(.sources li a):not(.sidebar-box a) {
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+}
+.author-box-bio a, .gift-more p a, .section-inner p a:not([class]) { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+@media print { .skip-link { display: none !important; } }

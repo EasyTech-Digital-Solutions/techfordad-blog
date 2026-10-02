@@ -1,0 +1,191 @@
+{
+ "_readme": "Maps every section of css/style.css (the /* ===== NAME ===== */ banners) to the tests that exercise it. tests/test_ui_registry.py fails when a section is missing here, so a new piece of UI cannot be added without deciding how it is tested. Format: 'file.py::test_function_name' (relative to tests/).",
+ "components": {
+  "FONTS": {
+   "covered_by": [
+    "test_seo.py::test_local_assets_exist",
+    "test_ui_pages.py::test_loads_without_errors"
+   ]
+  },
+  "RESET & BASE": {
+   "covered_by": [
+    "test_ui_pages.py::test_no_sideways_scrolling",
+    "test_ui_a11y.py::test_accessibility"
+   ]
+  },
+  "HEADER": {
+   "covered_by": [
+    "test_ui_pages.py::test_page_chrome_present",
+    "test_ui_pages.py::test_mobile_menu_button",
+    "test_ui_interactions.py::test_mobile_menu_opens_and_closes",
+    "test_ui_interactions.py::test_reviews_dropdown_opens_on_desktop"
+   ]
+  },
+  "HERO": {
+   "covered_by": [
+    "test_ui_pages.py::test_page_chrome_present",
+    "test_ui_a11y.py::test_accessibility"
+   ]
+  },
+  "TRUST BAR": {
+   "covered_by": [
+    "test_ui_pages.py::test_no_sideways_scrolling",
+    "test_ui_a11y.py::test_accessibility"
+   ]
+  },
+  "SECTION": {
+   "covered_by": [
+    "test_ui_pages.py::test_no_sideways_scrolling",
+    "test_ui_a11y.py::test_accessibility"
+   ]
+  },
+  "CARDS GRID": {
+   "covered_by": [
+    "test_ui_pages.py::test_no_sideways_scrolling",
+    "test_ui_pages.py::test_no_broken_images"
+   ]
+  },
+  "TOP PICKS / PRODUCT TABLE": {
+   "covered_by": [
+    "test_ui_pages.py::test_no_sideways_scrolling",
+    "test_ui_a11y.py::test_accessibility"
+   ]
+  },
+  "WHY TRUST US": {
+   "covered_by": [
+    "test_ui_pages.py::test_no_sideways_scrolling",
+    "test_ui_a11y.py::test_accessibility"
+   ]
+  },
+  "NEWSLETTER": {
+   "covered_by": [
+    "test_security.py::test_third_party_scripts_are_allowlisted",
+    "test_ui_pages.py::test_no_sideways_scrolling"
+   ]
+  },
+  "FOOTER": {
+   "covered_by": [
+    "test_ui_pages.py::test_page_chrome_present",
+    "test_ui_print.py::test_print_layout_removes_page_chrome_and_keeps_content"
+   ]
+  },
+  "ARTICLE PAGE": {
+   "covered_by": [
+    "test_ui_pages.py::test_no_sideways_scrolling",
+    "test_ui_print.py::test_print_layout_removes_page_chrome_and_keeps_content",
+    "test_ui_a11y.py::test_accessibility"
+   ]
+  },
+  "COMPARISON TABLE": {
+   "covered_by": [
+    "test_ui_pages.py::test_swipe_hint_shows_only_when_the_table_scrolls",
+    "test_ui_interactions.py::test_table_button_prints_only_the_table"
+   ]
+  },
+  "FAQ": {
+   "covered_by": [
+    "test_ui_interactions.py::test_faq_opens_and_closes",
+    "test_ui_print.py::test_print_layout_removes_page_chrome_and_keeps_content"
+   ]
+  },
+  "DISCLAIMER BAR": {
+   "covered_by": [
+    "test_links.py::test_pages_with_affiliate_links_carry_the_disclosure"
+   ]
+  },
+  "SIMPLE ARTICLE LAYOUT": {
+   "covered_by": [
+    "test_ui_pages.py::test_toolbar_lines_up_with_the_article",
+    "test_ui_pages.py::test_no_sideways_scrolling"
+   ]
+  },
+  "BREADCRUMB": {
+   "covered_by": [
+    "test_ui_print.py::test_print_layout_removes_page_chrome_and_keeps_content"
+   ]
+  },
+  "ABOUT / GUIDE HERO": {
+   "covered_by": [
+    "test_ui_pages.py::test_page_chrome_present",
+    "test_ui_pages.py::test_toolbar_lines_up_with_the_article"
+   ]
+  },
+  "RESPONSIVE": {
+   "covered_by": [
+    "test_ui_pages.py::test_no_sideways_scrolling",
+    "test_ui_pages.py::test_touch_targets_on_phones",
+    "test_ui_pages.py::test_mobile_menu_button"
+   ]
+  },
+  "AUTHOR BOX": {
+   "covered_by": [
+    "test_ui_print.py::test_print_layout_removes_page_chrome_and_keeps_content"
+   ]
+  },
+  "AUTHOR PROFILE PAGE": {
+   "covered_by": [
+    "test_inventory.py::test_redirect_stubs_are_well_formed"
+   ]
+  },
+  "SEASONAL THEMES": {
+   "covered_by": [
+    "test_ui_pages.py::test_loads_without_errors",
+    "test_ui_a11y.py::test_accessibility"
+   ]
+  },
+  "GIFT GUIDES": {
+   "covered_by": [
+    "test_ui_pages.py::test_toolbar_lines_up_with_the_article",
+    "test_ui_pages.py::test_no_sideways_scrolling"
+   ]
+  },
+  "Gift season: announcement bar, homepage picture tiles, menu dot": {
+   "covered_by": [
+    "test_ui_pages.py::test_loads_without_errors",
+    "test_ui_print.py::test_print_layout_removes_page_chrome_and_keeps_content"
+   ]
+  },
+  "RELATED GUIDES BLOCK": {
+   "covered_by": [
+    "test_generated.py::test_repo_check_script"
+   ]
+  },
+  "WHICH ONE SHOULD YOU BUY + TABLE CTA": {
+   "covered_by": [
+    "test_generated.py::test_repo_check_script"
+   ]
+  },
+  "SOURCES BLOCK": {
+   "covered_by": [
+    "test_generated.py::test_repo_check_script"
+   ]
+  },
+  "MEMBERSHIP OFFERS": {
+   "covered_by": [
+    "test_ui_pages.py::test_membership_offers_are_complete",
+    "test_links.py::test_membership_links_are_the_verified_ones"
+   ]
+  },
+  "PRINT & SHARE TOOLBAR": {
+   "covered_by": [
+    "test_ui_interactions.py::test_print_page_restores_scroll_position",
+    "test_ui_interactions.py::test_copy_link_copies_the_canonical_address",
+    "test_ui_print.py::test_printout_names_the_page_and_the_date",
+    "test_ui_pages.py::test_toolbar_lines_up_with_the_article"
+   ]
+  },
+  "PHONE TWEAKS": {
+   "covered_by": [
+    "test_ui_pages.py::test_touch_targets_on_phones",
+    "test_ui_pages.py::test_list_text_is_readable_on_phones"
+   ]
+  },
+  "ACCESSIBILITY": {
+   "covered_by": [
+    "test_seo.py::test_has_main_landmark_and_skip_link",
+    "test_ui_interactions.py::test_skip_link_works_with_keyboard",
+    "test_ui_a11y.py::test_accessibility"
+   ]
+  }
+ }
+}
