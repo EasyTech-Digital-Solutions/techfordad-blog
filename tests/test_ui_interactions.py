@@ -248,3 +248,22 @@ def test_faq_works_from_the_keyboard(page, sessions):
     pg.keyboard.press("Space")
     assert first.get_attribute("aria-expanded") == "false"
     pg.close()
+
+
+@pytest.mark.parametrize("native_share", [True, False], ids=["with-share-api", "without-share-api"])
+def test_toolbar_grid_is_tidy_with_and_without_the_share_api(sample_page, sessions, native_share):
+    """Phones have a share sheet (4 buttons); desktop Linux/Firefox do not (5 buttons). Both must lay out as a two-column grid."""
+    if not P.has_toolbar(sample_page):
+        pytest.skip("page has no toolbar")
+    init = "navigator.share = async () => {};" if native_share else "Object.defineProperty(navigator, 'share', {value: undefined, configurable: true});"
+    pg = _open(sessions, sample_page, "mobile", init=init)
+    info = pg.evaluate("""() => {
+        const bs = [...document.querySelectorAll('.page-tools button, .page-tools a')];
+        const rows = new Set(bs.map(b => Math.round(b.getBoundingClientRect().top))).size;
+        const bar = document.querySelector('.page-tools').getBoundingClientRect();
+        return {n: bs.length, rows, over: Math.round(bar.right - innerWidth), small: bs.filter(b => b.getBoundingClientRect().height < 43.5).length};
+    }""")
+    assert info["n"] == (4 if native_share else 5) or info["n"] == (3 if native_share else 4), info  # pages without the quick-comparison button have one fewer
+    assert info["rows"] == -(-info["n"] // 2), f"{info['n']} buttons should make {-(-info['n'] // 2)} rows: {info}"
+    assert info["over"] <= 1 and info["small"] == 0, info
+    pg.close()

@@ -83,7 +83,9 @@ def test_toolbar_lines_up_with_the_article(page, viewport, report):
     assert tb["rightOverflow"] <= 1, "toolbar runs past the right edge"
     assert tb["labels"][0] == "Print this page" and "Copy link" in tb["labels"], f"unexpected buttons: {tb['labels']}"
     if viewport == "mobile":
-        assert tb["rows"] <= 2, f"toolbar wraps onto {tb['rows']} rows on a phone (it should be a tidy 2-row grid)"
+        # two buttons per row: 4 buttons (with Share) make 2 rows, 5 (Text it + Email it instead of Share) make 3
+        want = -(-len(tb["labels"]) // 2)
+        assert tb["rows"] <= want, f"toolbar wraps onto {tb['rows']} rows for {len(tb['labels'])} buttons on a phone (a tidy two-column grid needs {want})"
 
 
 def test_table_print_button_only_on_pages_with_a_comparison_table(page, viewport, report):

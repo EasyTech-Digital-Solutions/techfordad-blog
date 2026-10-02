@@ -30,7 +30,7 @@ the `exclude:` list in `_config.yml`, and a test checks that).
 | `test_ui_a11y.py` | yes | Accessibility scan (axe-core) on every page against a **baseline** of known issues |
 | `test_ui_registry.py` | no | Every CSS section is mapped to the tests that cover it (the "keep the tests current" guard) |
 | `test_live_site.py` | `--live` | Every sitemap URL is up, redirects, real 404s, certificate expiry, security headers, internal files not public, deploy matches the repo |
-| `check_the_tests.py` | (script) | Breaks a copy of the site in 42 ways and confirms the right test notices each one |
+| `check_the_tests.py` | (script) | Breaks a copy of the site in 43 ways and confirms the right test notices each one |
 
 `.github/workflows/tests.yml` runs the whole suite on every pull request and every push to `main`.
 `.github/workflows/live-site-check.yml` runs the live checks every Monday.
@@ -68,7 +68,7 @@ Never grow a baseline to make a failing test pass; fix the page, or ask first.
 ## Checking the tests themselves
 
 ```
-./.venv/bin/python tests/check_the_tests.py            # all 42 deliberate breakages (about 6 minutes)
+./.venv/bin/python tests/check_the_tests.py            # all 43 deliberate breakages (about 6 minutes)
 ./.venv/bin/python tests/check_the_tests.py affiliate  # only those with "affiliate" in the name
 ```
 

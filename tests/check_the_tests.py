@@ -81,6 +81,7 @@ MUTATIONS = [
     ("browser: JavaScript error on every page", append("js/main.js", "\nthrow new Error('boom');\n"), "tests/test_ui_pages.py::test_loads_without_errors", ["--quick"]),
     ("browser: sideways scrolling", append("css/style.css", "\nbody { min-width: 2400px; }\n"), "tests/test_ui_pages.py::test_no_sideways_scrolling", ["--quick"]),
     ("browser: toolbar misaligned", append("css/style.css", "\n.page-tools { margin-left: -120px; }\n"), "tests/test_ui_pages.py::test_toolbar_lines_up_with_the_article", ["--quick"]),
+    ("browser: toolbar breaks without the share API", append("css/style.css", "\n@media (max-width: 600px) { .page-tools { display: block !important; } .page-tools > * { display: block; margin-bottom: 6px; } }\n"), "tests/test_ui_interactions.py::test_toolbar_grid_is_tidy_with_and_without_the_share_api", ["--quick"]),
     ("browser: tiny buttons on phones", append("css/style.css", "\n@media (max-width: 600px) { .page-tools button, .page-tools a { min-height: 20px; padding: 2px 6px; } }\n"), "tests/test_ui_pages.py::test_touch_targets_on_phones", ["--quick"]),
     ("browser: print scroll-jump bug is back", sub("js/main.js", "    if (savedY !== null) {\n      const y", "    if (false) {\n      const y"), "tests/test_ui_interactions.py::test_print_page_restores_scroll_position", ["--quick"]),
     ("browser: print leaves the sidebar in", append("css/style.css", "\n@media print { aside, .sidebar { display: block !important; } }\n"), "tests/test_ui_print.py::test_print_layout_removes_page_chrome_and_keeps_content", ["--quick"]),
