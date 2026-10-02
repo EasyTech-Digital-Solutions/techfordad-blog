@@ -215,3 +215,16 @@ def test_quick_print_layout_hides_everything_else(page, toolbar_page, sessions):
     }""")
     assert visible and all(visible), "an unmarked section is still visible in the quick print"
     pg.close()
+
+
+def test_skip_link_works_with_keyboard(sample_page, sessions):
+    """First Tab reveals 'Skip to main content'; Enter jumps to the page content."""
+    pg = _open(sessions, sample_page)
+    link = pg.locator(".skip-link")
+    assert link.bounding_box()["y"] < 0, "skip link should be hidden until it has keyboard focus"
+    pg.keyboard.press("Tab")
+    assert pg.evaluate("document.activeElement.className") == "skip-link", "the skip link must be the first thing Tab reaches"
+    assert link.bounding_box()["y"] >= 0, "skip link must be visible while focused"
+    pg.keyboard.press("Enter")
+    assert pg.evaluate("document.activeElement.id") == "main", "after Enter, keyboard focus must be on the page content, not still on the link"
+    pg.close()

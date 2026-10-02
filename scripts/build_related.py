@@ -155,7 +155,7 @@ def insert(path, text, block):
     if m:
         i = m.start(1)
         return text[:i] + block + text[i:]
-    m = re.search(r"\n(  </div>\n</div>\n)\n<footer>", text)  # Canada pages: end of .article-body
+    m = re.search(r"\n(  </div>\n</div>\n)\n(?:</main>\n\n)?<footer>", text)  # Canada pages: end of .article-body
     if m:
         i = m.start(1)
         return text[:i] + block + text[i:]
