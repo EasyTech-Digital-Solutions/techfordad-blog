@@ -212,6 +212,7 @@ document.querySelectorAll('#year').forEach(el => {
   // then restore it. 'summary' = picks + comparison table, 'table' = comparison table only.
   let marked = [];
   let printMode = 'full';
+  let savedY = null;  // scroll position to restore: closing the print dialog can jump the page to the top
   function section(id) {
     const h = host.querySelector('h2#' + id);
     const nodes = [];
@@ -221,6 +222,7 @@ document.querySelectorAll('#year').forEach(el => {
     return nodes;
   }
   function printSections(nodes, mode) {
+    savedY = window.scrollY;
     marked = nodes;
     printMode = mode;
     nodes.forEach(n => n.classList.add('print-keep'));
@@ -232,6 +234,13 @@ document.querySelectorAll('#year').forEach(el => {
     marked.forEach(n => n.classList.remove('print-keep'));
     marked = [];
     printMode = 'full';
+    if (savedY !== null) {
+      const y = savedY;
+      savedY = null;
+      const restore = () => window.scrollTo({ top: y, behavior: 'instant' });
+      restore();
+      requestAnimationFrame(restore);  // again after the browser re-lays out the page
+    }
   });
   const summaryNodes = [].concat(section('top-picks'), section('which-one'), section('comparison'));
   if (summaryNodes.length) addButton('Print quick comparison', () => printSections(summaryNodes, 'summary'));
@@ -296,6 +305,7 @@ document.querySelectorAll('#year').forEach(el => {
   host.appendChild(printFoot);
 
   window.addEventListener('beforeprint', () => {
+    if (savedY === null) savedY = window.scrollY;  // Ctrl/Cmd+P and the full-page button
     const today = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
     printHead.textContent = 'TechForDad · ' + url;
     printFoot.textContent = 'Printed ' + today + '. Prices and availability change, so check the retailer before you buy.';
