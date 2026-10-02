@@ -4,7 +4,7 @@ Automated checks for every page of the site: that it is correct, safe, readable 
 commission, and has not broken since the last change. Written for a static HTML site with no build step.
 
 ```
-tests/run.sh                 everything that works offline (loads every page in Chrome; about 15 minutes)
+tests/run.sh                 everything that works offline (loads every page in Chrome; about 17 minutes)
 tests/run.sh --quick         one page of each kind (about 2 minutes): the fast check while you work
 tests/run.sh tests/test_security.py tests/test_links.py     just some files (instant: no browser)
 tests/run.sh --live          also check the PUBLISHED site (run after merging to main)
@@ -29,7 +29,7 @@ the `exclude:` list in `_config.yml`, and a test checks that).
 | `test_ui_a11y.py` | yes | Accessibility scan (axe-core) on every page against a **baseline** of known issues |
 | `test_ui_registry.py` | no | Every CSS section is mapped to the tests that cover it (the "keep the tests current" guard) |
 | `test_live_site.py` | `--live` | Every sitemap URL is up, redirects, real 404s, certificate expiry, security headers, internal files not public, deploy matches the repo |
-| `check_the_tests.py` | (script) | Breaks a copy of the site in 27 ways and confirms the right test notices each one |
+| `check_the_tests.py` | (script) | Breaks a copy of the site in 31 ways and confirms the right test notices each one |
 
 `.github/workflows/tests.yml` runs the whole suite on every pull request and every push to `main`.
 `.github/workflows/live-site-check.yml` runs the live checks every Monday.
@@ -67,7 +67,7 @@ Never grow a baseline to make a failing test pass; fix the page, or ask first.
 ## Checking the tests themselves
 
 ```
-./.venv/bin/python tests/check_the_tests.py            # all 27 deliberate breakages (about 6 minutes)
+./.venv/bin/python tests/check_the_tests.py            # all 31 deliberate breakages (about 6 minutes)
 ./.venv/bin/python tests/check_the_tests.py affiliate  # only those with "affiliate" in the name
 ```
 
@@ -80,7 +80,7 @@ new kind of check you write.
 * The repo is served on a local port, as GitHub Pages would serve it. Requests to other sites (Google, Amazon) get empty
   answers, so tests run offline and never send analytics hits.
 * Each page is loaded once per screen size (desktop 1280px, phone 390px) and measured by `tests/measure.js`; many tests
-  read that one report, which keeps a full run to about 15 minutes.
+  read that one report, which keeps a full run to about 17 minutes.
 * Print is tested by emulating print media, and by replacing `window.print` with a stand-in that behaves like Chrome after
   a cancelled print (fires `beforeprint`, jumps to the top, fires `afterprint`).
 * The checks use fixtures in `conftest.py`; `pages.py` is the page inventory; `htmlutil.py` reads HTML for the static tests.

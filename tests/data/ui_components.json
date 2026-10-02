@@ -179,6 +179,13 @@
     "test_ui_pages.py::test_touch_targets_on_phones",
     "test_ui_pages.py::test_list_text_is_readable_on_phones"
    ]
+  },
+  "ACCESSIBILITY": {
+   "covered_by": [
+    "test_seo.py::test_has_main_landmark_and_skip_link",
+    "test_ui_interactions.py::test_skip_link_works_with_keyboard",
+    "test_ui_a11y.py::test_accessibility"
+   ]
   }
  }
 }

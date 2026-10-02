@@ -97,3 +97,14 @@ def test_local_assets_exist(html_page):
         if clean and not target.resolve().exists():
             missing.append(f"<{tag} {attr}={url}>")
     assert not missing, "references to files that do not exist:\n  " + "\n  ".join(missing)
+
+
+def test_has_main_landmark_and_skip_link(html_page):
+    """Screen-reader and keyboard users jump straight to <main>; every page needs one landmark and a working skip link."""
+    _skip_if_not_content(html_page)
+    text = P.read(html_page)
+    assert len(__import__("re").findall(r"<main\b", text)) == 1, "page needs exactly one <main> landmark"
+    assert '<main id="main"' in text, '<main> needs id="main" (the skip link points at it)'
+    skip = text.find('class="skip-link" href="#main"')
+    assert 0 < skip < text.find("<header"), "the 'Skip to main content' link must be the first thing in <body>, before the header"
+    assert text.find("<main") < text.find("<footer") and text.find("</main>") < text.find("<footer"), "<main> must end before the footer"
