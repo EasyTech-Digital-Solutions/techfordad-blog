@@ -1,0 +1,314 @@
+{
+ "_readme": "Accessibility problems (axe-core rule -> number of elements) that exist today, per page. The suite fails if a page gets a NEW problem or MORE elements with an existing one. Fix problems and re-run with --update-baseline to shrink this file; never grow it to make a test pass.",
+ "pages": {
+  "404.html": {
+   "landmark-one-main": 1,
+   "region": 2
+  },
+  "about.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 1,
+   "region": 2
+  },
+  "affiliate-disclosure.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 2,
+   "region": 2
+  },
+  "blog/best-alexa-devices-for-seniors.html": {
+   "color-contrast": 16,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 6,
+   "region": 108
+  },
+  "blog/best-blood-pressure-monitors-canada.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 4,
+   "region": 87
+  },
+  "blog/best-blood-pressure-monitors-for-seniors.html": {
+   "color-contrast": 12,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 2,
+   "region": 78
+  },
+  "blog/best-cell-phone-plans-for-seniors-canada.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 8,
+   "region": 72
+  },
+  "blog/best-cell-phones-for-seniors-canada.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 13,
+   "region": 103
+  },
+  "blog/best-cell-phones-for-seniors.html": {
+   "color-contrast": 13,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "region": 72
+  },
+  "blog/best-cordless-phones-for-seniors-canada.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 4,
+   "region": 61
+  },
+  "blog/best-cordless-phones-for-seniors.html": {
+   "color-contrast": 14,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 5,
+   "region": 96
+  },
+  "blog/best-e-readers-for-seniors-canada.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 6,
+   "region": 85
+  },
+  "blog/best-e-readers-for-seniors.html": {
+   "color-contrast": 13,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 7,
+   "region": 93
+  },
+  "blog/best-gps-trackers-for-seniors-canada.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 6,
+   "region": 84
+  },
+  "blog/best-gps-trackers-for-seniors.html": {
+   "color-contrast": 11,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 1,
+   "region": 78
+  },
+  "blog/best-hearing-aids-canada.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 5,
+   "region": 89
+  },
+  "blog/best-hearing-aids-for-seniors.html": {
+   "color-contrast": 12,
+   "empty-table-header": 1,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 2,
+   "region": 56
+  },
+  "blog/best-home-security-for-seniors-canada.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 3,
+   "region": 73
+  },
+  "blog/best-home-security-for-seniors.html": {
+   "color-contrast": 14,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 6,
+   "region": 79
+  },
+  "blog/best-laptops-for-seniors.html": {
+   "color-contrast": 11,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 3,
+   "region": 89
+  },
+  "blog/best-large-button-keyboards-for-seniors.html": {
+   "color-contrast": 18,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 5,
+   "region": 102
+  },
+  "blog/best-medical-alert-systems-canada.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 1,
+   "region": 47
+  },
+  "blog/best-medical-alert-systems.html": {
+   "color-contrast": 15,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 3,
+   "region": 80
+  },
+  "blog/best-pill-organizers-for-seniors.html": {
+   "color-contrast": 13,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 4,
+   "region": 90
+  },
+  "blog/best-sleep-trackers-for-seniors.html": {
+   "color-contrast": 15,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 5,
+   "region": 91
+  },
+  "blog/best-smart-home-devices-for-seniors.html": {
+   "color-contrast": 15,
+   "heading-order": 7,
+   "landmark-one-main": 1,
+   "link-in-text-block": 1,
+   "region": 55
+  },
+  "blog/best-smartwatches-for-seniors-canada.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 13,
+   "region": 105
+  },
+  "blog/best-smartwatches-for-seniors.html": {
+   "color-contrast": 18,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 6,
+   "region": 92
+  },
+  "blog/best-tablets-for-seniors-canada.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 3,
+   "region": 87
+  },
+  "blog/best-tablets-for-seniors.html": {
+   "color-contrast": 21,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 1,
+   "region": 87
+  },
+  "blog/best-tv-remotes-for-seniors.html": {
+   "color-contrast": 11,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 7,
+   "region": 89
+  },
+  "blog/best-video-doorbells-for-seniors-canada.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 2,
+   "region": 93
+  },
+  "blog/best-video-doorbells-for-seniors.html": {
+   "color-contrast": 16,
+   "heading-order": 5,
+   "landmark-one-main": 1,
+   "link-in-text-block": 3,
+   "region": 90
+  },
+  "blog/how-to-set-up-ipad-for-elderly-parent.html": {
+   "color-contrast": 1,
+   "landmark-one-main": 1,
+   "region": 70
+  },
+  "blog/jitterbug-vs-iphone-for-seniors.html": {
+   "color-contrast": 17,
+   "heading-order": 3,
+   "landmark-one-main": 1,
+   "region": 45
+  },
+  "blog/life-alert-vs-medical-guardian.html": {
+   "color-contrast": 7,
+   "landmark-one-main": 1,
+   "link-in-text-block": 1,
+   "region": 58
+  },
+  "blog/medical-alert-no-monthly-fee.html": {
+   "color-contrast": 12,
+   "heading-order": 4,
+   "landmark-one-main": 1,
+   "link-in-text-block": 1,
+   "region": 51
+  },
+  "contact.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 2,
+   "region": 2
+  },
+  "gift-guides/gifts-for-elderly-parents-who-have-everything.html": {
+   "landmark-one-main": 1,
+   "region": 31
+  },
+  "gift-guides/index.html": {
+   "landmark-one-main": 1,
+   "region": 3
+  },
+  "gift-guides/safety-tech-for-elderly-parents-who-live-alone.html": {
+   "landmark-one-main": 1,
+   "region": 42
+  },
+  "gift-guides/tech-gifts-for-elderly-parents.html": {
+   "landmark-one-main": 1,
+   "region": 34
+  },
+  "gift-guides/tech-gifts-for-seniors-under-50.html": {
+   "landmark-one-main": 1,
+   "region": 35
+  },
+  "gift-guides/tech-gifts-for-someone-with-dementia.html": {
+   "landmark-one-main": 1,
+   "region": 35
+  },
+  "guides/7-tech-essentials-checklist.html": {
+   "color-contrast": 1,
+   "landmark-one-main": 1,
+   "link-in-text-block": 7,
+   "region": 34
+  },
+  "guides/caregiver-resources.html": {
+   "color-contrast": 1,
+   "landmark-one-main": 1,
+   "link-in-text-block": 3,
+   "region": 37
+  },
+  "guides/fall-prevention-tech.html": {
+   "color-contrast": 1,
+   "landmark-one-main": 1,
+   "link-in-text-block": 5,
+   "region": 43
+  },
+  "guides/gps-trackers.html": {
+   "color-contrast": 1,
+   "landmark-one-main": 1,
+   "link-in-text-block": 4,
+   "region": 32
+  },
+  "guides/hearing-aids.html": {
+   "color-contrast": 1,
+   "landmark-one-main": 1,
+   "link-in-text-block": 3,
+   "region": 34
+  },
+  "guides/home-safety-checklist.html": {
+   "color-contrast": 1,
+   "landmark-one-main": 1,
+   "link-in-text-block": 2,
+   "region": 36
+  },
+  "guides/index.html": {
+   "color-contrast": 7,
+   "landmark-one-main": 1,
+   "link-in-text-block": 1,
+   "region": 2
+  },
+  "how-we-review.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 2,
+   "region": 2
+  },
+  "our-story.html": {
+   "landmark-one-main": 1,
+   "region": 2
+  },
+  "privacy-policy.html": {
+   "landmark-one-main": 1,
+   "link-in-text-block": 10,
+   "region": 2
+  }
+ }
+}

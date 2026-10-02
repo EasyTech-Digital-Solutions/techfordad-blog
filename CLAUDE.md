@@ -13,6 +13,7 @@ Every new `blog/*.html` article (weekly automated posts included) must ship with
 5. **A `sitemap.xml` entry** for the new URL.
 6. **Run `python3 scripts/build_nav.py`.** The header's "All Reviews" dropdown is generated from `blog/*.html` (files ending `-canada.html` go under Canada, `noindex` pages are left out) and copied into every page. Re-run it after adding or removing an article so the menu and the cache-busting `?v=` on `style.css`/`main.js` stay in sync.
 7. **Add the article to `scripts/build_related.py`** (a `TOPICS` entry, plus which topics it relates to in `RELATED`), then run `python3 scripts/build_nav.py`. It writes the "Keep Reading" block on every article and guide, so a new page is linked from at least two others and never left orphaned. If the new page is a US/Canada pair, also add it to `PAIRS` in `scripts/build_hreflang.py`. Never hand-edit the `<!-- related -->` or `<!-- hreflang -->` blocks.
+8. **Green tests.** Run `tests/run.sh`; a new article must pass every check (title/description length, canonical, affiliate tags, accessibility baseline). If it adds a new kind of page or UI, update the tests too (see "Tests" below).
 
 ## Hero images
 
@@ -25,6 +26,25 @@ Every article hero should have a real photo, not just text on the navy backgroun
    - `<img src="../images/heroes/hero-<topic>.jpg" alt="..." width="860" height="480" fetchpriority="high">` as the **first child** of `<div class="article-hero">`, before `.article-hero-inner`. (The CSS absolutely-positions it as a `background: cover`, so exact source dimensions don't matter — the `width`/`height` attributes are just layout-reservation hints and don't need to match the file's real pixel size. Use `fetchpriority="high"`, not `loading="lazy"`: the hero is the first thing visitors see, and lazy-loading it delays the page.)
 4. **Run `python3 scripts/make_card_images.py`** so the new hero also gets a small WebP card thumbnail in `images/cards/` (the cards on the reviews index, homepage, gift hub and 404 load these, not the full hero). The card `<img>` in `blog/index.html` uses `../images/cards/hero-<topic>.webp`; the homepage and 404 use `images/cards/...`.
 5. If no suitable photo exists yet, it's fine to ship the article with a text-only hero (many pages already work this way), but **come back and add one** — don't leave `og:image` pointing at a file that was never actually saved. If in doubt, point `og:image` at `images/og-default.svg` (the site's real fallback) rather than a hero filename that doesn't exist yet.
+
+## Tests (read before changing any HTML, CSS or JS)
+
+An automated suite in `tests/` checks every page: SEO basics, affiliate-link rules, security and privacy hygiene,
+layout on desktop and phone in a real browser, every button and print path, print layout, accessibility, and (opt-in)
+the live site. Full guide: `tests/README.md`.
+
+- **Run `tests/run.sh` before every commit** that touches HTML, CSS, JS or `scripts/`. `tests/run.sh --quick` is the fast version.
+  CI runs the whole suite on every pull request, so a red check blocks merging in practice.
+- **When you change the UI, change the tests in the same pull request.** A new page type goes in `tests/pages.py`; a new
+  CSS section needs a line in `tests/data/ui_components.json` plus a test that exercises it (the registry test fails
+  until you do); a new button or behavior needs a test in `tests/test_ui_interactions.py`; a new Amazon link needs
+  `tests/data/approved_amazon_links.json` and `python3 scripts/amazon_registry.py --update`.
+- **Never make a failing test pass by loosening it or growing a baseline file** (`tests/data/known_issues.json`,
+  `a11y_known_issues.json`). Fix the page, or ask first. Baselines only shrink.
+- **`scripts/build_nav.py` rewrites every page.** To check without writing, use `python3 scripts/build_nav.py --check`.
+  Bump `ASSET_VERSION` there whenever `css/style.css` or `js/main.js` changes (Cloudflare caches the versioned URLs).
+- After merging to `main`, run `tests/run.sh --live` (the published site: uptime, certificate, security headers, and that
+  internal files are not public). A weekly GitHub Action does the same.
 
 ## Content conventions
 
