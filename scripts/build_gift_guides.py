@@ -480,6 +480,7 @@ HEAD = """<!DOCTYPE html>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-YW35RMEFHV');</script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <header>
   <div class="header-inner">
@@ -495,9 +496,13 @@ HEAD = """<!DOCTYPE html>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
+
+<main id="main">
 """
 
 FOOT = """
+</main>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
