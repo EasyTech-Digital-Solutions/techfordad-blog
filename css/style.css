@@ -1336,3 +1336,75 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
 /* Inline affiliate links in running text (e.g. "Check price on Amazon" after a list item) must read as links */
 .article-body a[rel~="sponsored"]:not([class]) { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .article-body a[rel~="sponsored"]:not([class]):hover { color: var(--amber-text); }
+
+/* ===== PRINT & SHARE TOOLBAR (js/main.js) ===== */
+.page-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0 0 20px; }
+.page-tools button, .page-tools a {
+  display: inline-block; min-height: 44px; padding: 10px 18px;
+  background: var(--white); color: var(--navy); border: 2px solid var(--navy); border-radius: 8px;
+  font: inherit; font-size: .95rem; font-weight: 700; line-height: 1.2; text-decoration: none; cursor: pointer;
+}
+.page-tools button:hover, .page-tools a:hover { background: var(--amber-light); color: var(--navy); }
+.page-tools button:focus-visible, .page-tools a:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+.page-tools-status { font-size: .95rem; color: var(--muted); }
+.table-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; margin: 0 0 10px; }
+.table-tools button {
+  min-height: 44px; padding: 8px 14px; background: var(--white); color: var(--navy);
+  border: 2px solid var(--navy); border-radius: 8px; font: inherit; font-size: .9rem; font-weight: 700; cursor: pointer;
+}
+.table-tools button:hover { background: var(--amber-light); }
+.table-tools button:focus-visible, .table-tools a:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+.table-tools a { color: var(--navy); font-size: .9rem; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.print-only { display: none; }
+
+@media print {
+  @page { margin: 14mm; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .print-only { display: block; }
+  .print-head { margin: 0 0 8px; font-size: 9pt; color: #444; }
+  .print-foot { margin: 24px 0 0; padding-top: 8px; border-top: 1px solid #999; font-size: 9pt; color: #444; }
+  /* Chrome the reader doesn't need on paper */
+  .gift-bar, header, footer, .breadcrumb, aside, .sidebar, .newsletter, .related-guides, .author-box,
+  .page-tools, .table-tools, .email-form, .article-hero > img, .toc:has(.toc-title),
+  .btn-check-price, .table-cta, .perk-note, .perk-cta, .perk-line, .card-perk, .perk-btn { display: none !important; }
+  /* Plain hero: just the title */
+  .article-hero { background: none !important; min-height: 0; padding: 0 0 8px; color: #000; text-align: left; display: block; }
+  .article-hero::after { display: none; }
+  .article-hero * { color: #000 !important; text-shadow: none !important; }
+  .article-layout { display: block; }
+  .article-body { max-width: none; padding: 0; }
+  /* Show every FAQ answer, keep cards and tables whole */
+  .faq-a { display: block !important; }
+  .faq-q::after { display: none !important; }
+  .product-card, .faq-item, .sources { break-inside: avoid; }
+  h2, h3 { break-after: avoid; }
+  .comparison-table-wrap, .article-body div[style*="overflow-x"] { overflow: visible !important; }
+  table { width: 100%; font-size: 9pt; break-inside: avoid; }
+  th, td { border: 1px solid #999 !important; padding: 4px 6px; }
+  a { color: inherit !important; text-decoration: none; }
+  html[data-season] body::before { display: none; }
+  /* "Print quick comparison": keep only the sections main.js marked */
+  body.print-summary .article-body > *:not(.print-keep):not(.print-only) { display: none !important; }
+}
+
+/* ===== PHONE TWEAKS (touch targets, readable list text, toolbar layout) ===== */
+.table-hint { flex-basis: 100%; margin: 0; font-size: .9rem; color: var(--muted); }
+.table-hint[hidden] { display: none; }
+@media (max-width: 600px) {
+  /* Print & share toolbar: two tidy columns instead of a ragged wrap */
+  .page-tools { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: stretch; }
+  .page-tools > :nth-child(odd):nth-last-child(2) { grid-column: 1 / -1; } /* a lone last button spans the row */
+  .page-tools button, .page-tools a { width: 100%; padding: 10px 8px; text-align: center; }
+  .page-tools-status { grid-column: 1 / -1; }
+  .page-tools-status:empty { display: none; }
+  /* 44px touch targets for the header controls */
+  .nav-toggle { width: 44px; height: 44px; }
+  .nav-cta { padding-top: 12px; padding-bottom: 12px; }
+  /* Pros/cons and small boxes: 13px is too small for this audience */
+  .pros ul li, .cons ul li { font-size: .94rem; overflow-wrap: anywhere; }
+  .product-pros-cons { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .affiliate-box { font-size: .9rem; }
+  /* Long badges wrap instead of running off the screen */
+  .product-header { flex-wrap: wrap; }
+  .product-badge { white-space: normal; flex-shrink: 1; max-width: 100%; }
+}

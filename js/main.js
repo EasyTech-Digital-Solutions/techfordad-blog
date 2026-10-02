@@ -149,3 +149,156 @@ document.querySelectorAll('.gift-bar-close').forEach(btn => {
 document.querySelectorAll('#year').forEach(el => {
   el.textContent = new Date().getFullYear();
 });
+
+// Print & share toolbar — articles, gift guides and guides (not the index pages).
+// Injected here so every page gets it without editing the HTML. Shares the canonical
+// page URL (never an affiliate link) so a text or email to a sibling stays clean.
+(function () {
+  if (!/^\/(blog|gift-guides|guides)\/[^/]+\.html$/.test(location.pathname) || /\/index\.html$/.test(location.pathname)) return;
+  const host = document.querySelector('article.article-body, .article-body, .about-body');
+  if (!host) return;
+
+  const canonical = document.querySelector('link[rel="canonical"]');
+  const url = (canonical && canonical.href) || location.origin + location.pathname;
+  const h1 = document.querySelector('h1');
+  const title = (h1 && h1.textContent.trim()) || document.title;
+  const message = title + '\n' + url;
+  const page = location.pathname;
+
+  const bar = document.createElement('div');
+  bar.className = 'page-tools';
+  bar.setAttribute('role', 'group');
+  bar.setAttribute('aria-label', 'Print or share this page');
+  const status = document.createElement('span');
+  status.className = 'page-tools-status';
+  status.setAttribute('role', 'status');
+  status.setAttribute('aria-live', 'polite');
+
+  function addButton(label, onClick) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = label;
+    b.addEventListener('click', onClick);
+    bar.appendChild(b);
+    return b;
+  }
+  function addLink(label, href, method) {
+    const a = document.createElement('a');
+    a.textContent = label;
+    a.href = href;
+    a.addEventListener('click', () => track('share', { method: method, content_type: 'article', item_id: page }));
+    bar.appendChild(a);
+  }
+  function say(msg) {
+    status.textContent = msg;
+    setTimeout(() => { status.textContent = ''; }, 3000);
+  }
+  function copyLink() {
+    const done = () => { track('share', { method: 'copy_link', content_type: 'article', item_id: page }); say('Link copied'); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(done, () => say('Could not copy. Copy the address from your browser instead.'));
+    } else {
+      const t = document.createElement('textarea');
+      t.value = url; t.style.position = 'fixed'; t.style.opacity = '0';
+      document.body.appendChild(t); t.select();
+      try { document.execCommand('copy') ? done() : say('Could not copy. Copy the address from your browser instead.'); } catch (e) { say('Could not copy. Copy the address from your browser instead.'); }
+      t.remove();
+    }
+  }
+
+  addButton('Print this page', () => window.print());
+
+  // Compact print modes: mark some sections, hide the rest of the article for one print,
+  // then restore it. 'summary' = picks + comparison table, 'table' = comparison table only.
+  let marked = [];
+  let printMode = 'full';
+  function section(id) {
+    const h = host.querySelector('h2#' + id);
+    const nodes = [];
+    if (!h) return nodes;
+    nodes.push(h);
+    for (let n = h.nextElementSibling; n && n.tagName !== 'H2'; n = n.nextElementSibling) nodes.push(n);
+    return nodes;
+  }
+  function printSections(nodes, mode) {
+    marked = nodes;
+    printMode = mode;
+    nodes.forEach(n => n.classList.add('print-keep'));
+    document.body.classList.add('print-summary');
+    window.print();
+  }
+  window.addEventListener('afterprint', () => {
+    document.body.classList.remove('print-summary');
+    marked.forEach(n => n.classList.remove('print-keep'));
+    marked = [];
+    printMode = 'full';
+  });
+  const summaryNodes = [].concat(section('top-picks'), section('which-one'), section('comparison'));
+  if (summaryNodes.length) addButton('Print quick comparison', () => printSections(summaryNodes, 'summary'));
+
+  if (navigator.share) {
+    addButton('Share', () => {
+      navigator.share({ title: title, url: url }).then(
+        () => track('share', { method: 'native', content_type: 'article', item_id: page }),
+        () => {}  // dismissed the share sheet
+      );
+    });
+  } else {
+    addLink('Text it', 'sms:?&body=' + encodeURIComponent(message), 'sms');
+    addLink('Email it', 'mailto:?subject=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(message), 'email');
+  }
+  addButton('Copy link', copyLink);
+  bar.appendChild(status);
+
+  // Shown only when printing: where the page came from and when, since prices change.
+  const printHead = document.createElement('p');
+  printHead.className = 'print-only print-head';
+  const printFoot = document.createElement('p');
+  printFoot.className = 'print-only print-foot';
+  host.insertBefore(printHead, host.firstChild);
+  bar.id = 'page-tools';
+  host.insertBefore(bar, host.firstChild);
+
+  // One-click print right where the reader is looking at the comparison table.
+  const tableSection = section('comparison');
+  const wrap = tableSection.find(n => n.tagName === 'TABLE' || (n.querySelector && n.querySelector('table')));
+  if (wrap) {
+    const tools = document.createElement('div');
+    tools.className = 'table-tools';
+    const printTable = document.createElement('button');
+    printTable.type = 'button';
+    printTable.textContent = 'Print this table';
+    printTable.addEventListener('click', () => printSections(tableSection, 'table'));
+    const more = document.createElement('a');
+    more.href = '#page-tools';
+    more.textContent = 'More print and share options \u2191';
+    more.addEventListener('click', e => {
+      e.preventDefault();
+      bar.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const first = bar.querySelector('button, a');
+      if (first) setTimeout(() => first.focus({ preventScroll: true }), 400);
+    });
+    tools.appendChild(printTable);
+    tools.appendChild(more);
+    // Tell phone readers when the table is wider than the screen.
+    const hint = document.createElement('p');
+    hint.className = 'table-hint';
+    hint.textContent = 'Swipe the table sideways to see every column \u2192';
+    hint.hidden = true;
+    tools.appendChild(hint);
+    wrap.parentNode.insertBefore(tools, wrap);
+    const scroller = wrap.tagName === 'TABLE' ? wrap.parentElement : wrap;
+    const updateHint = () => { hint.hidden = scroller.scrollWidth <= scroller.clientWidth + 1; };
+    updateHint();
+    window.addEventListener('resize', updateHint);
+    window.addEventListener('load', updateHint);
+  }
+  host.appendChild(printFoot);
+
+  window.addEventListener('beforeprint', () => {
+    const today = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+    printHead.textContent = 'TechForDad · ' + url;
+    printFoot.textContent = 'Printed ' + today + '. Prices and availability change, so check the retailer before you buy.';
+    track('print', { content_type: 'article', item_id: page, print_mode: printMode });
+  });
+})();
