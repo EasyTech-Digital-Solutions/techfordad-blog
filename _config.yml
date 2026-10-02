@@ -15,3 +15,10 @@ exclude:
   - newsletter-log.json
   - Gemfile
   - Gemfile.lock
+  - tests            # the automated test suite, see tests/README.md
+  - pytest.ini
+
+# Jekyll skips folders that start with a dot, so /.well-known/security.txt (how security researchers find the
+# contact address) was never published. This list opts it back in. tests/test_live_site.py checks it is served.
+include:
+  - .well-known

@@ -1,0 +1,19 @@
+{
+  "_readme": "Everything at the top level of the repo that GitHub Pages publishes on techfordad.com. Anything NOT listed here and NOT excluded in _config.yml fails the suite, so a new internal file or folder can't be published by accident. Add a name here only if it is meant to be public.",
+  "public": [
+    ".well-known", "404.html", "CNAME", "about.html", "ads.txt", "affiliate-disclosure.html", "author", "blog",
+    "category", "contact.html", "css", "favicon.ico", "favicon.svg", "fonts", "gift-guides", "guides",
+    "how-we-review.html", "images", "index.html", "js", "our-story.html", "page", "privacy-policy.html",
+    "robots.txt", "sitemap.xml",
+    "digital-storytelling-how-dads-are-using-tech-to-create-bedtime-stories-for-the-future",
+    "mastering-the-grill-latest-tech-gadgets-for-bbq-loving-dads",
+    "reconnecting-with-your-teenagers-how-tech-can-bridge-the-generation-gap",
+    "rekindling-old-hobbies-technology-for-dads-vintage-record-collection",
+    "remote-work-efficiency-tech-tools-to-aid-working-dads-at-home",
+    "smart-homes-perfecting-your-dad-cave-with-automation",
+    "the-ultimate-trio-top-webinar-platforms-of-2023",
+    "top-5-best-fathers-day-gifts-for-dad-2023",
+    "top-8-tech-devices-for-dads",
+    "waterfall-incense-burner"
+  ]
+}
