@@ -67,3 +67,18 @@ def test_faq_uses_the_click_to_open_markup(html_page):
     faq_part = t[t.index('id="faq"'):]
     faq_part = faq_part[:faq_part.index("</article>")]
     assert not re.search(r"<h3>", faq_part.split('class="faq-item"')[0].split("</h2>", 1)[1]), "bare <h3> questions sit above the FAQ items"
+
+
+def test_table_of_contents_numbering_is_continuous(html_page):
+    """Once the contents list starts numbering (1., 2., ...) it numbers every later entry, in order, to the end."""
+    t = _article(html_page)
+    m = re.search(r'<ol class="toc-plain">(.*?)</ol>', t, re.S)
+    if not m:
+        pytest.skip("page has no numbered-style contents list")
+    texts = [re.sub(r"<[^>]+>", "", x).strip() for x in re.findall(r"<li>(.*?)</li>", m.group(1), re.S)]
+    numbers = [re.match(r"(\d+)\.\s", x) for x in texts]
+    first = next((i for i, n in enumerate(numbers) if n), None)
+    assert first is not None, "contents list has no numbered entries"
+    tail = numbers[first:]
+    assert all(tail), f"entries after the first numbered one are not numbered: {[texts[first + i] for i, n in enumerate(tail) if not n]}"
+    assert [int(n.group(1)) for n in tail] == list(range(1, len(tail) + 1)), f"numbering is not 1..{len(tail)} in order: {[int(n.group(1)) for n in tail]}"
