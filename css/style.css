@@ -742,6 +742,8 @@ footer {
 .check { color: var(--green); font-weight: 700; }
 .cross { color: var(--red); }
 
+.table-note { margin: 10px 0 22px; font-size: .92rem; color: var(--muted-on-amber, #4B5563); }
+
 /* ===== FAQ ===== */
 .faq-item {
   border: 1px solid var(--border);
@@ -1416,6 +1418,7 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
   background: var(--navy); color: var(--white); padding: 12px 18px; border-radius: 0 0 8px 8px;
   font-weight: 700; text-decoration: none;
 }
+.faq-q:focus-visible { outline: 3px solid var(--amber); outline-offset: -3px; }
 .skip-link:focus { top: 0; outline: 3px solid var(--amber); outline-offset: 2px; color: var(--white); }
 /* Headings and <main> receive focus from in-page links and the skip link; no ring needed on a programmatic focus. */
 [tabindex="-1"]:focus { outline: none; }
