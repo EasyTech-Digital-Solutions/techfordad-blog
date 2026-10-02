@@ -1365,14 +1365,14 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
   .print-foot { margin: 24px 0 0; padding-top: 8px; border-top: 1px solid #999; font-size: 9pt; color: #444; }
   /* Chrome the reader doesn't need on paper */
   .gift-bar, header, footer, .breadcrumb, aside, .sidebar, .newsletter, .related-guides, .author-box,
-  .page-tools, .table-tools, .email-form, .article-hero > img, .toc:has(.toc-title),
+  .page-tools, .table-tools, .email-form, .article-hero > img, .toc:has(.toc-title), .toc-box,
   .btn-check-price, .table-cta, .perk-note, .perk-cta, .perk-line, .card-perk, .perk-btn { display: none !important; }
   /* Plain hero: just the title */
   .article-hero { background: none !important; min-height: 0; padding: 0 0 8px; color: #000; text-align: left; display: block; }
   .article-hero::after { display: none; }
   .article-hero * { color: #000 !important; text-shadow: none !important; }
   .article-layout { display: block; }
-  .article-body { max-width: none; padding: 0; }
+  .article-body, .article-inner { max-width: none; padding: 0; }
   /* Show every FAQ answer, keep cards and tables whole */
   .faq-a { display: block !important; }
   .faq-q::after { display: none !important; }
@@ -1384,7 +1384,7 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
   a { color: inherit !important; text-decoration: none; }
   html[data-season] body::before { display: none; }
   /* "Print quick comparison": keep only the sections main.js marked */
-  body.print-summary .article-body > *:not(.print-keep):not(.print-only) { display: none !important; }
+  body.print-summary .print-host > *:not(.print-keep):not(.print-only) { display: none !important; }
 }
 
 /* ===== PHONE TWEAKS (touch targets, readable list text, toolbar layout) ===== */
