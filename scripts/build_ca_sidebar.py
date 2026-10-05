@@ -71,11 +71,12 @@ def shorten_label(label):
 
 
 def shorten_price(price):
+    """Short price for the sidebar. Canada pages always say CAD: a price without it can be read as US dollars."""
     p = plain(price).replace(" CAD", "").strip()
     if len(p) > 22:
         m = re.search(r"\$[\d,]+(?:\.\d+)?", p)
         p = f"From ~{m.group(0)}" if m else ""
-    return p
+    return f"{p} CAD" if "$" in p else p
 
 
 def picks(text):
