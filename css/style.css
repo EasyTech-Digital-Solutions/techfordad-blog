@@ -1469,7 +1469,7 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
 }
 .ad-preview .ad-slot::after { content: "Ad preview (local only): where Google would place an ad"; display: block; margin-top: 6px; font-size: 0.75rem; color: #4B5563; }
 
-/* ===== COUNTRY BADGE (js/main.js) =====
+/* ===== COUNTRY BADGE (js/main.js) ===== */
 .country-badge { position: fixed; left: 16px; bottom: 16px; z-index: 90; }
 .country-badge-pill {
   display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 6px 14px 6px 12px;
