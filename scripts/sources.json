@@ -241,6 +241,51 @@
         {"kind": "maker", "title": "Jiobit: Smart Tag", "url": "https://www.jiobit.com/", "used_for": "Plan price, update rate and battery life as the company lists them"}
       ],
       "note": "Prices and features change, so confirm them on each maker's page."
+    },
+    "blog/best-cordless-phones-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "VTech: SN5147 Amplified Cordless Phone", "url": "https://www.vtechphones.com/store/pd/4143/SN5147-Amplified-Corded-Cordless-Phone-with-Answering-System-Big-Buttons-Extra-Loud-Ringer-Smart-Call-Blocker", "used_for": "List price and product details", "skip_verify": true},
+        {"kind": "maker", "title": "Panasonic: KX-TGM420W Amplified Cordless Phone", "url": "https://shop.panasonic.com/products/amplified-cordless-phone-kx-tgm420", "used_for": "List price and product details, including the Slow Talk feature"},
+        {"kind": "maker", "title": "AT&T: CL82407 4-Handset Cordless System", "url": "https://telephones.att.com/pd/3738/CL82407-4-handset-cordless-answering-system-with-smart-call-blocker", "used_for": "List price and product details", "skip_verify": true}
+      ],
+      "note": "Prices and features change, so confirm them on the maker's page."
+    },
+    "blog/best-pill-organizers-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "Hero: Pricing", "url": "https://herohealth.com/pricing/", "used_for": "Device and plan prices for the Hero dispenser"},
+        {"kind": "maker", "title": "e-Pill: MedSmart", "url": "https://www.epill.com/medsmart.html", "used_for": "List price and product details"},
+        {"kind": "maker", "title": "e-Pill: Medcenter Monthly Pill Organizer", "url": "https://www.epill.com/medcenter.html", "used_for": "List price and product details"},
+        {"kind": "official", "title": "Medicare: Durable medical equipment (DME) coverage", "url": "https://www.medicare.gov/coverage/durable-medical-equipment-dme-coverage", "used_for": "What Original Medicare covers as durable medical equipment"}
+      ],
+      "note": "Prices and plans change, so confirm them on the maker's page. Not every dispenser on this page is listed, only those whose own page we could check."
+    },
+    "blog/best-smart-home-devices-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "Ring: Battery Video Doorbell", "url": "https://ring.com/products/battery-doorbell-2nd-gen", "used_for": "List price and product details"},
+        {"kind": "maker", "title": "iRobot: Roomba i3+ EVO", "url": "https://www.irobot.com/en_US/roomba-i3plus-evo-self-emptying-robot-vacuum/I355020.html", "used_for": "List price and product details"},
+        {"kind": "maker", "title": "Schlage: Encode Plus Smart Lock", "url": "https://www.schlage.com/en/home/smart-locks/encode-plus.html", "used_for": "List price and product details"},
+        {"kind": "official", "title": "CDC: Older adult fall data", "url": "https://www.cdc.gov/falls/about/index.html", "used_for": "That falls are the leading cause of injury death for adults 65 and older", "skip_verify": true}
+      ],
+      "note": "Prices and features change, so confirm them on the maker's page. Amazon's own devices are not listed because Amazon's pages block automated checks."
+    },
+    "blog/best-tablets-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "Apple: iPad", "url": "https://www.apple.com/shop/buy-ipad/ipad", "used_for": "List price from $449, checked Oct 5, 2026"},
+        {"kind": "maker", "title": "Apple: iPad mini", "url": "https://www.apple.com/shop/buy-ipad/ipad-mini", "used_for": "List price, checked Sep 23, 2026"},
+        {"kind": "maker", "title": "Samsung: Galaxy Tab A11+", "url": "https://www.samsung.com/us/tablets/galaxy-tab-a11-plus/buy/", "used_for": "List price from $299.99, checked Oct 5, 2026"},
+        {"kind": "independent", "title": "GSMArena: Samsung Galaxy Tab A11+ specifications", "url": "https://www.gsmarena.com/samsung_galaxy_tab_a11+-14192.php", "used_for": "Speakers, battery, display, software updates and release date"}
+      ],
+      "note": "Prices change, so confirm them on the maker's page. Amazon's Fire tablets are not listed because Amazon's pages block automated checks."
+    },
+    "blog/best-tablets-for-seniors-canada.html": {
+      "sources": [
+        {"kind": "maker", "title": "Apple (Canada): iPad", "url": "https://www.apple.com/ca/shop/buy-ipad/ipad", "used_for": "List price in CAD, checked Sep 23, 2026"},
+        {"kind": "maker", "title": "Apple (Canada): iPad Air", "url": "https://www.apple.com/ca/shop/buy-ipad/ipad-air", "used_for": "List price in CAD, checked Sep 23, 2026"},
+        {"kind": "maker", "title": "Samsung Canada: Galaxy Tab A11+", "url": "https://www.samsung.com/ca/tablets/galaxy-tab-a/galaxy-tab-a11-plus-gray-128gb-sm-x230nzaaxac/", "used_for": "Specifications; the page lists the tablet as not for sale"},
+        {"kind": "independent", "title": "Canada Computers: Samsung Galaxy Tab A11+ 128GB", "url": "https://www.canadacomputers.com/en/android-tablets/283040/samsung-galaxy-tab-a11-11-8-core-fhd-6gb-128gb-wi-fi-5-android-gray-sm-x230nzaaxac.html", "used_for": "A Canadian retail price, checked Oct 5, 2026 (a sale price)"},
+        {"kind": "independent", "title": "GSMArena: Samsung Galaxy Tab A11+ specifications", "url": "https://www.gsmarena.com/samsung_galaxy_tab_a11+-14192.php", "used_for": "Software updates and release date"}
+      ],
+      "note": "Prices change, so confirm them at the retailer. Amazon's Fire tablets are not listed because Amazon's pages block automated checks."
     }
   }
 }
