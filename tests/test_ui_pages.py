@@ -200,3 +200,18 @@ def test_author_strip_is_slim_and_just_above_the_footer(page, viewport, report):
     assert a["afterNewsletter"], "the author strip belongs after the newsletter signup"
     assert -1 <= a["gapToFooter"] <= 2, f"the author strip is {a['gapToFooter']}px above the footer; it should sit right on it"
     assert a["height"] <= (120 if viewport == "desktop" else 220), f"the author strip is {a['height']}px tall"
+
+
+def test_ad_slots_never_shift_or_crowd_the_reader(page, viewport, report):
+    """Manual ad slots (scripts/build_ads.py): below the hero, never inside a list, table, card, contents box or FAQ, with their height
+    reserved so a filled ad cannot push the page, and the sidebar slot only where the sidebar sits beside the article."""
+    slots = report["adSlots"]
+    if not slots:
+        pytest.skip("no ad slots on this page (none configured in scripts/ads.json)")
+    for s in slots:
+        assert not s["inside"], f"an ad slot sits inside a list, table, card or contents box: {s}"
+        if s["shown"]:
+            assert s["top"] > s["heroBottom"], "an ad slot is above the end of the hero image"
+            assert s["height"] >= 240, f"ad slot reserves only {s['height']}px: a filled ad would shift the page"
+    if viewport != "desktop":
+        assert not [s for s in slots if s["where"] == "ad-slot-sidebar" and s["shown"]], "the sidebar ad shows on a phone"

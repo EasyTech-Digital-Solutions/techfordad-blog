@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_gift_guides  # noqa: E402  (source of truth for the gift guide list)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ASSET_VERSION = "20261012"
+ASSET_VERSION = "20261013"
 
 # Short menu labels. Anything not listed falls back to a cleaned-up page title.
 LABELS = {
@@ -335,6 +335,8 @@ def main():
     build_guide_toc.main()
     import build_buying_summary
     build_buying_summary.main()
+    import build_ads
+    build_ads.main()
     import build_product_schema
     build_product_schema.main()
     import build_health_note

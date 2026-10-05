@@ -49,6 +49,13 @@ Guides without a Sources box yet: home safety checklist and 7 Tech Essentials (n
 4. Newsletter, then the slim author strip, then the footer. Prices are written "about $X (checked date)" and never as live prices.
 Edit the generator, never the HTML.
 
+## Ads (Google AdSense)
+
+Ads are placed by us, never by Google's Auto ads in-page format (it inserted up to eight 412px units per page, one above the hero image, others inside the contents list: a 0.4 to 0.5 layout shift on phones).
+`scripts/build_ads.py` (config: `scripts/ads.json`, run by `build_nav.py`) writes manual slots on indexable reviews only: before the first product, in the middle of long buying guides, before the FAQ, after the comparison table, and last in the sticky sidebar (wide screens only).
+Never above the hero, in a list, table, card or contents box. Each slot reserves its height; an unfilled slot collapses. A slot appears only when its id in `ads.json` is set. In the AdSense console keep Overlay formats (anchor, vignette) and turn OFF In-page formats.
+Tests: `tests/test_ads.py` (placement rules, idempotency) and `test_ad_slots_never_shift_or_crowd_the_reader` (browser).
+
 ## Known gaps (as of 2026-10-05)
 - Sources box missing on Alexa, TV remotes and Canada cordless phones (fewer than 3 clean sources); the noindex laptops, keyboards and US video doorbells pages are not rewritten yet.
 - TV remotes and smart home have no comparison table.

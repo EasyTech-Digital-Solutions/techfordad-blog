@@ -140,6 +140,11 @@
       const r = e.getBoundingClientRect(), fr = f.getBoundingClientRect();
       return { height: Math.round(r.height), gapToFooter: Math.round(fr.top - r.bottom), afterNewsletter: !n || (n.compareDocumentPosition(e) & Node.DOCUMENT_POSITION_FOLLOWING) !== 0 };
     })(),
+    adSlots: $$('.ad-slot').map((e) => {
+      const r = e.getBoundingClientRect(), hero = document.querySelector('.article-hero');
+      return { where: [...e.classList].find((c) => c.startsWith('ad-slot-')), shown: getComputedStyle(e).display !== 'none', top: Math.round(r.top + scrollY), height: Math.round(r.height),
+        heroBottom: hero ? Math.round(hero.getBoundingClientRect().bottom + scrollY) : 0, inside: !!e.closest('ul, ol, table, .product-card, .toc, .toc-box, .faq-item, .perk-offers, .buy-summary, .sources') };
+    }),
     faqCount: $$('.faq-item').length,
     scrollY: scrollY,
   };

@@ -1448,7 +1448,18 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
 .author-box-bio a, .gift-more p a, .section-inner p a:not([class]) { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 @media print { .skip-link { display: none !important; } }
 
-/* ===== COUNTRY BADGE (js/main.js) ===== */
+/* ===== AD SLOTS ===== */
+/* Manual AdSense slots (scripts/build_ads.py). Height is reserved so a filled ad never pushes the page; an unfilled slot collapses.
+   The sidebar slot is for wide screens only (on phones the sidebar sits below the article, where the in-article slots already show ads). */
+.ad-slot { margin: 28px 0; min-height: 280px; text-align: center; clear: both; }
+.ad-slot .ad-label { display: block; margin-bottom: 6px; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #4B5563; }
+.ad-slot ins.adsbygoogle { width: 100%; }
+.ad-slot-sidebar { min-height: 250px; margin: 20px 0 0; }
+.ad-slot:has(ins[data-ad-status="unfilled"]) { display: none; }
+@media (max-width: 900px) { .ad-slot-sidebar { display: none; } }
+@media print { .ad-slot { display: none !important; } }
+
+/* ===== COUNTRY BADGE (js/main.js) =====
 .country-badge { position: fixed; left: 16px; bottom: 16px; z-index: 90; }
 .country-badge-pill {
   display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 6px 14px 6px 12px;
