@@ -40,7 +40,7 @@ def test_sidebar_has_the_standard_boxes(html_page):
     assert "Related Guides" in boxes, f"sidebar has no 'Related Guides' box (boxes: {boxes})"
     if 'class="buy-decision"' in t and html_page not in SIDEBAR_EXCEPTIONS:
         assert "Our Top Picks" in boxes, "the page has a ranked pick list but the sidebar has no 'Our Top Picks' box"
-    assert 'class="disclaimer"' in aside and "Affiliate Disclosure" in aside, "sidebar is missing the affiliate note"
+    assert 'class="disclaimer"' not in aside, "the disclosure lives in the strip under the hero, not in the sidebar"
 
 
 def test_top_picks_sidebar_matches_the_pick_list(html_page):
@@ -171,7 +171,7 @@ def test_disclosure_is_one_slim_strip_under_the_hero(html_page):
     assert t.index("article-disclaimer") < t.index('<div class="article-layout">'), "the strip belongs between the hero and the two-column layout"
     text = strip.group(1)
     assert "may earn a commission" in text and "never influenced by compensation" in text and "approximate" in text
-    assert t.count("<strong>Affiliate Disclosure:</strong>") == 2, "one strip plus the short sidebar note; no second disclosure box in the article"
+    assert t.count("<strong>Affiliate Disclosure:</strong>") == 1, "one disclosure strip; no second box in the article or sidebar"
     assert 'background:#fffbeb' not in t and 'class="affiliate-box"' not in t, "the old amber disclosure box is gone"
 
 

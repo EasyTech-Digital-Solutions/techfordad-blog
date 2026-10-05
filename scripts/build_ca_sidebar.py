@@ -119,8 +119,7 @@ def render(path, text):
                       f'          <a href="{BR.rel(path, target)}"><strong>{esc(plain(title))} →</strong></a>',
                       f"          <span>{esc(plain(blurb))}</span>", "        </div>", "      </div>"]
         lines.append("    </div>")
-    lines += ['    <p class="disclaimer"><strong>Affiliate Disclosure:</strong> We earn a small commission if you purchase through our links. '
-              'This never influences our rankings.</p>', "    <!-- /ca-sidebar -->"]
+    lines += ["    <!-- /ca-sidebar -->"]
     return "\n".join(lines)
 
 
