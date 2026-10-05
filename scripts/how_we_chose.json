@@ -1,0 +1,97 @@
+{
+  "_about": "Texts for the 'How We Chose' box at the bottom of each article (scripts/build_how_we_chose.py writes it). Say only what we really do: read manufacturer specifications, published expert and buyer reviews, and accessibility guidance. We do not test products. List what each category's buyers should weigh, matching what the page itself argues.",
+  "categories": {
+    "blood-pressure": {
+      "noun": "Monitors",
+      "criteria": "whether it is an upper-arm monitor (the type recommended for home use), whether the exact model appears on a validated-device list, the range of cuff sizes, how easy the display is to read, irregular-heartbeat or AFib indicators, and how easy it is to use with limited hand strength or vision"
+    },
+    "cordless": {
+      "noun": "Phones",
+      "criteria": "amplification level in decibels, button size, display contrast, ringer volume, hearing-aid compatibility ratings, answering machine and call blocking, and how easy it is for someone unfamiliar with technology"
+    },
+    "tablets": {
+      "noun": "Tablets",
+      "criteria": "how quickly a new user can make a video call, how legible the default text is, how many taps common tasks take (photos, contacts, video), voice assistant support for calls and reminders, storage, and price"
+    },
+    "tv-remotes": {
+      "noun": "Remotes",
+      "criteria": "button size and spacing, how clearly the buttons are labelled, how few buttons the main face has, weight, backlighting, support for several devices, and whether it works out of the box without a phone app"
+    },
+    "hearing-aids": {
+      "noun": "Hearing Aids",
+      "criteria": "the level of hearing loss each device is designed for, self-fitting versus professional fitting, battery and charging, trial and return period, remote support, and total cost including follow-up care"
+    },
+    "medical-alerts": {
+      "noun": "Systems",
+      "criteria": "whether a staffed monitoring centre answers or the device calls 911 directly, fall detection and what it costs, home base versus mobile GPS, network coverage, contract and cancellation terms, monthly and equipment fees, and battery life"
+    },
+    "gps-trackers": {
+      "noun": "Trackers",
+      "criteria": "real-time cellular location versus Bluetooth, how often the location updates, battery life, subscription cost, whether a person who may remove it can still be located, geofencing alerts, and performance indoors"
+    },
+    "home-security": {
+      "noun": "Systems",
+      "criteria": "professional monitoring options, contract length and cancellation terms, equipment cost, how easy it is to install, senior-friendly features such as a panic button or simple keypad, and eligibility for insurance discounts"
+    },
+    "smartwatches": {
+      "noun": "Smartwatches",
+      "criteria": "fall detection and what happens after it triggers, battery life, screen readability, compatibility with the parent's phone, heart-health features, and price and subscription costs"
+    },
+    "cell-phones": {
+      "noun": "Phones",
+      "criteria": "ease of use, button and screen size, hearing-aid compatibility, emergency features, and the cost of the phone and its plan"
+    },
+    "e-readers": {
+      "noun": "E-Readers",
+      "criteria": "screen sharpness and glare, adjustable text size, backlight, battery life, physical page-turn buttons versus touch, library borrowing and the ebook store, and price"
+    },
+    "pill-organizers": {
+      "noun": "Dispensers",
+      "criteria": "locking compartments, alarm loudness and reminders, caregiver alerts, power and connectivity (WiFi versus cellular), capacity, subscription cost, and how easy it is to refill"
+    },
+    "sleep-trackers": {
+      "noun": "Trackers",
+      "criteria": "wearable versus under-mattress, comfort, battery and charging, whether a caregiver can see the data, how breathing indicators are described and their limits (not a diagnosis), and subscription cost"
+    },
+    "smart-home": {
+      "noun": "Devices",
+      "criteria": "how easy it is to use by voice or touch, safety value (lighting, doorbell, lock), setup effort, subscription needs, and privacy of cameras and microphones"
+    },
+    "alexa": {
+      "noun": "Devices",
+      "criteria": "screen size and video calling, speaker volume, camera privacy controls, Drop-In and reminders, setup effort, and price"
+    },
+    "video-doorbells": {
+      "noun": "Doorbells",
+      "criteria": "video quality and field of view, battery versus wired power, subscription costs, and support for Alexa, Google or Apple Home"
+    }
+  },
+  "pages": {
+    "blog/best-blood-pressure-monitors-for-seniors.html": "blood-pressure",
+    "blog/best-blood-pressure-monitors-canada.html": "blood-pressure",
+    "blog/best-cordless-phones-for-seniors.html": "cordless",
+    "blog/best-cordless-phones-for-seniors-canada.html": "cordless",
+    "blog/best-tablets-for-seniors.html": "tablets",
+    "blog/best-tablets-for-seniors-canada.html": "tablets",
+    "blog/best-tv-remotes-for-seniors.html": "tv-remotes",
+    "blog/best-hearing-aids-for-seniors.html": "hearing-aids",
+    "blog/best-hearing-aids-canada.html": "hearing-aids",
+    "blog/best-medical-alert-systems.html": "medical-alerts",
+    "blog/best-medical-alert-systems-canada.html": "medical-alerts",
+    "blog/best-gps-trackers-for-seniors.html": "gps-trackers",
+    "blog/best-gps-trackers-for-seniors-canada.html": "gps-trackers",
+    "blog/best-home-security-for-seniors.html": "home-security",
+    "blog/best-home-security-for-seniors-canada.html": "home-security",
+    "blog/best-smartwatches-for-seniors.html": "smartwatches",
+    "blog/best-smartwatches-for-seniors-canada.html": "smartwatches",
+    "blog/best-cell-phones-for-seniors.html": "cell-phones",
+    "blog/best-cell-phones-for-seniors-canada.html": "cell-phones",
+    "blog/best-e-readers-for-seniors.html": "e-readers",
+    "blog/best-e-readers-for-seniors-canada.html": "e-readers",
+    "blog/best-pill-organizers-for-seniors.html": "pill-organizers",
+    "blog/best-sleep-trackers-for-seniors.html": "sleep-trackers",
+    "blog/best-smart-home-devices-for-seniors.html": "smart-home",
+    "blog/best-alexa-devices-for-seniors.html": "alexa",
+    "blog/best-video-doorbells-for-seniors-canada.html": "video-doorbells"
+  }
+}
