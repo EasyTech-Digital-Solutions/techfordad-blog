@@ -1,0 +1,6 @@
+# Test-suite dependencies (separate from scripts/requirements.txt, which is the price bot's).
+# Pinned to the exact versions the suite was written against; Dependabot proposes upgrades as
+# pull requests (see .github/dependabot.yml), so a new release never changes test results unreviewed.
+pytest==9.1.1
+playwright==1.63.0
+axe-playwright-python==0.1.8
