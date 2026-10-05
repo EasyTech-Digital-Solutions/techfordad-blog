@@ -346,6 +346,17 @@
         {"kind": "maker", "title": "Apple: Accessibility", "url": "https://www.apple.com/accessibility/", "used_for": "Vision, hearing and mobility features available on iPad"},
         {"kind": "maker", "title": "Apple: iPad (A16)", "url": "https://www.apple.com/ipad-11/", "used_for": "Specifications of the 11-inch iPad"}
       ]
+    },
+    "guides/caregiver-resources.html": {
+      "sources": [
+        {"kind": "official", "title": "Administration for Community Living: National Family Caregiver Support Program", "url": "https://acl.gov/programs/support-caregivers/national-family-caregiver-support-program", "used_for": "The five kinds of support the program funds: information, access help, counselling and training, respite care and supplemental services"},
+        {"kind": "official", "title": "Eldercare Locator (Administration for Community Living)", "url": "https://eldercare.acl.gov/", "used_for": "How to find local services for older adults by website, phone, text or chat"},
+        {"kind": "authority", "title": "Alzheimer's Association: 24/7 Helpline", "url": "https://www.alz.org/help-support/resources/helpline", "used_for": "What the free helpline offers caregivers, and its hours"},
+        {"kind": "official", "title": "VA Caregiver Support Program", "url": "https://www.caregiver.va.gov/", "used_for": "The two VA caregiver programs and the support line, for caregivers of Veterans"},
+        {"kind": "official", "title": "IRS: Publication 502, Medical and Dental Expenses", "url": "https://www.irs.gov/publications/p502", "used_for": "When medical expenses paid for a parent can be deducted, and the support test"},
+        {"kind": "independent", "title": "AARP and National Alliance for Caregiving: Caregiving in the US 2025", "url": "https://www.aarp.org/caregiving/basics/caregiving-in-us-survey-2025/", "used_for": "How many Americans are family caregivers"}
+      ],
+      "note": "Programs, eligibility and phone numbers change. Confirm with the agency before you rely on them, and check your state or province for local programs."
     }
   }
 }

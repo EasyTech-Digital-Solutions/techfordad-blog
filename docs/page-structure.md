@@ -32,6 +32,23 @@ This holds for every review article (US and Canada variants) and, where a part a
 - Do not shorten or remove promo (offer) lines or the Prime box without being asked.
 - New article: copy a recent twin, add it to the generators' maps (`build_buying_summary.PAGES`, `how_we_chose.json`, `sources.json`, `build_related.py`, `build_health_note.MEDICAL_PAGES` if medical), run `python3 scripts/build_nav.py`.
 
+## Guides (`guides/*.html`)
+
+Same lean layout, minus the parts that only make sense for product reviews:
+1. Hero, then the **one slim disclosure strip** (health line inside it on medical guides).
+2. **Table of Contents** listing every section, written by `scripts/build_guide_toc.py` (run by `build_nav.py`; never hand-edit the `<!-- guide-toc -->` block).
+3. Intro and sections, **Sources and Where to Check the Details** (when the guide has at least 3 opened sources), **Keep Reading**.
+4. Newsletter, then the slim author strip, then the footer. No sidebar, no picks list, no product cards, no FAQ block, no How We Chose.
+Guides without a Sources box yet: home safety checklist and 7 Tech Essentials (no 3 clean, opened sources for their claims). 7 Tech Essentials also has no newsletter block.
+
+## Gift guides (`gift-guides/*.html`, built by `scripts/build_gift_guides.py`)
+
+1. Hero, then the **one slim disclosure strip**, which also carries the Amazon Associate statement and the tracking-ID note (there is no separate affiliate box).
+2. **Table of Contents** (the `toc-box`, titled "Table of Contents").
+3. Intro, the picks, comfort add-ons and how-to sections, **FAQ**, the Amazon membership offers (from `gift_guide_bounty_blocks.json`), **Related reviews**, "More gift guides", the guide's own **Sources** line.
+4. Newsletter, then the slim author strip, then the footer. Prices are written "about $X (checked date)" and never as live prices.
+Edit the generator, never the HTML.
+
 ## Known gaps (as of 2026-10-05)
 - Sources box missing on Alexa, TV remotes and Canada cordless phones (fewer than 3 clean sources); the noindex laptops, keyboards and US video doorbells pages are not rewritten yet.
 - Canada cell phones has 9 FAQs (target 6 to 7). TV remotes and smart home have no comparison table.

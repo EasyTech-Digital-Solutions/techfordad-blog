@@ -502,6 +502,29 @@ HEAD = """<!DOCTYPE html>
 """
 
 FOOT = """
+<section class="newsletter" id="newsletter">
+  <div class="newsletter-inner">
+    <h2>Free Caregiver Tech Checklist</h2>
+    <p>Get our free guide: <strong>"7 Tech Essentials Every Senior Home Should Have"</strong></p>
+    <form class="email-form" action="https://us2.list-manage.com/subscribe/post?u=4d4642fb82dc99daa1b66f684&amp;id=8cf3d53e8d" method="post" target="_blank">
+      <input type="email" name="EMAIL" placeholder="Enter your email address" required/>
+      <button type="submit">Get Free Guide</button>
+      <div style="position:absolute;left:-5000px;" aria-hidden="true">
+        <input type="text" name="b_4d4642fb82dc99daa1b66f684_8cf3d53e8d" tabindex="-1" value=""/>
+      </div>
+    </form>
+    <p class="email-note">No spam. Unsubscribe anytime.</p>
+  </div>
+</section>
+
+<div class="author-box">
+  <div class="author-box-avatar">★</div>
+  <div class="author-box-content">
+    <p class="author-box-name">Written by TechForDad: a project by EasyTechVancouver</p>
+    <p class="author-box-bio">TechForDad is published by EasyTech Vancouver. Our guides are based on manufacturer specifications, published reviews and current prices, which we recheck every month. We do not hands-on test products, and no company pays for its ranking. See <a href="../how-we-review.html">how we review products</a>.</p>
+  </div>
+</div>
+
 </main>
 
 <footer>
@@ -652,18 +675,14 @@ def guide_page(g):
 </div>
 
 <div class="article-disclaimer">
-<strong>Prices and availability change.</strong> Prices below are approximate and were checked on {PRICE_DATE}. The price on Amazon when you buy is the price you pay. See our <a href="../affiliate-disclosure.html">affiliate disclosure</a>.
+<strong>Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases, at no extra cost to you. Links here use a tracking ID that shows us how this guide performs; our picks are never influenced by commission. Prices are approximate (checked {PRICE_DATE}); the price on Amazon when you buy is the price you pay. <a href="../affiliate-disclosure.html" style="text-decoration:underline">Full disclosure</a>.
 </div>
 
 <div class="article-body">
   <div class="article-inner">
 
-    <div class="affiliate-box">
-      <strong>Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Links in this guide use a tracking ID that lets us see how the guide performs. Our picks are not influenced by commission.
-    </div>
-
     <div class="toc-box">
-      <strong>Quick Navigation</strong>
+      <strong>Table of Contents</strong>
       <ul>
         {chr(10).join('        ' + t for t in toc).strip()}
       </ul>
@@ -760,15 +779,11 @@ def hub_page():
 </div>
 
 <div class="article-disclaimer">
-<strong>Prices and availability change.</strong> Prices in our guides are approximate and were checked on {PRICE_DATE}. See our <a href="../affiliate-disclosure.html">affiliate disclosure</a>.
+<strong>Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases, at no extra cost to you. Links in the gift guides use a tracking ID that shows us how each guide performs; our picks are never influenced by commission. Prices in our guides are approximate (checked {PRICE_DATE}). <a href="../affiliate-disclosure.html" style="text-decoration:underline">Full disclosure</a>.
 </div>
 
 <div class="article-body">
   <div class="article-inner" style="max-width:1140px">
-
-    <div class="affiliate-box">
-      <strong>Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Links in the gift guides use a tracking ID that lets us see how each guide performs. Our picks are not influenced by commission.
-    </div>
 
     <p>Older parents are hard to shop for. They often have what they need, and a gift that adds a new device to manage can end up in a drawer. These guides focus on gifts that solve a real problem, and on setting them up so they get used.</p>
 

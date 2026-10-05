@@ -331,6 +331,8 @@ def main():
     build_sources.main()
     import build_how_we_chose
     build_how_we_chose.main()
+    import build_guide_toc
+    build_guide_toc.main()
     import build_buying_summary
     build_buying_summary.main()
     import build_product_schema
