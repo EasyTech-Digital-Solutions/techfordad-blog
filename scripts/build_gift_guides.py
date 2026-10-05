@@ -465,9 +465,10 @@ HEAD = """<!DOCTYPE html>
   <meta property="og:description" content="{desc}"/>
   <meta property="og:url" content="{url}"/>
   <meta property="og:image" content="{site}/images/heroes/{hero}"/>
-  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="{og_title}"/>
   <meta name="twitter:description" content="{desc}"/>
+  <meta name="twitter:image" content="{site}/images/heroes/{hero}"/>
   <meta name="google-adsense-account" content="ca-pub-6309879983967574"/>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6309879983967574" crossorigin="anonymous"></script>
 
@@ -553,10 +554,13 @@ def md(text):
     return re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", e(text))
 
 
-def jsonld(headline, desc, url, crumbs, faq):
+def jsonld(headline, desc, url, crumbs, faq, hero):
     article = {"@context": "https://schema.org", "@type": "Article", "headline": headline, "description": desc,
+               "image": f"{SITE}/images/heroes/{hero}",
                "author": {"@type": "Organization", "name": "TechForDad"},
-               "publisher": {"@type": "Organization", "name": "TechForDad", "url": SITE},
+               "publisher": {"@type": "Organization", "name": "TechForDad", "url": SITE,
+                             "parentOrganization": {"@type": "Organization", "name": "EasyTech Vancouver", "url": "https://easytechvancouver.ca/",
+                                                    "sameAs": ["https://www.facebook.com/profile.php?id=61587106324816", "https://www.instagram.com/easytechvancouver", "https://www.linkedin.com/company/easytech-digital-solutions/", "https://www.google.com/maps/place/Easy+Tech/@49.1768374,-122.9222895"]}},
                "datePublished": PUBLISHED, "dateModified": MODIFIED}
     bread = {"@context": "https://schema.org", "@type": "BreadcrumbList",
              "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(crumbs)]}
@@ -623,7 +627,7 @@ def guide_page(g):
 
     parts = [HEAD.format(title=e(g["title"]), desc=e(g["desc"]), url=url, og_title=e(g["h1"]), site=SITE, hero=g["hero"],
                          jsonld=jsonld(g["h1"], g["desc"], url,
-                                       [("Home", SITE + "/"), ("Gift Guides", SITE + "/gift-guides/index.html"), (g["short"], url)], faq))]
+                                       [("Home", SITE + "/"), ("Gift Guides", SITE + "/gift-guides/index.html"), (g["short"], url)], faq, g["hero"]))]
     parts.append(f"""
 <div class="breadcrumb">
   <div class="breadcrumb-inner">
@@ -717,7 +721,7 @@ def hub_page():
 """)
     footer_links = "\n".join(f'          <li><a href="{x["slug"]}.html">{e(x["short"])}</a></li>' for x in GUIDES)
     page = HEAD.format(title=e(HUB_TITLE), desc=e(HUB_DESC), url=url, og_title="Gift Guides for Elderly Parents and Seniors",
-                       site=SITE, hero="hero-senior-gifts.jpg", jsonld=jsonld("Gift Guides for Elderly Parents and Seniors", HUB_DESC, url, crumbs, []))
+                       site=SITE, hero="hero-senior-gifts.jpg", jsonld=jsonld("Gift Guides for Elderly Parents and Seniors", HUB_DESC, url, crumbs, [], "hero-senior-gifts.jpg"))
     page += f"""
 <div class="article-hero">
   <img src="../images/heroes/hero-senior-gifts.jpg" alt="Wrapped gifts with gold ribbon on kraft paper" width="860" height="480" fetchpriority="high">

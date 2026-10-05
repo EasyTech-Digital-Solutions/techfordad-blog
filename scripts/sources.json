@@ -10,6 +10,8 @@
         {"kind": "maker", "title": "Medical Alert", "url": "https://www.medicalalert.com/", "used_for": "The provider's own plans and equipment"},
         {"kind": "maker", "title": "Apple: Apple Watch SE", "url": "https://www.apple.com/apple-watch-se-3/", "used_for": "Watch features and models"},
         {"kind": "maker", "title": "Apple Support: Use Fall Detection with Apple Watch", "url": "https://support.apple.com/en-us/108896", "used_for": "How fall detection works and when it is on"},
+        {"kind": "official", "title": "CDC: Older adult falls", "url": "https://www.cdc.gov/falls/about/index.html", "used_for": "That falls are the leading cause of injury death for adults 65 and older", "skip_verify": true},
+        {"kind": "independent", "title": "NCOA: Does insurance cover medical alert systems?", "url": "https://www.ncoa.org/article/does-insurance-cover-medical-alert-systems/", "used_for": "What Original Medicare, Medicare Advantage and Medicaid cover"},
         {"kind": "independent", "title": "AARP: Best medical alerts with fall detection", "url": "https://www.aarp.org/caregiving/home-care/best-medical-alert-systems-with-fall-detection", "used_for": "AARP's own testing and picks, to compare with ours"},
         {"kind": "independent", "title": "NCOA: Best medical alert systems with fall detection", "url": "https://www.ncoa.org/product-resources/medical-alert-systems/best-medical-alert-systems-with-fall-detection/", "used_for": "Another set of reviews, using NCOA's own testing method"},
         {"kind": "independent", "title": "Consumer Reports: Best medical alert systems", "url": "https://www.consumerreports.org/health/medical-alert-systems/best-medical-alert-systems-a1136054281/", "used_for": "Consumer Reports' survey-based ratings of the main brands"}
@@ -23,7 +25,7 @@
         {"kind": "maker", "title": "Lifeline Canada", "url": "https://www.lifeline.ca/en/", "used_for": "Devices, monitoring and plans"},
         {"kind": "maker", "title": "Apple (Canada): Apple Watch SE", "url": "https://www.apple.com/ca/apple-watch-se-3/", "used_for": "Watch features and Canadian models"},
         {"kind": "maker", "title": "Apple Support (Canada): Use Fall Detection with Apple Watch", "url": "https://support.apple.com/en-ca/108896", "used_for": "How fall detection works and when it is on"},
-        {"kind": "official", "title": "Ontario: Assistive Devices Program", "url": "https://www.ontario.ca/page/assistive-devices-program", "used_for": "The Ontario program that funds some assistive devices"},
+        {"kind": "official", "title": "Ontario: Assistive Devices Program", "url": "https://www.ontario.ca/page/assistive-devices-program", "used_for": "What the program covers; it does not fund medical alert systems"},
         {"kind": "official", "title": "British Columbia: Home and community care", "url": "https://www2.gov.bc.ca/gov/content/health/accessing-health-care/home-community-care", "used_for": "BC's home and community care services"},
         {"kind": "official", "title": "Alberta: Continuing care", "url": "https://www.alberta.ca/continuing-care", "used_for": "Alberta's continuing care programs"}
       ],
@@ -88,6 +90,8 @@
         {"kind": "maker", "title": "Omron: Gold Upper Arm Monitor", "url": "https://omronhealthcare.com/products/gold-upper-arm-blood-pressure-monitor-bp5360", "used_for": "Features of Omron's current Gold monitor"},
         {"kind": "maker", "title": "Omron: 3 Series Upper Arm Monitor", "url": "https://omronhealthcare.com/products/3-series-upper-arm-blood-pressure-monitor-bp7150", "used_for": "Features of Omron's current 3 Series monitor"},
         {"kind": "maker", "title": "Withings: BPM Connect", "url": "https://www.withings.com/en-us/products/bpm-connect", "used_for": "Wi-Fi syncing, battery and the clinical validation protocol"},
+        {"kind": "authority", "title": "CDC: About high blood pressure", "url": "https://www.cdc.gov/high-blood-pressure/about/index.html", "used_for": "High blood pressure raises the risk of heart disease and stroke, and usually has no symptoms", "skip_verify": true},
+        {"kind": "authority", "title": "American Heart Association (Eastern States): AFib and stroke risk", "url": "https://easternstates.heart.org/2024/05/23/afib-and-stroke-understanding-the-fivefold-increase-in-risk-during-american-stroke-month/", "used_for": "People with AFib are five times more likely to have a stroke"},
         {"kind": "authority", "title": "American Heart Association: Home blood pressure monitoring", "url": "https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings/monitoring-your-blood-pressure-at-home", "used_for": "Why upper-arm monitors are recommended and why to choose a validated one", "skip_verify": true},
         {"kind": "authority", "title": "Validate BP: US Blood Pressure Validated Device Listing", "url": "https://www.validatebp.org/", "used_for": "The free list to check that a monitor has been clinically validated"},
         {"kind": "authority", "title": "American Medical Association: How BP devices are validated", "url": "https://www.ama-assn.org/public-health/prevention-wellness/validation-bp-measurement-devices-clinical-accuracy", "used_for": "What clinical validation means"}
@@ -103,7 +107,9 @@
         {"kind": "authority", "title": "Hypertension Canada: Device Recommendation Program", "url": "https://hypertension.ca/device-recommendation-program/", "used_for": "How devices are reviewed and recommended"},
         {"kind": "authority", "title": "Hypertension Canada: Experts concerned over inaccurate blood pressure devices", "url": "https://hypertension.ca/news/experts-concerned-over-inaccurate-blood-pressure-devices/", "used_for": "Hypertension Canada's president on there being no requirement for blood pressure devices to be tested for accuracy"},
         {"kind": "authority", "title": "Heart & Stroke: Atrial fibrillation", "url": "https://www.heartandstroke.ca/heart-disease/conditions/atrial-fibrillation", "used_for": "How AFib risk rises with age"},
-        {"kind": "official", "title": "Health Canada: Medical Devices Active Licence Listing", "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/licences/medical-devices-active-licence-listing.html", "used_for": "Where to look up whether a medical device is licensed in Canada", "skip_verify": true}
+        {"kind": "official", "title": "Health Canada: Medical Devices Active Licence Listing", "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/licences/medical-devices-active-licence-listing.html", "used_for": "Where to look up whether a medical device is licensed in Canada", "skip_verify": true},
+        {"kind": "official", "title": "Statistics Canada: High blood pressure, Canadian Community Health Survey 2023", "url": "https://www150.statcan.gc.ca/n1/pub/82-570-x/2024001/section2-eng.htm", "used_for": "How many Canadian adults, and adults 65 and older, report high blood pressure"},
+        {"kind": "official", "title": "Justice Canada: Medical Devices Regulations (SOR/98-282)", "url": "https://laws-lois.justice.gc.ca/eng/regulations/sor-98-282/page-2.html", "used_for": "That labelling must be in English and French for devices sold to the public"}
       ],
       "note": "A&D's Canadian online shop currently shows \"Opening soon\" and Withings' Canadian site no longer shows a product page for the BPM Connect, so confirm that the A&D UA-767FAM and the Withings monitor are available in Canada before you buy. Hypertension Canada's list above is the place to check that a monitor is validated. At the time of writing, four of the five monitors on this page appear on that list; the Withings BPM Connect does not."
     },
@@ -114,6 +120,8 @@
         {"kind": "maker", "title": "Sennheiser: All-Day Clear", "url": "https://us.sennheiser-hearing.com/products/sennheiser-all-day-clear", "used_for": "Features, battery and trial period"},
         {"kind": "maker", "title": "Audien: Atom Pro 2", "url": "https://audienhearing.com/products/atom-pro-2", "used_for": "Features and price"},
         {"kind": "maker", "title": "MDHearing: NEO XS PRO", "url": "https://www.mdhearingaid.com/hearing-aids/mdhearing-neo-xs-pro/", "used_for": "Features of the smallest model"},
+        {"kind": "official", "title": "NIDCD (NIH): Age-related hearing loss", "url": "https://www.nidcd.nih.gov/health/age-related-hearing-loss", "used_for": "How common hearing loss is among adults 65 and older"},
+        {"kind": "official", "title": "IRS: Publication 502, Medical and Dental Expenses", "url": "https://www.irs.gov/publications/p502", "used_for": "That hearing aids and batteries count as medical expenses"},
         {"kind": "official", "title": "FDA: OTC hearing aids, what you should know", "url": "https://www.fda.gov/medical-devices/hearing-aids/otc-hearing-aids-what-you-should-know", "used_for": "Who OTC hearing aids are for and when they start on October 17, 2022"},
         {"kind": "official", "title": "NIDCD (NIH): Over-the-counter hearing aids", "url": "https://www.nidcd.nih.gov/health/over-counter-hearing-aids", "used_for": "OTC compared with prescription, and when to see a professional"},
         {"kind": "official", "title": "Medicare: Hearing aid coverage", "url": "https://www.medicare.gov/coverage/hearing-aids", "used_for": "What Original Medicare does and does not cover"},
@@ -127,6 +135,13 @@
         {"kind": "maker", "title": "ReSound (Canada): Vivia", "url": "https://www.resound.com/en-ca/hearing-aids/resound-hearing-aids/resound-vivia", "used_for": "Features and battery life"},
         {"kind": "maker", "title": "Oticon: Intent", "url": "https://www.oticon.com/products/hearing-aids/family/intent", "used_for": "Features and battery life"},
         {"kind": "maker", "title": "Costco Canada: Hearing Aid Centre", "url": "https://www.costco.ca/f/-/hearing-aid-centre", "used_for": "Hearing tests and how to book"},
+        {"kind": "official", "title": "Manitoba: Seniors Hearing Aid Program", "url": "https://www.gov.mb.ca/seniors/print,hearing_aid_program.html", "used_for": "The grant amount, age and income limit"},
+        {"kind": "official", "title": "B.C. Government: Medical equipment, hearing instruments", "url": "https://www2.gov.bc.ca/gov/content/governments/policies-for-government/bcea-policy-and-procedure-manual/health-supplements-and-programs/medical-equipment-hearing-instruments", "used_for": "Hearing aid funding for people on income or disability assistance"},
+        {"kind": "official", "title": "Alberta: AADL cost sharing of benefits", "url": "https://www.alberta.ca/aadl-cost-sharing-of-benefits", "used_for": "The 25% cost share, the $500 yearly limit and the low-income exemption"},
+        {"kind": "official", "title": "Statistics Canada: Hearing loss of Canadians, 2012 to 2015", "url": "https://www150.statcan.gc.ca/n1/pub/82-625-x/2016001/article/14658-eng.htm", "used_for": "How common measured hearing loss is among adults 60 to 79"},
+        {"kind": "official", "title": "Canada Revenue Agency: Disability tax credit, hearing", "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/tax-credits-deductions-persons-disabilities/disability-tax-credit/eligible-dtc/hearing.html", "used_for": "Who can qualify for the disability tax credit with a hearing impairment", "skip_verify": true},
+        {"kind": "official", "title": "Canada Revenue Agency: Medical expenses", "url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/rc4065/medical-expenses.html", "used_for": "That hearing aids, repairs and batteries are eligible medical expenses", "skip_verify": true},
+        {"kind": "independent", "title": "CARP: British Columbia expands access to over-the-counter hearing aids", "url": "https://www.carp.ca/2026/06/17/british-columbia-expands-access-to-over-the-counter-hearing-aids/", "used_for": "BC allowing over-the-counter hearing aids for adults 18 and older"},
         {"kind": "official", "title": "Ontario: Hearing devices (Assistive Devices Program)", "url": "https://www.ontario.ca/page/hearing-devices", "used_for": "The Ontario grant toward hearing aids and how to apply"},
         {"kind": "official", "title": "Alberta: AADL benefits covered", "url": "https://www.alberta.ca/aadl-benefits-covered", "used_for": "Alberta's hearing aid funding and who qualifies"},
         {"kind": "official", "title": "B.C. Government: Over-the-counter hearing aids", "url": "https://news.gov.bc.ca/releases/2026HLTH0059-000716", "used_for": "British Columbia's decision on over-the-counter hearing aids", "skip_verify": true},
@@ -139,9 +154,17 @@
         {"kind": "official", "title": "FDA: OTC hearing aids, what you should know", "url": "https://www.fda.gov/medical-devices/hearing-aids/otc-hearing-aids-what-you-should-know", "used_for": "The 2022 OTC hearing aid category and who it is for"},
         {"kind": "official", "title": "NIDCD (NIH): Over-the-counter hearing aids", "url": "https://www.nidcd.nih.gov/health/over-counter-hearing-aids", "used_for": "OTC compared with prescription, and warning signs to see a professional"},
         {"kind": "official", "title": "Medicare: Hearing aid coverage", "url": "https://www.medicare.gov/coverage/hearing-aids", "used_for": "What Original Medicare does and does not cover"},
-        {"kind": "official", "title": "VA: Audiology services", "url": "https://www.rehab.va.gov/audiology/", "used_for": "Hearing care for eligible veterans"}
+        {"kind": "official", "title": "VA: Audiology services", "url": "https://www.rehab.va.gov/audiology/", "used_for": "Hearing care for eligible veterans"},
+        {"kind": "maker", "title": "ELEHEAR: Beyond Pro", "url": "https://elehear.com/products/beyond-pro", "used_for": "Price, features and trial period"},
+        {"kind": "maker", "title": "Jabra Enhance: Select M2", "url": "https://www.jabraenhance.com/product/enhanceselectm2", "used_for": "Price, trial period and included audiology care"},
+        {"kind": "maker", "title": "Sennheiser: All-Day Clear", "url": "https://us.sennheiser-hearing.com/products/sennheiser-all-day-clear", "used_for": "Price and trial period"},
+        {"kind": "maker", "title": "Audien: Atom Pro 2", "url": "https://audienhearing.com/products/atom-pro-2", "used_for": "Price and trial period"},
+        {"kind": "maker", "title": "MDHearing: NEO XS PRO", "url": "https://www.mdhearingaid.com/hearing-aids/mdhearing-neo-xs-pro/", "used_for": "Price, size and trial period"},
+        {"kind": "independent", "title": "HearingTracker: Sales of Sony hearing aids discontinued", "url": "https://www.hearingtracker.com/news/sales-of-sony-hearing-aids-discontinued-wsa-eyes-next-steps-for-otc-market", "used_for": "That Sony's OTC models were discontinued"},
+        {"kind": "independent", "title": "Hearing Review: LXE Hearing wind-down (Eargo, Lexie)", "url": "https://hearingreview.com/hearing-products/hearing-aids/otc/lxe-hearing-announces-wind-down-of-us-operations-affecting-eargo-lexie-and-go-brands", "used_for": "The wind-down of Eargo and Lexie and the support dates"},
+        {"kind": "independent", "title": "HearingTracker: Jabra Enhance Plus to be discontinued", "url": "https://www.hearingtracker.com/news/jabra-enhance-plus-otc-hearing-aid-to-be-discontinued", "used_for": "The Jabra Enhance Plus discontinuation and support dates"}
       ],
-      "note": "Prices and coverage change often. Check the FDA, Medicare and VA pages above for the current rules."
+      "note": "Prices, plans and features change, so the maker's own page is the final word."
     },
     "blog/best-smartwatches-for-seniors.html": {
       "sources": [
@@ -153,7 +176,8 @@
         {"kind": "maker", "title": "Garmin: Venu 4 owner's manual, safety and tracking features", "url": "https://www8.garmin.com/manuals/webhelp/GUID-2CF5620C-E585-4E0A-9CC3-9565533EEE4D/EN-US/GUID-64F677A5-03E0-453F-BFE3-E1B93D6FA3FC.html", "used_for": "Safety features on the Venu 4"},
         {"kind": "maker", "title": "Medical Guardian: MGMove smartwatch", "url": "https://www.medicalguardian.com/medical-alert-systems/smart-watch-alert-app", "used_for": "Monitoring, LTE and the fall-detection add-on"},
         {"kind": "maker", "title": "Bay Alarm Medical: SOS Smartwatch", "url": "https://www.bayalarmmedical.com/medical-alert-system/sos-smartwatch/", "used_for": "Standalone watch, monitoring and fall detection"},
-        {"kind": "independent", "title": "NCOA: Best medical alert watches", "url": "https://www.ncoa.org/product-resources/medical-alert-systems/best-medical-alert-watches/", "used_for": "NCOA's reviews of medical alert watches, to compare with ours"}
+        {"kind": "independent", "title": "NCOA: Best medical alert watches", "url": "https://www.ncoa.org/product-resources/medical-alert-systems/best-medical-alert-watches/", "used_for": "NCOA's reviews of medical alert watches, to compare with ours"},
+        {"kind": "official", "title": "CDC: Older adult fall data", "url": "https://www.cdc.gov/falls/data-research/facts-stats/index.html", "used_for": "How common falls are among adults 65 and older", "skip_verify": true}
       ],
       "note": "Garmin says the Venu 4's fall detection messages your emergency contacts through a paired phone and does not contact emergency services."
     },
@@ -180,6 +204,42 @@
         {"kind": "independent", "title": "AARP: Best medical alerts with fall detection", "url": "https://www.aarp.org/caregiving/home-care/best-medical-alert-systems-with-fall-detection", "used_for": "AARP's testing of alert systems with fall detection"}
       ],
       "note": "Technology can help, but it cannot prevent every fall. Talk to a doctor about your parent's fall risk."
+    },
+    "blog/life-alert-vs-medical-guardian.html": {
+      "sources": [
+        {"kind": "maker", "title": "Medical Guardian: MGHome Cellular", "url": "https://www.medicalguardian.com/medical-alert-systems/cellular-home-alert", "used_for": "The company's listed price, fall detection add-on, network and cancellation footnote"},
+        {"kind": "maker", "title": "Life Alert", "url": "https://www.lifealert.com/", "used_for": "How Life Alert describes its service; it lists no prices"},
+        {"kind": "independent", "title": "NCOA: Life Alert review", "url": "https://www.ncoa.org/product-resources/medical-alert-systems/life-alert-review/", "used_for": "Life Alert's listed prices, activation fee, contract length and fall detection"},
+        {"kind": "independent", "title": "NCOA: Medical Guardian review", "url": "https://www.ncoa.org/product-resources/medical-alert-systems/medical-guardian-review/", "used_for": "Medical Guardian's listed price, equipment fee, fall detection add-on and cancellation terms"},
+        {"kind": "maker", "title": "Medical Guardian: FAQ", "url": "https://www.medicalguardian.com/faq", "used_for": "The company's statements on contracts, fees and refunds"},
+        {"kind": "maker", "title": "Medical Guardian: Policies", "url": "https://www.medicalguardian.com/legal/policies", "used_for": "Equipment returns, lost or damaged equipment fees and promotion terms"}
+      ],
+      "note": "We have not tested either service. Medical Guardian says it has no cancellation fees, but a page footnote says fees may apply, and its policies charge for lost or damaged equipment. Life Alert does not post prices, so confirm everything with each company."
+    },
+    "blog/medical-alert-no-monthly-fee.html": {
+      "sources": [
+        {"kind": "independent", "title": "NCOA: Does insurance cover medical alert systems?", "url": "https://www.ncoa.org/article/does-insurance-cover-medical-alert-systems/", "used_for": "What Original Medicare, Medicare Advantage and Medicaid cover"},
+        {"kind": "maker", "title": "Apple Support: Use Fall Detection with Apple Watch", "url": "https://support.apple.com/en-us/108896", "used_for": "How fall detection works and when it is on"},
+        {"kind": "maker", "title": "Lively: Mobile2 All-in-One Medical Alert", "url": "https://shop.lively.com/products/lively-mobile2-all-in-one-medical-alert", "used_for": "Mobile device features and the fall-detection add-on"}
+      ],
+      "note": "Prices and terms change, so confirm monthly fees, cancellation terms and fall detection with each company."
+    },
+    "blog/best-gps-trackers-for-seniors.html": {
+      "sources": [
+        {"kind": "authority", "title": "Alzheimer Society of Canada: Tracking devices", "url": "https://alzheimer.ca/en/help-information/im-caring-person-living-dementia/ensuring-safety-security/tracking-devices", "used_for": "Respecting the person's wishes and the limits of tracking devices"},
+        {"kind": "maker", "title": "AngelSense", "url": "https://www.angelsense.com/", "used_for": "How the company describes its monitoring and alerting service"},
+        {"kind": "maker", "title": "Jiobit: Smart Tag", "url": "https://www.jiobit.com/", "used_for": "Plan price, update rate and battery life as the company lists them"}
+      ],
+      "note": "Prices and features change, so confirm them on each maker's page."
+    },
+    "guides/gps-trackers.html": {
+      "sources": [
+        {"kind": "authority", "title": "Alzheimer's Association: Wandering", "url": "https://www.alz.org/help-support/caregiving/stages-behaviors/wandering", "used_for": "How common wandering is and when to call 911", "skip_verify": true},
+        {"kind": "authority", "title": "Alzheimer Society of Canada: Tracking devices", "url": "https://alzheimer.ca/en/help-information/im-caring-person-living-dementia/ensuring-safety-security/tracking-devices", "used_for": "Respecting the person's wishes and the limits of tracking devices"},
+        {"kind": "maker", "title": "AngelSense", "url": "https://www.angelsense.com/", "used_for": "How the company describes its monitoring and alerting service"},
+        {"kind": "maker", "title": "Jiobit: Smart Tag", "url": "https://www.jiobit.com/", "used_for": "Plan price, update rate and battery life as the company lists them"}
+      ],
+      "note": "Prices and features change, so confirm them on each maker's page."
     }
   }
 }

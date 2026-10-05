@@ -1130,6 +1130,10 @@ html[data-season="christmas"] .logo::after {
 .gift-feature-links { display: none; }
 .gift-feature-actions { display: flex; align-items: center; }
 
+/* Gift season: show the gift block right after the trust bar, above "Our Top Picks". Done with CSS order (not JS)
+   so the page does not jump after it first paints. Ties keep source order: hero, trust bar, gift block. */
+html[data-gifts="peak"] main#main { display: grid; grid-template-columns: minmax(0, 1fr); }
+html[data-gifts="peak"] main#main > :not(.hero):not(.trust-bar):not(.gift-feature) { order: 1; }
 html[data-gifts="peak"] .gift-feature {
   padding: 0 24px; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%); color: var(--white);
   margin: 0;

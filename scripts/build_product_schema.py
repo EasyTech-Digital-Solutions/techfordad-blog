@@ -104,7 +104,8 @@ def apply_page(path, check):
     if not cards:
         problems.append(f"{path.name}: has product-card markup but no cards parsed")
         return
-    currency = "CAD" if 'lang="en-CA"' in base else "USD"
+    # match the <html> tag only: hreflang="en-CA" links on US pages also contain lang="en-CA"
+    currency = "CAD" if '<html lang="en-CA"' in base else "USD"
     schema = build_schema(cards, currency)
     if schema is None:
         return
