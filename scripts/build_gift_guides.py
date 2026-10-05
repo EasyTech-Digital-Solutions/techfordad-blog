@@ -17,10 +17,10 @@ import re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "gift-guides")
 TAG = "techfordad-gifts-20"
-PRICE_DATE = "September 29, 2026"   # date prices were last checked; change with --checked, never by hand
+PRICE_DATE = "September 30, 2026"   # date prices were last checked; change with --checked, never by hand
 UPDATED_LABEL = "September 2026"    # shown as "Updated ..." on the pages; follows PRICE_DATE
 PUBLISHED = "2026-09-29"            # first publish date (structured data)
-MODIFIED = "2026-09-29"             # last modified date (structured data); follows PRICE_DATE
+MODIFIED = "2026-09-30"             # last modified date (structured data); follows PRICE_DATE
 SITE = "https://www.techfordad.com"
 
 
@@ -679,7 +679,7 @@ def guide_page(g):
     if g["addons"]:
         parts.append(f'    <h2 id="addons">{e(g["addons_title"])}</h2>\n\n    <ul>\n')
         for a in g["addons"]:
-            parts.append(f'      <li><strong>{e(a["name"])}</strong> ({e(a["price"])}): {e(a["why"])} <a href="{amazon(a["asin"])}" target="_blank" rel="sponsored noopener">Check price on Amazon</a></li>\n')
+            parts.append(f'      <li><strong>{e(a["name"])}</strong> ({e(a["price"])}): {e(a["why"])} <a href="{amazon(a["asin"])}" target="_blank" rel="sponsored noopener">Check price on Amazon →</a></li>\n')
         parts.append("    </ul>\n")
     for title, paras in g["sections"]:
         parts.append(section(title, paras))
@@ -701,7 +701,30 @@ def guide_page(g):
     parts.append("  </div>\n</div>\n")
     footer_links = "\n".join(f'          <li><a href="{x["slug"]}.html">{e(x["short"])}</a></li>' for x in GUIDES)
     parts.append(FOOT.format(footer_links=footer_links))
-    return "".join(parts)
+    return add_bounty_blocks(g["slug"], "".join(parts))
+
+
+# The Amazon bounty / membership offers (Prime, Audible, Music Unlimited) live in scripts/gift_guide_bounty_blocks.json as exact
+# HTML, because they are written by hand per guide (which memberships fit which gifts). They go in front of three headings.
+# Without this step a regeneration silently deletes them (it did on 2026-10-05); tests/test_generated.py now fails if the
+# generator's output differs from the committed pages.
+BOUNTY_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "gift_guide_bounty_blocks.json")
+BOUNTY_HEADINGS = {"before_picks": '<h2 id="picks">', "before_faq": '<h2 id="faq">', "before_related": '<h2 id="related">'}
+
+
+def add_bounty_blocks(slug, text):
+    import json
+    with open(BOUNTY_FILE, encoding="utf-8") as f:
+        blocks = json.load(f).get(slug, {})
+    for key, heading in BOUNTY_HEADINGS.items():
+        if key in blocks:
+            marker = "    " + heading
+            assert text.count(marker) == 1, f"{slug}: cannot place {key}: {marker!r} found {text.count(marker)} times"
+            text = text.replace(marker, blocks[key] + heading, 1)
+    for old, new in blocks.get("patches", []):
+        assert text.count(old) == 1, f"{slug}: bounty patch does not apply: {old[:60]!r}"
+        text = text.replace(old, new, 1)
+    return text
 
 
 def hub_page():
@@ -905,8 +928,45 @@ def apply_checked_date(iso):
     MODIFIED = d.isoformat()
 
 
+def check():
+    """Dry run: regenerate in a temporary copy of the site and report any file that differs from the real one.
+    Exits 1 if the generator no longer reproduces the committed pages (so a regeneration would change or delete something)."""
+    import filecmp
+    import shutil
+    import subprocess
+    import sys
+    import tempfile
+
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    with tempfile.TemporaryDirectory() as tmp:
+        copy = os.path.join(tmp, "site")
+        shutil.copytree(root, copy, ignore=shutil.ignore_patterns(".git", ".venv", "node_modules", "__pycache__", "*.jpg", "*.jpeg", "*.png", "*.webp", "*.svg", "*.woff2"))
+        run = subprocess.run([sys.executable, os.path.join(copy, "scripts", "build_gift_guides.py")], capture_output=True, text=True)
+        if run.returncode:
+            print(run.stderr or run.stdout)
+            return 1
+        stale = []
+        for dirpath, dirs, files in os.walk(copy):
+            dirs[:] = [d for d in dirs if d not in (".git", ".venv", "__pycache__")]
+            for name in files:
+                if not name.endswith((".html", ".xml")):
+                    continue
+                new_path = os.path.join(dirpath, name)
+                rel = os.path.relpath(new_path, copy)
+                old_path = os.path.join(root, rel)
+                if not os.path.exists(old_path) or not filecmp.cmp(new_path, old_path, shallow=False):
+                    stale.append(rel)
+        if stale:
+            print("build_gift_guides.py would change these files (the generator is out of sync with the pages):\n  " + "\n  ".join(sorted(stale)[:20]))
+            return 1
+    print("gift guides OK: the generator reproduces the committed pages")
+    return 0
+
+
 def main():
     import sys
+    if "--check" in sys.argv:
+        sys.exit(check())
     if "--checked" in sys.argv:
         apply_checked_date(sys.argv[sys.argv.index("--checked") + 1])
     check_lengths()
