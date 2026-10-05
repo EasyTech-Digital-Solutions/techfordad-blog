@@ -52,9 +52,14 @@ Edit the generator, never the HTML.
 ## Ads (Google AdSense)
 
 Ads are placed by us, never by Google's Auto ads in-page format (it inserted up to eight 412px units per page, one above the hero image, others inside the contents list: a 0.4 to 0.5 layout shift on phones).
-`scripts/build_ads.py` (config: `scripts/ads.json`, run by `build_nav.py`) writes manual slots on indexable reviews only: before the first product, in the middle of long buying guides, before the FAQ, after the comparison table, and last in the sticky sidebar (wide screens only).
-Never above the hero, in a list, table, card or contents box. Each slot reserves its height; an unfilled slot collapses. A slot appears only when its id in `ads.json` is set. In the AdSense console keep Overlay formats (anchor, vignette) and turn OFF In-page formats.
-Tests: `tests/test_ads.py` (placement rules, idempotency) and `test_ad_slots_never_shift_or_crowd_the_reader` (browser).
+`scripts/build_ads.py` (config: `scripts/ads.json`, run by `build_nav.py`) writes the manual slots and also decides which pages load the AdSense script at all.
+
+**Pages with ads:** indexable reviews (up to 5 slots: before the first product, mid-article on long pages, before the FAQ, after the comparison table, last in the sticky sidebar on wide screens), the home page (2 slots between sections, below the first screen), guides (2 to 3: after the intro, mid-page, before Related/Sources) and gift guides (3: after the intro, after the picks, before the FAQ), each above any Amazon offer block, never between an offer and its heading.
+**Pages without ads (the script is not loaded):** About, Contact, Our Story, How We Review, Privacy Policy, Affiliate Disclosure, the three index pages (reviews, guides, gift hub), noindex pages, redirect stubs and the 404. AdSense does not allow ads on navigation, error or low-content pages.
+
+Never above the hero, in a list, table, card or contents box, and the gap under a comparison-table button is 56px (no accidental clicks). Each slot reserves its height; an unfilled slot collapses. A slot appears only when its id in `ads.json` is set.
+In the AdSense console keep Overlay formats (anchor; consider turning vignette off) and turn OFF In-page formats once the manual slots are live.
+Tests: `tests/test_ads.py` (placement, idempotency, which pages load the script) and `test_ad_slots_never_shift_or_crowd_the_reader` (browser).
 
 ## Known gaps (as of 2026-10-05)
 - Sources box missing on Alexa, TV remotes and Canada cordless phones (fewer than 3 clean sources); the noindex laptops, keyboards and US video doorbells pages are not rewritten yet.

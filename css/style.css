@@ -1455,6 +1455,8 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
 .ad-slot .ad-label { display: block; margin-bottom: 6px; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: #4B5563; }
 .ad-slot ins.adsbygoogle { width: 100%; }
 .ad-slot-sidebar { min-height: 250px; margin: 20px 0 0; }
+.ad-slot-table { margin-top: 56px; } /* clear of the table's Check Price button: no accidental clicks */
+.ad-slot-home { max-width: 760px; margin: 36px auto; padding: 0 16px; }
 .ad-slot:has(ins[data-ad-status="unfilled"]) { display: none; }
 @media (max-width: 900px) { .ad-slot-sidebar { display: none; } }
 @media print { .ad-slot { display: none !important; } }
