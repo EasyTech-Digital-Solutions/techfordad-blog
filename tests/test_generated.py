@@ -9,6 +9,7 @@ import pages as P
 CHECKS = {
     "check_site.py --all (prices, JSON-LD, title/description length, og:image)": ["scripts/check_site.py", "--all"],
     "check_internal_links.py (every internal link resolves)": ["scripts/check_internal_links.py"],
+    "build_gift_guides.py --check (the generator reproduces the committed gift guides, bounty links included)": ["scripts/build_gift_guides.py", "--check"],
     "build_nav.py --check (nav, hreflang, related, sources, buying summary, product schema, CTAs, asset versions)": ["scripts/build_nav.py", "--check"],
 }
 
