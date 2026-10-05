@@ -57,6 +57,7 @@ PAGES = {
     "blog/medical-alert-no-monthly-fee.html": ("us-insert", ["apple-watch", "lowest-fee", "lively", "bay-alarm"]),
 }
 HEADING = "Which One Should You Buy?"
+SIDEBAR_PICKS_RE = re.compile(r"<h3>(?:Quick Picks|Our Picks|Our Top Picks)</h3>")
 BUY_RE = re.compile(r"\n?[ \t]*<!-- buy-summary -->.*?<!-- /buy-summary -->[ \t]*\n?", re.S)
 CTA_RE = re.compile(r"[ \t]*<!-- table-cta -->.*?<!-- /table-cta -->[ \t]*\n?", re.S)
 problems = []
@@ -128,8 +129,10 @@ def pick(text, sid, country="us"):
                 con=plain(con.group(1)) if con else None, url=link.group(1) if link else None)
 
 
-def render_summary(picks, mode):
-    lines = ["<!-- buy-summary -->"]
+def render_summary(picks, mode, has_sidebar_picks):
+    # On wide screens the sticky sidebar already lists the same picks, so the in-article copy is hidden there (CSS .buy-summary-dup);
+    # it stays visible on tablets and phones, where the sidebar drops below the article, and in print.
+    lines = ["<!-- buy-summary -->", '<div class="buy-summary buy-summary-dup">' if has_sidebar_picks else '<div class="buy-summary">']
     if mode in ("us", "ca"):
         lines.append(f'<h2 id="top-picks">{HEADING}</h2>')
     else:
@@ -150,6 +153,7 @@ def render_summary(picks, mode):
     lines.append("</ul>")
     if "overall" in picks[0]["label"].lower():
         lines.append(f'<p class="buy-note">Not sure? Start with the <a href="#{picks[0]["id"]}">{picks[0]["name"]}</a>. It is our overall pick.</p>')
+    lines.append("</div>")
     lines.append("<!-- /buy-summary -->")
     return "\n".join(lines) + "\n"
 
@@ -177,7 +181,7 @@ def process(rel, check):
     if any(p is None for p in picks):
         return
     # 1. decision section
-    summary = render_summary(picks, mode)
+    summary = render_summary(picks, mode, bool(SIDEBAR_PICKS_RE.search(base)))
     if mode in ("us-insert", "ca"):
         if BUY_RE.search(text):
             new = BUY_RE.sub(lambda _m: ("\n" if _m.group(0).startswith("\n") else "") + summary, text, count=1)

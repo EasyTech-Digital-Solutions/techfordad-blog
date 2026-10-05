@@ -129,6 +129,16 @@
       return { count: $$('.country-badge').length, tag: e.tagName, text: e.querySelector('span').textContent.trim(), href: e.getAttribute('href'), label: e.getAttribute('aria-label') || e.closest('.country-badge').getAttribute('aria-label'),
         top: Math.round(r.top), left: Math.round(r.left), right: Math.round(r.right), bottom: Math.round(r.bottom), height: Math.round(r.height), vw, vh: innerHeight };
     })(),
+    buySummary: (() => {
+      const e = document.querySelector('.buy-summary');
+      return e ? { dup: e.classList.contains('buy-summary-dup'), shown: getComputedStyle(e).display !== 'none' } : null;
+    })(),
+    author: (() => {
+      const e = document.querySelector('.author-box'), f = document.querySelector('footer'), n = document.querySelector('.newsletter');
+      if (!e || !f) return null;
+      const r = e.getBoundingClientRect(), fr = f.getBoundingClientRect();
+      return { height: Math.round(r.height), gapToFooter: Math.round(fr.top - r.bottom), afterNewsletter: !n || (n.compareDocumentPosition(e) & Node.DOCUMENT_POSITION_FOLLOWING) !== 0 };
+    })(),
     faqCount: $$('.faq-item').length,
     scrollY: scrollY,
   };

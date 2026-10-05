@@ -30,7 +30,7 @@ def test_article_has_the_full_template(html_page):
                          ('<aside class="article-sidebar">', "right-hand sidebar"), ('class="toc"', "table of contents"),
                          ('class="author-box"', "author box"), ('class="newsletter"', "free-checklist signup")]:
         assert needle in t, f"missing the {what} ({needle})"
-    assert t.index("</article>") < t.index('<aside class="article-sidebar">') < t.index('class="author-box"') < t.index('class="newsletter"') < t.index("</main>")
+    assert t.index("</article>") < t.index('<aside class="article-sidebar">') < t.index('class="newsletter"') < t.index('class="author-box"') < t.index("</main>")
 
 
 def test_sidebar_has_the_standard_boxes(html_page):
@@ -207,3 +207,15 @@ def test_contents_list_follows_page_order(html_page):
     positions = [t.find(f'id="{i}"') for i in ids]
     assert all(p >= 0 for p in positions), "a contents entry points at a section that does not exist"
     assert positions == sorted(positions), f"contents list is out of page order: {[i for i, p in zip(ids, positions) if p != sorted(positions)[positions.index(p)]][:4]}"
+
+
+def test_every_review_has_a_table_of_contents(html_page):
+    """Readers asked for a contents list on every review, product reviews included, so each section is one click away."""
+    t = _article(html_page)
+    if html_page in NOT_A_REVIEW:
+        pytest.skip("how-to guide, not a review")
+    m = re.search(r'<p class="toc-title">Table of Contents</p>(.*?)</div>', t, re.S)
+    assert m, "the page has no table of contents"
+    ids = re.findall(r'href="#([^"]+)"', m.group(1))
+    assert len(ids) >= 5, f"table of contents has only {len(ids)} entries"
+    assert all(f'id="{i}"' in t for i in ids), "a contents entry points at a section that does not exist"

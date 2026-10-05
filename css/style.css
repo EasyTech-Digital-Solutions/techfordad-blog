@@ -910,6 +910,15 @@ footer {
 }
 .about-body p { color: #374151; line-height: 1.75; margin-bottom: 14px; }
 
+/* The sticky sidebar lists the same picks as the in-article "Which One Should You Buy?" summary, so show it once:
+   the summary stays on tablets, phones and in print, where the sidebar sits below the article or is hidden. */
+@media screen and (min-width: 901px) {
+  .buy-summary-dup { display: none; }
+  /* ...and so is its entry in the contents list, which would jump to nothing */
+  .article-body:has(.buy-summary-dup) .toc li:has(> a[href="#top-picks"]),
+  .article-body:has(.buy-summary-dup) .toc li:has(> a[href="#which-one"]) { display: none; }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .article-layout { grid-template-columns: 1fr; }
@@ -958,27 +967,28 @@ footer {
   .trust-inner { gap: 16px; }
 }
 
-/* ===== AUTHOR BOX (in-article) ===== */
+/* ===== AUTHOR BOX (slim strip just above the footer) ===== */
 .author-box {
-  display: flex; gap: 20px; align-items: flex-start;
-  background: var(--amber-light); border: 1px solid var(--amber);
-  border-radius: var(--radius); padding: 24px;
-  margin: 40px 0 32px;
+  display: flex; gap: 14px; align-items: center;
+  background: var(--white); border: solid #d1d5db; border-width: 1px 0;
+  padding: 14px max(20px, calc((100% - 1100px) / 2));
+  margin: 0;
 }
 .author-box-avatar {
   flex-shrink: 0;
-  width: 64px; height: 64px; border-radius: 50%;
+  width: 36px; height: 36px; border-radius: 50%;
   background: var(--navy); color: var(--white);
   display: flex; align-items: center; justify-content: center;
-  font-weight: 700; font-size: 18px; letter-spacing: 1px;
+  font-weight: 700; font-size: 14px; letter-spacing: 1px;
 }
 .author-box-content { flex: 1; }
-.author-box-name { font-weight: 700; font-size: 15px; margin-bottom: 6px; }
+.author-box-name { font-weight: 700; font-size: 14px; margin-bottom: 2px; }
 .author-box-name a { color: var(--navy); text-decoration: underline; }
-.author-box-bio { font-size: 14px; color: var(--muted-on-amber); line-height: 1.6; }
+.author-box-bio { font-size: 13px; color: #374151; line-height: 1.5; margin: 0; }
 .author-box-bio a { color: var(--navy); }
 @media (max-width: 600px) {
-  .author-box { flex-direction: column; gap: 14px; }
+  .author-box { gap: 10px; align-items: flex-start; }
+  .author-box-avatar { width: 30px; height: 30px; font-size: 12px; }
 }
 
 /* ===== AUTHOR PROFILE PAGE ===== */
@@ -1194,7 +1204,6 @@ html:not([data-gifts="peak"]) .gift-feature-actions { flex: 0 0 auto; margin-lef
 }
 
 /* Guides section fixes */
-.author-box-guide { max-width: 780px; width: calc(100% - 48px); margin: 0 auto 40px; }
 ul.checklist { list-style: none; padding-left: 0; }
 ul.checklist li { position: relative; padding-left: 34px; margin-bottom: 12px; }
 ul.checklist li::before {
@@ -1447,9 +1456,11 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22); font-size: 0.85rem; font-weight: 700; line-height: 1.2; text-decoration: none;
 }
 .country-badge-pill img { display: block; height: 18px; width: auto; }
-.country-badge-switch { padding-left: 10px; border-left: 1px solid var(--navy); font-weight: 500; }
+/* Just the flag and country name; the "other version" text only appears when the pill is hovered or focused. */
+.country-badge-switch { display: none; padding-left: 10px; border-left: 1px solid var(--navy); font-weight: 500; }
+a.country-badge-pill:hover .country-badge-switch, a.country-badge-pill:focus-visible .country-badge-switch { display: inline; }
 a.country-badge-pill:hover { background: var(--navy); color: var(--white); }
 a.country-badge-pill:hover .country-badge-switch { border-left-color: var(--white); }
 a.country-badge-pill:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
-@media (max-width: 600px) { .country-badge { left: 10px; bottom: 10px; } .country-badge-switch { display: none; } }
+@media (max-width: 600px) { .country-badge { left: 10px; bottom: 10px; } a.country-badge-pill:hover .country-badge-switch, a.country-badge-pill:focus-visible .country-badge-switch { display: none; } }
 @media print { .country-badge { display: none !important; } }

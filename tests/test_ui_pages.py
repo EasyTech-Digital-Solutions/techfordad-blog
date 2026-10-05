@@ -175,3 +175,26 @@ def test_country_badge_says_which_country_the_page_is_for(page, toolbar_page, vi
     assert 0 <= b["left"] and b["right"] <= b["vw"], "badge sticks out sideways"
     assert 0 <= b["top"] and b["bottom"] <= b["vh"], "badge is off screen"
     assert b["height"] >= 43.5, f"badge is {b['height']}px tall; tap targets should be 44px"
+
+
+# ---------------------------------------------------------------- less clutter: picks shown once, slim author strip
+
+def test_picks_are_shown_once(page, viewport, report):
+    """The sticky sidebar lists the same picks as the in-article "Which One Should You Buy?" summary, so wide screens show only the
+    sidebar copy; the summary stays wherever the sidebar sits below the article (tablet, phone)."""
+    b, lay = report["buySummary"], report["layout"]
+    if not b:
+        pytest.skip("page has no picks summary")
+    if b["dup"] and lay.get("sideRight"):
+        assert not b["shown"], "the picks summary and the sidebar picks are both visible side by side"
+    else:
+        assert b["shown"], "the picks summary is hidden although the sidebar is not beside the article"
+
+
+def test_author_strip_is_slim_and_just_above_the_footer(page, viewport, report):
+    a = report["author"]
+    if not a:
+        pytest.skip("page has no author strip")
+    assert a["afterNewsletter"], "the author strip belongs after the newsletter signup"
+    assert -1 <= a["gapToFooter"] <= 2, f"the author strip is {a['gapToFooter']}px above the footer; it should sit right on it"
+    assert a["height"] <= (120 if viewport == "desktop" else 220), f"the author strip is {a['height']}px tall"
