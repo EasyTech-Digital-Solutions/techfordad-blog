@@ -286,6 +286,66 @@
         {"kind": "independent", "title": "GSMArena: Samsung Galaxy Tab A11+ specifications", "url": "https://www.gsmarena.com/samsung_galaxy_tab_a11+-14192.php", "used_for": "Software updates and release date"}
       ],
       "note": "Prices change, so confirm them at the retailer. Amazon's Fire tablets are not listed because Amazon's pages block automated checks."
+    },
+    "blog/best-cell-phones-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "Lively: Jitterbug Flip2", "url": "https://shop.lively.com/products/jitterbug-flip2-flip-phone", "used_for": "Features, device price and plan range for the Flip2"},
+        {"kind": "maker", "title": "Apple: iPhone 17e", "url": "https://www.apple.com/iphone-17e/", "used_for": "Specifications and models of the iPhone 17e"},
+        {"kind": "maker", "title": "Apple: Accessibility", "url": "https://www.apple.com/accessibility/", "used_for": "Vision, hearing and mobility features to set up first"},
+        {"kind": "maker", "title": "Samsung US: Galaxy A series", "url": "https://www.samsung.com/us/smartphones/galaxy-a/", "used_for": "Which Galaxy A models Samsung currently sells"}
+      ],
+      "note": "Lively lists the Jitterbug Flip2 as sold out and points to the Flip3, and Samsung US now sells the Galaxy A17 and newer in place of the A16. Check availability before buying."
+    },
+    "blog/best-home-security-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "SimpliSafe: Home security systems", "url": "https://simplisafe.com/", "used_for": "Systems and monitoring plans SimpliSafe offers"},
+        {"kind": "maker", "title": "Cove: Self-installed home security systems", "url": "https://www.covesmart.com/", "used_for": "Systems and 24/7 monitoring that Cove offers"},
+        {"kind": "maker", "title": "Abode: DIY home security", "url": "https://goabode.com/", "used_for": "Self-monitoring versus optional professional monitoring, and no long-term contract"},
+        {"kind": "independent", "title": "Consumer Reports: Best home security systems", "url": "https://www.consumerreports.org/home-garden/home-security-systems/", "used_for": "An independent, ratings-based comparison of systems (full ratings need a subscription)", "skip_verify": true}
+      ],
+      "note": "Ring, ADT and Vivint block scripted page checks, so their details come from each maker's own site and should be confirmed there before you buy."
+    },
+    "blog/best-home-security-for-seniors-canada.html": {
+      "sources": [
+        {"kind": "maker", "title": "TELUS: SmartHome", "url": "https://www.telus.com/en/smart-home", "used_for": "Self-monitored versus professionally monitored plans and starting prices"},
+        {"kind": "maker", "title": "Rogers: Smart Home Monitoring", "url": "https://www.rogers.com/home-monitoring", "used_for": "What the Rogers plan includes and how it is installed"},
+        {"kind": "maker", "title": "Ring Canada: Home security systems", "url": "https://ring.com/ca/en/collections/home-security-systems", "used_for": "Ring Alarm kits and monitoring plans sold in Canada"},
+        {"kind": "maker", "title": "Abode: DIY home security", "url": "https://goabode.com/", "used_for": "Self-monitoring versus optional professional monitoring, and no long-term contract"}
+      ],
+      "note": "Plan prices change often. Confirm the monthly price and contract term with the provider before you sign."
+    },
+    "blog/best-gps-trackers-for-seniors-canada.html": {
+      "sources": [
+        {"kind": "authority", "title": "Alzheimer Society of Canada: Tracking devices", "url": "https://alzheimer.ca/en/help-information/im-caring-person-living-dementia/ensuring-safety-security/tracking-devices", "used_for": "Questions to ask before choosing a tracker, and the limits of any device"},
+        {"kind": "maker", "title": "Lil Tracker: GPS trackers for seniors", "url": "https://www.liltracker.ca/collections/devices-for-seniors", "used_for": "Watches and pendants offered, with Canadian-dollar prices and SIM plans"},
+        {"kind": "maker", "title": "TELUS Health: Medical alert pendant (LivingWell Companion)", "url": "https://www.telus.com/en/personal-health/livingwell-companion", "used_for": "Features, monthly price and activation fee for the TELUS mobile pendant"},
+        {"kind": "maker", "title": "Lifeline Canada: Medical alert systems", "url": "https://www.lifeline.ca/en/", "used_for": "The mobile On the Go system; Lifeline lists no price online"},
+        {"kind": "maker", "title": "Tracki: GPS trackers", "url": "https://tracki.com/", "used_for": "Tracki device range and device prices"}
+      ],
+      "note": "Lifeline gives pricing only by phone and AngelSense blocks scripted page checks, so confirm both with the company."
+    },
+    "blog/jitterbug-vs-iphone-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "Lively: Jitterbug Flip2", "url": "https://shop.lively.com/products/jitterbug-flip2-flip-phone", "used_for": "Features, device price and plan range for the Flip2"},
+        {"kind": "maker", "title": "Apple: iPhone 17e", "url": "https://www.apple.com/iphone-17e/", "used_for": "Specifications and models of the iPhone 17e"},
+        {"kind": "maker", "title": "Apple: Accessibility", "url": "https://www.apple.com/accessibility/", "used_for": "Vision, hearing and mobility features on iPhone"}
+      ],
+      "note": "Lively lists the Jitterbug Flip2 as sold out and points to the Flip3. Check which Jitterbug models are on sale before you decide."
+    },
+    "blog/best-video-doorbells-for-seniors-canada.html": {
+      "sources": [
+        {"kind": "maker", "title": "Ring Canada: Doorbell cameras", "url": "https://ring.com/ca/en/collections/video-doorbell-cameras", "used_for": "Ring battery doorbell models and the optional Ring Protect subscription"},
+        {"kind": "maker", "title": "Arlo Canada", "url": "https://ca.arlo.com/", "used_for": "Arlo doorbells and the Arlo Secure subscription"},
+        {"kind": "maker", "title": "eufy Canada", "url": "https://www.eufy.com/ca", "used_for": "That eufy sells the Video Doorbell E340; storage and fees are on its product page"}
+      ],
+      "note": "Prices on these pages change often and the currency shown can differ from CAD. Confirm the price and any subscription before you buy."
+    },
+    "blog/how-to-set-up-ipad-for-elderly-parent.html": {
+      "sources": [
+        {"kind": "maker", "title": "Apple Support: iPad User Guide", "url": "https://support.apple.com/guide/ipad/welcome/ipados", "used_for": "Display and text settings, Magnifier and FaceTime setup"},
+        {"kind": "maker", "title": "Apple: Accessibility", "url": "https://www.apple.com/accessibility/", "used_for": "Vision, hearing and mobility features available on iPad"},
+        {"kind": "maker", "title": "Apple: iPad (A16)", "url": "https://www.apple.com/ipad-11/", "used_for": "Specifications of the 11-inch iPad"}
+      ]
     }
   }
 }
