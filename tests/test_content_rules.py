@@ -22,6 +22,8 @@ INVENTED_EXPERIENCE = [
     r"\bwe(?:'|’)ve (?:spoken|talked|heard|interviewed|visited|met|seen families)",
     r"\bwe have (?:spoken|talked|interviewed)",
     r"\b(?:caregivers|families|readers|seniors) we(?:'|’)ve\b",
+    r"\btold us\b",
+    r"\b(?:our readers|readers (?:say|report|told|wrote))\b",
     r"\bin our experience\b",
     r"\bfrom our experience\b",
     r"\bwe personally\b",

@@ -174,12 +174,6 @@
       "price": "Not for sale on samsung.com/ca",
       "verified": "2026-09-24"
     },
-    "Samsung Galaxy Tab A9+": {
-      "method": "fetch",
-      "url": "https://www.samsung.com/us/tablets/galaxy-tab-a9-plus/buy/",
-      "price": "Replaced by Tab A11+ on samsung.com",
-      "verified": "2026-09-24"
-    },
     "Ring Battery Doorbell 2K / 2K Plus": {
       "method": "fetch",
       "url": "https://ring.com/products/battery-doorbell-2nd-gen",
@@ -897,6 +891,13 @@
       "url": "https://www.amazon.ca/Ring-Alarm-8-piece-kit/dp/B07ZPMDF1M",
       "price": "8-piece kit $349.99 CAD",
       "verified": "2026-09-30"
+    },
+    "Samsung Galaxy Tab A11+": {
+      "method": "fetch",
+      "url": "https://www.samsung.com/us/tablets/galaxy-tab-a11-plus/buy/",
+      "price": "$299.99 (128GB) / $379.99 (256GB)",
+      "verified": "2026-10-05",
+      "note": "Replaces the Galaxy Tab A9+ (discontinued late 2025). Specs (4 speakers, 7,040 mAh, Android 16, up to 7 OS updates, released 2025-11-02) from the GSMArena spec sheet. Used on blog/best-tablets-for-seniors.html."
     }
   }
 }

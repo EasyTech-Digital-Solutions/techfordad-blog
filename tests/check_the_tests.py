@@ -102,6 +102,7 @@ MUTATIONS = [
     ("affiliate: gift guide loses its membership links", sub("gift-guides/tech-gifts-for-elderly-parents.html", "amazon.com/amazonprime?tag=techfordad-gifts-20", "amazon.com/x", count=-1), "tests/test_content_rules.py::test_gift_guides_keep_their_membership_links", []),
     ("browser: gift block jumps after the page paints", sub("css/style.css", 'html[data-gifts="peak"] main#main { display: grid; grid-template-columns: minmax(0, 1fr); }', ""), "tests/test_ui_pages.py::test_home_gift_block_order_is_set_by_css_and_does_not_shift", []),
     ("generator: a gift guide drifts from build_gift_guides.py", sub("gift-guides/tech-gifts-for-elderly-parents.html", 'class="perk-note"', 'class="perk-changed"'), "tests/test_generated.py::test_repo_check_script", []),
+    ("honesty: 'seniors told us' claim", sub(PAGE, "</article>", "<p>Seniors told us the speakers were too quiet.</p></article>"), "tests/test_content_rules.py::test_no_claims_of_experience_the_site_does_not_have", []),
 ]
 
 

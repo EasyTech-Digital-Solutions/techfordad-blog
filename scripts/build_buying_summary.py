@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 # "us-insert" (no Quick Picks list: inserted just before the first product section)
 PAGES = {
     "blog/best-tablets-for-seniors.html": ("us", ["ipad", "fire-hd10", "ipad-mini", "samsung", "fire-8"]),
-    "blog/best-tablets-for-seniors-canada.html": ("ca", ["ipad", "ipad-air", "samsung-tab-a9-plus", "fire-hd-10", "lenovo-tab"]),
+    "blog/best-tablets-for-seniors-canada.html": ("ca", ["ipad", "ipad-air", "samsung-tab-a11-plus", "fire-hd-10", "lenovo-tab"]),
     "blog/best-cell-phones-for-seniors.html": ("us", ["jitterbug", "iphone-se", "jitterbug-smart", "doro", "galaxy"]),
     "blog/best-cell-phones-for-seniors-canada.html": ("ca", ["iphone16", "samsung-a36", "samsung-a16", "doro", "artfone"]),
     "blog/best-medical-alert-systems.html": ("us", ["best-overall", "best-value", "best-mobile", "best-apple", "best-budget"]),

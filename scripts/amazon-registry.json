@@ -395,10 +395,10 @@
       ]
     },
     {
-      "id": "ca-samsung-galaxy-tab-a9-11-inch",
-      "name": "Samsung Galaxy Tab A9+ (11-inch)",
+      "id": "ca-samsung-galaxy-tab-a11-11-inch",
+      "name": "Samsung Galaxy Tab A11+ (11-inch)",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Samsung+Galaxy+Tab+A9+Plus",
+      "url": "https://www.amazon.ca/s?k=Samsung+Galaxy+Tab+A11+Plus",
       "kind": "search",
       "asin": null,
       "price": null,
@@ -1873,13 +1873,13 @@
       ]
     },
     {
-      "id": "com-samsung-galaxy-tab-a9",
-      "name": "Samsung Galaxy Tab A9+",
+      "id": "com-samsung-galaxy-tab-a11",
+      "name": "Samsung Galaxy Tab A11+",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Samsung+Galaxy+Tab+A9%2B",
+      "url": "https://www.amazon.com/s?k=Samsung+Galaxy+Tab+A11%2B",
       "kind": "search",
       "asin": null,
-      "price": "$149",
+      "price": "$299.99",
       "used_in": [
         "blog/best-tablets-for-seniors.html"
       ]
