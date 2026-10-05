@@ -869,7 +869,7 @@ GIFT_LINKS = {
     "best-pill-organizers-for-seniors.html": "tech-gifts-for-seniors-under-50",
 }
 LINK_RE = re.compile(r"[ \t]*<!-- gift-links -->.*?<!-- /gift-links -->\n?", re.S)
-TAIL_RE = re.compile(r'(\s*</div>\s*</div>\s*)(<section class="newsletter")')
+RELATED_RE = re.compile(r"[ \t]*<!-- related -->")  # the box sits in the article, just before "Keep Reading", not inside the author box
 
 
 def add_review_links():
@@ -886,7 +886,7 @@ def add_review_links():
         block = (f'    <!-- gift-links -->\n    <div class="gift-more">\n      <strong>See more gift ideas</strong>\n'
                  f'      <p><a href="../gift-guides/{slug}.html">{e(g["h1"])}</a>, or browse <a href="../gift-guides/index.html">all gift guides</a>.</p>\n'
                  f'    </div>\n    <!-- /gift-links -->\n')
-        new, n = TAIL_RE.subn(lambda m: "\n\n" + block + m.group(1).lstrip("\n") + m.group(2), text, count=1)
+        new, n = RELATED_RE.subn(lambda m: block + m.group(0), text, count=1)
         if n and new != text:
             with open(path, "w", encoding="utf-8", newline="") as f:
                 f.write(new)
