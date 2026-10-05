@@ -65,7 +65,7 @@ def test_slots_land_only_in_reader_safe_places(rel, with_ids):
 
 @pytest.mark.parametrize("rel", REVIEWS[:6])
 def test_placing_twice_changes_nothing_and_removing_restores_the_page(rel, with_ids, monkeypatch):
-    text = P.read(rel)
+    text = A.BLOCK_RE.sub("", P.read(rel))  # the page without any ad blocks, whatever is configured for real
     once = A.place(text, B.PAGES[rel][1][0])
     assert A.place(once, B.PAGES[rel][1][0]) == once, "placement is not idempotent"
     monkeypatch.setattr(A, "config", lambda: {"client": DUMMY["client"], "slots": {"in_article": "", "after_table": "", "sidebar": ""}})
