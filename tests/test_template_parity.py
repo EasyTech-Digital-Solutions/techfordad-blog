@@ -192,3 +192,15 @@ def test_quick_tip_sits_before_the_summary(html_page):
         pytest.skip("no quick tip")
     marker = "<!-- buy-summary -->" if "<!-- buy-summary -->" in t else '<h2 id="top-picks"'
     assert t.index('class="perk-line"') < t.index(marker), "the quick tip comes before 'Which One Should You Buy?', as on the USA pages"
+
+
+def test_contents_list_follows_page_order(html_page):
+    """Entries in the table of contents appear in the same order as their sections on the page."""
+    t = _article(html_page)
+    m = re.search(r'<ol class="toc-plain">(.*?)</ol>', t, re.S)
+    if not m:
+        pytest.skip("page has no contents list of this style")
+    ids = re.findall(r'<li><a href="#([^"]+)">', m.group(1))
+    positions = [t.find(f'id="{i}"') for i in ids]
+    assert all(p >= 0 for p in positions), "a contents entry points at a section that does not exist"
+    assert positions == sorted(positions), f"contents list is out of page order: {[i for i, p in zip(ids, positions) if p != sorted(positions)[positions.index(p)]][:4]}"
