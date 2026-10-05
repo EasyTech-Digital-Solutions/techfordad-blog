@@ -16,7 +16,7 @@
         {"kind": "independent", "title": "NCOA: Best medical alert systems with fall detection", "url": "https://www.ncoa.org/product-resources/medical-alert-systems/best-medical-alert-systems-with-fall-detection/", "used_for": "Another set of reviews, using NCOA's own testing method"},
         {"kind": "independent", "title": "Consumer Reports: Best medical alert systems", "url": "https://www.consumerreports.org/health/medical-alert-systems/best-medical-alert-systems-a1136054281/", "used_for": "Consumer Reports' survey-based ratings of the main brands"}
       ],
-      "note": "Response times on this page come from customer reviews, not lab tests. The independent reviews above are where to compare."
+      "note": "No independent response-time test exists for these systems; the only figures here are the companies' own claims. The independent reviews above are where to compare."
     },
     "blog/best-medical-alert-systems-canada.html": {
       "sources": [
@@ -241,6 +241,124 @@
         {"kind": "maker", "title": "Jiobit: Smart Tag", "url": "https://www.jiobit.com/", "used_for": "Plan price, update rate and battery life as the company lists them"}
       ],
       "note": "Prices and features change, so confirm them on each maker's page."
+    },
+    "blog/best-cordless-phones-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "VTech: SN5147 Amplified Cordless Phone", "url": "https://www.vtechphones.com/store/pd/4143/SN5147-Amplified-Corded-Cordless-Phone-with-Answering-System-Big-Buttons-Extra-Loud-Ringer-Smart-Call-Blocker", "used_for": "List price and product details", "skip_verify": true},
+        {"kind": "maker", "title": "Panasonic: KX-TGM420W Amplified Cordless Phone", "url": "https://shop.panasonic.com/products/amplified-cordless-phone-kx-tgm420", "used_for": "List price and product details, including the Slow Talk feature"},
+        {"kind": "maker", "title": "AT&T: CL82407 4-Handset Cordless System", "url": "https://telephones.att.com/pd/3738/CL82407-4-handset-cordless-answering-system-with-smart-call-blocker", "used_for": "List price and product details", "skip_verify": true}
+      ],
+      "note": "Prices and features change, so confirm them on the maker's page."
+    },
+    "blog/best-pill-organizers-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "Hero: Pricing", "url": "https://herohealth.com/pricing/", "used_for": "Device and plan prices for the Hero dispenser"},
+        {"kind": "maker", "title": "e-Pill: MedSmart", "url": "https://www.epill.com/medsmart.html", "used_for": "List price and product details"},
+        {"kind": "maker", "title": "e-Pill: Medcenter Monthly Pill Organizer", "url": "https://www.epill.com/medcenter.html", "used_for": "List price and product details"},
+        {"kind": "official", "title": "Medicare: Durable medical equipment (DME) coverage", "url": "https://www.medicare.gov/coverage/durable-medical-equipment-dme-coverage", "used_for": "What Original Medicare covers as durable medical equipment"}
+      ],
+      "note": "Prices and plans change, so confirm them on the maker's page. Not every dispenser on this page is listed, only those whose own page we could check."
+    },
+    "blog/best-smart-home-devices-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "Ring: Battery Video Doorbell", "url": "https://ring.com/products/battery-doorbell-2nd-gen", "used_for": "List price and product details"},
+        {"kind": "maker", "title": "iRobot: Roomba i3+ EVO", "url": "https://www.irobot.com/en_US/roomba-i3plus-evo-self-emptying-robot-vacuum/I355020.html", "used_for": "List price and product details"},
+        {"kind": "maker", "title": "Schlage: Encode Plus Smart Lock", "url": "https://www.schlage.com/en/home/smart-locks/encode-plus.html", "used_for": "List price and product details"},
+        {"kind": "official", "title": "CDC: Older adult fall data", "url": "https://www.cdc.gov/falls/about/index.html", "used_for": "That falls are the leading cause of injury death for adults 65 and older", "skip_verify": true}
+      ],
+      "note": "Prices and features change, so confirm them on the maker's page. Amazon's own devices are not listed because Amazon's pages block automated checks."
+    },
+    "blog/best-tablets-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "Apple: iPad", "url": "https://www.apple.com/shop/buy-ipad/ipad", "used_for": "List price from $449, checked Oct 5, 2026"},
+        {"kind": "maker", "title": "Apple: iPad mini", "url": "https://www.apple.com/shop/buy-ipad/ipad-mini", "used_for": "List price, checked Sep 23, 2026"},
+        {"kind": "maker", "title": "Samsung: Galaxy Tab A11+", "url": "https://www.samsung.com/us/tablets/galaxy-tab-a11-plus/buy/", "used_for": "List price from $299.99, checked Oct 5, 2026"},
+        {"kind": "independent", "title": "GSMArena: Samsung Galaxy Tab A11+ specifications", "url": "https://www.gsmarena.com/samsung_galaxy_tab_a11+-14192.php", "used_for": "Speakers, battery, display, software updates and release date"}
+      ],
+      "note": "Prices change, so confirm them on the maker's page. Amazon's Fire tablets are not listed because Amazon's pages block automated checks."
+    },
+    "blog/best-tablets-for-seniors-canada.html": {
+      "sources": [
+        {"kind": "maker", "title": "Apple (Canada): iPad", "url": "https://www.apple.com/ca/shop/buy-ipad/ipad", "used_for": "List price in CAD, checked Sep 23, 2026"},
+        {"kind": "maker", "title": "Apple (Canada): iPad Air", "url": "https://www.apple.com/ca/shop/buy-ipad/ipad-air", "used_for": "List price in CAD, checked Sep 23, 2026"},
+        {"kind": "maker", "title": "Samsung Canada: Galaxy Tab A11+", "url": "https://www.samsung.com/ca/tablets/galaxy-tab-a/galaxy-tab-a11-plus-gray-128gb-sm-x230nzaaxac/", "used_for": "Specifications; the page lists the tablet as not for sale"},
+        {"kind": "independent", "title": "Canada Computers: Samsung Galaxy Tab A11+ 128GB", "url": "https://www.canadacomputers.com/en/android-tablets/283040/samsung-galaxy-tab-a11-11-8-core-fhd-6gb-128gb-wi-fi-5-android-gray-sm-x230nzaaxac.html", "used_for": "A Canadian retail price, checked Oct 5, 2026 (a sale price)"},
+        {"kind": "independent", "title": "GSMArena: Samsung Galaxy Tab A11+ specifications", "url": "https://www.gsmarena.com/samsung_galaxy_tab_a11+-14192.php", "used_for": "Software updates and release date"}
+      ],
+      "note": "Prices change, so confirm them at the retailer. Amazon's Fire tablets are not listed because Amazon's pages block automated checks."
+    },
+    "blog/best-cell-phones-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "Lively: Jitterbug Flip3", "url": "https://shop.lively.com/products/jitterbug-flip3-flip-phone", "used_for": "Features, device price and plan range for the Flip3"},
+        {"kind": "maker", "title": "Apple: iPhone 17e", "url": "https://www.apple.com/iphone-17e/", "used_for": "Specifications and models of the iPhone 17e"},
+        {"kind": "maker", "title": "Apple: Accessibility", "url": "https://www.apple.com/accessibility/", "used_for": "Vision, hearing and mobility features to set up first"},
+        {"kind": "maker", "title": "Samsung US: Galaxy A17 5G", "url": "https://www.samsung.com/us/smartphones/galaxy-a17-5g/", "used_for": "Specifications, software support and price of the Galaxy A17 5G"}
+      ],
+      "note": "Lively lists the older Jitterbug Flip2 as sold out and now sells the Flip3. Samsung US sells the Galaxy A17 5G in place of the A16. Check availability and price before buying."
+    },
+    "blog/best-home-security-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "SimpliSafe: Home security systems", "url": "https://simplisafe.com/", "used_for": "Systems and monitoring plans SimpliSafe offers"},
+        {"kind": "maker", "title": "Cove: Self-installed home security systems", "url": "https://www.covesmart.com/", "used_for": "Systems and 24/7 monitoring that Cove offers"},
+        {"kind": "maker", "title": "Abode: DIY home security", "url": "https://goabode.com/", "used_for": "Self-monitoring versus optional professional monitoring, and no long-term contract"},
+        {"kind": "independent", "title": "Consumer Reports: Best home security systems", "url": "https://www.consumerreports.org/home-garden/home-security-systems/", "used_for": "An independent, ratings-based comparison of systems (full ratings need a subscription)", "skip_verify": true}
+      ],
+      "note": "Ring, ADT and Vivint block scripted page checks, so their details come from each maker's own site and should be confirmed there before you buy."
+    },
+    "blog/best-home-security-for-seniors-canada.html": {
+      "sources": [
+        {"kind": "maker", "title": "TELUS: SmartHome", "url": "https://www.telus.com/en/smart-home", "used_for": "Self-monitored versus professionally monitored plans and starting prices"},
+        {"kind": "maker", "title": "Rogers: Smart Home Monitoring", "url": "https://www.rogers.com/home-monitoring", "used_for": "What the Rogers plan includes and how it is installed"},
+        {"kind": "maker", "title": "Ring Canada: Home security systems", "url": "https://ring.com/ca/en/collections/home-security-systems", "used_for": "Ring Alarm kits and monitoring plans sold in Canada"},
+        {"kind": "maker", "title": "Abode: DIY home security", "url": "https://goabode.com/", "used_for": "Self-monitoring versus optional professional monitoring, and no long-term contract"}
+      ],
+      "note": "Plan prices change often. Confirm the monthly price and contract term with the provider before you sign."
+    },
+    "blog/best-gps-trackers-for-seniors-canada.html": {
+      "sources": [
+        {"kind": "authority", "title": "Alzheimer Society of Canada: Tracking devices", "url": "https://alzheimer.ca/en/help-information/im-caring-person-living-dementia/ensuring-safety-security/tracking-devices", "used_for": "Questions to ask before choosing a tracker, and the limits of any device"},
+        {"kind": "maker", "title": "Lil Tracker: GPS trackers for seniors", "url": "https://www.liltracker.ca/collections/devices-for-seniors", "used_for": "Watches and pendants offered, with Canadian-dollar prices and SIM plans"},
+        {"kind": "maker", "title": "TELUS Health: Medical alert pendant (LivingWell Companion)", "url": "https://www.telus.com/en/personal-health/livingwell-companion", "used_for": "Features, monthly price and activation fee for the TELUS mobile pendant"},
+        {"kind": "maker", "title": "Lifeline Canada: Medical alert systems", "url": "https://www.lifeline.ca/en/", "used_for": "The mobile On the Go system; Lifeline lists no price online"},
+        {"kind": "maker", "title": "Tracki: GPS trackers", "url": "https://tracki.com/", "used_for": "Tracki device range and device prices"}
+      ],
+      "note": "Lifeline gives pricing only by phone and AngelSense blocks scripted page checks, so confirm both with the company."
+    },
+    "blog/jitterbug-vs-iphone-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "Lively: Jitterbug Flip3", "url": "https://shop.lively.com/products/jitterbug-flip3-flip-phone", "used_for": "Features, device price and plan range for the Flip3"},
+        {"kind": "maker", "title": "Apple: iPhone 17e", "url": "https://www.apple.com/iphone-17e/", "used_for": "Specifications and models of the iPhone 17e"},
+        {"kind": "maker", "title": "Apple: Accessibility", "url": "https://www.apple.com/accessibility/", "used_for": "Vision, hearing and mobility features on iPhone"},
+        {"kind": "maker", "title": "Lively: Jitterbug Smart5", "url": "https://shop.lively.com/products/jitterbug-smart5-smartphone-for-seniors", "used_for": "Screen size, battery claim, hearing aid rating, device price and plan prices for the Smart5"},
+        {"kind": "maker", "title": "Apple: iPhone 17e technical specifications", "url": "https://www.apple.com/iphone-17e/specs/", "used_for": "Display size, battery claim and hearing aid compatibility of the iPhone 17e"}
+      ],
+      "note": "Lively lists the older Jitterbug Flip2 as sold out and now sells the Flip3. Check which Jitterbug models are on sale before you decide."
+    },
+    "blog/best-video-doorbells-for-seniors-canada.html": {
+      "sources": [
+        {"kind": "maker", "title": "Ring Canada: Doorbell cameras", "url": "https://ring.com/ca/en/collections/video-doorbell-cameras", "used_for": "Ring battery doorbell models and the optional Ring Protect subscription"},
+        {"kind": "maker", "title": "Arlo Canada", "url": "https://ca.arlo.com/", "used_for": "Arlo doorbells and the Arlo Secure subscription"},
+        {"kind": "maker", "title": "eufy Canada", "url": "https://www.eufy.com/ca", "used_for": "That eufy sells the Video Doorbell E340; storage and fees are on its product page"}
+      ],
+      "note": "Prices on these pages change often and the currency shown can differ from CAD. Confirm the price and any subscription before you buy."
+    },
+    "blog/how-to-set-up-ipad-for-elderly-parent.html": {
+      "sources": [
+        {"kind": "maker", "title": "Apple Support: iPad User Guide", "url": "https://support.apple.com/guide/ipad/welcome/ipados", "used_for": "Display and text settings, Magnifier and FaceTime setup"},
+        {"kind": "maker", "title": "Apple: Accessibility", "url": "https://www.apple.com/accessibility/", "used_for": "Vision, hearing and mobility features available on iPad"},
+        {"kind": "maker", "title": "Apple: iPad (A16)", "url": "https://www.apple.com/ipad-11/", "used_for": "Specifications of the 11-inch iPad"}
+      ]
+    },
+    "guides/caregiver-resources.html": {
+      "sources": [
+        {"kind": "official", "title": "Administration for Community Living: National Family Caregiver Support Program", "url": "https://acl.gov/programs/support-caregivers/national-family-caregiver-support-program", "used_for": "The five kinds of support the program funds: information, access help, counselling and training, respite care and supplemental services"},
+        {"kind": "official", "title": "Eldercare Locator (Administration for Community Living)", "url": "https://eldercare.acl.gov/", "used_for": "How to find local services for older adults by website, phone, text or chat"},
+        {"kind": "authority", "title": "Alzheimer's Association: 24/7 Helpline", "url": "https://www.alz.org/help-support/resources/helpline", "used_for": "What the free helpline offers caregivers, and its hours"},
+        {"kind": "official", "title": "VA Caregiver Support Program", "url": "https://www.caregiver.va.gov/", "used_for": "The two VA caregiver programs and the support line, for caregivers of Veterans"},
+        {"kind": "official", "title": "IRS: Publication 502, Medical and Dental Expenses", "url": "https://www.irs.gov/publications/p502", "used_for": "When medical expenses paid for a parent can be deducted, and the support test"},
+        {"kind": "independent", "title": "AARP and National Alliance for Caregiving: Caregiving in the US 2025", "url": "https://www.aarp.org/caregiving/basics/caregiving-in-us-survey-2025/", "used_for": "How many Americans are family caregivers"}
+      ],
+      "note": "Programs, eligibility and phone numbers change. Confirm with the agency before you rely on them, and check your state or province for local programs."
     }
   }
 }

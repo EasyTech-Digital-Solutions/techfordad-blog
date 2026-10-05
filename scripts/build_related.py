@@ -151,7 +151,7 @@ def insert(path, text, block):
         i = text.rindex("</article>")
         i = text.rfind("\n", 0, i) + 1
         return text[:i] + block + text[i:]
-    m = re.search(r'\n(</div>\n)\n<div class="author-box', text)  # guides: end of .about-body
+    m = re.search(r'\n(</div>\n)\n<(?:section class="newsletter"|div class="author-box)', text)  # guides: end of .about-body
     if m:
         i = m.start(1)
         return text[:i] + block + text[i:]

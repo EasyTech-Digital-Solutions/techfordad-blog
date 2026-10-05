@@ -22,6 +22,8 @@ INVENTED_EXPERIENCE = [
     r"\bwe(?:'|’)ve (?:spoken|talked|heard|interviewed|visited|met|seen families)",
     r"\bwe have (?:spoken|talked|interviewed)",
     r"\b(?:caregivers|families|readers|seniors) we(?:'|’)ve\b",
+    r"\btold us\b",
+    r"\b(?:our readers|readers (?:say|report|told|wrote))\b",
     r"\bin our experience\b",
     r"\bfrom our experience\b",
     r"\bwe personally\b",
@@ -104,8 +106,29 @@ def test_gift_guides_keep_their_membership_links():
 
 
 def test_no_numeric_scores(html_page):
-    """How We Review says "We do not use a numeric score". Invented X/10 scores implied testing the site does not do (removed 2026-10-05)."""
+    """How We Review says "We do not use a numeric score". Invented X/10 or X/5 scores implied testing the site does not do
+    (removed 2026-10-05). A third party's published score may stay when it is attributed (the HearAdvisor lab grade)."""
     _content_page(html_page)
     text = _visible_text(html_page)
-    hits = re.findall(r"\b(?:our score|our rating)\b|\b\d(?:\.\d)?\s?/\s?10\b", text, re.I)
+    text = re.sub(r"HearAdvisor lab test:.*?\)", "", text)  # attributed, independent lab figure
+    hits = re.findall(r"\b(?:our score|our rating)\b|\b\d(?:\.\d)?\s?/\s?(?:10|5)\b|\b\d(?:\.\d)?\s+out of\s+(?:10|5)\b", text, re.I)
     assert not hits, f"numeric score on the page: {hits[:3]}"
+
+
+AMAZON_REVIEW_CLAIMS = re.compile(
+    r"verified (?:customer|user|buyer|amazon)s?(?: \w+)? reviews|"
+    r"\b(?:customers|reviewers|users|owners|buyers)\s+(?:consistently|frequently|often|generally)\b|"
+    r"\bconsistently (?:rated|praised|reported)\b|\bhigh marks\b|\bstrong marks\b|"
+    r"\b\d[\d,]*\+?\s(?:customer |amazon |verified )*(?:ratings|reviews)\b|\b\d\.\d[- ]stars?\b|\b\d-star (?:rating|average)\b|"
+    r"\bamazon (?:rating|reviews)\b", re.I)
+
+
+def test_no_amazon_ratings_or_invented_review_claims(html_page):
+    """Amazon's Associates rules allow star ratings and review counts only when they come from its API, and the site says it does not
+    test products: so no review counts, star averages or "customers consistently report" claims (removed 2026-10-05)."""
+    _content_page(html_page)
+    if html_page in ("about.html", "how-we-review.html", "our-story.html"):
+        pytest.skip("these pages describe how we work (we read published and buyer reviews); they make no claim about a product")
+    text = _visible_text(html_page)
+    hits = [m.group(0) for m in AMAZON_REVIEW_CLAIMS.finditer(text)]
+    assert not hits, f"claims about customer reviews or Amazon ratings: {hits[:3]}"

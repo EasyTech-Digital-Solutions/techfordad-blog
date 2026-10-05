@@ -119,7 +119,8 @@
   },
   "AUTHOR BOX": {
    "covered_by": [
-    "test_ui_print.py::test_print_layout_removes_page_chrome_and_keeps_content"
+    "test_ui_print.py::test_print_layout_removes_page_chrome_and_keeps_content",
+    "test_ui_pages.py::test_author_strip_is_slim_and_just_above_the_footer"
    ]
   },
   "AUTHOR PROFILE PAGE": {
@@ -186,6 +187,12 @@
     "test_seo.py::test_has_main_landmark_and_skip_link",
     "test_ui_interactions.py::test_skip_link_works_with_keyboard",
     "test_ui_a11y.py::test_accessibility"
+   ]
+  },
+  "COUNTRY BADGE": {
+   "covered_by": [
+    "test_ui_pages.py::test_country_badge_says_which_country_the_page_is_for",
+    "test_ui_print.py::test_country_badge_is_not_printed"
    ]
   }
  }

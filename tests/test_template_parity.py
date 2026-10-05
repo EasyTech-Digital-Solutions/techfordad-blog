@@ -30,7 +30,7 @@ def test_article_has_the_full_template(html_page):
                          ('<aside class="article-sidebar">', "right-hand sidebar"), ('class="toc"', "table of contents"),
                          ('class="author-box"', "author box"), ('class="newsletter"', "free-checklist signup")]:
         assert needle in t, f"missing the {what} ({needle})"
-    assert t.index("</article>") < t.index('<aside class="article-sidebar">') < t.index('class="author-box"') < t.index('class="newsletter"') < t.index("</main>")
+    assert t.index("</article>") < t.index('<aside class="article-sidebar">') < t.index('class="newsletter"') < t.index('class="author-box"') < t.index("</main>")
 
 
 def test_sidebar_has_the_standard_boxes(html_page):
@@ -40,7 +40,7 @@ def test_sidebar_has_the_standard_boxes(html_page):
     assert "Related Guides" in boxes, f"sidebar has no 'Related Guides' box (boxes: {boxes})"
     if 'class="buy-decision"' in t and html_page not in SIDEBAR_EXCEPTIONS:
         assert "Our Top Picks" in boxes, "the page has a ranked pick list but the sidebar has no 'Our Top Picks' box"
-    assert 'class="disclaimer"' in aside and "Affiliate Disclosure" in aside, "sidebar is missing the affiliate note"
+    assert 'class="disclaimer"' not in aside, "the disclosure lives in the strip under the hero, not in the sidebar"
 
 
 def test_top_picks_sidebar_matches_the_pick_list(html_page):
@@ -162,14 +162,17 @@ def test_comparison_table_uses_the_shared_markup(html_page):
     assert '<div style="overflow-x:auto;">' in seg, "the table sits in the standard scrolling wrapper"
 
 
-def test_disclosure_box_looks_the_same(html_page):
+def test_disclosure_is_one_slim_strip_under_the_hero(html_page):
     t = _article(html_page)
     if html_page in NOT_A_REVIEW:
         pytest.skip("how-to guide, not a review")
-    box = re.search(r'<div class="toc" style="([^"]*)">\s*<strong>Affiliate Disclosure', t)
-    assert box, "the affiliate disclosure box at the top is missing or uses non-standard markup"
-    assert box.group(1) == "background:#fffbeb; border-color:#f59e0b; font-size:0.9rem;"
-    assert 'class="affiliate-box"' not in t
+    strip = re.search(r'<div class="article-disclaimer">\s*<strong>Affiliate Disclosure:</strong>(.*?)</div>', t, re.S)
+    assert strip, "the affiliate disclosure strip under the hero is missing or uses non-standard markup"
+    assert t.index("article-disclaimer") < t.index('<div class="article-layout">'), "the strip belongs between the hero and the two-column layout"
+    text = strip.group(1)
+    assert "may earn a commission" in text and "never influenced by compensation" in text and "approximate" in text
+    assert t.count("<strong>Affiliate Disclosure:</strong>") == 1, "one disclosure strip; no second box in the article or sidebar"
+    assert 'background:#fffbeb' not in t and 'class="affiliate-box"' not in t, "the old amber disclosure box is gone"
 
 
 def test_hero_line_and_breadcrumb(html_page):
@@ -204,3 +207,25 @@ def test_contents_list_follows_page_order(html_page):
     positions = [t.find(f'id="{i}"') for i in ids]
     assert all(p >= 0 for p in positions), "a contents entry points at a section that does not exist"
     assert positions == sorted(positions), f"contents list is out of page order: {[i for i, p in zip(ids, positions) if p != sorted(positions)[positions.index(p)]][:4]}"
+
+
+def test_every_review_has_a_table_of_contents(html_page):
+    """Readers asked for a contents list on every review, product reviews included, so each section is one click away."""
+    t = _article(html_page)
+    if html_page in NOT_A_REVIEW:
+        pytest.skip("how-to guide, not a review")
+    m = re.search(r'<p class="toc-title">Table of Contents</p>(.*?)</div>', t, re.S)
+    assert m, "the page has no table of contents"
+    ids = re.findall(r'href="#([^"]+)"', m.group(1))
+    assert len(ids) >= 5, f"table of contents has only {len(ids)} entries"
+    assert all(f'id="{i}"' in t for i in ids), "a contents entry points at a section that does not exist"
+
+
+def test_foot_of_a_review_is_in_the_fixed_order(html_page):
+    """docs/page-structure.md: FAQ, How We Chose, Sources, gift ideas, Keep Reading."""
+    t = _article(html_page)
+    if html_page in NOT_A_REVIEW:
+        pytest.skip("how-to guide, not a review")
+    marks = [m for m in ('id="faq"', "<!-- how-we-chose -->", "<!-- sources -->", "<!-- gift-links -->", "<!-- related -->") if m in t]
+    positions = [t.index(m) for m in marks]
+    assert positions == sorted(positions), f"the foot of the page is out of order: {marks}"

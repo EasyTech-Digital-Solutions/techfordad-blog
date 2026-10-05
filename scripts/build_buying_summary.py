@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 # "us-insert" (no Quick Picks list: inserted just before the first product section)
 PAGES = {
     "blog/best-tablets-for-seniors.html": ("us", ["ipad", "fire-hd10", "ipad-mini", "samsung", "fire-8"]),
-    "blog/best-tablets-for-seniors-canada.html": ("ca", ["ipad", "ipad-air", "samsung-tab-a9-plus", "fire-hd-10", "lenovo-tab"]),
+    "blog/best-tablets-for-seniors-canada.html": ("ca", ["ipad", "ipad-air", "samsung-tab-a11-plus", "fire-hd-10", "lenovo-tab"]),
     "blog/best-cell-phones-for-seniors.html": ("us", ["jitterbug", "iphone-se", "jitterbug-smart", "doro", "galaxy"]),
     "blog/best-cell-phones-for-seniors-canada.html": ("ca", ["iphone16", "samsung-a36", "samsung-a16", "doro", "artfone"]),
     "blog/best-medical-alert-systems.html": ("us", ["best-overall", "best-value", "best-mobile", "best-apple", "best-budget"]),
@@ -53,10 +53,11 @@ PAGES = {
     # US pages with no Quick Picks list: the section goes just before the first product review
     "blog/best-hearing-aids-for-seniors.html": ("us-insert", ["elehear", "jabra", "lexie", "audien", "eargo"]),
     "blog/best-smart-home-devices-for-seniors.html": ("us-insert", ["echo-show", "ring", "smart-lights", "thermostat", "alexa-together", "robot-vacuum", "smart-lock"]),
-    "blog/jitterbug-vs-iphone-for-seniors.html": ("us-insert", ["jitterbug-flip2", "jitterbug-smart5", "iphone-se"]),
+    "blog/jitterbug-vs-iphone-for-seniors.html": ("us-insert", ["jitterbug-flip3", "jitterbug-smart5", "iphone-se"]),
     "blog/medical-alert-no-monthly-fee.html": ("us-insert", ["apple-watch", "lowest-fee", "lively", "bay-alarm"]),
 }
 HEADING = "Which One Should You Buy?"
+SIDEBAR_PICKS_RE = re.compile(r"<h3>(?:Quick Picks|Our Picks|Our Top Picks)</h3>")
 BUY_RE = re.compile(r"\n?[ \t]*<!-- buy-summary -->.*?<!-- /buy-summary -->[ \t]*\n?", re.S)
 CTA_RE = re.compile(r"[ \t]*<!-- table-cta -->.*?<!-- /table-cta -->[ \t]*\n?", re.S)
 problems = []
@@ -128,8 +129,10 @@ def pick(text, sid, country="us"):
                 con=plain(con.group(1)) if con else None, url=link.group(1) if link else None)
 
 
-def render_summary(picks, mode):
-    lines = ["<!-- buy-summary -->"]
+def render_summary(picks, mode, has_sidebar_picks):
+    # On wide screens the sticky sidebar already lists the same picks, so the in-article copy is hidden there (CSS .buy-summary-dup);
+    # it stays visible on tablets and phones, where the sidebar drops below the article, and in print.
+    lines = ["<!-- buy-summary -->", '<div class="buy-summary buy-summary-dup">' if has_sidebar_picks else '<div class="buy-summary">']
     if mode in ("us", "ca"):
         lines.append(f'<h2 id="top-picks">{HEADING}</h2>')
     else:
@@ -150,6 +153,7 @@ def render_summary(picks, mode):
     lines.append("</ul>")
     if "overall" in picks[0]["label"].lower():
         lines.append(f'<p class="buy-note">Not sure? Start with the <a href="#{picks[0]["id"]}">{picks[0]["name"]}</a>. It is our overall pick.</p>')
+    lines.append("</div>")
     lines.append("<!-- /buy-summary -->")
     return "\n".join(lines) + "\n"
 
@@ -177,7 +181,7 @@ def process(rel, check):
     if any(p is None for p in picks):
         return
     # 1. decision section
-    summary = render_summary(picks, mode)
+    summary = render_summary(picks, mode, bool(SIDEBAR_PICKS_RE.search(base)))
     if mode in ("us-insert", "ca"):
         if BUY_RE.search(text):
             new = BUY_RE.sub(lambda _m: ("\n" if _m.group(0).startswith("\n") else "") + summary, text, count=1)

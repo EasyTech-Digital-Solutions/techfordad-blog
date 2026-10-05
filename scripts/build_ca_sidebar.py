@@ -71,11 +71,12 @@ def shorten_label(label):
 
 
 def shorten_price(price):
+    """Short price for the sidebar. Canada pages always say CAD: a price without it can be read as US dollars."""
     p = plain(price).replace(" CAD", "").strip()
     if len(p) > 22:
         m = re.search(r"\$[\d,]+(?:\.\d+)?", p)
         p = f"From ~{m.group(0)}" if m else ""
-    return p
+    return f"{p} CAD" if "$" in p else p
 
 
 def picks(text):
@@ -118,8 +119,7 @@ def render(path, text):
                       f'          <a href="{BR.rel(path, target)}"><strong>{esc(plain(title))} →</strong></a>',
                       f"          <span>{esc(plain(blurb))}</span>", "        </div>", "      </div>"]
         lines.append("    </div>")
-    lines += ['    <p class="disclaimer"><strong>Affiliate Disclosure:</strong> We earn a small commission if you purchase through our links. '
-              'This never influences our rankings.</p>', "    <!-- /ca-sidebar -->"]
+    lines += ["    <!-- /ca-sidebar -->"]
     return "\n".join(lines)
 
 
