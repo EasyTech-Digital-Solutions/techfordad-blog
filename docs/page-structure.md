@@ -51,4 +51,5 @@ Edit the generator, never the HTML.
 
 ## Known gaps (as of 2026-10-05)
 - Sources box missing on Alexa, TV remotes and Canada cordless phones (fewer than 3 clean sources); the noindex laptops, keyboards and US video doorbells pages are not rewritten yet.
-- Canada cell phones has 9 FAQs (target 6 to 7). TV remotes and smart home have no comparison table.
+- TV remotes and smart home have no comparison table.
+- Method boxes: the old hand-written "How We Ranked/Evaluated/Researched" boxes at the top of reviews are gone; the generated bottom box is the only one. Do not reintroduce claims about "verified customer reviews", review counts or star ratings (tests enforce this).
