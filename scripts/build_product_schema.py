@@ -6,12 +6,10 @@ article's own product-card markup (the same cards a visitor sees) and
 writes an ItemList of Products with Offers into a new <!-- product-schema -->
 block in <head>, right before </head>.
 
-Deliberately NOT added: review/aggregateRating. The "Our Score: X/10" shown
-on cards is TechForDad's own editorial judgment, not a crowd-sourced rating;
-tagging it as AggregateRating would misrepresent an opinion as a review
-count to Google, the structured-data equivalent of the fabricated-testing
-claims removed earlier from this site. Price is a verifiable fact, so only
-price is added.
+Deliberately NOT added: review/aggregateRating. TechForDad does not test products, so any score or star rating would be an
+opinion, and tagging an opinion as AggregateRating would misrepresent it to Google as a review count. (Numeric "Our Score"
+values that used to appear on pages were removed on 2026-10-05 because no methodology stood behind them.) Price is a
+verifiable fact, so only price is added.
 
 Usage: python3 build_product_schema.py [--check]
 """

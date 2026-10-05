@@ -121,3 +121,30 @@ def test_articles_are_two_columns_on_desktop_and_stacked_on_phones(page, viewpor
     else:
         assert lay["sideBelow"], "sidebar should sit below the article on a phone"
     assert "Related Guides" in lay["boxes"]
+
+
+# ---------------------------------------------------------------- home page gift block order (2026-10-05)
+
+LAYOUT_SHIFT_OBSERVER = """
+window.__cls = 0;
+new PerformanceObserver(list => {
+  for (const e of list.getEntries()) if (!e.hadRecentInput) window.__cls += e.value;
+}).observe({type: 'layout-shift', buffered: true});
+"""
+
+
+@pytest.mark.parametrize("season,expected", [
+    ("?gifts=peak", ["hero", "trust-bar", "gift-feature", "top-picks"]),
+    ("?gifts=off", ["hero", "trust-bar", "top-picks"]),
+])
+def test_home_gift_block_order_is_set_by_css_and_does_not_shift(sessions, season, expected):
+    """In gift season the gift block sits above 'Our Top Picks'. It used to be moved by JavaScript after first paint, which
+    shifted the page (layout shift 0.135 on desktop). CSS `order` puts it there before the first paint."""
+    pg, console, errors, failed = sessions("desktop").open("index.html" + season, init=LAYOUT_SHIFT_OBSERVER)
+    order = pg.evaluate("""() => [...document.querySelectorAll('main#main > *')]
+        .map(e => [e.getBoundingClientRect().top + scrollY, e.className || e.id || e.tagName.toLowerCase()])
+        .sort((a, b) => a[0] - b[0]).map(x => x[1])""")
+    assert order[:len(expected)] == expected, f"section order on {season}: {order[:5]}"
+    cls = pg.evaluate("window.__cls")
+    pg.close()
+    assert cls < 0.02, f"layout shift {cls:.3f} on the home page ({season})"

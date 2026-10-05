@@ -125,7 +125,8 @@
         {"kind": "official", "title": "FDA: OTC hearing aids, what you should know", "url": "https://www.fda.gov/medical-devices/hearing-aids/otc-hearing-aids-what-you-should-know", "used_for": "Who OTC hearing aids are for and when they start on October 17, 2022"},
         {"kind": "official", "title": "NIDCD (NIH): Over-the-counter hearing aids", "url": "https://www.nidcd.nih.gov/health/over-counter-hearing-aids", "used_for": "OTC compared with prescription, and when to see a professional"},
         {"kind": "official", "title": "Medicare: Hearing aid coverage", "url": "https://www.medicare.gov/coverage/hearing-aids", "used_for": "What Original Medicare does and does not cover"},
-        {"kind": "official", "title": "VA: Hearing aids", "url": "https://www.prosthetics.va.gov/psas/hearing_aids.asp", "used_for": "Hearing aids for eligible veterans"}
+        {"kind": "official", "title": "VA: Hearing aids", "url": "https://www.prosthetics.va.gov/psas/hearing_aids.asp", "used_for": "Hearing aids for eligible veterans"},
+        {"kind": "independent", "title": "HearingTracker: ELEHEAR Beyond Pro lab test (HearAdvisor)", "url": "https://www.hearingtracker.com/hearing-aids/elehear-beyond-pro", "used_for": "The independent lab grade and score for the ELEHEAR Beyond Pro"}
       ],
       "note": "The FDA describes OTC hearing aids as its own regulated category for adults with mild to moderate hearing loss. See its page for exactly what that does and does not mean."
     },

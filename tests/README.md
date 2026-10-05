@@ -20,7 +20,9 @@ the `exclude:` list in `_config.yml`, and a test checks that).
 |---|---|---|
 | `test_inventory.py` | no | Every HTML file has a **kind** (`pages.py`); `sitemap.xml` matches the pages; old-URL redirects work |
 | `test_template_parity.py` | no | USA and Canada articles do not differ: two columns, sidebar boxes (Our Top Picks matches the pick list, Related Guides, affiliate note), author box, newsletter, click-to-open FAQ, section order (summary, products, comparison table), and the inside of each part: product cards, comparison table, disclosure box, hero line, breadcrumb |
-| `test_seo.py` | no | Well-formed HTML, no duplicate ids, one `h1`, title ≤ 60 and description ≤ 160, canonical URL, social tags, `lang` (`en-CA` for Canada), alt text, no missing local files |
+| `test_seo.py` | no | Well-formed HTML, no duplicate ids, one `h1`, title ≤ 60 and description ≤ 160, canonical URL, social tags, `lang` (`en-CA` for Canada), alt text, no missing local files; complete social card (JPG/PNG share image, large Twitter card, `twitter:image`); Article schema (image, dates, EasyTech publisher links); product price currency matches the market; FAQ schema matches the visible FAQ |
+| `test_content_rules.py` | no | The honesty rules: no wording that claims experience or testing the site does not have, no unsupported superlatives, no numeric scores, no claim that blood pressure monitors are tax-claimable (CRA says they are not), every health page links to at least one source, gift guides keep their membership links |
+| `test_health_note.py` | no | The "not medical advice" line is inside the affiliate box on every medical page, and only on those pages |
 | `test_links.py` | no | **Affiliate rules (the part that gets paid):** right tracking ID per page type, right Amazon store, `rel="sponsored"`, no shortened links, disclosure present, bounty links match the verified list exactly, discontinued offers gone, `#anchors` exist |
 | `test_security.py` | no | Internal files are not published, no insecure `http://` resources, third-party scripts and forms are allowlisted, no inline handlers beyond the known two, no `eval`/`innerHTML`, no secrets in the repo, workflows pinned and least-privilege, `security.txt` not expired |
 | `test_generated.py` | no | The repo's own scripts: `check_site.py --all`, `check_internal_links.py`, `build_nav.py --check` (nav, related, sources, buying summary, asset versions) |
@@ -30,7 +32,7 @@ the `exclude:` list in `_config.yml`, and a test checks that).
 | `test_ui_a11y.py` | yes | Accessibility scan (axe-core) on every page against a **baseline** of known issues |
 | `test_ui_registry.py` | no | Every CSS section is mapped to the tests that cover it (the "keep the tests current" guard) |
 | `test_live_site.py` | `--live` | Every sitemap URL is up, redirects, real 404s, certificate expiry, security headers, internal files not public, deploy matches the repo |
-| `check_the_tests.py` | (script) | Breaks a copy of the site in 42 ways and confirms the right test notices each one |
+| `check_the_tests.py` | (script) | Breaks a copy of the site in 56 ways and confirms the right test notices each one |
 
 `.github/workflows/tests.yml` runs the whole suite on every pull request and every push to `main`.
 `.github/workflows/live-site-check.yml` runs the live checks every Monday.
@@ -68,7 +70,7 @@ Never grow a baseline to make a failing test pass; fix the page, or ask first.
 ## Checking the tests themselves
 
 ```
-./.venv/bin/python tests/check_the_tests.py            # all 42 deliberate breakages (about 6 minutes)
+./.venv/bin/python tests/check_the_tests.py            # all 56 deliberate breakages (about 8 minutes)
 ./.venv/bin/python tests/check_the_tests.py affiliate  # only those with "affiliate" in the name
 ```
 

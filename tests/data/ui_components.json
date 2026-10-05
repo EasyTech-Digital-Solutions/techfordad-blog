@@ -142,7 +142,8 @@
   "Gift season: announcement bar, homepage picture tiles, menu dot": {
    "covered_by": [
     "test_ui_pages.py::test_loads_without_errors",
-    "test_ui_print.py::test_print_layout_removes_page_chrome_and_keeps_content"
+    "test_ui_print.py::test_print_layout_removes_page_chrome_and_keeps_content",
+    "test_ui_pages.py::test_home_gift_block_order_is_set_by_css_and_does_not_shift"
    ]
   },
   "RELATED GUIDES BLOCK": {
