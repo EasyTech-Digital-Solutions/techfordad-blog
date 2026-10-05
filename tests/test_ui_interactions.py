@@ -12,7 +12,7 @@ window.__prints = [];
 window.print = () => {
   window.__prints.push({
     summary: document.body.classList.contains('print-summary'),
-    keep: [...document.querySelectorAll('.print-keep')].map(e => e.id || e.tagName.toLowerCase()),
+    keep: [...document.querySelectorAll('.print-keep')].map(e => e.id || (e.querySelector('h2[id]') || {}).id || e.tagName.toLowerCase()),  // the picks summary is a wrapper div: name it by its heading
   });
   window.dispatchEvent(new Event('beforeprint'));
   window.scrollTo(0, 0);

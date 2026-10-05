@@ -153,6 +153,39 @@ document.querySelectorAll('.gift-bar-close').forEach(btn => {
 
 // (Homepage gift block: moved above "Our Top Picks" in gift season by CSS `order`, so nothing shifts after first paint.)
 
+// Country badge: a small floating pill that says which country a review is written for (USA flag or Canadian maple leaf).
+// When the same review exists for the other country (the hreflang pair in <head>), the pill links to it.
+(function () {
+  if (!/^\/(blog|guides|gift-guides)\/[^/]+\.html$/.test(location.pathname) || /\/index\.html$/.test(location.pathname)) return;
+  const isCa = /-canada\.html$/.test(location.pathname);
+  const here = isCa ? { name: 'Canada', flag: '/images/flag-ca.svg' } : { name: 'USA', flag: '/images/flag-us.svg' };
+  const other = isCa ? { name: 'USA', code: 'en-US' } : { name: 'Canada', code: 'en-CA' };
+  const pair = document.querySelector('link[rel="alternate"][hreflang="' + other.code + '"]');
+  // <aside> so the badge is a landmark (a bare element under <body> fails the "all content in a region" accessibility rule)
+  const badge = document.createElement('aside');
+  badge.className = 'country-badge';
+  badge.setAttribute('aria-label', 'This page is written for ' + here.name + ' readers');
+  const pill = document.createElement(pair ? 'a' : 'span');
+  pill.className = 'country-badge-pill';
+  if (pair) {
+    pill.href = new URL(pair.href, location.href).pathname; // same host (works on a local copy as well as on the live site)
+    pill.setAttribute('aria-label', 'Written for ' + here.name + '. Switch to the ' + other.name + ' version.');
+  }
+  const img = document.createElement('img');
+  img.src = here.flag; img.alt = ''; img.height = 18; img.width = isCa ? 15 : 34;
+  const label = document.createElement('span');
+  label.textContent = here.name;
+  pill.append(img, label);
+  if (pair) {
+    const sw = document.createElement('span');
+    sw.className = 'country-badge-switch';
+    sw.textContent = other.name + ' version \u203a';
+    pill.append(sw);
+  }
+  badge.appendChild(pill);
+  document.body.appendChild(badge);
+})();
+
 // Auto-updating copyright year
 document.querySelectorAll('#year').forEach(el => {
   el.textContent = new Date().getFullYear();
@@ -228,8 +261,11 @@ document.querySelectorAll('#year').forEach(el => {
     const h = host.querySelector('h2#' + id);
     const nodes = [];
     if (!h) return nodes;
-    nodes.push(h);
-    for (let n = h.nextElementSibling; n && n.tagName !== 'H2'; n = n.nextElementSibling) nodes.push(n);
+    // the picks summary sits in a wrapper <div class="buy-summary"> that is a direct child of the host: keep the whole wrapper
+    let top = h;
+    while (top.parentElement && top.parentElement !== host) top = top.parentElement;
+    nodes.push(top);
+    for (let n = top.nextElementSibling; n && n.tagName !== 'H2'; n = n.nextElementSibling) nodes.push(n);
     return nodes;
   }
   function printSections(nodes, mode) {

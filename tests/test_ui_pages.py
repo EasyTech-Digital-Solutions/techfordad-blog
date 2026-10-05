@@ -148,3 +148,55 @@ def test_home_gift_block_order_is_set_by_css_and_does_not_shift(sessions, season
     cls = pg.evaluate("window.__cls")
     pg.close()
     assert cls < 0.02, f"layout shift {cls:.3f} on the home page ({season})"
+
+
+# ---------------------------------------------------------------- country badge (floating USA / Canada pill)
+
+def test_country_badge_says_which_country_the_page_is_for(page, toolbar_page, viewport, report):
+    """Review pages show a floating pill with the USA flag or the Canadian maple leaf. It links to the other country's version
+    of the same review when that page exists, stays inside the screen and is big enough to tap."""
+    b = report["badge"]
+    assert b, "no country badge on a review page"
+    assert b["count"] == 1, "more than one country badge"
+    canada = page.endswith("-canada.html")
+    country = "Canada" if canada else "USA"
+    assert b["text"] == country, f"badge says {b['text']!r}"
+    assert b["label"] and country in b["label"], "badge needs a spoken label"
+    # the other country's page is whatever the page's own hreflang link says (file names are not always a simple -canada swap)
+    import htmlutil as H
+    code = "en-US" if canada else "en-CA"
+    alt = [l["href"] for l in H.parse(page).links if l.get("rel", "").lower() == "alternate" and l.get("hreflang") == code]
+    if alt:
+        target = "/" + alt[0].removeprefix("https://www.techfordad.com/")
+        assert (P.ROOT / target.lstrip("/")).exists(), f"hreflang points at a page that does not exist: {target}"
+        assert b["tag"] == "A" and b["href"] == target, f"should link to {target}, links to {b['href']}"
+    else:
+        assert b["tag"] == "SPAN" and not b["href"], "a badge with no other-country page should not be a link"
+    assert 0 <= b["left"] and b["right"] <= b["vw"], "badge sticks out sideways"
+    assert 0 <= b["top"] and b["bottom"] <= b["vh"], "badge is off screen"
+    assert b["height"] >= 43.5, f"badge is {b['height']}px tall; tap targets should be 44px"
+
+
+# ---------------------------------------------------------------- less clutter: picks shown once, slim author strip
+
+def test_picks_are_shown_once(page, viewport, report):
+    """The sticky sidebar lists the same picks as the in-article "Which One Should You Buy?" summary, so wide screens show only the
+    sidebar copy; the summary stays wherever the sidebar sits below the article (tablet, phone)."""
+    b, lay = report["buySummary"], report["layout"]
+    if not b:
+        pytest.skip("page has no picks summary")
+    if b["dup"] and lay.get("sideRight"):
+        assert not b["shown"], "the picks summary and the sidebar picks are both visible side by side"
+        assert not b["tocLinkShown"], "the contents list links to the hidden picks summary, which would jump to nothing"
+    else:
+        assert b["shown"], "the picks summary is hidden although the sidebar is not beside the article"
+        assert b["tocLinkShown"] in (None, True), "the contents entry for the picks summary is hidden although the summary is shown"
+
+
+def test_author_strip_is_slim_and_just_above_the_footer(page, viewport, report):
+    a = report["author"]
+    if not a:
+        pytest.skip("page has no author strip")
+    assert a["afterNewsletter"], "the author strip belongs after the newsletter signup"
+    assert -1 <= a["gapToFooter"] <= 2, f"the author strip is {a['gapToFooter']}px above the footer; it should sit right on it"
+    assert a["height"] <= (120 if viewport == "desktop" else 220), f"the author strip is {a['height']}px tall"

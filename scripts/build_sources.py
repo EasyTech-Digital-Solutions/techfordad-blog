@@ -67,7 +67,9 @@ def render(rel, entry, checked):
 
 def insert(text, block):
     text = BLOCK_RE.sub("", text)
-    i = text.find("<!-- related -->")
+    i = text.find("<!-- gift-links -->")  # order at the foot of a review: FAQ, How We Chose, Sources, gift ideas, Keep Reading
+    if i == -1:
+        i = text.find("<!-- related -->")
     if i == -1:
         return None
     i = text.rfind("\n", 0, i) + 1

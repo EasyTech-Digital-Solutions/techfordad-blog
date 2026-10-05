@@ -62,7 +62,7 @@
     "file": "blog/best-cell-phones-for-seniors.html",
     "products": [
       {
-        "name": "Jitterbug Flip2 by Lively",
+        "name": "Jitterbug Flip3 by Lively",
         "price": "$79.99",
         "check_url": "https://www.lively.com"
       },
@@ -82,8 +82,8 @@
         "check_url": "https://www.amazon.com/s?k=Doro+7050"
       },
       {
-        "name": "Samsung Galaxy A16 5G",
-        "price": "$149",
+        "name": "Samsung Galaxy A17 5G",
+        "price": "$245",
         "check_url": "https://www.samsung.com/us/"
       }
     ]
@@ -93,7 +93,7 @@
     "file": "blog/jitterbug-vs-iphone-for-seniors.html",
     "products": [
       {
-        "name": "Jitterbug Flip2",
+        "name": "Jitterbug Flip3",
         "price": "$80",
         "check_url": "https://www.lively.com"
       },
@@ -108,8 +108,8 @@
         "check_url": "https://www.apple.com/shop/buy-iphone/iphone-17e"
       },
       {
-        "name": "Lively Preferred plan",
-        "price": "$19.99/mo",
+        "name": "Lively Basic plan",
+        "price": "$14.99/mo",
         "check_url": "https://www.lively.com"
       },
       {
@@ -134,9 +134,9 @@
         "check_url": "https://www.apple.com/shop/buy-ipad/ipad-mini"
       },
       {
-        "name": "Samsung Galaxy Tab A9+",
-        "price": "$149",
-        "check_url": "https://www.samsung.com/us/"
+        "name": "Samsung Galaxy Tab A11+",
+        "price": "$299.99",
+        "check_url": "https://www.samsung.com/us/tablets/galaxy-tab-a11-plus/buy/"
       },
       {
         "name": "Amazon Fire HD 8",
@@ -321,7 +321,7 @@
         "check_url": "https://www.medicalguardian.com"
       },
       {
-        "name": "Jitterbug Flip2 by Lively",
+        "name": "Jitterbug Flip3 by Lively",
         "price": "$79.99",
         "check_url": "https://www.lively.com"
       },

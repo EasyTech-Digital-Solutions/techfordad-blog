@@ -321,7 +321,7 @@ GUIDES = [
         "hero_alt": "An AirTag floating above an open hand",
         "subtitle": "Every price here was $50 or less when we checked, and each one solves a real problem. Prices move, so check before you buy.",
         "intro": [
-            "You do not need to spend much on a tech gift that gets used. The picks below were $50 or less when we checked, each has a clear daily purpose, and most have thousands of Amazon ratings.",
+            "You do not need to spend much on a tech gift that gets used. The picks below were $50 or less when we checked, and each has a clear daily purpose.",
             "Prices below are what we saw on September 29, 2026 and will change. Amazon raised many device prices in August, so a few items sit close to the $50 line.",
         ],
         "products": [
@@ -330,7 +330,7 @@ GUIDES = [
              "best": "iPhone owners", "watch": "Works with iPhone and iPad only."},
             {"name": "Chipolo ONE Point (Android)", "asin": "B0C4W2VGTX", "badge": "Tracker for Android",
              "price": "about $28 (Chipolo)", "why": "The same idea for Android phones, using Google's Find My Device network.",
-             "best": "Android owners", "watch": "Its Amazon rating (3.9 stars) is lower than the AirTag's."},
+             "best": "Android owners", "watch": "Check which phones it works with before you buy; iPhone owners are usually better served by the AirTag."},
             {"name": "AINFTIME day and date clock", "asin": "B0BKV7TVNL", "badge": "Knows what day it is",
              "price": "about $29.99", "why": "A large display that spells out the day and date, useful for anyone who loses track of days.",
              "best": "A parent who often asks what day it is", "watch": "Plugs in."},
@@ -339,7 +339,7 @@ GUIDES = [
              "best": "A parent who struggles with a standard remote", "watch": "TV and cable only; no streaming apps."},
             {"name": "GE BigEZ OneTouch big-button remote", "asin": "B0FWL14KM6", "badge": "Lowest-cost big-button remote",
              "price": "about $12.25 (Amazon)", "why": "Large backlit buttons and one-touch setup for Samsung, LG, Vizio, Sony and Roku TVs. It also ranks second in our TV remote review.",
-             "best": "A parent who needs bigger buttons on a budget", "watch": "It has fewer Amazon ratings (73) than the Flipper, and it controls TVs with a slim set of buttons."},
+             "best": "A parent who needs bigger buttons on a budget", "watch": "It controls TVs with a slim set of buttons, so check it covers your parent's TV."},
             {"name": "Fire TV Stick HD", "asin": "B0DJGDC3BD", "badge": "Streaming with a voice remote",
              "price": "about $40 (Amazon's Aug 2026 price list)", "why": "Plugs into the TV and lets your parent say what they want to watch.",
              "best": "Parents with a TV that has a free HDMI port", "watch": "Someone needs to set it up first."},
@@ -502,6 +502,29 @@ HEAD = """<!DOCTYPE html>
 """
 
 FOOT = """
+<section class="newsletter" id="newsletter">
+  <div class="newsletter-inner">
+    <h2>Free Caregiver Tech Checklist</h2>
+    <p>Get our free guide: <strong>"7 Tech Essentials Every Senior Home Should Have"</strong></p>
+    <form class="email-form" action="https://us2.list-manage.com/subscribe/post?u=4d4642fb82dc99daa1b66f684&amp;id=8cf3d53e8d" method="post" target="_blank">
+      <input type="email" name="EMAIL" placeholder="Enter your email address" required/>
+      <button type="submit">Get Free Guide</button>
+      <div style="position:absolute;left:-5000px;" aria-hidden="true">
+        <input type="text" name="b_4d4642fb82dc99daa1b66f684_8cf3d53e8d" tabindex="-1" value=""/>
+      </div>
+    </form>
+    <p class="email-note">No spam. Unsubscribe anytime.</p>
+  </div>
+</section>
+
+<div class="author-box">
+  <div class="author-box-avatar">★</div>
+  <div class="author-box-content">
+    <p class="author-box-name">Written by TechForDad: a project by EasyTechVancouver</p>
+    <p class="author-box-bio">TechForDad is published by EasyTech Vancouver. Our guides are based on manufacturer specifications, published reviews and current prices, which we recheck every month. We do not hands-on test products, and no company pays for its ranking. See <a href="../how-we-review.html">how we review products</a>.</p>
+  </div>
+</div>
+
 </main>
 
 <footer>
@@ -652,18 +675,14 @@ def guide_page(g):
 </div>
 
 <div class="article-disclaimer">
-<strong>Prices and availability change.</strong> Prices below are approximate and were checked on {PRICE_DATE}. The price on Amazon when you buy is the price you pay. See our <a href="../affiliate-disclosure.html">affiliate disclosure</a>.
+<strong>Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases, at no extra cost to you. Links here use a tracking ID that shows us how this guide performs; our picks are never influenced by commission. Prices are approximate (checked {PRICE_DATE}); the price on Amazon when you buy is the price you pay. <a href="../affiliate-disclosure.html" style="text-decoration:underline">Full disclosure</a>.
 </div>
 
 <div class="article-body">
   <div class="article-inner">
 
-    <div class="affiliate-box">
-      <strong>Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Links in this guide use a tracking ID that lets us see how the guide performs. Our picks are not influenced by commission.
-    </div>
-
     <div class="toc-box">
-      <strong>Quick Navigation</strong>
+      <strong>Table of Contents</strong>
       <ul>
         {chr(10).join('        ' + t for t in toc).strip()}
       </ul>
@@ -760,15 +779,11 @@ def hub_page():
 </div>
 
 <div class="article-disclaimer">
-<strong>Prices and availability change.</strong> Prices in our guides are approximate and were checked on {PRICE_DATE}. See our <a href="../affiliate-disclosure.html">affiliate disclosure</a>.
+<strong>Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases, at no extra cost to you. Links in the gift guides use a tracking ID that shows us how each guide performs; our picks are never influenced by commission. Prices in our guides are approximate (checked {PRICE_DATE}). <a href="../affiliate-disclosure.html" style="text-decoration:underline">Full disclosure</a>.
 </div>
 
 <div class="article-body">
   <div class="article-inner" style="max-width:1140px">
-
-    <div class="affiliate-box">
-      <strong>Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Links in the gift guides use a tracking ID that lets us see how each guide performs. Our picks are not influenced by commission.
-    </div>
 
     <p>Older parents are hard to shop for. They often have what they need, and a gift that adds a new device to manage can end up in a drawer. These guides focus on gifts that solve a real problem, and on setting them up so they get used.</p>
 
@@ -779,7 +794,7 @@ def hub_page():
 
     <ul>
       <li>We favor devices with one clear daily benefit and a low learning curve.</li>
-      <li>We look at each product's Amazon listing, rating and number of ratings before we recommend it, and most have thousands of ratings.</li>
+      <li>We look at each product's Amazon listing, and whether it is still on sale, before we recommend it.</li>
       <li>We explain monthly costs, subscriptions and limits, such as how often fall detection actually works.</li>
       <li>A few comfort items appear at the end of some guides, clearly marked as not tech.</li>
       <li>We do not rank products by commission.</li>
@@ -869,7 +884,7 @@ GIFT_LINKS = {
     "best-pill-organizers-for-seniors.html": "tech-gifts-for-seniors-under-50",
 }
 LINK_RE = re.compile(r"[ \t]*<!-- gift-links -->.*?<!-- /gift-links -->\n?", re.S)
-TAIL_RE = re.compile(r'(\s*</div>\s*</div>\s*)(<section class="newsletter")')
+RELATED_RE = re.compile(r"[ \t]*<!-- related -->")  # the box sits in the article, just before "Keep Reading", not inside the author box
 
 
 def add_review_links():
@@ -886,7 +901,7 @@ def add_review_links():
         block = (f'    <!-- gift-links -->\n    <div class="gift-more">\n      <strong>See more gift ideas</strong>\n'
                  f'      <p><a href="../gift-guides/{slug}.html">{e(g["h1"])}</a>, or browse <a href="../gift-guides/index.html">all gift guides</a>.</p>\n'
                  f'    </div>\n    <!-- /gift-links -->\n')
-        new, n = TAIL_RE.subn(lambda m: "\n\n" + block + m.group(1).lstrip("\n") + m.group(2), text, count=1)
+        new, n = RELATED_RE.subn(lambda m: block + m.group(0), text, count=1)
         if n and new != text:
             with open(path, "w", encoding="utf-8", newline="") as f:
                 f.write(new)

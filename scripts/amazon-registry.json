@@ -395,10 +395,10 @@
       ]
     },
     {
-      "id": "ca-samsung-galaxy-tab-a9-11-inch",
-      "name": "Samsung Galaxy Tab A9+ (11-inch)",
+      "id": "ca-samsung-galaxy-tab-a11-11-inch",
+      "name": "Samsung Galaxy Tab A11+ (11-inch)",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Samsung+Galaxy+Tab+A9+Plus",
+      "url": "https://www.amazon.ca/s?k=Samsung+Galaxy+Tab+A11+Plus",
       "kind": "search",
       "asin": null,
       "price": null,
@@ -1427,10 +1427,10 @@
       ]
     },
     {
-      "id": "com-jitterbug-flip2",
-      "name": "Jitterbug Flip2",
+      "id": "com-jitterbug-flip3",
+      "name": "Jitterbug Flip3",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Jitterbug+Flip2",
+      "url": "https://www.amazon.com/s?k=Jitterbug+Flip3",
       "kind": "search",
       "asin": null,
       "price": "$80",
@@ -1439,10 +1439,10 @@
       ]
     },
     {
-      "id": "com-jitterbug-flip2-2",
-      "name": "Jitterbug Flip2",
+      "id": "com-jitterbug-flip3-2",
+      "name": "Jitterbug Flip3",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Jitterbug+Flip2+senior+phone",
+      "url": "https://www.amazon.com/s?k=Jitterbug+Flip3+senior+phone",
       "kind": "search",
       "asin": null,
       "price": "$80",
@@ -1451,10 +1451,10 @@
       ]
     },
     {
-      "id": "com-jitterbug-flip2-by-lively",
-      "name": "Jitterbug Flip2 by Lively",
+      "id": "com-jitterbug-flip3-by-lively",
+      "name": "Jitterbug Flip3 by Lively",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Jitterbug+Flip2+by+Lively",
+      "url": "https://www.amazon.com/s?k=Jitterbug+Flip3+by+Lively",
       "kind": "search",
       "asin": null,
       "price": "$79.99",
@@ -1849,13 +1849,13 @@
       ]
     },
     {
-      "id": "com-samsung-galaxy-a16",
-      "name": "Samsung Galaxy A16",
+      "id": "com-samsung-galaxy-a17-5g",
+      "name": "Samsung Galaxy A17 5G",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Samsung+Galaxy+A16",
+      "url": "https://www.amazon.com/s?k=Samsung+Galaxy+A17+5G",
       "kind": "search",
       "asin": null,
-      "price": null,
+      "price": "$245",
       "used_in": [
         "blog/best-cell-phones-for-seniors.html"
       ]
@@ -1873,13 +1873,13 @@
       ]
     },
     {
-      "id": "com-samsung-galaxy-tab-a9",
-      "name": "Samsung Galaxy Tab A9+",
+      "id": "com-samsung-galaxy-tab-a11",
+      "name": "Samsung Galaxy Tab A11+",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Samsung+Galaxy+Tab+A9%2B",
+      "url": "https://www.amazon.com/s?k=Samsung+Galaxy+Tab+A11%2B",
       "kind": "search",
       "asin": null,
-      "price": "$149",
+      "price": "$299.99",
       "used_in": [
         "blog/best-tablets-for-seniors.html"
       ]

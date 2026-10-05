@@ -43,3 +43,14 @@ def test_printout_names_the_page_and_the_date(page, toolbar_page, sessions):
     assert foot.startswith("Printed ") and "check the retailer" in foot, foot
     assert pg.locator(".print-head").is_visible() and pg.locator(".print-foot").is_visible()
     pg.close()
+
+
+def test_country_badge_is_not_printed(sample_page, sessions):
+    """A floating pill on a printed page would sit on top of the text."""
+    if not P.has_toolbar(sample_page):
+        pytest.skip("page has no country badge")
+    pg, console, errors, failed = sessions("desktop").open(sample_page)
+    pg.emulate_media(media="print")
+    shown = pg.evaluate("(() => { const e = document.querySelector('.country-badge'); return !!e && getComputedStyle(e).display !== 'none'; })()")
+    pg.close()
+    assert not shown, "the country badge is visible when printing"
