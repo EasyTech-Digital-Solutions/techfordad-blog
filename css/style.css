@@ -1438,3 +1438,18 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
 }
 .author-box-bio a, .gift-more p a, .section-inner p a:not([class]) { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 @media print { .skip-link { display: none !important; } }
+
+/* ===== COUNTRY BADGE (js/main.js) ===== */
+.country-badge { position: fixed; left: 16px; bottom: 16px; z-index: 90; }
+.country-badge-pill {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 6px 14px 6px 12px;
+  background: var(--white); color: var(--navy); border: 2px solid var(--navy); border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22); font-size: 0.85rem; font-weight: 700; line-height: 1.2; text-decoration: none;
+}
+.country-badge-pill img { display: block; height: 18px; width: auto; }
+.country-badge-switch { padding-left: 10px; border-left: 1px solid var(--navy); font-weight: 500; }
+a.country-badge-pill:hover { background: var(--navy); color: var(--white); }
+a.country-badge-pill:hover .country-badge-switch { border-left-color: var(--white); }
+a.country-badge-pill:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+@media (max-width: 600px) { .country-badge { left: 10px; bottom: 10px; } .country-badge-switch { display: none; } }
+@media print { .country-badge { display: none !important; } }

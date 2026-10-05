@@ -28,7 +28,7 @@
   const imagesWithoutAlt = images.filter((i) => !i.hasAttribute('alt')).map((i) => i.getAttribute('src'));
 
   // Buttons and links we own, which must be easy to tap.
-  const targetSelectors = '.page-tools button, .page-tools a, .table-tools button, .perk-btn, .btn-check-price, .nav-cta, .nav-toggle, .faq-q';
+  const targetSelectors = '.page-tools button, .page-tools a, .table-tools button, .perk-btn, .btn-check-price, .nav-cta, .nav-toggle, .faq-q, .country-badge-pill';
   const smallTargets = $$(targetSelectors).filter(vis)
     .map((e) => ({ el: label(e), w: Math.round(e.getBoundingClientRect().width), h: Math.round(e.getBoundingClientRect().height) }))
     .filter((t) => t.h < 43.5);
@@ -122,6 +122,13 @@
     hasHeader: !!header && vis(header),
     hasFooter: !!document.querySelector('footer'),
     navToggleVisible: !!toggle && vis(toggle),
+    badge: (() => {
+      const e = document.querySelector('.country-badge-pill');
+      if (!e) return null;
+      const r = e.getBoundingClientRect();
+      return { count: $$('.country-badge').length, tag: e.tagName, text: e.querySelector('span').textContent.trim(), href: e.getAttribute('href'), label: e.getAttribute('aria-label') || e.closest('.country-badge').getAttribute('aria-label'),
+        top: Math.round(r.top), left: Math.round(r.left), right: Math.round(r.right), bottom: Math.round(r.bottom), height: Math.round(r.height), vw, vh: innerHeight };
+    })(),
     faqCount: $$('.faq-item').length,
     scrollY: scrollY,
   };
