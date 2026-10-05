@@ -1,4 +1,10 @@
-"""Add Product/Offer JSON-LD for every product card on a "Best X" article.
+"""Add an ItemList (position and name) of the products on a "Best X" article. NOT Product/Offer: see build_schema().
+
+History: this used to write Product/Offer markup with prices and availability; Search Console then reported merchant-listing
+errors on a site that is not a merchant. Removed 2026-10-05.
+
+Original description:
+Add Product/Offer JSON-LD for every product card on a "Best X" article.
 
 The site had Article, FAQPage and BreadcrumbList schema but nothing telling
 Google what products are being compared, or their prices. This reads each
@@ -67,22 +73,16 @@ def parse_price(text):
     return m.group(1).replace(",", "")
 
 
-def build_schema(cards, currency):
-    items = []
-    for i, c in enumerate(cards, 1):
-        product = {"@type": "Product", "name": c["name"]}
-        if c["url"]:
-            product["url"] = c["url"]
-        price = parse_price(c["price_text"])
-        if price and c["url"]:
-            product["offers"] = {
-                "@type": "Offer",
-                "price": price,
-                "priceCurrency": currency,
-                "availability": "https://schema.org/InStock",
-                "url": c["url"],
-            }
-        items.append({"@type": "ListItem", "position": i, "item": product})
+def build_schema(cards, currency=None):
+    """An ordered list of the products a page compares: position and name only.
+
+    Deliberately NOT Product / Offer: that markup tells Google the page is a merchant listing (price, "InStock", shipping, returns,
+    product image, GTIN). TechForDad does not sell these products, its prices are "about" figures that must not be presented as live
+    prices (Amazon's rules and our own policy), and the cards have no product photos. Search Console flagged the old markup
+    (Merchant listings: missing image, shippingDetails, hasMerchantReturnPolicy, gtin; Product snippets: no review or aggregateRating).
+    `currency` is accepted so the caller does not change; it is not written.
+    """
+    items = [{"@type": "ListItem", "position": i, "name": c["name"]} for i, c in enumerate(cards, 1)]
     if not items:
         return None
     return {

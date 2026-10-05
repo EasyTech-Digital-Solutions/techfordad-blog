@@ -90,7 +90,7 @@ MUTATIONS = [
     ("social: share image is an SVG", sub(PAGE, "re:(<meta property=\"og:image\" content=\"[^\"]*?)\\.(?:jpg|png)\"", r'\1.svg"'), "tests/test_seo.py::test_social_card_is_complete", []),
     ("social: twitter:image missing", sub(PAGE, "re:\\s*<meta name=\"twitter:image\" content=\"[^\"]*\"\\s*/>", ""), "tests/test_seo.py::test_social_card_is_complete", []),
     ("schema: Article loses its image", sub(PAGE, "re:\\n\\s*\"image\": \"[^\"]*\",", ""), "tests/test_seo.py::test_article_schema_is_complete", []),
-    ("schema: US page says prices are in CAD", sub(PAGE, "re:\"priceCurrency\": \"USD\"", '"priceCurrency": "CAD"'), "tests/test_seo.py::test_product_prices_use_the_market_currency", []),
+    ("schema: product list turns back into merchant Offers", sub(PAGE, "re:\"@type\": \"ListItem\",\\s*\"position\": 1,", '"@type": "ListItem", "position": 1, "offers": {"@type": "Offer", "price": "9", "availability": "https://schema.org/InStock"},'), "tests/test_seo.py::test_product_list_is_not_merchant_markup", []),
     ("schema: FAQ questions drift from the visible FAQ", sub(PAGE, "re:(<div class=\"faq-q\"[^>]*>)", r"\1Totally different question? "), "tests/test_seo.py::test_faq_schema_matches_the_visible_faq", []),
     ("honesty: a page claims experience we do not have", sub(PAGE, "</article>", "<p>In our experience this works well.</p></article>"), "tests/test_content_rules.py::test_no_claims_of_experience_the_site_does_not_have", []),
     ("honesty: unsupported superlative", sub(PAGE, "</article>", "<p>An industry-leading device.</p></article>"), "tests/test_content_rules.py::test_no_unsupported_superlatives", []),
@@ -101,6 +101,7 @@ MUTATIONS = [
     ("seo: robots.txt blocks a noindex stub folder", append("robots.txt", "\nDisallow: /page/\n"), "tests/test_security.py::test_robots_does_not_block_noindex_stubs", []),
     ("affiliate: gift guide loses its membership links", sub("gift-guides/tech-gifts-for-elderly-parents.html", "amazon.com/amazonprime?tag=techfordad-gifts-20", "amazon.com/x", count=-1), "tests/test_content_rules.py::test_gift_guides_keep_their_membership_links", []),
     ("browser: gift block jumps after the page paints", sub("css/style.css", 'html[data-gifts="peak"] main#main { display: grid; grid-template-columns: minmax(0, 1fr); }', ""), "tests/test_ui_pages.py::test_home_gift_block_order_is_set_by_css_and_does_not_shift", []),
+    ("generator: a gift guide drifts from build_gift_guides.py", sub("gift-guides/tech-gifts-for-elderly-parents.html", 'class="perk-note"', 'class="perk-changed"'), "tests/test_generated.py::test_repo_check_script", []),
 ]
 
 

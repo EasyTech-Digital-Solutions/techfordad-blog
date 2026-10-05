@@ -149,19 +149,19 @@ def test_article_schema_is_complete(html_page):
     assert parent.get("name") == "EasyTech Vancouver" and parent.get("sameAs"), "publisher should name EasyTech Vancouver with its profile links"
 
 
-def test_product_prices_use_the_market_currency(html_page):
-    """A US page that says CAD (or the reverse) tells Google the wrong price. This broke once when hreflang matched the Canada check."""
-    kind = P.kind(html_page)
-    if kind not in {"article-us", "article-ca", "gift-guide"}:
-        pytest.skip("page has no product prices")
-    expected = "CAD" if kind == "article-ca" else "USD"
+def test_product_list_is_not_merchant_markup(html_page):
+    """TechForDad does not sell the products it reviews, so its structured data must not look like a merchant listing.
+    Product / Offer markup (price, availability, shipping, returns, GTIN, product image) made Search Console report merchant-listing
+    errors on a review site. The product list is a plain ItemList of names; see scripts/build_product_schema.py."""
     for block in H.jsonld(html_page):
         if block.get("@type") != "ItemList":
             continue
         for element in block["itemListElement"]:
-            offers = element.get("item", {}).get("offers")
-            if offers:
-                assert offers["priceCurrency"] == expected, f"{element['item']['name']}: {offers['priceCurrency']} on a {kind} page"
+            assert element.get("@type") == "ListItem" and element.get("name"), "product list items need a name"
+            assert "item" not in element and "offers" not in element, f"{element.get('name')}: Product/Offer markup is not allowed (we are not the merchant)"
+    text = P.read(html_page)
+    assert '"@type": "Offer"' not in text and '"@type": "Product"' not in text, "Offer/Product structured data found on the page"
+    assert "schema.org/InStock" not in text, "availability markup claims stock we cannot verify"
 
 
 def test_faq_schema_matches_the_visible_faq(html_page):
