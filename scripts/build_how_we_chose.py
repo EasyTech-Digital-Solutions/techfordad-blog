@@ -41,7 +41,7 @@ def main():
         path = ROOT / rel
         original = path.read_text(encoding="utf-8")
         text = LEGACY_RE.sub("", BLOCK_RE.sub("", original))
-        marker = next((m for m in ("<!-- sources -->", "<!-- related -->") if m in text), None)
+        marker = next((m for m in ("<!-- sources -->", "<!-- gift-links -->", "<!-- related -->") if m in text), None)
         if not marker:
             problems.append(rel)
             continue

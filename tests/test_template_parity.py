@@ -219,3 +219,13 @@ def test_every_review_has_a_table_of_contents(html_page):
     ids = re.findall(r'href="#([^"]+)"', m.group(1))
     assert len(ids) >= 5, f"table of contents has only {len(ids)} entries"
     assert all(f'id="{i}"' in t for i in ids), "a contents entry points at a section that does not exist"
+
+
+def test_foot_of_a_review_is_in_the_fixed_order(html_page):
+    """docs/page-structure.md: FAQ, How We Chose, Sources, gift ideas, Keep Reading."""
+    t = _article(html_page)
+    if html_page in NOT_A_REVIEW:
+        pytest.skip("how-to guide, not a review")
+    marks = [m for m in ('id="faq"', "<!-- how-we-chose -->", "<!-- sources -->", "<!-- gift-links -->", "<!-- related -->") if m in t]
+    positions = [t.index(m) for m in marks]
+    assert positions == sorted(positions), f"the foot of the page is out of order: {marks}"
