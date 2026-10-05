@@ -10,7 +10,8 @@ which also removes Auto ads, anchor and vignette from them: AdSense does not all
 removes the script tag per page type, so a new page cannot pick it up by accident.
 
 Slots on reviews, in page order:
-  in_article  1. just before the first product review   2. in the middle of the buying-guide sections (long pages only)   3. just before the FAQ
+  in_article  1. just before the first product review   2. one or two more at paragraph breaks in the buying guide (pages of 3,000+ words: one; 4,200+: two;
+              always 350+ words from any other ad)   3. just before the FAQ
   after_table just after the comparison table and its button
   sidebar     last box in the sticky sidebar (shown on wide screens only: the sidebar sits below the article on phones)
 Blocks sit between <!-- ad:NAME --> markers so the script is idempotent. Never hand-edit them.
@@ -100,6 +101,48 @@ def _before_offers(text, pos):
     return pos
 
 
+FORBIDDEN_CLASSES = ('class="product-card', 'class="toc"', 'class="faq-item"', 'class="perk-offers"')
+LONG_PAGE_WORDS = (3000, 4200)  # words in the article: one extra slot from the first, two from the second
+MIN_WORDS_BETWEEN_ADS = 350
+
+
+def inside_forbidden(text, pos):
+    """The tag or class name of the list, table, card, contents box, FAQ item or offers box that contains `pos`, else None."""
+    before = text[:pos]
+    for tag, close in (("<ul", "</ul>"), ("<ol", "</ol>"), ("<table", "</table>")):
+        if before.rfind(tag) > before.rfind(close):
+            return tag
+    for cls in FORBIDDEN_CLASSES:
+        i = before.rfind(cls)
+        if i != -1 and before[i:].count("<div") - before[i:].count("</div>") > 0:
+            return cls
+    return None
+
+
+def words(fragment):
+    return len(re.sub(r"<[^>]+>", " ", fragment).split())
+
+
+def pick_spread(text, cands, start, end, taken, n):
+    """From candidate insertion points, pick up to n spread evenly by word count between `start` and `end`, each at least
+    MIN_WORDS_BETWEEN_ADS words from the ends and from every position in `taken` (and from each other)."""
+    if n <= 0 or end <= start or not cands:
+        return []
+    total = words(text[start:end])
+    picks = []
+    for k in range(1, n + 1):
+        target = total * k / (n + 1)
+        best = None
+        for pos in cands:
+            w = words(text[start:pos])
+            ok = all(words(text[min(pos, t):max(pos, t)]) >= MIN_WORDS_BETWEEN_ADS for t in [*taken, *picks, start, end])
+            if ok and (best is None or abs(w - target) < abs(best[0] - target)):
+                best = (w, pos)
+        if best:
+            picks.append(best[1])
+    return picks
+
+
 def place_home(text, cfg):
     out = []
     for heading in ("In-Depth Guides for Caregivers", "Guides for Canadian Families"):
@@ -152,7 +195,7 @@ def place_gift(text, cfg):
     return out
 
 
-def place(text, first_product_id=None, rel=None):
+def place(text, first_product_id=None, rel=None, product_ids=None):
     """Return the page with ad blocks (re)written; no-op when no slot is configured."""
     cfg = config()
     text = BLOCK_RE.sub("", text)
@@ -173,6 +216,7 @@ def place(text, first_product_id=None, rel=None):
     ids = h2_ids(text[a0:a1])
     ids = [(i, a0 + p) for i, p in ids]
     names = [i for i, _ in ids]
+    h2pos = dict(ids)
     # 1. before the first product review
     if first_product_id and first_product_id in names:
         b = block(cfg, "in_article", "article")
@@ -191,18 +235,38 @@ def place(text, first_product_id=None, rel=None):
             b = block(cfg, "after_table", "table")
             if b:
                 inserts.append((at_line_start(k) if text[k - 1] == "\n" else k, b))
-    # 2. middle of the buying-guide sections (between the comparison table and the FAQ), long pages only
-    if "comparison" in names and "faq" in names:
-        mid = [(i, p) for i, p in ids if names.index("comparison") < names.index(i) < names.index("faq")]
-        if len(mid) >= 4:
-            b = block(cfg, "in_article", "article")
-            if b:
-                inserts.append((at_line_start(mid[len(mid) // 2][1]), b))
+    # 2. one or two more, by page length: between two product reviews (after a verdict, before the next product's heading, so a few hundred
+    #    words separate it from the previous Check Price button) or at a paragraph break in the buying guide after the comparison table
+    if "faq" in names and first_product_id in names:
+        art_words = words(text[a0:a1])
+        n_mid = 0 if art_words < LONG_PAGE_WORDS[0] else 1 if art_words < LONG_PAGE_WORDS[1] else 2
+        b = block(cfg, "in_article", "article")
+        if b and n_mid:
+            start = _line_start(text, dict(ids)[first_product_id])
+            end = _line_start(text, dict(ids)["faq"])
+            prods = [n for n in (product_ids or []) if n in h2pos]
+            cands = [_line_start(text, h2pos[n]) for n in prods[1:]]  # before product #2, #3, ...
+            if "comparison" in h2pos:
+                j = text.find("</table>", h2pos["comparison"])
+                for m in re.finditer(r"</p>\n(?=\s*<p[ >])|\n(?=[ \t]*<h2[ >])", text[j:end] if j != -1 else ""):
+                    pos = j + m.end()
+                    if not inside_forbidden(text, pos):
+                        cands.append(pos)
+            cands = [c for c in cands if not inside_forbidden(text, c)]
+            for pos in pick_spread(text, sorted(set(cands)), start, end, [pos for pos, _ in inserts], n_mid):
+                inserts.append((pos, b))
     # 3. before the FAQ
     if "faq" in names:
         b = block(cfg, "in_article", "article")
         if b:
             inserts.append((at_line_start(dict(ids)["faq"]), b))
+    # keep the ads in the article at least MIN_WORDS_BETWEEN_ADS words apart: on a short page the later of two close slots is dropped
+    inserts.sort(key=lambda x: x[0])
+    kept = []
+    for pos, b in inserts:
+        if not kept or words(text[kept[-1][0]:pos]) >= MIN_WORDS_BETWEEN_ADS:
+            kept.append((pos, b))
+    inserts = kept
     # sidebar: last thing inside the sticky aside
     sb = block(cfg, "sidebar", "sidebar")
     if sb:
@@ -228,7 +292,7 @@ def main():
         text = path.read_text(encoding="utf-8")
         kind = page_kind(rel, text)
         first = (B.PAGES.get(rel) or (None, [None]))[1][0]
-        new = manage_script(place(text, first, rel), kind, cfg["client"])
+        new = manage_script(place(text, first, rel, (B.PAGES.get(rel) or (None, []))[1]), kind, cfg["client"])
         if new != text:
             path.write_text(new, encoding="utf-8")
             written += 1

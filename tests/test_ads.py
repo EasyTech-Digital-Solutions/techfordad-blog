@@ -50,7 +50,7 @@ def test_slots_land_only_in_reader_safe_places(rel, with_ids):
         pytest.skip("not an indexable review (no ads on noindex or sidebar-less pages)")
     new = A.place(text, B.PAGES[rel][1][0])
     assert new.count('class="ad-slot ad-slot-sidebar"') == 1
-    assert 1 <= new.count('class="ad-slot ad-slot-article"') <= 3
+    assert 1 <= new.count('class="ad-slot ad-slot-article"') <= 4
     hero_end = new.index('class="article-hero"')
     for m in re.finditer(r'<!-- ad:(\w+) -->', new):
         pos = m.start()
@@ -134,3 +134,20 @@ def test_ad_preview_switch_only_works_on_localhost():
     guard = js[js.index("// Ad preview"):js.index("// Auto-updating copyright year")]
     assert "localhost" in guard and "127" in guard and "location.hostname" in guard, "the preview switch lost its localhost check"
     assert "return;" in guard and guard.index("hostname") < guard.index("classList.add"), "the host check must come before the preview is switched on"
+
+
+@pytest.mark.parametrize("rel", REVIEWS)
+def test_ads_on_reviews_are_spread_out_and_scale_with_page_length(rel, with_ids):
+    text = P.read(rel)
+    if not A.is_indexable_review(text):
+        pytest.skip("not an indexable review")
+    new = A.place(A.BLOCK_RE.sub("", text), B.PAGES[rel][1][0], rel, B.PAGES[rel][1])
+    art = new[new.index('<article class="article-body"'):new.index("</article>")]
+    n_art_words = A.words(A.BLOCK_RE.sub("", art))
+    marks = [m.start() for m in re.finditer(r"<!-- ad:(?:in_article|after_table) -->", art)]
+    for a, b in zip(marks, marks[1:]):
+        assert A.words(art[a:b]) >= A.MIN_WORDS_BETWEEN_ADS, f"{rel}: two ads are fewer than {A.MIN_WORDS_BETWEEN_ADS} words apart"
+    in_article = art.count('class="ad-slot ad-slot-article"')
+    if n_art_words >= A.LONG_PAGE_WORDS[0] and "faq" in art:
+        assert in_article >= 3, f"{rel}: a {n_art_words}-word page should carry at least 3 in-article slots, has {in_article}"
+    assert in_article <= 4, "too many in-article slots"
