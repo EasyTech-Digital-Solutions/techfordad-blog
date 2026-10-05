@@ -30,21 +30,6 @@
     "file": "blog/life-alert-vs-medical-guardian.html",
     "products": [
       {
-        "name": "Life Alert Home (base plan)",
-        "price": "$49.95/mo",
-        "check_url": "https://www.lifealert.com"
-      },
-      {
-        "name": "Life Alert Home + Mobile GPS",
-        "price": "$69.95/mo",
-        "check_url": "https://www.lifealert.com"
-      },
-      {
-        "name": "Life Alert Home + Mobile + Fall Detection",
-        "price": "$89.95/mo",
-        "check_url": "https://www.lifealert.com"
-      },
-      {
         "name": "Medical Guardian MGHome Cellular",
         "price": "$34.95/mo",
         "check_url": "https://www.medicalguardian.com"

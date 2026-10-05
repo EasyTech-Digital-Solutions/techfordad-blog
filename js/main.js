@@ -151,14 +151,7 @@ document.querySelectorAll('.gift-bar-close').forEach(btn => {
   });
 });
 
-// Homepage gift block: in gift season move it up, just above "Our Top Picks".
-(function () {
-  const gift = document.querySelector('.gift-feature');
-  const top = document.querySelector('.top-picks');
-  if (gift && top && document.documentElement.getAttribute('data-gifts') === 'peak') {
-    top.parentNode.insertBefore(gift, top);
-  }
-})();
+// (Homepage gift block: moved above "Our Top Picks" in gift season by CSS `order`, so nothing shifts after first paint.)
 
 // Auto-updating copyright year
 document.querySelectorAll('#year').forEach(el => {

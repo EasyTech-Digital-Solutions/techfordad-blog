@@ -86,6 +86,21 @@ MUTATIONS = [
     ("browser: print scroll-jump bug is back", sub("js/main.js", "    if (savedY !== null) {\n      const y", "    if (false) {\n      const y"), "tests/test_ui_interactions.py::test_print_page_restores_scroll_position", ["--quick"]),
     ("browser: print leaves the sidebar in", append("css/style.css", "\n@media print { aside, .sidebar { display: block !important; } }\n"), "tests/test_ui_print.py::test_print_layout_removes_page_chrome_and_keeps_content", ["--quick"]),
     ("browser: copy link copies the wrong thing", sub("js/main.js", "navigator.clipboard.writeText(url)", "navigator.clipboard.writeText(location.href + '?utm=x')"), "tests/test_ui_interactions.py::test_copy_link_copies_the_canonical_address", ["--quick"]),
+    # ---- added in the 2026-10-05 sweep
+    ("social: share image is an SVG", sub(PAGE, "re:(<meta property=\"og:image\" content=\"[^\"]*?)\\.(?:jpg|png)\"", r'\1.svg"'), "tests/test_seo.py::test_social_card_is_complete", []),
+    ("social: twitter:image missing", sub(PAGE, "re:\\s*<meta name=\"twitter:image\" content=\"[^\"]*\"\\s*/>", ""), "tests/test_seo.py::test_social_card_is_complete", []),
+    ("schema: Article loses its image", sub(PAGE, "re:\\n\\s*\"image\": \"[^\"]*\",", ""), "tests/test_seo.py::test_article_schema_is_complete", []),
+    ("schema: US page says prices are in CAD", sub(PAGE, "re:\"priceCurrency\": \"USD\"", '"priceCurrency": "CAD"'), "tests/test_seo.py::test_product_prices_use_the_market_currency", []),
+    ("schema: FAQ questions drift from the visible FAQ", sub(PAGE, "re:(<div class=\"faq-q\"[^>]*>)", r"\1Totally different question? "), "tests/test_seo.py::test_faq_schema_matches_the_visible_faq", []),
+    ("honesty: a page claims experience we do not have", sub(PAGE, "</article>", "<p>In our experience this works well.</p></article>"), "tests/test_content_rules.py::test_no_claims_of_experience_the_site_does_not_have", []),
+    ("honesty: unsupported superlative", sub(PAGE, "</article>", "<p>An industry-leading device.</p></article>"), "tests/test_content_rules.py::test_no_unsupported_superlatives", []),
+    ("honesty: invented numeric score", sub(PAGE, "</article>", "<p>Our score: 9.4/10</p></article>"), "tests/test_content_rules.py::test_no_numeric_scores", []),
+    ("honesty: blood pressure monitor called tax claimable", sub(PAGE, "</article>", "<p>A blood pressure monitor qualifies for the Medical Expense Tax Credit.</p></article>"), "tests/test_content_rules.py::test_blood_pressure_monitors_are_not_called_tax_claimable", []),
+    ("honesty: health page loses every source link", sub("blog/best-hearing-aids-for-seniors.html", "re:<a href=\"https://[^\"]*(?:cdc|fda|nih|medicare|irs|iii|nidcd|nhlbi|hearingtracker|statcan|canada|va\\.gov)[^\"]*\"[^>]*>", "<a href=\"#\">", count=0), "tests/test_content_rules.py::test_health_pages_link_to_their_sources", []),
+    ("honesty: health notice removed", sub("blog/best-hearing-aids-for-seniors.html", "re:<!-- health-note -->.*?<!-- /health-note -->", ""), "tests/test_health_note.py::test_health_page_has_the_notice", []),
+    ("seo: robots.txt blocks a noindex stub folder", append("robots.txt", "\nDisallow: /page/\n"), "tests/test_security.py::test_robots_does_not_block_noindex_stubs", []),
+    ("affiliate: gift guide loses its membership links", sub("gift-guides/tech-gifts-for-elderly-parents.html", "amazon.com/amazonprime?tag=techfordad-gifts-20", "amazon.com/x", count=-1), "tests/test_content_rules.py::test_gift_guides_keep_their_membership_links", []),
+    ("browser: gift block jumps after the page paints", sub("css/style.css", 'html[data-gifts="peak"] main#main { display: grid; grid-template-columns: minmax(0, 1fr); }', ""), "tests/test_ui_pages.py::test_home_gift_block_order_is_set_by_css_and_does_not_shift", []),
 ]
 
 

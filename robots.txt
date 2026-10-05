@@ -3,11 +3,10 @@ Allow: /
 
 # Legacy "tech for dads" content, pre-dates the current senior-tech focus.
 # Each of those pages is a stub with its own noindex meta tag and a
-# canonical/redirect to the homepage, so it is not Disallowed here:
+# canonical/redirect to a current page, so it is deliberately NOT Disallowed:
 # blocking crawling would stop Google from ever re-fetching the page to
 # see that noindex tag and drop it from the index.
-Disallow: /page/
-Disallow: /author/
-Disallow: /category/
+# (/page/, /author/ and /category/ were Disallowed here before; that blocked
+# Google from seeing their noindex, so those URLs could stay indexed.)
 
 Sitemap: https://www.techfordad.com/sitemap.xml

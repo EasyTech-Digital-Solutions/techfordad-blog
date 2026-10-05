@@ -168,6 +168,15 @@ def test_cname_and_robots():
     assert "Sitemap: https://www.techfordad.com/sitemap.xml" in robots
 
 
+def test_robots_does_not_block_noindex_stubs():
+    """A page blocked in robots.txt cannot be crawled, so Google never sees its noindex tag and may keep the URL indexed.
+    Every old stub (meta refresh + noindex) must stay crawlable."""
+    disallowed = [line.split(":", 1)[1].strip() for line in P.read("robots.txt").splitlines() if line.lower().startswith("disallow:")]
+    stubs = [rel for rel, kind in P.inventory().items() if kind == "stub"]
+    blocked = [rel for rel in stubs for d in disallowed if d and ("/" + rel).startswith(d)]
+    assert not blocked, f"robots.txt blocks pages that rely on a noindex tag: {blocked[:5]}"
+
+
 WORKFLOWS = sorted((P.ROOT / ".github" / "workflows").glob("*.yml"))
 
 

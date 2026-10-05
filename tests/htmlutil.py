@@ -116,3 +116,16 @@ def parse(rel: str) -> Doc:
     doc.feed(P.read(rel))
     doc.close()
     return doc
+
+
+@functools.lru_cache(maxsize=None)
+def jsonld(rel: str) -> tuple:
+    """Every JSON-LD block on a page, parsed. A block that does not parse raises, which fails the test that asked."""
+    import json
+    import re
+
+    out = []
+    for m in re.finditer(r'<script type="application/ld\+json">(.*?)</script>', P.read(rel), re.S):
+        data = json.loads(m.group(1))
+        out.extend(data if isinstance(data, list) else [data])
+    return tuple(out)

@@ -108,3 +108,80 @@ def test_has_main_landmark_and_skip_link(html_page):
     skip = text.find('class="skip-link" href="#main"')
     assert 0 < skip < text.find("<header"), "the 'Skip to main content' link must be the first thing in <body>, before the header"
     assert text.find("<main") < text.find("<footer") and text.find("</main>") < text.find("<footer"), "<main> must end before the footer"
+
+
+# ---------------------------------------------------------------- social cards and structured data (added in the 2026-10-05 sweep)
+
+CARD_KINDS = {"home", "hub", "article-us", "article-ca", "gift-guide", "guide", "info"}
+ARTICLE_KINDS = {"article-us", "article-ca", "gift-guide", "guide"}
+
+
+def _indexable(rel, kinds):
+    if P.kind(rel) not in kinds or P.is_noindex(rel):
+        pytest.skip("page type or noindex page: no social card or article schema")
+
+
+def test_social_card_is_complete(html_page):
+    """Facebook, LinkedIn, X and messaging apps ignore SVG share images and need the twitter tags to show a large card."""
+    _indexable(html_page, CARD_KINDS)
+    doc = H.parse(html_page)
+    image = doc.meta("og:image", "content", attr="property")
+    assert not image.lower().endswith(".svg"), f"og:image is an SVG ({image}); use a JPG or PNG"
+    assert doc.meta("twitter:card", "content") == "summary_large_image", "twitter:card should be summary_large_image"
+    for name in ("twitter:title", "twitter:description", "twitter:image"):
+        assert doc.meta(name, "content"), f"missing {name}"
+    assert doc.meta("twitter:image", "content") == image, "twitter:image should match og:image"
+
+
+def test_article_schema_is_complete(html_page):
+    """Google reads the Article block for the image, dates and who publishes the page."""
+    _indexable(html_page, ARTICLE_KINDS)
+    articles = [b for b in H.jsonld(html_page) if b.get("@type") == "Article"]
+    assert len(articles) == 1, f"expected exactly one Article block, found {len(articles)}"
+    art = articles[0]
+    assert len(art["headline"]) <= 110, "Article headline over 110 characters"
+    image = art.get("image", "")
+    assert image and not image.lower().endswith(".svg"), "Article needs a JPG or PNG image"
+    local = image.removeprefix("https://www.techfordad.com/")
+    assert (P.ROOT / local).is_file(), f"Article image file does not exist: {image}"
+    assert art["datePublished"] <= art["dateModified"], "datePublished is after dateModified"
+    parent = art["publisher"].get("parentOrganization", {})
+    assert parent.get("name") == "EasyTech Vancouver" and parent.get("sameAs"), "publisher should name EasyTech Vancouver with its profile links"
+
+
+def test_product_prices_use_the_market_currency(html_page):
+    """A US page that says CAD (or the reverse) tells Google the wrong price. This broke once when hreflang matched the Canada check."""
+    kind = P.kind(html_page)
+    if kind not in {"article-us", "article-ca", "gift-guide"}:
+        pytest.skip("page has no product prices")
+    expected = "CAD" if kind == "article-ca" else "USD"
+    for block in H.jsonld(html_page):
+        if block.get("@type") != "ItemList":
+            continue
+        for element in block["itemListElement"]:
+            offers = element.get("item", {}).get("offers")
+            if offers:
+                assert offers["priceCurrency"] == expected, f"{element['item']['name']}: {offers['priceCurrency']} on a {kind} page"
+
+
+def test_faq_schema_matches_the_visible_faq(html_page):
+    """FAQ structured data must match what a visitor can open (the generator writes it, but a hand edit can break it)."""
+    import html as htmllib
+    import re
+
+    if P.kind(html_page) not in ARTICLE_KINDS | {"hub"}:
+        pytest.skip("page type has no FAQ")
+    blocks = [b for b in H.jsonld(html_page) if b.get("@type") == "FAQPage"]
+    text = P.read(html_page)
+    visible = re.findall(r'<div class="faq-q"[^>]*>(.*?)</div>', text, re.S)
+    if not visible and '<h2 id="faq">' in text:  # gift guides list each question as an <h3> under the FAQ heading
+        section = text.split('<h2 id="faq">', 1)[1].split("<h2", 1)[0]
+        visible = re.findall(r"<h3[^>]*>(.*?)</h3>", section, re.S)
+    if not blocks:
+        pytest.skip("no FAQ schema")
+
+    def plain(s):
+        return re.sub(r"\s+", " ", htmllib.unescape(re.sub(r"<[^>]+>", "", s))).strip()
+
+    schema_questions = [e["name"] for e in blocks[0]["mainEntity"]]
+    assert schema_questions == [plain(q) for q in visible], "FAQ schema questions differ from the visible FAQ (run scripts/build_nav.py)"
