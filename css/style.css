@@ -1334,7 +1334,7 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
 .perk-line a, .card-perk a, .perk-fine a, .perk-cta a:not(.perk-btn) { color: var(--navy); font-weight: 700; text-decoration: underline; }
 .card-perk { margin: 8px 0 0; font-size: .88rem; line-height: 1.45; color: var(--muted); text-align: center; }
 .perk-note { margin: 28px 0; padding: 20px; background: var(--amber-light); border: 1px solid var(--border); border-left: 4px solid var(--amber); border-radius: var(--radius); }
-.perk-note h3 { margin: 0 0 6px; font-size: 1.15rem; color: var(--navy); }
+.perk-note h3, .perk-note .perk-title { margin: 0 0 6px; padding: 0; border: 0; font-size: 1.15rem; color: var(--navy); }
 .perk-lead { margin: 0 0 12px; line-height: 1.55; }
 .perk-offers { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); }
 .perk-offer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; padding: 14px 16px; }

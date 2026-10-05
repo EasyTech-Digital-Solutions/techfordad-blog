@@ -261,8 +261,11 @@ document.querySelectorAll('#year').forEach(el => {
     const h = host.querySelector('h2#' + id);
     const nodes = [];
     if (!h) return nodes;
-    nodes.push(h);
-    for (let n = h.nextElementSibling; n && n.tagName !== 'H2'; n = n.nextElementSibling) nodes.push(n);
+    // the picks summary sits in a wrapper <div class="buy-summary"> that is a direct child of the host: keep the whole wrapper
+    let top = h;
+    while (top.parentElement && top.parentElement !== host) top = top.parentElement;
+    nodes.push(top);
+    for (let n = top.nextElementSibling; n && n.tagName !== 'H2'; n = n.nextElementSibling) nodes.push(n);
     return nodes;
   }
   function printSections(nodes, mode) {
