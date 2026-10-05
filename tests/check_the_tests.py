@@ -100,6 +100,7 @@ MUTATIONS = [
     ("honesty: health notice removed", sub("blog/best-hearing-aids-for-seniors.html", "re:<!-- health-note -->.*?<!-- /health-note -->", ""), "tests/test_health_note.py::test_health_page_has_the_notice", []),
     ("honesty: How We Chose box removed", sub("blog/best-tablets-for-seniors.html", "re:(?s)<!-- how-we-chose -->.*?<!-- /how-we-chose -->", ""), "tests/test_how_we_chose.py", []),
     ("structure: a guide loses its table of contents", sub("guides/hearing-aids.html", "re:(?s)<!-- guide-toc -->.*?<!-- /guide-toc -->", ""), "tests/test_guides_structure.py::test_guide_follows_the_layout", []),
+    ("structure: Canada twin loses its How We Chose box", sub("blog/best-tablets-for-seniors-canada.html", "re:(?s)<!-- how-we-chose -->.*?<!-- /how-we-chose -->", ""), "tests/test_structure_pairs.py", []),
     ("structure: a gift guide gets a second disclosure box", sub("gift-guides/tech-gifts-for-elderly-parents.html", '<div class="article-body">', '<div class="article-body"><div class="affiliate-box">x</div>'), "tests/test_guides_structure.py::test_gift_guide_follows_the_layout", []),
     ("seo: robots.txt blocks a noindex stub folder", append("robots.txt", "\nDisallow: /page/\n"), "tests/test_security.py::test_robots_does_not_block_noindex_stubs", []),
     ("affiliate: gift guide loses its membership links", sub("gift-guides/tech-gifts-for-elderly-parents.html", "amazon.com/amazonprime?tag=techfordad-gifts-20", "amazon.com/x", count=-1), "tests/test_content_rules.py::test_gift_guides_keep_their_membership_links", []),

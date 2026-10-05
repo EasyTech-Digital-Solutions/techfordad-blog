@@ -131,7 +131,8 @@
     })(),
     buySummary: (() => {
       const e = document.querySelector('.buy-summary');
-      return e ? { dup: e.classList.contains('buy-summary-dup'), shown: getComputedStyle(e).display !== 'none' } : null;
+      const tl = document.querySelector('.toc a[href="#top-picks"], .toc a[href="#which-one"]');
+      return e ? { dup: e.classList.contains('buy-summary-dup'), shown: getComputedStyle(e).display !== 'none', tocLinkShown: tl ? !!tl.offsetParent : null } : null;
     })(),
     author: (() => {
       const e = document.querySelector('.author-box'), f = document.querySelector('footer'), n = document.querySelector('.newsletter');

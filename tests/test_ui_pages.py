@@ -187,8 +187,10 @@ def test_picks_are_shown_once(page, viewport, report):
         pytest.skip("page has no picks summary")
     if b["dup"] and lay.get("sideRight"):
         assert not b["shown"], "the picks summary and the sidebar picks are both visible side by side"
+        assert not b["tocLinkShown"], "the contents list links to the hidden picks summary, which would jump to nothing"
     else:
         assert b["shown"], "the picks summary is hidden although the sidebar is not beside the article"
+        assert b["tocLinkShown"] in (None, True), "the contents entry for the picks summary is hidden although the summary is shown"
 
 
 def test_author_strip_is_slim_and_just_above_the_footer(page, viewport, report):
