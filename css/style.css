@@ -1460,6 +1460,14 @@ html[data-gifts="peak"] .gift-feature-text, html[data-gifts="peak"] .gift-featur
 .ad-slot:has(ins[data-ad-status="unfilled"]) { display: none; }
 @media (max-width: 900px) { .ad-slot-sidebar { display: none; } }
 @media print { .ad-slot { display: none !important; } }
+/* ?adpreview on a local copy (js/main.js, localhost only): show every slot as a grey placeholder, wherever it would be shown */
+.ad-preview .ad-slot:not(.ad-slot-sidebar) { display: block !important; }
+@media (min-width: 901px) { .ad-preview .ad-slot-sidebar { display: block !important; } }
+.ad-preview .ad-slot ins.adsbygoogle, .ad-preview .ad-slot ins.adsbygoogle[data-ad-status="unfilled"] {
+  display: block !important; min-height: 220px; outline: 2px dashed #9ca3af;
+  background: repeating-linear-gradient(45deg, #e5e7eb, #e5e7eb 12px, #f3f4f6 12px, #f3f4f6 24px);
+}
+.ad-preview .ad-slot::after { content: "Ad preview (local only): where Google would place an ad"; display: block; margin-top: 6px; font-size: 0.75rem; color: #4B5563; }
 
 /* ===== COUNTRY BADGE (js/main.js) =====
 .country-badge { position: fixed; left: 16px; bottom: 16px; z-index: 90; }

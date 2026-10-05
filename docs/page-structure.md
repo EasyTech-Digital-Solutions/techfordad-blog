@@ -59,7 +59,8 @@ Ads are placed by us, never by Google's Auto ads in-page format (it inserted up 
 
 Never above the hero, in a list, table, card or contents box, and the gap under a comparison-table button is 56px (no accidental clicks). Each slot reserves its height; an unfilled slot collapses. A slot appears only when its id in `ads.json` is set.
 In the AdSense console keep Overlay formats (anchor; consider turning vignette off) and turn OFF In-page formats once the manual slots are live.
-Tests: `tests/test_ads.py` (placement, idempotency, which pages load the script) and `test_ad_slots_never_shift_or_crowd_the_reader` (browser).
+Local preview: open any page on localhost with `?adpreview` to see grey placeholders in every slot (Google serves no ads locally, and an unfilled slot normally collapses); the switch checks the host and never runs on the live site.
+Tests: `tests/test_ads.py` (placement, idempotency, which pages load the script, the localhost-only preview) and `test_ad_slots_never_shift_or_crowd_the_reader` (browser).
 
 ## Known gaps (as of 2026-10-05)
 - Sources box missing on Alexa, TV remotes and Canada cordless phones (fewer than 3 clean sources); the noindex laptops, keyboards and US video doorbells pages are not rewritten yet.

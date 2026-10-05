@@ -125,3 +125,12 @@ def test_home_guides_and_gift_guides_get_few_safe_slots(rel, kind, low, high, wi
         assert not before.endswith(("</aside>",)) or 'class="perk-note"' not in before[-900:], "a slot sits right after an Amazon offer block"
     if kind == "home":
         assert new.index("<!-- ad:") > new.index('class="trust-bar"'), "a home slot is in the first screen area"
+
+
+def test_ad_preview_switch_only_works_on_localhost():
+    """?adpreview draws placeholders in the ad slots on a local copy. It must never be able to run on the live site."""
+    js = (P.ROOT / "js/main.js").read_text(encoding="utf-8")
+    assert "ad-preview" in js
+    guard = js[js.index("// Ad preview"):js.index("// Auto-updating copyright year")]
+    assert "localhost" in guard and "127" in guard and "location.hostname" in guard, "the preview switch lost its localhost check"
+    assert "return;" in guard and guard.index("hostname") < guard.index("classList.add"), "the host check must come before the preview is switched on"
