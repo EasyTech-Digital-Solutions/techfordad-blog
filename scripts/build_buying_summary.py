@@ -53,7 +53,7 @@ PAGES = {
     # US pages with no Quick Picks list: the section goes just before the first product review
     "blog/best-hearing-aids-for-seniors.html": ("us-insert", ["elehear", "jabra", "lexie", "audien", "eargo"]),
     "blog/best-smart-home-devices-for-seniors.html": ("us-insert", ["echo-show", "ring", "smart-lights", "thermostat", "alexa-together", "robot-vacuum", "smart-lock"]),
-    "blog/jitterbug-vs-iphone-for-seniors.html": ("us-insert", ["jitterbug-flip2", "jitterbug-smart5", "iphone-se"]),
+    "blog/jitterbug-vs-iphone-for-seniors.html": ("us-insert", ["jitterbug-flip3", "jitterbug-smart5", "iphone-se"]),
     "blog/medical-alert-no-monthly-fee.html": ("us-insert", ["apple-watch", "lowest-fee", "lively", "bay-alarm"]),
 }
 HEADING = "Which One Should You Buy?"

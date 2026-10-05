@@ -29,7 +29,7 @@ TEXT = ('<strong>Health information:</strong> general information, not medical a
 # The note lives INSIDE the affiliate disclosure box (one box, not two): a second line before the box's closing </div>.
 OLD_BLOCK_RE = re.compile(r'[ \t]*<!-- health-note -->.*?<!-- /health-note -->[ \t]*\r?\n\r?\n?', re.S)
 INLINE_RE = re.compile(r'<br>\s*<!-- health-note -->.*?<!-- /health-note -->', re.S)
-ARTICLE_ANCHOR = re.compile(r'(<div class="toc" style="background:#fffbeb; border-color:#f59e0b; font-size:0\.9rem;">\s*<strong>Affiliate Disclosure:</strong>.*?)(\s*</div>)', re.S)
+ARTICLE_ANCHOR = re.compile(r'(<div class="article-disclaimer">\s*<strong>Affiliate Disclosure:</strong>.*?)(\s*</div>)', re.S)
 GUIDE_ANCHOR = re.compile(r'(<div class="article-disclaimer">.*?)(\s*</div>)', re.S)
 
 

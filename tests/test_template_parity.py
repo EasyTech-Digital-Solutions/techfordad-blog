@@ -162,14 +162,17 @@ def test_comparison_table_uses_the_shared_markup(html_page):
     assert '<div style="overflow-x:auto;">' in seg, "the table sits in the standard scrolling wrapper"
 
 
-def test_disclosure_box_looks_the_same(html_page):
+def test_disclosure_is_one_slim_strip_under_the_hero(html_page):
     t = _article(html_page)
     if html_page in NOT_A_REVIEW:
         pytest.skip("how-to guide, not a review")
-    box = re.search(r'<div class="toc" style="([^"]*)">\s*<strong>Affiliate Disclosure', t)
-    assert box, "the affiliate disclosure box at the top is missing or uses non-standard markup"
-    assert box.group(1) == "background:#fffbeb; border-color:#f59e0b; font-size:0.9rem;"
-    assert 'class="affiliate-box"' not in t
+    strip = re.search(r'<div class="article-disclaimer">\s*<strong>Affiliate Disclosure:</strong>(.*?)</div>', t, re.S)
+    assert strip, "the affiliate disclosure strip under the hero is missing or uses non-standard markup"
+    assert t.index("article-disclaimer") < t.index('<div class="article-layout">'), "the strip belongs between the hero and the two-column layout"
+    text = strip.group(1)
+    assert "may earn a commission" in text and "never influenced by compensation" in text and "approximate" in text
+    assert t.count("<strong>Affiliate Disclosure:</strong>") == 2, "one strip plus the short sidebar note; no second disclosure box in the article"
+    assert 'background:#fffbeb' not in t and 'class="affiliate-box"' not in t, "the old amber disclosure box is gone"
 
 
 def test_hero_line_and_breadcrumb(html_page):

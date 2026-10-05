@@ -212,11 +212,23 @@
       "price": "No price; 'available at select retailers'",
       "verified": "2026-09-24"
     },
-    "Jitterbug Flip2 / Smart5": {
+    "Jitterbug Flip3": {
+      "method": "fetch",
+      "url": "https://shop.lively.com/products/jitterbug-flip3-flip-phone",
+      "price": "$79.99 list ($59.99 on sale at Lively on 2026-10-05); plans $14.99-$44.99/mo; $35 activation. Flip2 is sold out",
+      "verified": "2026-10-05"
+    },
+    "Jitterbug Smart5": {
       "method": "fetch",
       "url": "https://shop.lively.com/collections/jitterbug-phones",
-      "price": "Flip2 $79.99 / Smart5 $119.99 (Flip3 $79.99 is newer)",
+      "price": "Smart5 $119.99",
       "verified": "2026-09-24"
+    },
+    "Samsung Galaxy A17 5G (US)": {
+      "method": "fetch",
+      "url": "https://www.samsung.com/us/smartphones/galaxy-a17-5g/buy/",
+      "price": "$244.99 on Samsung US (list $269.99), 128GB unlocked",
+      "verified": "2026-10-05"
     },
     "Lively Mobile2": {
       "method": "fetch",
