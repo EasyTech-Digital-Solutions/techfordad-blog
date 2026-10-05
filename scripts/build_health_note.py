@@ -24,7 +24,7 @@ MEDICAL_PAGES = [
 
 TEXT = ('<strong>Health information:</strong> general information, not medical advice; it does not replace your parent\'s doctor, '
         'audiologist or pharmacist. Health facts link to their sources, and AI helps draft our guides '
-        '(<a href="../how-we-review.html">how we review products</a>).')
+        '(<a href="../how-we-review.html" style="text-decoration:underline">how we review products</a>).')
 
 # The note lives INSIDE the affiliate disclosure box (one box, not two): a second line before the box's closing </div>.
 OLD_BLOCK_RE = re.compile(r'[ \t]*<!-- health-note -->.*?<!-- /health-note -->[ \t]*\r?\n\r?\n?', re.S)
