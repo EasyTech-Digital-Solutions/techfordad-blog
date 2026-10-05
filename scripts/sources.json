@@ -16,7 +16,7 @@
         {"kind": "independent", "title": "NCOA: Best medical alert systems with fall detection", "url": "https://www.ncoa.org/product-resources/medical-alert-systems/best-medical-alert-systems-with-fall-detection/", "used_for": "Another set of reviews, using NCOA's own testing method"},
         {"kind": "independent", "title": "Consumer Reports: Best medical alert systems", "url": "https://www.consumerreports.org/health/medical-alert-systems/best-medical-alert-systems-a1136054281/", "used_for": "Consumer Reports' survey-based ratings of the main brands"}
       ],
-      "note": "Response times on this page come from customer reviews, not lab tests. The independent reviews above are where to compare."
+      "note": "No independent response-time test exists for these systems; the only figures here are the companies' own claims. The independent reviews above are where to compare."
     },
     "blog/best-medical-alert-systems-canada.html": {
       "sources": [
@@ -328,7 +328,9 @@
       "sources": [
         {"kind": "maker", "title": "Lively: Jitterbug Flip3", "url": "https://shop.lively.com/products/jitterbug-flip3-flip-phone", "used_for": "Features, device price and plan range for the Flip3"},
         {"kind": "maker", "title": "Apple: iPhone 17e", "url": "https://www.apple.com/iphone-17e/", "used_for": "Specifications and models of the iPhone 17e"},
-        {"kind": "maker", "title": "Apple: Accessibility", "url": "https://www.apple.com/accessibility/", "used_for": "Vision, hearing and mobility features on iPhone"}
+        {"kind": "maker", "title": "Apple: Accessibility", "url": "https://www.apple.com/accessibility/", "used_for": "Vision, hearing and mobility features on iPhone"},
+        {"kind": "maker", "title": "Lively: Jitterbug Smart5", "url": "https://shop.lively.com/products/jitterbug-smart5-smartphone-for-seniors", "used_for": "Screen size, battery claim, hearing aid rating, device price and plan prices for the Smart5"},
+        {"kind": "maker", "title": "Apple: iPhone 17e technical specifications", "url": "https://www.apple.com/iphone-17e/specs/", "used_for": "Display size, battery claim and hearing aid compatibility of the iPhone 17e"}
       ],
       "note": "Lively lists the older Jitterbug Flip2 as sold out and now sells the Flip3. Check which Jitterbug models are on sale before you decide."
     },

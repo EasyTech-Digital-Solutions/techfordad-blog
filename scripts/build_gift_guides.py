@@ -321,7 +321,7 @@ GUIDES = [
         "hero_alt": "An AirTag floating above an open hand",
         "subtitle": "Every price here was $50 or less when we checked, and each one solves a real problem. Prices move, so check before you buy.",
         "intro": [
-            "You do not need to spend much on a tech gift that gets used. The picks below were $50 or less when we checked, each has a clear daily purpose, and most have thousands of Amazon ratings.",
+            "You do not need to spend much on a tech gift that gets used. The picks below were $50 or less when we checked, and each has a clear daily purpose.",
             "Prices below are what we saw on September 29, 2026 and will change. Amazon raised many device prices in August, so a few items sit close to the $50 line.",
         ],
         "products": [
@@ -330,7 +330,7 @@ GUIDES = [
              "best": "iPhone owners", "watch": "Works with iPhone and iPad only."},
             {"name": "Chipolo ONE Point (Android)", "asin": "B0C4W2VGTX", "badge": "Tracker for Android",
              "price": "about $28 (Chipolo)", "why": "The same idea for Android phones, using Google's Find My Device network.",
-             "best": "Android owners", "watch": "Its Amazon rating (3.9 stars) is lower than the AirTag's."},
+             "best": "Android owners", "watch": "Check which phones it works with before you buy; iPhone owners are usually better served by the AirTag."},
             {"name": "AINFTIME day and date clock", "asin": "B0BKV7TVNL", "badge": "Knows what day it is",
              "price": "about $29.99", "why": "A large display that spells out the day and date, useful for anyone who loses track of days.",
              "best": "A parent who often asks what day it is", "watch": "Plugs in."},
@@ -339,7 +339,7 @@ GUIDES = [
              "best": "A parent who struggles with a standard remote", "watch": "TV and cable only; no streaming apps."},
             {"name": "GE BigEZ OneTouch big-button remote", "asin": "B0FWL14KM6", "badge": "Lowest-cost big-button remote",
              "price": "about $12.25 (Amazon)", "why": "Large backlit buttons and one-touch setup for Samsung, LG, Vizio, Sony and Roku TVs. It also ranks second in our TV remote review.",
-             "best": "A parent who needs bigger buttons on a budget", "watch": "It has fewer Amazon ratings (73) than the Flipper, and it controls TVs with a slim set of buttons."},
+             "best": "A parent who needs bigger buttons on a budget", "watch": "It controls TVs with a slim set of buttons, so check it covers your parent's TV."},
             {"name": "Fire TV Stick HD", "asin": "B0DJGDC3BD", "badge": "Streaming with a voice remote",
              "price": "about $40 (Amazon's Aug 2026 price list)", "why": "Plugs into the TV and lets your parent say what they want to watch.",
              "best": "Parents with a TV that has a free HDMI port", "watch": "Someone needs to set it up first."},
@@ -794,7 +794,7 @@ def hub_page():
 
     <ul>
       <li>We favor devices with one clear daily benefit and a low learning curve.</li>
-      <li>We look at each product's Amazon listing, rating and number of ratings before we recommend it, and most have thousands of ratings.</li>
+      <li>We look at each product's Amazon listing, and whether it is still on sale, before we recommend it.</li>
       <li>We explain monthly costs, subscriptions and limits, such as how often fall detection actually works.</li>
       <li>A few comfort items appear at the end of some guides, clearly marked as not tech.</li>
       <li>We do not rank products by commission.</li>

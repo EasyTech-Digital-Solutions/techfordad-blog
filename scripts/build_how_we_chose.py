@@ -16,7 +16,7 @@ DATA = json.loads((ROOT / "scripts" / "how_we_chose.json").read_text(encoding="u
 
 BLOCK_RE = re.compile(r"[ \t]*<!-- how-we-chose -->.*?<!-- /how-we-chose -->[ \t]*\r?\n\r?\n?", re.S)
 # the old box that used to sit near the top of the page
-LEGACY_RE = re.compile(r'[ \t]*<div class="toc"[^>]*>\s*<p class="toc-title">How We Chose[^<]*</p>.*?</div>\s*\n?', re.S)
+LEGACY_RE = re.compile(r'[ \t]*<div class="toc"[^>]*>\s*<p class="toc-title">How We (?:Chose|Ranked|Evaluated|Researched)[^<]*</p>.*?</div>\s*\n?', re.S)
 
 
 def block(rel, cat):
@@ -41,7 +41,7 @@ def main():
         path = ROOT / rel
         original = path.read_text(encoding="utf-8")
         text = LEGACY_RE.sub("", BLOCK_RE.sub("", original))
-        marker = next((m for m in ("<!-- sources -->", "<!-- gift-links -->", "<!-- related -->") if m in text), None)
+        marker = next((m for m in ("<!-- sources -->", "<!-- gift-links -->", "<!-- related -->", "</article>") if m in text), None)
         if not marker:
             problems.append(rel)
             continue

@@ -64,6 +64,14 @@
     "video-doorbells": {
       "noun": "Doorbells",
       "criteria": "video quality and field of view, battery versus wired power, subscription costs, and support for Alexa, Google or Apple Home"
+    },
+    "keyboards": {
+      "noun": "Keyboards",
+      "criteria": "key contrast and lettering size, whether it is backlit, wired or wireless connection, whether it works with the computer your parent already has, and price"
+    },
+    "laptops": {
+      "noun": "Laptops",
+      "criteria": "screen size, keyboard quality, battery life, the accessibility tools built into the operating system, and price"
     }
   },
   "pages": {
@@ -92,6 +100,9 @@
     "blog/best-sleep-trackers-for-seniors.html": "sleep-trackers",
     "blog/best-smart-home-devices-for-seniors.html": "smart-home",
     "blog/best-alexa-devices-for-seniors.html": "alexa",
-    "blog/best-video-doorbells-for-seniors-canada.html": "video-doorbells"
+    "blog/best-video-doorbells-for-seniors-canada.html": "video-doorbells",
+    "blog/best-large-button-keyboards-for-seniors.html": "keyboards",
+    "blog/best-laptops-for-seniors.html": "laptops",
+    "blog/best-video-doorbells-for-seniors.html": "video-doorbells"
   }
 }
