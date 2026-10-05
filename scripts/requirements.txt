@@ -1,7 +1,7 @@
 # Python dependency of the weekly price bot (.github/workflows/auto-price-update.yml).
 # Pinned to the exact version the last successful run used; Dependabot proposes upgrades as pull
 # requests (see .github/dependabot.yml), so a new release never reaches the live site unreviewed.
-anthropic==1.8.0
+anthropic==1.11.0
 
 # Local-only tools (not needed by the workflow):
 #   Pillow  ->  scripts/make_card_images.py
