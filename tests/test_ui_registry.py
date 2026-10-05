@@ -52,3 +52,13 @@ def test_every_section_names_real_tests():
             elif "::" in ref and ref.split("::")[1] not in path.read_text(encoding="utf-8"):
                 problems.append(f"{name}: {ref} (no test with that name)")
     assert not problems, "\n".join(problems)
+
+
+def test_every_css_comment_is_closed():
+    """An unterminated /* comment silently swallows the rules after it (it once removed the country badge's styling)."""
+    css = (P.ROOT / "css" / "style.css").read_text(encoding="utf-8")
+    assert css.count("/*") == css.count("*/"), f"css/style.css has {css.count('/*')} comment openers and {css.count('*/')} closers"
+    depth = 0
+    for m in re.finditer(r"/\*|\*/", css):
+        depth += 1 if m.group(0) == "/*" else -1
+        assert depth in (0, 1), f"nested or unmatched comment near character {m.start()}"

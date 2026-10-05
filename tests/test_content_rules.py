@@ -132,3 +132,25 @@ def test_no_amazon_ratings_or_invented_review_claims(html_page):
     text = _visible_text(html_page)
     hits = [m.group(0) for m in AMAZON_REVIEW_CLAIMS.finditer(text)]
     assert not hits, f"claims about customer reviews or Amazon ratings: {hits[:3]}"
+
+
+NUMBER_WORDS = {"two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10, "twelve": 12}
+
+
+def test_researched_counts_match_the_products_shown(html_page):
+    """A review must not claim a bigger research set than it shows ("8 devices researched" above five product cards, or "We researched 12
+    systems" with five listed): every "N compared/researched" figure equals the number of product cards (fixed 2026-10-05)."""
+    _content_page(html_page)
+    raw = P.read(html_page)
+    cards = len(re.findall(r'class="product-card', raw))
+    if cards < 2:
+        pytest.skip("no product cards")
+    text = _visible_text(html_page)
+    claims = []
+    for m in re.finditer(r"<span>(\d{1,2})\s+[A-Za-z&\- ]+?\s+(?:researched|compared)</span>", raw):  # the hero line: "5 monitors compared"
+        claims.append((int(m.group(1)), m.group(0)))
+    for m in re.finditer(r"\bWe (?:researched|compared) (?:the )?(\d{1,2}|" + "|".join(NUMBER_WORDS) + r")\b", text, re.I):
+        n = m.group(1).lower()
+        claims.append((int(n) if n.isdigit() else NUMBER_WORDS[n], m.group(0)))
+    bad = [c for n, c in claims if n != cards]
+    assert not bad, f"{html_page}: shows {cards} products but says: {bad[:3]}"
