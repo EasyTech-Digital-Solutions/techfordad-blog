@@ -66,10 +66,10 @@ def check_page(rel):
         if changed:
             problems.append(f'{rel}: tag balance changed vs HEAD {changed}')
     modified = re.search(r'"dateModified"\s*:\s*"(\d{4})-(\d{2})', html)
-    badge = re.search(r'Updated (\w+) (\d{4})', html)
+    badge = re.search(r'Updated (\w+) (\d{4})', html, re.I)  # also matches the uppercase hero tag
     if modified and badge:
         month = date(int(modified.group(1)), int(modified.group(2)), 1).strftime('%B')
-        if (badge.group(1), badge.group(2)) != (month, modified.group(1)):
+        if (badge.group(1).capitalize(), badge.group(2)) != (month, modified.group(1)):
             problems.append(f'{rel}: badge "Updated {badge.group(1)} {badge.group(2)}" != dateModified {modified.group(1)}-{modified.group(2)}')
     title = re.search(r'<title>(.*?)</title>', html, re.S)
     # Count characters as displayed (&amp; is one character in search results)
