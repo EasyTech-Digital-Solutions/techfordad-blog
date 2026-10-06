@@ -186,6 +186,13 @@ document.querySelectorAll('.gift-bar-close').forEach(btn => {
   document.body.appendChild(badge);
 })();
 
+// Ad preview (local copies only): open any page with ?adpreview to draw a visible placeholder in every ad slot, so the layout can be judged
+// where Google serves no ads. It does nothing on the live site (the host check below).
+(function () {
+  if (!/^(localhost|127\.0\.0\.1)$/.test(location.hostname) || !/[?&]adpreview\b/.test(location.search)) return;
+  document.documentElement.classList.add('ad-preview');
+})();
+
 // Auto-updating copyright year
 document.querySelectorAll('#year').forEach(el => {
   el.textContent = new Date().getFullYear();

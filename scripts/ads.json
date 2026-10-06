@@ -1,0 +1,9 @@
+{
+  "_about": "Manual Google AdSense slots, placed by scripts/build_ads.py (run by build_nav.py). A slot is written to the pages only when its id below is filled in; leave an id empty to keep that slot off. Create the units in AdSense (Ads > By ad unit > Display ads, responsive) and paste each unit's data-ad-slot number. Then turn OFF 'In-page formats' under Auto ads in the AdSense console (keep Overlay formats) so Auto ads stop inserting their own, layout-shifting units.",
+  "client": "ca-pub-6309879983967574",
+  "slots": {
+    "in_article": "2976660818",
+    "after_table": "7298874198",
+    "sidebar": "2968832665"
+  }
+}
