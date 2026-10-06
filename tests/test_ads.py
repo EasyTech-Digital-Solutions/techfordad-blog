@@ -160,3 +160,11 @@ def test_every_slot_asks_for_a_rectangle_ad_that_fits_its_reserved_height(with_i
     assert new.count('data-ad-format="rectangle"') == new.count('<ins class="adsbygoogle"') and 'data-ad-format="auto"' not in new
     css = (P.ROOT / "css/style.css").read_text(encoding="utf-8")
     assert re.search(r"\.ad-slot \{[^}]*min-height: 280px", css), "the slot no longer reserves 280px, the height of the tallest rectangle ad"
+
+
+def test_the_sidebar_ad_only_loads_where_the_sidebar_shows(with_ids):
+    """Below 900px the sidebar slot is display:none; pushing an ad into it logs a TagError (availableWidth=0) on every phone page."""
+    new = A.place(A.BLOCK_RE.sub("", P.read("blog/best-tablets-for-seniors.html")), "ipad", "blog/best-tablets-for-seniors.html", B.PAGES["blog/best-tablets-for-seniors.html"][1])
+    side = new[new.index("<!-- ad:sidebar -->"):new.index("<!-- /ad -->", new.index("<!-- ad:sidebar -->"))]
+    assert "matchMedia('(min-width: 901px)')" in side, "the sidebar ad loads on phones too"
+    assert new.count("matchMedia('(min-width: 901px)')") == 1, "only the sidebar slot should be conditional"

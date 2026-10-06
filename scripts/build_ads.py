@@ -31,6 +31,12 @@ def config():
     return json.loads((ROOT / "scripts" / "ads.json").read_text(encoding="utf-8"))
 
 
+def push(slot):
+    """The sidebar slot is hidden below 900px, and asking Google to fill a hidden slot logs 'No slot size for availableWidth=0': load it only where it shows."""
+    call = "(adsbygoogle = window.adsbygoogle || []).push({});"
+    return f"if (window.matchMedia('(min-width: 901px)').matches) {call}" if slot == "sidebar" else call
+
+
 def block(cfg, slot, where):
     sid = cfg["slots"].get(slot, "")
     if not sid:
@@ -38,7 +44,7 @@ def block(cfg, slot, where):
     return (f'<!-- ad:{slot} -->\n<div class="ad-slot ad-slot-{where}">\n  <span class="ad-label">Advertisement</span>\n'
             f'  <ins class="adsbygoogle" style="display:block" data-ad-client="{cfg["client"]}" data-ad-slot="{sid}" '
             f'data-ad-format="rectangle" data-full-width-responsive="false"></ins>\n'
-            "  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>\n</div>\n<!-- /ad -->\n\n")
+            f"  <script>{push(slot)}</script>\n</div>\n<!-- /ad -->\n\n")
 
 
 def is_indexable_review(text):
