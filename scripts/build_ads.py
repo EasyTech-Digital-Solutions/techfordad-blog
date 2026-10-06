@@ -1,6 +1,7 @@
 """Place the manual AdSense slots on every indexable review (blog/*.html with a sidebar), in spots that do not get in the readers' way.
 
-Why manual: Auto ads inserted up to eight 412px units per page, one above the hero image (a 0.4 to 0.5 layout shift on phones), others inside the
+Format: rectangle (300x250 or 336x280) on every slot, so a filled ad never grows past the 280px the slot reserves (a responsive 'auto' unit
+filled at 438px on phones and would have pushed the page). Why manual: Auto ads inserted up to eight 412px units per page, one above the hero image (a 0.4 to 0.5 layout shift on phones), others inside the
 table of contents and the "Which One" list. Here the site owner decides where ads go, each slot has its height reserved (no shift), and no ad
 ever sits in a list, a table, a card or above the page's first screen. Config: scripts/ads.json (a slot is written only when its id is set).
 
@@ -30,14 +31,20 @@ def config():
     return json.loads((ROOT / "scripts" / "ads.json").read_text(encoding="utf-8"))
 
 
+def push(slot):
+    """The sidebar slot is hidden below 900px, and asking Google to fill a hidden slot logs 'No slot size for availableWidth=0': load it only where it shows."""
+    call = "(adsbygoogle = window.adsbygoogle || []).push({});"
+    return f"if (window.matchMedia('(min-width: 901px)').matches) {call}" if slot == "sidebar" else call
+
+
 def block(cfg, slot, where):
     sid = cfg["slots"].get(slot, "")
     if not sid:
         return None
     return (f'<!-- ad:{slot} -->\n<div class="ad-slot ad-slot-{where}">\n  <span class="ad-label">Advertisement</span>\n'
             f'  <ins class="adsbygoogle" style="display:block" data-ad-client="{cfg["client"]}" data-ad-slot="{sid}" '
-            f'data-ad-format="auto" data-full-width-responsive="true"></ins>\n'
-            "  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>\n</div>\n<!-- /ad -->\n\n")
+            f'data-ad-format="rectangle" data-full-width-responsive="false"></ins>\n'
+            f"  <script>{push(slot)}</script>\n</div>\n<!-- /ad -->\n\n")
 
 
 def is_indexable_review(text):
