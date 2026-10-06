@@ -151,3 +151,12 @@ def test_ads_on_reviews_are_spread_out_and_scale_with_page_length(rel, with_ids)
     if n_art_words >= A.LONG_PAGE_WORDS[0] and "faq" in art:
         assert in_article >= 3, f"{rel}: a {n_art_words}-word page should carry at least 3 in-article slots, has {in_article}"
     assert in_article <= 4, "too many in-article slots"
+
+
+def test_every_slot_asks_for_a_rectangle_ad_that_fits_its_reserved_height(with_ids):
+    """A filled responsive 'auto' ad was 438px tall on a phone against 280px reserved: a 160px jump. Rectangle ads (300x250, 336x280) fit."""
+    new = A.place(A.BLOCK_RE.sub("", P.read("blog/best-tablets-for-seniors.html")), "ipad", "blog/best-tablets-for-seniors.html", B.PAGES["blog/best-tablets-for-seniors.html"][1])
+    assert new.count('<ins class="adsbygoogle"') >= 4
+    assert new.count('data-ad-format="rectangle"') == new.count('<ins class="adsbygoogle"') and 'data-ad-format="auto"' not in new
+    css = (P.ROOT / "css/style.css").read_text(encoding="utf-8")
+    assert re.search(r"\.ad-slot \{[^}]*min-height: 280px", css), "the slot no longer reserves 280px, the height of the tallest rectangle ad"

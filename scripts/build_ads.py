@@ -1,6 +1,7 @@
 """Place the manual AdSense slots on every indexable review (blog/*.html with a sidebar), in spots that do not get in the readers' way.
 
-Why manual: Auto ads inserted up to eight 412px units per page, one above the hero image (a 0.4 to 0.5 layout shift on phones), others inside the
+Format: rectangle (300x250 or 336x280) on every slot, so a filled ad never grows past the 280px the slot reserves (a responsive 'auto' unit
+filled at 438px on phones and would have pushed the page). Why manual: Auto ads inserted up to eight 412px units per page, one above the hero image (a 0.4 to 0.5 layout shift on phones), others inside the
 table of contents and the "Which One" list. Here the site owner decides where ads go, each slot has its height reserved (no shift), and no ad
 ever sits in a list, a table, a card or above the page's first screen. Config: scripts/ads.json (a slot is written only when its id is set).
 
@@ -36,7 +37,7 @@ def block(cfg, slot, where):
         return None
     return (f'<!-- ad:{slot} -->\n<div class="ad-slot ad-slot-{where}">\n  <span class="ad-label">Advertisement</span>\n'
             f'  <ins class="adsbygoogle" style="display:block" data-ad-client="{cfg["client"]}" data-ad-slot="{sid}" '
-            f'data-ad-format="auto" data-full-width-responsive="true"></ins>\n'
+            f'data-ad-format="rectangle" data-full-width-responsive="false"></ins>\n'
             "  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>\n</div>\n<!-- /ad -->\n\n")
 
 
