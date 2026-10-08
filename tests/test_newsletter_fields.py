@@ -49,6 +49,14 @@ def test_the_form_still_posts_to_the_same_audience_and_keeps_its_spam_trap(rel):
     assert 'type="email" name="EMAIL"' in text and "required" in FORM.search(text).group(1)
 
 
+@pytest.mark.parametrize("rel", PAGES)
+def test_the_form_says_what_signing_up_means_and_links_the_privacy_policy(rel):
+    text = P.read(rel)
+    note = N.consent_note(rel)
+    assert text.count('class="email-note"') == 1 and note in text, f"{rel}: run scripts/build_nav.py"
+    assert "agree to receive occasional emails" in note and "Unsubscribe anytime" in note
+
+
 def test_every_topic_key_has_a_newsletter_family():
     missing = sorted(set(R.TOPICS) - set(N.FAMILY))
     assert not missing, f"add these topics to FAMILY in scripts/build_newsletter_fields.py: {missing}"

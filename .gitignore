@@ -8,3 +8,8 @@ _t_*.html
 .venv/
 .pytest_cache/
 tests/.cache/
+
+# generated newsletter output (rebuilt by scripts/send_newsletter.py)
+docs/newsletters/*.preview.html
+docs/newsletters/*.email.html
+docs/newsletters/*.fragment.html

@@ -69,6 +69,18 @@ def block(rel, html):
     return f"\n      <!-- nl-fields -->\n{inputs}\n      <!-- /nl-fields -->"
 
 
+NOTE_RE = re.compile(r'<p class="email-note">.*?</p>', re.S)
+
+
+def consent_note(rel):
+    """The line under the form that says what signing up means (no confirmation email, so consent must be clear: CASL / CAN-SPAM)."""
+    prefix = "../" * rel.count("/")
+    return (
+        '<p class="email-note">By signing up you agree to receive occasional emails from TechForDad. '
+        f'Unsubscribe anytime. <a href="{prefix}privacy-policy.html">Privacy policy</a>.</p>'
+    )
+
+
 def pages():
     for pattern in ("*.html", "blog/*.html", "guides/*.html", "gift-guides/*.html"):
         for path in sorted(ROOT.glob(pattern)):
@@ -83,6 +95,7 @@ def main():
             continue
         clean = BLOCK_RE.sub("", text)
         new = FORM_RE.sub(lambda m: m.group(1) + block(rel, clean), clean, count=1)
+        new = NOTE_RE.sub(lambda m: consent_note(rel), new, count=1)
         if new != text:
             path.write_text(new, encoding="utf-8")
             written += 1

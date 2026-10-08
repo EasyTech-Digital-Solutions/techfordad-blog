@@ -1,0 +1,44 @@
+{
+  "title": "TechForDad, October 2026",
+  "subject": "Fall safety, new gift guides, and what's new at TechForDad",
+  "preview": "Simple tech ideas for the parents and grandparents in your life.",
+  "intro": [
+    "Hello,",
+    "Thank you for being part of TechForDad. Here is what's new this month, and one practical idea for keeping a loved one safe as the days get shorter."
+  ],
+  "blocks": [
+    {
+      "heading": "This month's idea: make the home safer for fall and winter",
+      "paragraphs": [
+        "Falls are one of the most common reasons an older adult ends up in hospital, and darker evenings make them more likely. Good lighting, a way to call for help and a clear path through the house make a real difference.",
+        "Our guides walk through the simple, affordable fixes, with no technical knowledge needed."
+      ],
+      "button": {"text": "Read the fall prevention guide", "url": "https://www.techfordad.com/guides/fall-prevention-tech.html"},
+      "after": [
+        {"text": "Prefer a checklist? ", "link_text": "Our home safety checklist", "url": "https://www.techfordad.com/guides/home-safety-checklist.html", "tail": " covers room by room what to check."}
+      ]
+    },
+    {
+      "heading": "New: Gift Guides for the holidays",
+      "paragraphs": [
+        "Not sure what to buy for a parent or grandparent? We have put together six guides, from budget-friendly ideas to gifts for someone living with dementia and safety gadgets for people who live alone.",
+        "Prices change often, so each guide says when it was last checked."
+      ],
+      "button": {"text": "Browse the Gift Guides", "url": "https://www.techfordad.com/gift-guides/"}
+    },
+    {
+      "heading": "Recently added reviews",
+      "bullets": [
+        {"link_text": "Best home security for seniors", "url": "https://www.techfordad.com/blog/best-home-security-for-seniors.html", "desc": "simple systems that don't need a technician."},
+        {"link_text": "Best cell phone plans for seniors (Canada)", "url": "https://www.techfordad.com/blog/best-cell-phone-plans-for-seniors-canada.html", "desc": "for readers in Canada who want a lower bill without the confusion."},
+        {"link_text": "See all reviews", "url": "https://www.techfordad.com/blog/", "desc": "medical alerts, tablets, hearing aids, GPS trackers and more."}
+      ]
+    },
+    {
+      "heading": "Tell us what you need",
+      "paragraphs": [
+        "Just reply to this email with the product or problem you would like us to cover next. We read every message."
+      ]
+    }
+  ]
+}

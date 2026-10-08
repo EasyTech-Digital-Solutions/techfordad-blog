@@ -1,0 +1,39 @@
+{
+  "title": "Welcome to TechForDad",
+  "subject": "Welcome to TechForDad: your free checklist is inside",
+  "preview": "Here is your free 7 Tech Essentials checklist, plus three guides to start with.",
+  "intro": [
+    "Welcome to TechForDad, and thank you for signing up.",
+    "Here is the free checklist we promised."
+  ],
+  "blocks": [
+    {
+      "heading": "Your free checklist",
+      "paragraphs": [
+        "7 Tech Essentials Every Senior Home Should Have: a simple list of what to check, room by room."
+      ],
+      "button": {"text": "Get your free checklist", "url": "https://www.techfordad.com/guides/7-tech-essentials-checklist.html"}
+    },
+    {
+      "heading": "Not sure where to start?",
+      "paragraphs": [
+        "These three guides help most families:"
+      ],
+      "bullets": [
+        {"link_text": "Medical alert systems", "url": "https://www.techfordad.com/blog/best-medical-alert-systems.html", "desc": "help at the press of a button."},
+        {"link_text": "Tablets for seniors", "url": "https://www.techfordad.com/blog/best-tablets-for-seniors.html", "desc": "easy video calls and photos."},
+        {"link_text": "Hearing aids", "url": "https://www.techfordad.com/blog/best-hearing-aids-for-seniors.html", "desc": "what to look for and what to avoid."}
+      ]
+    },
+    {
+      "heading": "How we work",
+      "paragraphs": [
+        "We compare products using the makers' own specifications and published reviews, and we check prices every month. We don't test products ourselves, and no company pays for a place in our rankings.",
+        "You will only hear from us when we have something useful. Questions? Just reply to this email."
+      ],
+      "after": [
+        {"text": "", "link_text": "Read how we review products", "url": "https://www.techfordad.com/how-we-review.html", "tail": "."}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<!-- Same fonts as the website; email apps that block web fonts fall back to Georgia / Arial. -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body style="margin:0;padding:0;background:#FAFAF8;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">{{preview}}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FAFAF8;">
+<tr><td align="center" style="padding:16px;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#FFFFFF;border:1px solid #E5E7EB;border-radius:10px;overflow:hidden;font-family:'Inter',Arial,Helvetica,sans-serif;color:#1A1A2E;font-size:18px;line-height:1.6;">
+
+  <!-- Header: the uploaded logo (navy on light) with an amber rule, on white -->
+  <tr><td bgcolor="#FFFFFF" style="background:#FFFFFF;padding:28px 24px 20px;text-align:center;border-bottom:4px solid #E8A020;">
+    <a href="https://www.techfordad.com/" style="text-decoration:none;">
+      <img src="../images/logo/techfordad-logo-email.png" width="300" height="79" alt="TechForDad" style="display:block;margin:0 auto;width:300px;max-width:100%;height:auto;border:0;">
+    </a>
+    <div style="color:#1B3A6B;font-size:16px;padding-top:12px;">Simple tech for seniors and the people who help them</div>
+  </td></tr>
+
+  <tr><td style="padding:28px 24px 8px;">
+{{intro}}
+  </td></tr>
+
+{{blocks}}
+
+  <!-- Footer: dark like the site footer -->
+  <tr><td bgcolor="#111827" style="background:#111827;padding:24px;font-size:14px;line-height:1.5;color:#D1D5DB;text-align:center;">
+    <p style="margin:0 0 8px;">You are receiving this because you signed up at <a href="https://www.techfordad.com/" style="color:#E8A020;">techfordad.com</a>.</p>
+    <p style="margin:0 0 8px;">*|LIST:ADDRESSLINE|*</p>
+    <p style="margin:0;"><a href="*|UNSUB|*" style="color:#E8A020;">Unsubscribe</a></p>
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>
