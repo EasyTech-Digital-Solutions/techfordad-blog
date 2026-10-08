@@ -447,6 +447,7 @@ section { padding: 64px 24px; }
 }
 .email-form button:hover { background: var(--amber); color: var(--navy); }
 .email-note { font-size: 0.78rem; color: var(--muted-on-amber); margin-top: 10px; }
+.email-note a { color: inherit; text-decoration: underline; }
 
 /* ===== FOOTER ===== */
 footer {
