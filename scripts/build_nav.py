@@ -337,6 +337,8 @@ def main():
     build_buying_summary.main()
     import build_ads
     build_ads.main()
+    import build_newsletter_fields
+    build_newsletter_fields.main()
     import build_product_schema
     build_product_schema.main()
     import build_health_note
