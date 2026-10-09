@@ -71,9 +71,9 @@
       "id": "ca-apple-ipad-11th-generation",
       "name": "Apple iPad (11th Generation)",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Apple+iPad+11th+generation",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B0DZ76C2QV",
+      "kind": "product",
+      "asin": "B0DZ76C2QV",
       "price": null,
       "used_in": [
         "blog/best-tablets-for-seniors-canada.html"
@@ -338,9 +338,9 @@
       "id": "ca-ring-alarm-security-kit",
       "name": "Ring Alarm Security Kit",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Ring+Alarm+security+kit",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B07ZDTCRNS",
+      "kind": "product",
+      "asin": "B07ZDTCRNS",
       "price": null,
       "used_in": [
         "blog/best-home-security-for-seniors-canada.html"
@@ -556,9 +556,9 @@
       "id": "com-amazon-echo-show-8-2025",
       "name": "Amazon Echo Show 8 (2025)",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Amazon+Echo+Show+8+2025",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0FKX43RC3",
+      "kind": "product",
+      "asin": "B0FKX43RC3",
       "price": "$199.99",
       "used_in": [
         "blog/best-alexa-devices-for-seniors.html",
@@ -629,9 +629,9 @@
       "id": "com-amazon-kindle-paperwhite-2024",
       "name": "Amazon Kindle Paperwhite (2024)",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Kindle+Paperwhite+2024",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0DDZJS3SB",
+      "kind": "product",
+      "asin": "B0DDZJS3SB",
       "price": null,
       "used_in": [
         "blog/best-e-readers-for-seniors.html"
@@ -785,9 +785,9 @@
       "id": "com-apple-macbook-air-m5-15-inch-2026",
       "name": "Apple MacBook Air M5 15-inch (2026)",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=MacBook+Air+M5+15+inch",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0GR6DQMFR",
+      "kind": "product",
+      "asin": "B0GR6DQMFR",
       "price": null,
       "used_in": [
         "blog/best-laptops-for-seniors.html"
@@ -1816,9 +1816,9 @@
       "id": "com-ring-battery-doorbell-2k-plus",
       "name": "Ring Battery Doorbell 2K Plus",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Ring+Battery+Doorbell+2K+Plus",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0GT669J31",
+      "kind": "product",
+      "asin": "B0GT669J31",
       "price": null,
       "used_in": [
         "blog/best-video-doorbells-for-seniors.html"
