@@ -783,49 +783,27 @@
       ]
     },
     {
-      "id": "com-apple-watch-se-3-gps-40mm",
-      "name": "Apple Watch SE 3 (GPS, 40mm)",
+      "id": "com-apple-watch-se-3rd-gen-2025",
+      "name": "Apple Watch SE (3rd Gen, 2025)",
       "country": "us",
       "url": "https://www.amazon.com/dp/B0HJB1CGR3",
       "kind": "product",
       "asin": "B0HJB1CGR3",
       "price": null,
       "used_in": [
-        "gift-guides/safety-tech-for-elderly-parents-who-live-alone.html"
-      ]
-    },
-    {
-      "id": "com-apple-watch-se-3rd-gen-2025",
-      "name": "Apple Watch SE (3rd Gen, 2025)",
-      "country": "us",
-      "url": "https://www.amazon.com/s?k=Apple+Watch+SE",
-      "kind": "search",
-      "asin": null,
-      "price": null,
-      "used_in": [
-        "blog/best-medical-alert-systems.html"
-      ]
-    },
-    {
-      "id": "com-apple-watch-se-3rd-gen-2025-2",
-      "name": "Apple Watch SE (3rd Gen, 2025)",
-      "country": "us",
-      "url": "https://www.amazon.com/s?k=Apple+Watch+SE+3rd+generation",
-      "kind": "search",
-      "asin": null,
-      "price": null,
-      "used_in": [
+        "blog/best-medical-alert-systems.html",
         "blog/jitterbug-vs-iphone-for-seniors.html",
-        "blog/medical-alert-no-monthly-fee.html"
+        "blog/medical-alert-no-monthly-fee.html",
+        "gift-guides/safety-tech-for-elderly-parents-who-live-alone.html"
       ]
     },
     {
       "id": "com-apple-watch-series-12",
       "name": "Apple Watch Series 12",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Apple+Watch+Series+12",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0HJ9YNRW7",
+      "kind": "product",
+      "asin": "B0HJ9YNRW7",
       "price": null,
       "used_in": [
         "blog/best-smartwatches-for-seniors.html"
@@ -1452,27 +1430,16 @@
       ]
     },
     {
-      "id": "com-jitterbug-smart5",
-      "name": "Jitterbug Smart5",
-      "country": "us",
-      "url": "https://www.amazon.com/s?k=Jitterbug+Smart5+senior+smartphone",
-      "kind": "search",
-      "asin": null,
-      "price": "$120",
-      "used_in": [
-        "blog/jitterbug-vs-iphone-for-seniors.html"
-      ]
-    },
-    {
       "id": "com-jitterbug-smart5-by-lively",
       "name": "Jitterbug Smart5 by Lively",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Jitterbug+Smart5+by+Lively",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0H4NWMP6S",
+      "kind": "product",
+      "asin": "B0H4NWMP6S",
       "price": "$119.99",
       "used_in": [
-        "blog/best-cell-phones-for-seniors.html"
+        "blog/best-cell-phones-for-seniors.html",
+        "blog/jitterbug-vs-iphone-for-seniors.html"
       ]
     },
     {
@@ -1745,9 +1712,9 @@
       "id": "com-omron-platinum-bp5465",
       "name": "Omron Platinum BP5465",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Omron+Platinum+BP5465+blood+pressure+monitor",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0DXXLYZTL",
+      "kind": "product",
+      "asin": "B0DXXLYZTL",
       "price": "$79",
       "used_in": [
         "blog/best-blood-pressure-monitors-for-seniors.html"
