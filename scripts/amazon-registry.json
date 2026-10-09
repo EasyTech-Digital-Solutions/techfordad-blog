@@ -21,9 +21,9 @@
       "id": "ca-amazon-fire-hd-10",
       "name": "Amazon Fire HD 10",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Amazon+Fire+HD+10",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B0BL66884Q",
+      "kind": "product",
+      "asin": "B0BL66884Q",
       "price": null,
       "used_in": [
         "blog/best-tablets-for-seniors-canada.html"
@@ -144,9 +144,9 @@
       "id": "ca-arlo-video-doorbell-2k-2nd-gen",
       "name": "Arlo Video Doorbell 2K (2nd Gen)",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Arlo+Video+Doorbell+2K+2nd+Gen",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B0DNTZN481",
+      "kind": "product",
+      "asin": "B0DNTZN481",
       "price": null,
       "used_in": [
         "blog/best-video-doorbells-for-seniors-canada.html"
@@ -216,9 +216,9 @@
       "id": "ca-garmin-venu-4",
       "name": "Garmin Venu 4",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Garmin+Venu+4",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B0FRG1TXC6",
+      "kind": "product",
+      "asin": "B0FRG1TXC6",
       "price": null,
       "used_in": [
         "blog/best-smartwatches-for-seniors-canada.html"
@@ -253,9 +253,9 @@
       "id": "ca-kobo-clara-colour",
       "name": "Kobo Clara Colour",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Kobo+Clara+Colour",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B0CZY1LRT4",
+      "kind": "product",
+      "asin": "B0CZY1LRT4",
       "price": null,
       "used_in": [
         "blog/best-e-readers-for-seniors-canada.html"
@@ -265,9 +265,9 @@
       "id": "ca-kobo-libra-colour",
       "name": "Kobo Libra Colour",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Kobo+Libra+Colour",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B0CZXX465Z",
+      "kind": "product",
+      "asin": "B0CZXX465Z",
       "price": null,
       "used_in": [
         "blog/best-e-readers-for-seniors-canada.html"
@@ -1239,9 +1239,9 @@
       "id": "com-garmin-venu-4",
       "name": "Garmin Venu 4",
       "country": "us",
-      "url": "https://www.amazon.com/dp/B0FRW33GPN",
-      "kind": "product",
-      "asin": "B0FRW33GPN",
+      "url": "https://www.amazon.com/s?k=Garmin+Venu+4",
+      "kind": "search",
+      "asin": null,
       "price": null,
       "used_in": [
         "blog/best-smartwatches-for-seniors.html"
@@ -1251,9 +1251,9 @@
       "id": "com-garmin-vivosmart-5",
       "name": "Garmin Vivosmart 5",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Garmin+Vivosmart+5",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B09VY63659",
+      "kind": "product",
+      "asin": "B09VY63659",
       "price": null,
       "used_in": [
         "blog/best-sleep-trackers-for-seniors.html"
@@ -1528,9 +1528,9 @@
       "id": "com-kobo-clara-bw",
       "name": "Kobo Clara BW",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Kobo+Clara+BW",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0CZXYV8GT",
+      "kind": "product",
+      "asin": "B0CZXYV8GT",
       "price": null,
       "used_in": [
         "blog/best-e-readers-for-seniors.html"
@@ -1540,9 +1540,9 @@
       "id": "com-kobo-libra-colour",
       "name": "Kobo Libra Colour",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Kobo+Libra+Colour",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0CZXX465Z",
+      "kind": "product",
+      "asin": "B0CZXX465Z",
       "price": null,
       "used_in": [
         "blog/best-e-readers-for-seniors.html"
@@ -1877,9 +1877,9 @@
       "id": "com-samsung-galaxy-watch-9",
       "name": "Samsung Galaxy Watch 9",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Samsung+Galaxy+Watch+9",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0H1D828TR",
+      "kind": "product",
+      "asin": "B0H1D828TR",
       "price": null,
       "used_in": [
         "blog/best-smartwatches-for-seniors.html"
@@ -1913,9 +1913,9 @@
       "id": "com-sennheiser-all-day-clear",
       "name": "Sennheiser All-Day Clear",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Sennheiser+All-Day+Clear+hearing+aid",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0CBDBPYP8",
+      "kind": "product",
+      "asin": "B0CBDBPYP8",
       "price": "$999.95/pair",
       "used_in": [
         "blog/best-hearing-aids-for-seniors.html"
