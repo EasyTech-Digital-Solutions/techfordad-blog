@@ -241,9 +241,9 @@
       "id": "ca-kobo-clara-bw",
       "name": "Kobo Clara BW",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Kobo+Clara+BW",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B0CZXYV8GT",
+      "kind": "product",
+      "asin": "B0CZXYV8GT",
       "price": null,
       "used_in": [
         "blog/best-e-readers-for-seniors-canada.html"
@@ -531,9 +531,9 @@
       "id": "com-amazon-echo-show-11-2025",
       "name": "Amazon Echo Show 11 (2025)",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Amazon+Echo+Show+11",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0FKX1M63D",
+      "kind": "product",
+      "asin": "B0FKX1M63D",
       "price": null,
       "used_in": [
         "blog/best-alexa-devices-for-seniors.html"
