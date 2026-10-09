@@ -9,9 +9,9 @@
       "id": "ca-a-d-medical-ua-767fam-multi-user",
       "name": "A&D Medical UA-767FAM Multi-User",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=A%26D+Medical+UA-767FAM",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B01D8L9I8M",
+      "kind": "product",
+      "asin": "B01D8L9I8M",
       "price": null,
       "used_in": [
         "blog/best-blood-pressure-monitors-canada.html"
@@ -33,9 +33,9 @@
       "id": "ca-amazon-kindle-paperwhite-16-gb",
       "name": "Amazon Kindle Paperwhite (16 GB)",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Kindle+Paperwhite+2024",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B0CFPWLGF2",
+      "kind": "product",
+      "asin": "B0CFPWLGF2",
       "price": null,
       "used_in": [
         "blog/best-e-readers-for-seniors-canada.html"
@@ -1080,9 +1080,9 @@
       "id": "com-boogiio-large-print-high-contrast-keyboard",
       "name": "BOOGIIO Large Print High Contrast Keyboard",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=BOOGIIO+large+print+keyboard+yellow+black",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B07QR3YHPK",
+      "kind": "product",
+      "asin": "B07QR3YHPK",
       "price": null,
       "used_in": [
         "blog/best-large-button-keyboards-for-seniors.html"
@@ -1116,9 +1116,9 @@
       "id": "com-clarity-xlc3-4",
       "name": "Clarity XLC3.4+",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Clarity+XLC3.4+amplified+cordless+phone",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B004H4EBHI",
+      "kind": "product",
+      "asin": "B004H4EBHI",
       "price": null,
       "used_in": [
         "blog/best-cordless-phones-for-seniors.html"
@@ -1250,9 +1250,9 @@
       "id": "com-garmin-venu-4",
       "name": "Garmin Venu 4",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Garmin+Venu+4",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0FRW33GPN",
+      "kind": "product",
+      "asin": "B0FRW33GPN",
       "price": null,
       "used_in": [
         "blog/best-smartwatches-for-seniors.html"
@@ -1322,9 +1322,9 @@
       "id": "com-google-nest-learning-thermostat-4th-gen",
       "name": "Google Nest Learning Thermostat (4th Gen)",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Google+Nest+Learning+Thermostat+4th+gen",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0DGYVRM5T",
+      "kind": "product",
+      "asin": "B0DGYVRM5T",
       "price": null,
       "used_in": [
         "blog/best-smart-home-devices-for-seniors.html"
@@ -1623,9 +1623,9 @@
       "id": "com-livefine-28-day-automatic-pill-dispenser",
       "name": "LiveFine 28-Day Automatic Pill Dispenser",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=LiveFine+28+Day+Automatic+Pill+Dispenser",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B08KJHQR5V",
+      "kind": "product",
+      "asin": "B08KJHQR5V",
       "price": null,
       "used_in": [
         "blog/best-pill-organizers-for-seniors.html"
@@ -1804,9 +1804,9 @@
       "id": "com-ring-battery-doorbell-2k",
       "name": "Ring Battery Doorbell 2K",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Ring+Battery+Doorbell+2K",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0GT5C485J",
+      "kind": "product",
+      "asin": "B0GT5C485J",
       "price": "$99.99",
       "used_in": [
         "blog/best-smart-home-devices-for-seniors.html"
@@ -1864,9 +1864,9 @@
       "id": "com-samsung-galaxy-ring",
       "name": "Samsung Galaxy Ring",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Samsung+Galaxy+Ring",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0DPN9QFY8",
+      "kind": "product",
+      "asin": "B0DPN9QFY8",
       "price": null,
       "used_in": [
         "blog/best-sleep-trackers-for-seniors.html"
