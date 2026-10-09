@@ -132,9 +132,9 @@
       "id": "ca-apple-watch-series-12",
       "name": "Apple Watch Series 12",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Apple+Watch+Series+12",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B0HJB23HFR",
+      "kind": "product",
+      "asin": "B0HJB23HFR",
       "price": null,
       "used_in": [
         "blog/best-smartwatches-for-seniors-canada.html"
@@ -156,9 +156,9 @@
       "id": "ca-artfone-c1-4g-senior-cell-phone",
       "name": "Artfone C1+ 4G Senior Cell Phone",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Artfone+C1+4G+senior+phone",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B0DMKS3ZDG",
+      "kind": "product",
+      "asin": "B0DMKS3ZDG",
       "price": null,
       "used_in": [
         "blog/best-cell-phones-for-seniors-canada.html"
@@ -410,9 +410,9 @@
       "id": "ca-samsung-galaxy-watch-9",
       "name": "Samsung Galaxy Watch 9",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Samsung+Galaxy+Watch+9",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B0H4HJ2H5F",
+      "kind": "product",
+      "asin": "B0H4HJ2H5F",
       "price": null,
       "used_in": [
         "blog/best-smartwatches-for-seniors-canada.html"
@@ -458,9 +458,9 @@
       "id": "ca-vtech-careline-sn5127-amplified-cordless-phone",
       "name": "VTech CareLine SN5127 Amplified Cordless Phone",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=VTech+CareLine+SN5127+amplified+cordless",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B07TB4RKT9",
+      "kind": "product",
+      "asin": "B07TB4RKT9",
       "price": null,
       "used_in": [
         "blog/best-cordless-phones-for-seniors-canada.html"
@@ -519,9 +519,9 @@
       "id": "com-amazon-echo-dot-max",
       "name": "Amazon Echo Dot Max",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Amazon+Echo+Dot+Max",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0D6SZKGT4",
+      "kind": "product",
+      "asin": "B0D6SZKGT4",
       "price": null,
       "used_in": [
         "blog/best-alexa-devices-for-seniors.html"
@@ -864,9 +864,9 @@
       "id": "com-audien-atom-pro-2",
       "name": "Audien Atom Pro 2",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Audien+Atom+Pro+2+hearing+aid",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0CJQ95BHX",
+      "kind": "product",
+      "asin": "B0CJQ95BHX",
       "price": "$289/pair",
       "used_in": [
         "blog/best-hearing-aids-for-seniors.html"
@@ -1519,9 +1519,9 @@
       "id": "com-kopjippom-large-print-backlit-keyboard-wired",
       "name": "KOPJIPPOM Large Print Backlit Keyboard (Wired)",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=KOPJIPPOM+large+print+backlit+keyboard",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B09LH4KF5H",
+      "kind": "product",
+      "asin": "B09LH4KF5H",
       "price": null,
       "used_in": [
         "blog/best-large-button-keyboards-for-seniors.html"
@@ -1531,9 +1531,9 @@
       "id": "com-landairsea-54-gps-tracker",
       "name": "LandAirSea 54 GPS Tracker",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=LandAirSea+54+GPS+tracker",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B06XVZ6Y4T",
+      "kind": "product",
+      "asin": "B06XVZ6Y4T",
       "price": null,
       "used_in": [
         "blog/best-gps-trackers-for-seniors.html"
@@ -1676,9 +1676,9 @@
       "id": "com-nuklz-n-wireless-large-print-keyboard",
       "name": "Nuklz N Wireless Large Print Keyboard",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Nuklz+N+large+print+wireless+keyboard",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B083B8B8HW",
+      "kind": "product",
+      "asin": "B083B8B8HW",
       "price": null,
       "used_in": [
         "blog/best-large-button-keyboards-for-seniors.html"
@@ -1965,9 +1965,9 @@
       "id": "com-vtech-sn5147-amplified-cordless-phone",
       "name": "VTech SN5147 Amplified Cordless Phone",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=VTech+SN5147+amplified+cordless+phone",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B07C4WX72D",
+      "kind": "product",
+      "asin": "B07C4WX72D",
       "price": null,
       "used_in": [
         "blog/best-cordless-phones-for-seniors.html"
