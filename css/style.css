@@ -408,6 +408,7 @@ section { padding: 64px 24px; }
 
 .why-icon { font-size: 2.2rem; margin-bottom: 12px; }
 .why-item h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+.why-item a { color: inherit; text-decoration: underline; }
 .why-item p { font-size: 0.85rem; opacity: 0.75; }
 
 /* ===== NEWSLETTER ===== */
