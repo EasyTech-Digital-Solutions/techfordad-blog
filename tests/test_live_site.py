@@ -75,7 +75,7 @@ def test_unknown_page_returns_a_real_404():
 
 @pytest.mark.parametrize("path", ["admin/", "admin/index.html", "scripts/products.json", "scripts/amazon-registry.json", "docs/",
                                   "tests/", "tests/test_security.py", "CLAUDE.md", "README.md", "newsletter-log.json",
-                                  "_config.yml", "Gemfile", ".git/config", ".env", ".github/workflows/auto-price-update.yml"])
+                                  "_config.yml", "Gemfile", ".git/config", ".env", ".github/workflows/live-site-check.yml"])
 def test_internal_files_are_not_published(path):
     status, _, _ = fetch(f"{SITE}/{path}")
     assert status == 404, f"/{path} is publicly reachable (HTTP {status})"

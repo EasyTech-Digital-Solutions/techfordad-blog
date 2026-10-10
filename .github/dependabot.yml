@@ -10,14 +10,6 @@ updates:
     commit-message:
       prefix: "ci"
 
-  # Python packages used by the price bot (scripts/requirements.txt)
-  - package-ecosystem: "pip"
-    directory: "/scripts"
-    schedule:
-      interval: "weekly"
-    commit-message:
-      prefix: "deps"
-
   # Python packages used by the automated test suite (tests/requirements.txt)
   - package-ecosystem: "pip"
     directory: "/tests"
