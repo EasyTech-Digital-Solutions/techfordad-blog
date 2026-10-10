@@ -1,0 +1,14 @@
+# Normalize line endings to LF for all text files, regardless of OS checkout settings
+# (core.autocrlf). Without this, a Windows machine with autocrlf=true can make
+# scripts/build_gift_guides.py --check (and similar generator-vs-committed-page checks)
+# report false "out of sync" diffs that are pure CRLF/LF noise, not real content drift.
+* text=auto eol=lf
+
+*.ico binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.svg binary
+*.webp binary
+*.woff binary
+*.woff2 binary
