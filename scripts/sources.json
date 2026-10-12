@@ -59,7 +59,7 @@
         {"kind": "maker", "title": "Apple (Canada): iPhone 16", "url": "https://www.apple.com/ca/shop/buy-iphone/iphone-16", "used_for": "Models, storage and Canadian pricing"},
         {"kind": "maker", "title": "Apple (Canada): Accessibility", "url": "https://www.apple.com/ca/accessibility/", "used_for": "Text size, vision and hearing features to set up first"},
         {"kind": "maker", "title": "Samsung Canada: Galaxy A36 5G support page", "url": "https://www.samsung.com/ca/support/model/SM-A366WZKAXAC/", "used_for": "Manuals and specifications for the A36"},
-        {"kind": "maker", "title": "Samsung Canada: Galaxy A16 5G", "url": "https://www.samsung.com/ca/smartphones/galaxy-a/galaxy-a16-5g-blue-black-128gb-sm-a166wzkaxac/", "used_for": "Specifications for the A16"},
+        {"kind": "maker", "title": "Samsung Canada newsroom: Galaxy A17 5G launch", "url": "https://news.samsung.com/ca/samsung-canada-introduces-the-galaxy-a17-5g-with-everyday-ai-and-essential-performance", "used_for": "Official Canadian pricing and specifications for the A17"},
         {"kind": "maker", "title": "Doro: PhoneEasy 626 manual (Canadian English)", "url": "https://www.doro.com/globalassets/inriver/resources/manual_doro_phoneeasy_626_en_ca_v30r16650.pdf", "used_for": "Features of the Doro flip phone", "skip_verify": true},
         {"kind": "maker", "title": "TELUS: Mobility for Good for seniors", "url": "https://www.telus.com/en/social-impact/connecting-canada/connecting-for-good-programs/seniors", "used_for": "Who qualifies and what the plan includes"},
         {"kind": "maker", "title": "Rogers: Connected for Success", "url": "https://www.rogers.com/connected-for-success", "used_for": "Who qualifies and what the plan includes"},
@@ -96,7 +96,7 @@
         {"kind": "authority", "title": "Validate BP: US Blood Pressure Validated Device Listing", "url": "https://www.validatebp.org/", "used_for": "The free list to check that a monitor has been clinically validated"},
         {"kind": "authority", "title": "American Medical Association: How BP devices are validated", "url": "https://www.ama-assn.org/public-health/prevention-wellness/validation-bp-measurement-devices-clinical-accuracy", "used_for": "What clinical validation means"}
       ],
-      "note": "Omron's pages for the Gold and 3 Series monitors now show the newer BP5360 and BP7150, so the BP5350 and BP7100 named on this page may be older models: check which one you are buying. We could not confirm a current maker page for the Greater Goods 0602."
+      "note": "The 3 Series section now reflects the current BP7150 model. Omron's page for the Gold monitor shows the newer BP5360, so the BP5350 named on this page may be an older model: check which one you are buying. We could not confirm a current maker page for the Greater Goods 0602."
     },
     "blog/best-blood-pressure-monitors-canada.html": {
       "sources": [

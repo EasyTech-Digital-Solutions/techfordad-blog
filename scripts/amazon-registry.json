@@ -371,12 +371,12 @@
       ]
     },
     {
-      "id": "ca-samsung-galaxy-a16-5g-128gb-unlocked",
-      "name": "Samsung Galaxy A16 5G (128GB, Unlocked)",
+      "id": "ca-samsung-galaxy-a17-5g-128gb-unlocked",
+      "name": "Samsung Galaxy A17 5G (128GB, Unlocked)",
       "country": "ca",
-      "url": "https://www.amazon.ca/Samsung-A16-6-7-Android-Unlocked-Warranty/dp/B0DP5LSL9Q",
+      "url": "https://www.amazon.ca/dp/B0FMDDYZ1L",
       "kind": "product",
-      "asin": "B0DP5LSL9Q",
+      "asin": "B0FMDDYZ1L",
       "price": null,
       "used_in": [
         "blog/best-cell-phones-for-seniors-canada.html"
@@ -1555,9 +1555,9 @@
       "id": "com-lenovo-ideapad-5-15-6-inch",
       "name": "Lenovo IdeaPad 5 15.6-inch",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Lenovo+IdeaPad+5+15.6+2026",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0FWQC56TK",
+      "kind": "product",
+      "asin": "B0FWQC56TK",
       "price": null,
       "used_in": [
         "blog/best-laptops-for-seniors.html"
@@ -1685,13 +1685,13 @@
       ]
     },
     {
-      "id": "com-omron-3-series-bp7100",
-      "name": "Omron 3 Series BP7100",
+      "id": "com-omron-3-series-bp7150",
+      "name": "Omron 3 Series BP7150",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Omron+3+Series+BP7100+blood+pressure+monitor",
+      "url": "https://www.amazon.com/s?k=Omron+3+Series+BP7150+blood+pressure+monitor",
       "kind": "search",
       "asin": null,
-      "price": "$35",
+      "price": null,
       "used_in": [
         "blog/best-blood-pressure-monitors-for-seniors.html"
       ]
@@ -1811,7 +1811,7 @@
       "url": "https://www.amazon.com/s?k=Samsung+Galaxy+A17+5G",
       "kind": "search",
       "asin": null,
-      "price": "$245",
+      "price": "$270",
       "used_in": [
         "blog/best-cell-phones-for-seniors.html"
       ]
@@ -1832,9 +1832,9 @@
       "id": "com-samsung-galaxy-tab-a11",
       "name": "Samsung Galaxy Tab A11+",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Samsung+Galaxy+Tab+A11%2B",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0FVXMHHRP",
+      "kind": "product",
+      "asin": "B0FVXMHHRP",
       "price": "$299.99",
       "used_in": [
         "blog/best-tablets-for-seniors.html"
@@ -1926,6 +1926,18 @@
       ]
     },
     {
+      "id": "com-tkmars-wireless-doorbell-camera-with-monitor",
+      "name": "TKMARS Wireless Doorbell Camera with Monitor",
+      "country": "us",
+      "url": "https://www.amazon.com/dp/B0DFG4X87R",
+      "kind": "product",
+      "asin": "B0DFG4X87R",
+      "price": null,
+      "used_in": [
+        "blog/best-video-doorbells-for-seniors.html"
+      ]
+    },
+    {
       "id": "com-tracki-gps-tracker",
       "name": "Tracki GPS Tracker",
       "country": "us",
@@ -1971,18 +1983,6 @@
       "price": null,
       "used_in": [
         "blog/best-cordless-phones-for-seniors.html"
-      ]
-    },
-    {
-      "id": "com-wireless-video-doorbell-with-indoor-monitor",
-      "name": "Wireless Video Doorbell with Indoor Monitor",
-      "country": "us",
-      "url": "https://www.amazon.com/s?k=wireless+video+doorbell+indoor+monitor+no+wifi",
-      "kind": "search",
-      "asin": null,
-      "price": null,
-      "used_in": [
-        "blog/best-video-doorbells-for-seniors.html"
       ]
     },
     {

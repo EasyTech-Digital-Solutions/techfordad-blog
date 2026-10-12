@@ -14,7 +14,7 @@ Kinds
     info         about, contact, privacy, affiliate disclosure, our story, how we review
     error        404.html
     stub         a "page moved" redirect (meta refresh); old WordPress-era URLs and renamed pages
-    admin        admin/index.html (a local tool, never published; see admin/README.md)
+    admin        admin/*.html (local tools, never published; see admin/README.md)
 """
 from __future__ import annotations
 
@@ -61,7 +61,7 @@ def all_html() -> list[str]:
 
 def kind(rel: str) -> str | None:
     """Return the page's kind, or None if no rule matches (the inventory test then fails)."""
-    if rel == "admin/index.html":
+    if rel.startswith("admin/"):
         return "admin"
     if 'http-equiv="refresh"' in read(rel):
         return "stub"

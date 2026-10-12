@@ -12,6 +12,12 @@ so everything works the same as before. Because it now runs on `localhost`, the 
 Anthropic key you enter are stored in the browser for `localhost` only, not on the website's own
 origin where the ad and analytics scripts run.
 
+**Product Tracker** (`product-tracker.html`, linked from the top bar) is a searchable, sortable table
+of every product the site prices or links to, with status (Current / Unverifiable / Needs 2nd source /
+Check model), last-verified date, and a source link per item. It reads `product-tracker-data.json`,
+a flat export of the `products` collection from the "Product Tracker" artifact on claude.ai — ask
+Claude to re-export that data into this file after a price-verification pass to refresh it.
+
 Good practice:
 - Use a **fine-grained GitHub token limited to this one repository** (Contents: read/write).
 - Give the Anthropic key used here a **monthly spend limit** in the Anthropic console.
