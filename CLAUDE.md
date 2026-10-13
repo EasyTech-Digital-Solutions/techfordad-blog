@@ -1,5 +1,18 @@
 # TechForDad
 
+## Repo layout gotcha — avoid nested self-clones
+
+This repo has twice ended up with an accidental duplicate clone of itself
+nested inside its own working tree (e.g. `techfordad-blog/techfordad-blog/`)
+— most likely from running "Clone Repository" while already inside this
+folder, which defaults to cloning into a subfolder named after the repo.
+Check you're not already inside this repo before cloning it again. If a
+nested `.git` ever turns up here, don't delete either copy until checking
+`git log --oneline` and `git branch -a` in **both** — in the second
+incident the *nested* copy turned out to have newer uncommitted work AND an
+unpushed local branch (`admin-research-queue`) that existed nowhere else;
+assuming the outer copy is always the canonical one would have lost it.
+
 Static HTML affiliate blog reviewing tech products for seniors and their caregivers (US + Canada variants). No build step — pages are hand-authored HTML, deployed as static files via GitHub Pages (see `CNAME`).
 
 ## New article checklist
