@@ -1,0 +1,32 @@
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*credentials*
+*secret*
+
+# Python virtualenv and caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+tests/.cache/
+
+# Logs and caches
+*.log
+logs/
+.cache/
+
+# Generated newsletter output
+docs/newsletters/*.preview.html
+docs/newsletters/*.email.html
+docs/newsletters/*.fragment.html
+
+# Large/binary data
+*.sqlite
+*.db
+*.zip
+*.tar
+*.tar.gz
