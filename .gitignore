@@ -14,3 +14,7 @@ tests/.cache/
 docs/newsletters/*.preview.html
 docs/newsletters/*.email.html
 docs/newsletters/*.fragment.html
+
+# Internal product tracker: local-only, not part of the published site
+admin/product-tracker-data.json
+admin/product-tracker.html
