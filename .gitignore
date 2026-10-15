@@ -18,3 +18,14 @@ docs/newsletters/*.fragment.html
 # Internal product tracker: local-only, not part of the published site
 admin/product-tracker-data.json
 admin/product-tracker.html
+
+# Amazon Creators API: vendored SDK (re-downloadable, not our code) and real credentials
+scripts/vendor/creatorsapi-python-sdk/
+admin/.amazon-creds.json
+
+# Pinterest pin images/zip: generated deliverable, not part of the site (scripts/build_pinterest_pins.py)
+docs/pinterest-pins/
+docs/pinterest-pins-final/
+
+# Pinterest API credentials for scripts/upload_pinterest_pins.py
+admin/.pinterest-creds.json
