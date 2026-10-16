@@ -233,6 +233,21 @@ def test_skip_link_works_with_keyboard(sample_page, sessions):
     pg.close()
 
 
+@pytest.mark.parametrize("size", ["desktop", "mobile"])
+def test_contents_links_land_below_the_sticky_header(sessions, size):
+    """A contents link scrolls its heading into view below the sticky header, not under it (html scroll-padding-top).
+    Ads are stubbed here, so no slot collapses mid-jump (on the live site an unfilled AdSense slot still can)."""
+    pg = _open(sessions, "blog/best-tablets-for-seniors.html", size)
+    for href in ("#fire-hd10", "#faq"):
+        pg.evaluate("h => document.querySelector('.toc-plain a[href=\"' + h + '\"]').click()", href)
+        pg.wait_for_function("h => Math.abs(document.getElementById(h).getBoundingClientRect().top - window.__last) < 1 || !(window.__last = document.getElementById(h).getBoundingClientRect().top)",
+                             arg=href[1:], polling=150, timeout=5000)
+        top, header = pg.evaluate("h => [document.getElementById(h).getBoundingClientRect().top, document.querySelector('header').getBoundingClientRect().bottom]", href[1:])
+        assert top >= header - 1, f"{href} heading is hidden under the sticky header ({top:.0f}px < {header:.0f}px)"
+        assert top <= 200, f"{href} heading stopped too far down ({top:.0f}px)"
+    pg.close()
+
+
 def test_faq_works_from_the_keyboard(page, sessions):
     """Questions are reachable with Tab and open with Enter or Space (they used to respond to the mouse only)."""
     pg = _open(sessions, page)

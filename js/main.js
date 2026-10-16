@@ -186,6 +186,36 @@ document.querySelectorAll('.gift-bar-close').forEach(btn => {
   document.body.appendChild(badge);
 })();
 
+// "Ask TechForDad" chat: a floating button on every page. The chat itself (js/chat.js) is fetched on the first press,
+// so pages load no extra code until someone uses it.
+(function () {
+  const me = document.querySelector('script[src*="js/main.js"]');
+  if (!me) return;
+  const wrap = document.createElement('aside');  // a landmark, like the country badge (axe "content in a region")
+  wrap.className = 'chat-launch';
+  wrap.setAttribute('aria-label', 'Ask a question');
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.id = 'chat-launcher';
+  btn.className = 'chat-launcher';
+  btn.setAttribute('aria-haspopup', 'dialog');
+  btn.setAttribute('aria-expanded', 'false');
+  btn.setAttribute('aria-controls', 'chat-panel');
+  btn.textContent = 'Ask TechForDad';
+  btn.addEventListener('click', () => {
+    if (window.TFDChat) return window.TFDChat.open();
+    if (btn.getAttribute('aria-busy')) return;
+    btn.setAttribute('aria-busy', 'true');
+    const s = document.createElement('script');
+    s.src = me.src.replace(/main\.js/, 'chat.js');
+    s.onload = () => { btn.removeAttribute('aria-busy'); window.TFDChat.open(); };
+    s.onerror = () => btn.removeAttribute('aria-busy');
+    document.body.appendChild(s);
+  });
+  wrap.appendChild(btn);
+  document.body.appendChild(wrap);
+})();
+
 // Ad preview (local copies only): open any page with ?adpreview to draw a visible placeholder in every ad slot, so the layout can be judged
 // where Google serves no ads. It does nothing on the live site (the host check below).
 (function () {

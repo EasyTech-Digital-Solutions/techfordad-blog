@@ -1,0 +1,39 @@
+# "Ask TechForDad" chat Worker. Deployed by .github/workflows/deploy-chat.yml; setup steps in docs/chatbot-plan.md.
+# Stay on the Workers FREE plan: there, usage past the daily allowance fails instead of being billed.
+name = "techfordad-chat"
+main = "src/index.js"
+compatibility_date = "2026-09-15"
+workers_dev = false
+
+routes = [
+  { pattern = "www.techfordad.com/api/*", zone_name = "techfordad.com" },
+]
+
+[vars]
+# Swap the model here; run scripts/chat_eval.py before and after.
+CHAT_MODEL = "@cf/meta/llama-3.1-8b-instruct-fp8-fast"
+# Chunks scoring below this (cosine similarity) are ignored, so off-topic questions get "couldn't find that".
+MIN_SCORE = "0.6"
+
+[ai]
+binding = "AI"
+
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "techfordad-chat"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "techfordad-chat"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+[[ratelimits]]
+name = "RATE_LIMITER"
+namespace_id = "1001"
+simple = { limit = 8, period = 60 }
+
+[triggers]
+crons = ["17 4 * * *"]
+
+[observability]
+enabled = false
