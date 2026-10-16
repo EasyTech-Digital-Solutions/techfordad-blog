@@ -49,7 +49,7 @@ def main():
             new = f'{m.group(1)}<script type="application/ld+json">\n  {body}\n  </script>'
             if new != m.group(0):
                 text = text.replace(m.group(0), new, 1)
-                path.write_text(text, encoding="utf-8")
+                path.write_text(text, encoding="utf-8", newline="")
                 changed += 1
             break
     print(f"FAQ schema: {changed} pages updated")

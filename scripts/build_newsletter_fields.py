@@ -97,7 +97,7 @@ def main():
         new = FORM_RE.sub(lambda m: m.group(1) + block(rel, clean), clean, count=1)
         new = NOTE_RE.sub(lambda m: consent_note(rel), new, count=1)
         if new != text:
-            path.write_text(new, encoding="utf-8")
+            path.write_text(new, encoding="utf-8", newline="")
             written += 1
     print(f"newsletter fields: {written} pages written")
 
