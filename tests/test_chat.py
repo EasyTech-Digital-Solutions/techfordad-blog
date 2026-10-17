@@ -64,6 +64,8 @@ def test_chunk_buttons_come_untagged_from_the_right_store():
 def test_chunks_are_clean_and_fit_vectorize():
     _, chunks = _chunks()
     assert len({c["id"] for c in chunks}) == len(chunks), "chunk ids must be unique"
+    too_long = [c["id"] for c in chunks if len(c["id"].encode("utf-8")) > 64]
+    assert not too_long, f"Vectorize ids are at most 64 bytes: {too_long[:3]}"
     for c in chunks:
         assert "Check Price on Amazon" not in c["text"], f"{c['id']}: button text leaked into the chunk"
         assert "As an Amazon Associate" not in c["text"], f"{c['id']}: footer text leaked into the chunk"
