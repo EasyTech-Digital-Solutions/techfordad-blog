@@ -43,6 +43,15 @@ AMAZON = re.compile(r"https://www\.amazon\.(com|ca)/")
 BLOCK_TAGS = {"p", "li", "h3", "h4", "tr", "div", "section", "table", "ul", "ol", "dd", "dt", "br", "blockquote"}
 
 
+def chunk_id(page_url, i):
+    """Vectorize ids are at most 64 bytes: "gift-guides/gifts-for-elderly-parents-who-have-everything#12"."""
+    base = page_url.lstrip("/").removesuffix(".html")
+    cid = f"{base}#{i}"
+    if len(cid.encode("utf-8")) > 64:  # a longer file name than any today: shorten it, keep it unique
+        cid = f"{base[:40]}~{hashlib.sha1(base.encode('utf-8')).hexdigest()[:10]}#{i}"
+    return cid
+
+
 def read(path):
     with open(path, encoding="utf-8", newline="") as f:
         return f.read().replace("\r\n", "\n")
@@ -191,7 +200,7 @@ def chunks(page):
         url = page["url"] + (f"#{sid}" if sid else "")
         products_json = json.dumps(products, ensure_ascii=False)  # Vectorize metadata values must be flat
         result.append({
-            "id": f"{page['url'].lstrip('/')}#{i}",
+            "id": chunk_id(page["url"], i),
             "url": url,
             "title": page["title"],
             "section": heading,
