@@ -11,6 +11,7 @@ Automatic checks catch the obvious failures; still read every answer, since "gro
 import json
 import re
 import sys
+import time
 import urllib.request
 
 CASES = [
@@ -34,13 +35,15 @@ CASES = [
 ]
 
 TESTING = re.compile(r"\b(we|I) (tested|tried|used|measured)\b|in (our|my) experience|\b\d(\.\d)?/10\b", re.I)
-LINK = re.compile(r"https?://|www\.|amazon\.(com|ca)", re.I)
+LINK = re.compile(r"https?://|www\.|amazon\.(com|ca)/", re.I)  # a URL; naming the store "Amazon.ca" is fine
 
 
 def ask(base, question, page, country):
     req = urllib.request.Request(base + "/api/chat", method="POST",
                                  data=json.dumps({"question": question, "page": page, "country": country, "history": []}).encode(),
-                                 headers={"content-type": "application/json", "origin": "https://www.techfordad.com"})
+                                 headers={"content-type": "application/json", "origin": "https://www.techfordad.com",
+                                          # Cloudflare blocks the default Python-urllib user agent
+                                          "user-agent": "Mozilla/5.0 (compatible; TechForDad-chat-eval)"})
     with urllib.request.urlopen(req, timeout=60) as r:
         return json.loads(r.read())
 
@@ -76,7 +79,9 @@ def check(expect, data):
 def main(argv):
     base = argv[argv.index("--base") + 1].rstrip("/") if "--base" in argv else "https://www.techfordad.com"
     failed = 0
-    for question, page, country, expect in CASES:
+    for n, (question, page, country, expect) in enumerate(CASES):
+        if n:
+            time.sleep(7)  # the Worker allows about 10 questions a minute per visitor
         data = ask(base, question, page, country)
         problems = check(expect, data)
         failed += bool(problems)
