@@ -239,7 +239,7 @@ def api(method, path, body=None, content_type="application/json"):
             with urllib.request.urlopen(req, timeout=120) as r:
                 return json.loads(r.read())["result"]
         except urllib.error.HTTPError as e:
-            if e.code in (429, 500, 502, 503) and attempt < 3:
+            if e.code in (429, 500, 502, 503, 504) and attempt < 3:
                 time.sleep(2 ** attempt * 3)
                 continue
             sys.exit(f"Cloudflare API {method} {path}: HTTP {e.code} {e.read()[:500]!r}")
