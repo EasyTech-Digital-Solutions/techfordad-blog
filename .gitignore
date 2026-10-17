@@ -29,3 +29,6 @@ docs/pinterest-pins-final/
 
 # Pinterest API credentials for scripts/upload_pinterest_pins.py
 admin/.pinterest-creds.json
+
+# Wrangler local cache (created by wrangler login/create commands)
+.wrangler/

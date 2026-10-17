@@ -188,9 +188,24 @@ document.querySelectorAll('.gift-bar-close').forEach(btn => {
 
 // "Ask TechForDad" chat: a floating button on every page. The chat itself (js/chat.js) is fetched on the first press,
 // so pages load no extra code until someone uses it.
+// Soft launch: until CHAT_FOR_EVERYONE is true, the button only shows in a browser that opened a page with ?chat=on
+// (remembered in localStorage; ?chat=off forgets it). To launch, set it to true and raise ASSET_VERSION.
+const CHAT_FOR_EVERYONE = false;
 (function () {
   const me = document.querySelector('script[src*="js/main.js"]');
   if (!me) return;
+  if (!CHAT_FOR_EVERYONE) {
+    const m = location.search.match(/[?&]chat=(on|off)\b/);
+    let on = false;
+    try {
+      if (m && m[1] === 'on') localStorage.setItem('tfd-chat', 'on');
+      if (m && m[1] === 'off') localStorage.removeItem('tfd-chat');
+      on = localStorage.getItem('tfd-chat') === 'on';
+    } catch (e) {
+      on = !!m && m[1] === 'on';  // storage blocked: show it on this page only
+    }
+    if (!on) return;
+  }
   const wrap = document.createElement('aside');  // a landmark, like the country badge (axe "content in a region")
   wrap.className = 'chat-launch';
   wrap.setAttribute('aria-label', 'Ask a question');

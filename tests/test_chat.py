@@ -13,6 +13,7 @@ import pages as P
 
 ARTICLE = "blog/best-tablets-for-seniors.html"
 CANADA = "blog/best-tablets-for-seniors-canada.html"
+CHAT_ON = "try { localStorage.setItem('tfd-chat', 'on'); } catch (e) {}"  # same as conftest.py
 GTAG_SPY = "window.__ga = []; window.gtag = function () { window.__ga.push(JSON.stringify([].slice.call(arguments))); };"
 
 
@@ -200,6 +201,7 @@ def test_conversation_follows_the_reader_to_the_next_page(browser, site_url):
         route.fulfill(status=200, content_type="application/json", body=json.dumps(answer))
 
     ctx = browser.new_context()
+    ctx.add_init_script(CHAT_ON)
     ctx.route("**/*", lambda r: r.continue_() if r.request.url.startswith(site_url) else r.fulfill(status=200, body=""))
     ctx.route("**/api/chat", handle)
     pg = ctx.new_page()
@@ -222,6 +224,28 @@ def test_conversation_follows_the_reader_to_the_next_page(browser, site_url):
     other.locator("#chat-launcher").click()
     other.locator("#chat-panel").wait_for(state="visible")
     assert other.locator(".chat-msg").count() == 0
+    ctx.close()
+
+
+@pytest.mark.slow
+def test_soft_launch_shows_the_button_only_after_chat_on(browser, site_url):
+    """Until CHAT_FOR_EVERYONE is true in js/main.js, visitors see no button; ?chat=on turns it on for that browser
+    (kept across pages and visits) and ?chat=off turns it off again."""
+    if re.search(r"const CHAT_FOR_EVERYONE = true", (P.ROOT / "js/main.js").read_text(encoding="utf-8")):
+        pytest.skip("the chat is launched for everyone")
+    ctx = browser.new_context()  # no CHAT_ON: a normal visitor
+    ctx.route("**/*", lambda r: r.continue_() if r.request.url.startswith(site_url) else r.fulfill(status=200, body=""))
+    pg = ctx.new_page()
+    pg.goto(f"{site_url}/{ARTICLE}")
+    assert pg.locator("#chat-launcher").count() == 0, "visitors must not see the chat during the soft launch"
+    pg.goto(f"{site_url}/{ARTICLE}?chat=on")
+    assert pg.locator("#chat-launcher").is_visible()
+    pg.goto(f"{site_url}/index.html")
+    assert pg.locator("#chat-launcher").is_visible(), "?chat=on should be remembered on the next page"
+    pg.goto(f"{site_url}/index.html?chat=off")
+    assert pg.locator("#chat-launcher").count() == 0
+    pg.goto(f"{site_url}/{ARTICLE}")
+    assert pg.locator("#chat-launcher").count() == 0, "?chat=off should be remembered too"
     ctx.close()
 
 

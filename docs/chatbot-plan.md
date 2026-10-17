@@ -1,6 +1,7 @@
 # TechForDad AI chat assistant: plan
 
-Branch: `ai-chatbot`. Status: built and tested locally (2026-10-15); not deployed. Needs the one-time Cloudflare setup below.
+Branch: `ai-chatbot`. Status: built and tested locally (2026-10-15). Cloudflare setup done 2026-10-17 (Vectorize index, D1, token, GitHub
+secrets). Ships in soft launch: hidden unless `?chat=on`.
 
 ## Goal
 
@@ -170,8 +171,10 @@ testing claims, no live-price claims, safe medical wording.
 2. **Worker:** `/api/chat`, retrieval, prompt, guardrails, rate limit, "limit reached" response.
 3. **Widget:** button, panel, fallback search, tests.
 4. **Evaluate:** run the eval set on 2 models, pick one, tune the prompt.
-5. **Soft launch:** behind `?chat=on` only, check daily neuron use in the Cloudflare dashboard.
-6. **Launch:** on all review/guide pages; privacy policy live; re-index step added to the article checklist.
+5. **Soft launch:** the button shows only in a browser that opened a page with `?chat=on` (remembered in
+   `localStorage`; `?chat=off` forgets it). Run the eval set on the live Worker, check daily neuron use.
+6. **Launch:** set `CHAT_FOR_EVERYONE = true` in `js/main.js`, raise `ASSET_VERSION`, run `build_nav.py`.
+7. Privacy policy live; re-index happens on every push to main (no checklist step needed).
 
 ## Risks
 
@@ -209,7 +212,8 @@ testing claims, no live-price claims, safe medical wording.
 6. Run `python3 scripts/chat_eval.py`, read every answer, adjust `RULES` / `CHAT_MODEL`, redeploy. If the
    `[[ratelimits]]` binding is refused on the Free plan, delete that block from `worker/wrangler.toml` and add a
    Cloudflare WAF rate-limiting rule for `/api/chat` instead.
-7. Soft launch: watch Workers AI usage (dashboard > AI > Workers AI) for a week.
+7. Soft launch: open any page with `?chat=on` to see the button (only in that browser), try it, and watch Workers AI
+   usage (dashboard > AI > Workers AI). Launch for everyone with `CHAT_FOR_EVERYONE = true` in `js/main.js`.
 
 Sources: developers.cloudflare.com pages for Workers AI pricing, Workers pricing, Vectorize pricing, Rate Limiting
 binding, Turnstile plans, Workers AI data usage, AI Search limits & pricing (all read 2026-10-15).

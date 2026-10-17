@@ -37,6 +37,8 @@ VIEWPORTS = {
                     "(KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1"),
     ),
 }
+# The chat button is in soft launch (CHAT_FOR_EVERYONE in js/main.js): it only shows when this flag is set.
+CHAT_ON = "try { localStorage.setItem('tfd-chat', 'on'); } catch (e) {}"
 GIF = bytes.fromhex("47494638396101000100800000000000ffffff21f90401000000002c00000000010001000002024401003b")
 
 
@@ -144,6 +146,7 @@ class Session:
         self.base = base
         self.external: list[str] = []
         self.ctx = browser.new_context(**VIEWPORTS[viewport])
+        self.ctx.add_init_script(CHAT_ON)  # test pages as they will be after launch, with the chat button
         self.ctx.route("**/*", self._route)
 
     def _route(self, route):
