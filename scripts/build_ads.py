@@ -301,7 +301,7 @@ def main():
         first = (B.PAGES.get(rel) or (None, [None]))[1][0]
         new = manage_script(place(text, first, rel, (B.PAGES.get(rel) or (None, []))[1]), kind, cfg["client"])
         if new != text:
-            path.write_text(new, encoding="utf-8")
+            path.write_text(new, encoding="utf-8", newline="")
             written += 1
     print(f"ads: {written} pages written" + ("" if any(cfg["slots"].values()) else " (no slot ids set in scripts/ads.json: slots are off)"))
 

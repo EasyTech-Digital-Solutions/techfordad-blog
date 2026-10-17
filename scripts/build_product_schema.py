@@ -123,7 +123,7 @@ def apply_page(path, check):
         if new != html:
             problems.append(f"{path.name}: product schema missing or out of date (run build_product_schema.py)")
     elif new != html:
-        path.write_text(new, encoding="utf-8")
+        path.write_text(new, encoding="utf-8", newline="")
 
 
 def main():

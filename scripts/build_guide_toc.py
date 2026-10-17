@@ -67,7 +67,7 @@ def main():
             continue
         new = build(text)
         if new is not None and new != text:
-            path.write_text(new, encoding="utf-8")
+            path.write_text(new, encoding="utf-8", newline="")
             written += 1
     print(f"guide contents: {written} pages written")
 

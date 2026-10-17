@@ -10,7 +10,8 @@
   "RESET & BASE": {
    "covered_by": [
     "test_ui_pages.py::test_no_sideways_scrolling",
-    "test_ui_a11y.py::test_accessibility"
+    "test_ui_a11y.py::test_accessibility",
+    "test_ui_interactions.py::test_contents_links_land_below_the_sticky_header"
    ]
   },
   "HEADER": {
@@ -199,6 +200,16 @@
    "covered_by": [
     "test_ui_pages.py::test_ad_slots_never_shift_or_crowd_the_reader",
     "test_ui_print.py::test_print_layout_removes_page_chrome_and_keeps_content"
+   ]
+  },
+  "CHAT ASSISTANT": {
+   "covered_by": [
+    "test_chat.py::test_launcher_is_on_every_kind_of_page",
+    "test_chat.py::test_chat_answers_from_the_worker_with_site_links",
+    "test_chat.py::test_chat_falls_back_to_article_search_when_the_ai_is_unavailable",
+    "test_chat.py::test_conversation_follows_the_reader_to_the_next_page",
+    "test_chat.py::test_chat_closes_with_escape_and_returns_focus",
+    "test_chat.py::test_chat_panel_fits_the_screen"
    ]
   }
  }

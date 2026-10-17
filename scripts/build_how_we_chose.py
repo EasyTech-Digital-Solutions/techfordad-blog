@@ -50,7 +50,7 @@ def main():
         i = text.rfind("\n", 0, i) + 1
         new = text[:i] + block(rel, cat) + text[i:]
         if new != original:
-            path.write_text(new, encoding="utf-8")
+            path.write_text(new, encoding="utf-8", newline="")
             written += 1
     print(f"how we chose: {written} pages written" + (f" (no insertion point: {problems})" if problems else ""))
 

@@ -1,0 +1,60 @@
+name: Deploy chat
+
+# Deploys the "Ask TechForDad" chat Worker (worker/) and syncs the articles it answers from to Cloudflare Vectorize.
+# Runs when the Worker or any article changes on main. Skipped until the repository variable CHAT_D1_DATABASE_ID is
+# set (Settings > Secrets and variables > Actions); setup steps are in docs/chatbot-plan.md.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'worker/**'
+      - 'blog/**'
+      - 'guides/**'
+      - 'gift-guides/**'
+      - 'scripts/build_chat_index.py'
+      - '.github/workflows/deploy-chat.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-chat
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: vars.CHAT_D1_DATABASE_ID != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CHAT_VECTORIZE_INDEX: techfordad-chat
+      D1_ID: ${{ vars.CHAT_D1_DATABASE_ID }}
+      WRANGLER: wrangler@4.146.0
+    steps:
+      # Actions are pinned to exact commits (tag shown in the comment); Dependabot proposes updates.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Worker unit tests
+        run: node --test worker/test/index.test.mjs
+
+      - name: Fill in the D1 database id
+        run: sed -i "s/REPLACE_WITH_D1_DATABASE_ID/${D1_ID}/" worker/wrangler.toml
+
+      - name: Sync the articles to Vectorize (only changed chunks are re-embedded)
+        run: python3 scripts/build_chat_index.py --upload
+
+      - name: Create or update the chat log table
+        working-directory: worker
+        run: npx --yes "$WRANGLER" d1 execute techfordad-chat --remote --file schema.sql
+
+      - name: Deploy the Worker
+        working-directory: worker
+        run: npx --yes "$WRANGLER" deploy
+
+      - name: Check the chat answers on the live site
+        run: |
+          sleep 10
+          curl -fsS https://www.techfordad.com/api/health

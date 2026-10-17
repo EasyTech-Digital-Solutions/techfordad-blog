@@ -46,7 +46,7 @@ def main():
         inner = anchor.group(1).rstrip()
         new = text[:anchor.start()] + inner + "<br>\n      <!-- health-note -->" + TEXT + "<!-- /health-note -->" + anchor.group(2) + text[anchor.end():]
         if new != original:
-            path.write_text(new, encoding="utf-8")
+            path.write_text(new, encoding="utf-8", newline="")
             written += 1
     print(f"health note: {written} pages written" + (f" (no anchor found: {problems})" if problems else ""))
 

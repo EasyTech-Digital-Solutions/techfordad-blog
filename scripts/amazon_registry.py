@@ -173,7 +173,7 @@ def main():
     if "--update" in sys.argv:
         old = json.loads(read(REGISTRY)) if REGISTRY.exists() else {}
         new = build(found, old)
-        REGISTRY.write_text(json.dumps(new, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        REGISTRY.write_text(json.dumps(new, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="")
         n_price = sum(1 for e in new["links"] if e["price"])
         print(f"registry written: {len(new['links'])} links ({sum(1 for e in new['links'] if e['kind'] == 'product')} product pages, "
               f"{sum(1 for e in new['links'] if e['kind'] == 'search')} searches), {n_price} with a tracked price")
