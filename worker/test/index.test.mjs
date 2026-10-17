@@ -2,7 +2,7 @@
 // (tests/test_chat.py runs this as part of the suite.)
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import worker, { scrub, stripForeignLinks, productsFor, mentioned } from '../src/index.js';
+import worker, { scrub, stripForeignLinks, productsFor, mentioned, withSafetyLines } from '../src/index.js';
 
 const ORIGIN = 'https://www.techfordad.com';
 const CHUNK = {
@@ -140,4 +140,19 @@ test('feedback is recorded', async () => {
   const r = await call(env, { id: 'abc', helpful: true }, { path: '/api/chat/feedback' });
   assert.equal(r.status, 200);
   assert.match(calls.sql[0].sql, /UPDATE chats SET helpful/);
+});
+
+test('an emergency gets 911 first, even when no article matches', async () => {
+  const { env } = fakeEnv({ matches: [{ score: 0.3, metadata: CHUNK }] });
+  const r = await call(env, { question: "My dad fell and can't get up, what do I do?" });
+  assert.equal(r.data.mode, 'no_match');
+  assert.match(r.data.answer, /^If someone is hurt or in danger right now, call 911/);
+  const ai = await call(fakeEnv({ answer: 'A medical alert pendant can help next time.' }).env, { question: 'My mom fell, what should I buy?' });
+  assert.match(ai.data.answer, /^If someone is hurt[\s\S]*medical alert pendant/);
+});
+
+test('health answers always end with ask their doctor', () => {
+  assert.match(withSafetyLines('What blood pressure reading is too high?', 'Above 180/120 is a crisis.'), /180\/120[\s\S]*Ask their doctor/);
+  assert.equal(withSafetyLines('Is hearing loss normal?', 'Ask your audiologist.'), 'Ask your audiologist.', 'no duplicate when the model already says it');
+  assert.equal(withSafetyLines('Which tablet is easiest?', 'The iPad.'), 'The iPad.', 'no health line on product questions');
 });
