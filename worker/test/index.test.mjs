@@ -156,3 +156,15 @@ test('health answers always end with ask their doctor', () => {
   assert.equal(withSafetyLines('Is hearing loss normal?', 'Ask your audiologist.'), 'Ask your audiologist.', 'no duplicate when the model already says it');
   assert.equal(withSafetyLines('Which tablet is easiest?', 'The iPad.'), 'The iPad.', 'no health line on product questions');
 });
+
+test('asked whether TechForDad tested something, the answer says plainly that it does not test products', () => {
+  const out = withSafetyLines('Did you test the Apple Watch fall detection yourselves?',
+    "I couldn't find that on TechForDad. The article says Apple says it turns on automatically for people 55 or older.");
+  assert.match(out, /^TechForDad does not test products itself\./);
+  assert.ok(!/couldn't find/.test(out), out);
+  assert.ok(!/medical advice/.test(out), 'fall detection is a product feature, not a health question');
+  assert.equal(withSafetyLines('Have you tried the Jitterbug?', 'TechForDad does not test products. The article says...'),
+    'TechForDad does not test products. The article says...', 'no duplicate when the model already says it');
+  assert.equal(withSafetyLines('Which tablet is easiest?', 'The iPad.'), 'The iPad.');
+  assert.match(withSafetyLines('My mom fell, does fall detection help?', 'Yes.'), /Ask their doctor/, 'a real fall still gets the health line');
+});
