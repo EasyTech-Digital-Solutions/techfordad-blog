@@ -13,7 +13,7 @@ const RULES = `You are "Ask TechForDad", the help assistant on techfordad.com, a
 
 Follow these rules exactly:
 1. Answer ONLY from the EXCERPTS below. If the excerpts do not answer the question, say "I couldn't find that on TechForDad" and suggest the closest topic the excerpts do cover. Never use outside knowledge about products, prices or health.
-2. TechForDad does not test products. Never say "we tested", "we tried", "in our experience" or give scores. Say "TechForDad recommends", "the article says", or attribute claims to the maker ("Apple says").
+2. TechForDad does not test products. If asked whether TechForDad tested, tried or used something, say plainly that TechForDad does not test products, then share what the articles say. Never say "we tested", "we tried", "in our experience" or give scores. Say "TechForDad recommends", "the article says", or attribute claims to the maker ("Apple says").
 3. Prices: only as "about $X when TechForDad last checked", and add that the current price is on the article's Check Price button. Use CAD for Canada, USD for the USA.
 4. Health (hearing, blood pressure, medication, falls, dementia, sleep): give only the general information in the excerpts and suggest asking their doctor, audiologist or pharmacist. Never diagnose, never give doses. If someone describes an emergency (a fall with injury, chest pain, can't breathe, can't wake someone), tell them to call 911 now, before anything else.
 5. Never write links, URLs or Amazon links. Under your answer the website adds links to the articles and a Check Price button for each product you name, so name products exactly as the excerpts do.
@@ -23,16 +23,23 @@ Follow these rules exactly:
 9. Write for an older reader: plain words, short sentences, at most about 150 words. Use short dashes for lists. No headings, no tables, no markdown bold.`;
 
 // Safety lines added by code, not left to the model (the live eval showed a small model skips them):
-// an emergency always starts with 911, even when no article matches; a health answer always ends with "ask their doctor".
+// an emergency always starts with 911, even when no article matches; a health answer always ends with "ask their doctor";
+// "did you test it?" always starts with the plain answer that TechForDad does not test products.
 const EMERGENCY = /\b(fell|fallen|(has|have|had) a fall|can'?t get up|can'?t breathe|not breathing|chest pains?|heart attack|stroke|unconscious|unresponsive|won'?t wake|can'?t wake|choking|seizure|overdose|bleeding)\b/i;
 const HEALTH = /\b(blood pressure|hypertension|hearing|deaf|tinnitus|medication|medicine|pills?|dose|dosage|dementia|alzheimer'?s|memory loss|sleep|apnea|diabetes|blood sugar|glucose|heart|pulse|oxygen|falls?|fell|fallen|symptoms?|pain|dizz(y|iness)|doctor)\b/i;
+const TESTING = /\b(did|do|have|has|does)\s+(you|y'?all|techfordad|your team)\s+(\w+\s+)?(test|tested|try|tried|use|used|review|reviewed)\b|\b(you|techfordad)\s+(tested|tried)\b|\bhands[- ]on\b/i;
+const TESTING_LINE = 'TechForDad does not test products itself. Its articles compare features, prices and what the makers say.';
 const EMERGENCY_LINE = 'If someone is hurt or in danger right now, call 911. Stay with them until help arrives.';
 const HEALTH_LINE = "This is general information from TechForDad's articles, not medical advice. Ask their doctor, audiologist or pharmacist about their own situation.";
 
 export function withSafetyLines(question, answer) {
   let out = answer;
+  if (TESTING.test(question) && !/does not test/i.test(out)) {
+    out = `${TESTING_LINE}\n\n${out.replace(/^I couldn't find that on TechForDad\.?\s*/i, '')}`.trim();
+  }
   if (EMERGENCY.test(question) && !/\b911\b/.test(out.slice(0, 200))) out = `${EMERGENCY_LINE}\n\n${out}`;
-  if (HEALTH.test(question) && !/\b(doctor|audiologist|pharmacist)\b/i.test(out)) out = `${out}\n\n${HEALTH_LINE}`;
+  // "fall detection" is a watch or pendant feature, not a health question on its own
+  if (HEALTH.test(question.replace(/\bfall[- ]detection\b/gi, '')) && !/\b(doctor|audiologist|pharmacist)\b/i.test(out)) out = `${out}\n\n${HEALTH_LINE}`;
   return out;
 }
 
