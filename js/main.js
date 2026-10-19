@@ -190,7 +190,7 @@ document.querySelectorAll('.gift-bar-close').forEach(btn => {
 // so pages load no extra code until someone uses it.
 // Soft launch: until CHAT_FOR_EVERYONE is true, the button only shows in a browser that opened a page with ?chat=on
 // (remembered in localStorage; ?chat=off forgets it). To launch, set it to true and raise ASSET_VERSION.
-const CHAT_FOR_EVERYONE = false;
+const CHAT_FOR_EVERYONE = true;
 (function () {
   const me = document.querySelector('script[src*="js/main.js"]');
   if (!me) return;

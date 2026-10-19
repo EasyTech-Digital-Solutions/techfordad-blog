@@ -230,14 +230,20 @@ def test_conversation_follows_the_reader_to_the_next_page(browser, site_url):
 
 
 @pytest.mark.slow
-def test_soft_launch_shows_the_button_only_after_chat_on(browser, site_url):
-    """Until CHAT_FOR_EVERYONE is true in js/main.js, visitors see no button; ?chat=on turns it on for that browser
-    (kept across pages and visits) and ?chat=off turns it off again."""
-    if re.search(r"const CHAT_FOR_EVERYONE = true", (P.ROOT / "js/main.js").read_text(encoding="utf-8")):
-        pytest.skip("the chat is launched for everyone")
+def test_chat_button_visibility_follows_the_launch_flag(browser, site_url):
+    """Launched (CHAT_FOR_EVERYONE true in js/main.js): every visitor sees the button. Soft launch (false): visitors see
+    no button; ?chat=on turns it on for that browser (kept across pages and visits) and ?chat=off turns it off again."""
+    launched = re.search(r"const CHAT_FOR_EVERYONE = true", (P.ROOT / "js/main.js").read_text(encoding="utf-8"))
     ctx = browser.new_context()  # no CHAT_ON: a normal visitor
     ctx.route("**/*", lambda r: r.continue_() if r.request.url.startswith(site_url) else r.fulfill(status=200, body=""))
     pg = ctx.new_page()
+    if launched:
+        pg.goto(f"{site_url}/{ARTICLE}")
+        assert pg.locator("#chat-launcher").is_visible(), "launched: every visitor sees the button"
+        pg.goto(f"{site_url}/index.html?chat=off")
+        assert pg.locator("#chat-launcher").is_visible(), "launched: ?chat=off no longer hides it"
+        ctx.close()
+        return
     pg.goto(f"{site_url}/{ARTICLE}")
     assert pg.locator("#chat-launcher").count() == 0, "visitors must not see the chat during the soft launch"
     pg.goto(f"{site_url}/{ARTICLE}?chat=on")
