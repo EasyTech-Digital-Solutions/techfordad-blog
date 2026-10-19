@@ -58,7 +58,7 @@ Ads are placed by us, never by Google's Auto ads in-page format (it inserted up 
 **Pages without ads (the script is not loaded):** About, Contact, Our Story, How We Review, Privacy Policy, Affiliate Disclosure, the three index pages (reviews, guides, gift hub), noindex pages, redirect stubs and the 404. AdSense does not allow ads on navigation, error or low-content pages.
 
 Never above the hero, in a list, table, card or contents box, and the gap under a comparison-table button is 56px (no accidental clicks). Every slot asks for a rectangle ad (300x250 or 336x280) and reserves 280px, so a filled ad never grows past the reserved height (a responsive 'auto' unit filled at 438px on phones); an unfilled slot collapses. A slot appears only when its id in `ads.json` is set.
-In the AdSense console keep Overlay formats (anchor; consider turning vignette off) and turn OFF In-page formats once the manual slots are live.
+In the AdSense console (Ads > site > Overlay formats) keep anchor and side rail ads, with anchor position **Bottom only** and **Allow dynamic anchors OFF**: a dynamic anchor filled at 330px, half of a phone screen, over the article (seen 2026-10-18; with it off the anchor is a 66 to 103px strip). Keep vignette ads off, and In-page formats OFF (the manual slots replace them).
 Local preview: open any page on localhost with `?adpreview` to see grey placeholders in every slot (Google serves no ads locally, and an unfilled slot normally collapses); the switch checks the host and never runs on the live site.
 Tests: `tests/test_ads.py` (placement, idempotency, which pages load the script, the localhost-only preview) and `test_ad_slots_never_shift_or_crowd_the_reader` (browser).
 
