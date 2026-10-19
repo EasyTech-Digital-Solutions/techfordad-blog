@@ -2,7 +2,7 @@
 // (tests/test_chat.py runs this as part of the suite.)
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import worker, { scrub, stripForeignLinks, productsFor, mentioned, withSafetyLines } from '../src/index.js';
+import worker, { scrub, stripForeignLinks, productsFor, mentioned, withSafetyLines, aboutPrices } from '../src/index.js';
 
 const ORIGIN = 'https://www.techfordad.com';
 const CHUNK = {
@@ -167,4 +167,15 @@ test('asked whether TechForDad tested something, the answer says plainly that it
     'TechForDad does not test products. The article says...', 'no duplicate when the model already says it');
   assert.equal(withSafetyLines('Which tablet is easiest?', 'The iPad.'), 'The iPad.');
   assert.match(withSafetyLines('My mom fell, does fall detection help?', 'Yes.'), /Ask their doctor/, 'a real fall still gets the health line');
+});
+
+test('bare prices get "about"; qualified prices and ranges are left alone', () => {
+  assert.equal(aboutPrices('- Jabra Enhance Select M2 ($1,695/pair)'), '- Jabra Enhance Select M2 (about $1,695/pair)');
+  assert.equal(aboutPrices('Lively Mobile2 starts at $24.99/month.'), 'Lively Mobile2 starts at about $24.99/month.');
+  assert.equal(aboutPrices('It costs about $120 when TechForDad last checked.'), 'It costs about $120 when TechForDad last checked.');
+  assert.equal(aboutPrices('The monthly cost is about $40 to $60.'), 'The monthly cost is about $40 to $60.');
+  assert.equal(aboutPrices('Gifts under $50, between $20 and $30, or $15-$25.'), 'Gifts under $50, between $20 and $30, or about $15-$25.');
+  assert.equal(aboutPrices('The iPad is about C$499 in Canada, or US$349.'), 'The iPad is about C$499 in Canada, or about US$349.');
+  assert.equal(aboutPrices('No prices here.'), 'No prices here.');
+  assert.match(withSafetyLines('Which hearing aids?', 'ELEHEAR ($599/pair)'), /about \$599/, 'applied to every answer');
 });
