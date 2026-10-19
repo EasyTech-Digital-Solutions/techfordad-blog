@@ -36,6 +36,7 @@ CASES = [
 
 TESTING = re.compile(r"\b(we|I) (tested|tried|used|measured)\b|in (our|my) experience|\b\d(\.\d)?/10\b", re.I)
 LINK = re.compile(r"https?://|www\.|amazon\.(com|ca)/", re.I)  # a URL; naming the store "Amazon.ca" is fine
+SEARCH = re.compile(r"\bsearch(ing)?\b[^.]{0,40}\b(website|site|TechForDad)\b", re.I)  # the site has no search box
 
 
 def ask(base, question, page, country):
@@ -57,6 +58,8 @@ def check(expect, data):
         problems.append("claims testing or gives a score")
     if LINK.search(a):
         problems.append("contains a link")
+    if SEARCH.search(a):
+        problems.append("tells the reader to search the website (it has no search box)")
     if expect in ("answer", "answer_cad", "price") and data.get("mode") != "ai":
         problems.append(f"expected an answer, got mode {data.get('mode')}")
     if expect in ("answer", "answer_cad", "price") and not data.get("sources"):
