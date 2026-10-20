@@ -19,77 +19,77 @@
     "Telus Mobility for Good seniors (Canada plans page)": {
       "method": "fetch",
       "url": "https://www.telus.com/en/social-impact/connecting-canada/connecting-for-good-programs/seniors",
-      "price": "$25 10GB / $35 20GB, GIS + OAS T4A, free S23 FE on 2-yr term",
-      "verified": "2026-09-29",
+      "price": "$25 10GB / $35 20GB, GIS + T4A(OAS)",
+      "verified": "2026-10-19",
       "note": "Used on blog/best-cell-phone-plans-for-seniors-canada.html and the carrier section of best-cell-phones-for-seniors-canada.html."
     },
     "Rogers Connected for Success (Canada plans page)": {
       "method": "fetch",
       "url": "https://www.rogers.com/connected-for-success",
-      "price": "$25 10GB / $35 15GB, income/disability support, GIS or RGI housing, no age rule",
-      "verified": "2026-09-29"
+      "price": "$25 10GB / $35 15GB",
+      "verified": "2026-10-19"
     },
     "Rogers 65+ plans (Canada plans page)": {
       "method": "fetch",
       "url": "https://www.rogers.com/mobility/seniors",
       "price": "Essentials $85 ($65 autopay) 100GB / Popular $100 ($80) / Ultimate $115 ($95)",
-      "verified": "2026-09-29"
+      "verified": "2026-10-19"
     },
     "Chatr prepaid (Canada plans page)": {
       "method": "fetch",
       "url": "https://www.chatrwireless.com/plans",
-      "price": "$21 1GB / $25 5GB / $30 15GB / $35 30GB / $159 yr 40GB, new customers",
-      "verified": "2026-09-29"
+      "price": "$22 500MB (autopay only; iPhoneinCanada 2026-10-08) / $25 5GB / $30 15GB / $35 30GB / $159 yr 40GB",
+      "verified": "2026-10-19"
     },
     "Lucky Mobile prepaid (Canada plans page)": {
       "method": "fetch",
       "url": "https://www.luckymobile.ca/plans",
-      "price": "$21 1GB / $25 5GB / $30 15GB / $35 30GB, new activations",
-      "verified": "2026-09-29",
+      "price": "$22 500MB / $25 5GB / $30 15GB / $35 30GB",
+      "verified": "2026-10-19",
       "note": "Page listed the low plans as ending Oct 5 2026; re-check after that date. The $19 500MB promo was removed from the article."
     },
     "Virgin Plus BYOP 20GB (Canada plans page)": {
       "method": "fetch",
       "url": "https://www.virginplus.ca/en/plans/postpaid.html",
-      "price": "$40/mo with autopay credit, new activations",
-      "verified": "2026-09-29",
+      "price": "60GB from $45/mo incl. autopay credit, new activations",
+      "verified": "2026-10-19",
       "note": "A $45 version ended Oct 5 2026 and was removed from the article."
     },
     "Bell postpaid BYOP (Canada plans page)": {
       "method": "fetch",
       "url": "https://www.bell.ca/Mobility/Cell_phone_plans",
-      "price": "Select 60GB $50 / Select 100GB US roaming $55 / Ultra $70 and $85, with streaming credit",
+      "price": "page: Select 60GB $50 / 100GB $55 / Ultra $70, $85; bell.ca now shows 100GB $60 / Ultra $75, $85 but with a stale 'Offer ends July 7, 2024' line",
       "verified": "2026-09-29"
     },
     "Apple iPhone 17e": {
       "method": "fetch",
       "url": "https://www.apple.com/shop/buy-iphone/iphone-17e",
-      "price": "$699",
-      "verified": "2026-09-23"
+      "price": "$699 (256GB)",
+      "verified": "2026-10-19"
     },
     "Apple iPhone 16 (Canada)": {
       "method": "fetch",
       "url": "https://www.apple.com/ca/shop/buy-iphone/iphone-16",
       "price": "$1,149 CAD",
-      "verified": "2026-09-24"
+      "verified": "2026-10-19"
     },
     "Apple iPad (11th generation)": {
-      "method": "news",
-      "url": "https://www.macrumors.com/2026/07/21/get-the-a16-ipad-for-399/",
-      "price": "$449",
-      "verified": "2026-09-23"
+      "method": "fetch",
+      "url": "https://www.apple.com/shop/buy-ipad/ipad",
+      "price": "$449 (128GB Wi-Fi)",
+      "verified": "2026-10-19"
     },
     "Apple iPad (Canada)": {
       "method": "fetch",
       "url": "https://www.apple.com/ca/shop/buy-ipad/ipad",
       "price": "$649 CAD",
-      "verified": "2026-09-23"
+      "verified": "2026-10-19"
     },
     "Apple iPad mini": {
       "method": "fetch",
       "url": "https://www.apple.com/shop/buy-ipad/ipad-mini",
       "price": "$599",
-      "verified": "2026-09-23"
+      "verified": "2026-10-19"
     },
     "Apple iPad Air (M4)": {
       "method": "fetch",
@@ -101,37 +101,37 @@
       "method": "fetch",
       "url": "https://www.apple.com/ca/shop/buy-ipad/ipad-air",
       "price": "11in $999 / 13in $1,299 CAD",
-      "verified": "2026-09-23"
+      "verified": "2026-10-19"
     },
     "Apple Watch Series 12 / SE 3": {
       "method": "fetch",
       "url": "https://www.apple.com/shop/buy-watch/apple-watch",
       "price": "S12 $399 / SE 3 $249",
-      "verified": "2026-09-23"
+      "verified": "2026-10-19"
     },
     "Apple Watch Series 12 / SE 3 (Canada)": {
       "method": "fetch",
       "url": "https://www.apple.com/ca/shop/buy-watch/apple-watch",
       "price": "S12 $549 / SE 3 $329 CAD",
-      "verified": "2026-09-24"
+      "verified": "2026-10-19"
     },
     "Apple AirTag 2": {
       "method": "fetch",
       "url": "https://www.apple.com/shop/buy-airtag/airtag",
       "price": "$29 / 4-pack $99",
-      "verified": "2026-09-24"
+      "verified": "2026-10-19"
     },
     "Apple MacBook Air M5 15-inch": {
       "method": "news",
-      "url": "https://www.macrumors.com/roundup/macbook-air/",
-      "price": "$1,499",
-      "verified": "2026-09-23"
+      "url": "https://www.iclarified.com/p1166/macbook-air-m5-15inch-16gb-ram-512gb-ssd-starlight",
+      "price": "$1,499 list (iClarified, dealnews)",
+      "verified": "2026-10-19"
     },
     "Amazon Echo / Kindle / Fire lineup": {
       "method": "news",
-      "url": "https://thenextweb.com/news/amazon-echo-kindle-fire-tv-eero-price-rises-memory-shortage",
-      "price": "Echo Dot $79.99, Dot Max $119.99, Spot $109.99, Show 8 $199.99, Show 11 $249.99, Kindle $149.99, Paperwhite $199.99, Scribe $499.99",
-      "verified": "2026-09-24",
+      "url": "https://www.iclarified.com/101850/amazon-raises-prices-on-echo-kindle-fire-tv-and-eero-devices",
+      "price": "Dot $79.99 / Dot Max $119.99 / Show 11 $249.99 (iClarified, Fortune 2026-08-21)",
+      "verified": "2026-10-19",
       "note": "Second source: https://fortune.com/2026/08/21/exclusive-amazon-quietly-hiked-prices-echo-fire-tv-kindle-eero-significant-increases-memory-costs/"
     },
     "Amazon Fire HD 10": {
@@ -152,20 +152,20 @@
       "method": "fetch",
       "url": "https://ereader.kobo.com/en-us/products/kobo-clara-bw",
       "price": "Clara BW $159.99 / Libra Colour $259.99",
-      "verified": "2026-09-24",
+      "verified": "2026-10-19",
       "note": "Libra: https://ereader.kobo.com/en-us/products/kobo-libra-colour"
     },
     "Kobo Canada": {
       "method": "fetch",
-      "url": "https://ereader.kobo.com/en-ca/products/kobo-clara-bw",
-      "price": "Clara BW $179.99 / Libra Colour $289.99 / Clara Colour $199.99 CAD",
-      "verified": "2026-09-24"
+      "url": "https://ereader.kobo.com/en-ca/products/kobo-clara-colour",
+      "price": "Clara BW $179.99 / Clara Colour $199.99 / Libra Colour $289.99 CAD",
+      "verified": "2026-10-19"
     },
     "Samsung Galaxy Watch 9": {
       "method": "fetch",
       "url": "https://www.samsung.com/us/watches/galaxy-watch9/",
-      "price": "$379.99 (40mm BT)",
-      "verified": "2026-09-24",
+      "price": "From $379.99",
+      "verified": "2026-10-19",
       "note": "The /buy/ page shows the LTE price ($429.99) first; use the product page."
     },
     "Samsung Galaxy A16 5G (Canada)": {
@@ -177,8 +177,8 @@
     "Ring Battery Doorbell 2K / 2K Plus": {
       "method": "fetch",
       "url": "https://ring.com/products/battery-doorbell-2nd-gen",
-      "price": "2K $99.99 / 2K Plus $179.99 regular",
-      "verified": "2026-09-23",
+      "price": "2K $99.99 / 2K Plus $179.99",
+      "verified": "2026-10-19",
       "note": "ring.com/ca pages show USD; don't use them for CAD."
     },
     "Ring subscription": {
@@ -190,21 +190,21 @@
     "Google Nest Doorbell / Learning Thermostat": {
       "method": "news",
       "url": "https://9to5google.com/2026/08/31/google-nest-camera-doorbell-price-hike/",
-      "price": "Doorbell battery $199.99, wired 3rd gen $199.99, Learning Thermostat $279.99",
-      "verified": "2026-09-24"
+      "price": "Doorbell $199.99, Learning Thermostat $279.99",
+      "verified": "2026-10-19"
     },
     "eufy Video Doorbell S330": {
       "method": "fetch",
       "url": "https://www.eufy.com/products/e8203111",
-      "price": "Wired S330 $179.99",
+      "price": "eufy.com: Wired S330 $179.99, HomeBase not included; page says ~$259.99 with HomeBase and 'included HomeBase'",
       "verified": "2026-09-24",
       "note": "The battery + HomeBase variant on the page isn't listed on eufy.com."
     },
     "Schlage Encode Plus": {
       "method": "fetch",
       "url": "https://www.schlage.com/en/home/smart-locks/encode-plus.html",
-      "price": "$329",
-      "verified": "2026-09-24"
+      "price": "From $329 ($399 MSRP)",
+      "verified": "2026-10-19"
     },
     "iRobot Roomba i3+ EVO": {
       "method": "fetch",
@@ -215,38 +215,38 @@
     "Jitterbug Flip3": {
       "method": "fetch",
       "url": "https://shop.lively.com/products/jitterbug-flip3-flip-phone",
-      "price": "$79.99 list ($59.99 on sale at Lively on 2026-10-05); plans $14.99-$44.99/mo; $35 activation. Flip2 is sold out",
-      "verified": "2026-10-05"
+      "price": "$79.99 list (sale $59.99); plans $14.99-$44.99/mo; $35 activation",
+      "verified": "2026-10-19"
     },
     "Jitterbug Smart5": {
       "method": "fetch",
       "url": "https://shop.lively.com/collections/jitterbug-phones",
-      "price": "Smart5 $119.99",
-      "verified": "2026-09-24"
+      "price": "$119.99 list (sale $89.99)",
+      "verified": "2026-10-19"
     },
     "Samsung Galaxy A17 5G (US)": {
-      "method": "fetch",
-      "url": "https://www.samsung.com/us/smartphones/galaxy-a17-5g/buy/",
-      "price": "$244.99 on Samsung US (list $269.99), 128GB unlocked",
-      "verified": "2026-10-05"
+      "method": "news",
+      "url": "https://www.sammobile.com/news/samsung-launches-galaxy-a17-5g-canada/",
+      "price": "US list ~$269.99; Canada $269.99 CAD (SamMobile, MobileSyrup)",
+      "verified": "2026-10-19"
     },
     "Lively Mobile2": {
       "method": "fetch",
       "url": "https://shop.lively.com/products/lively-mobile2-all-in-one-medical-alert",
-      "price": "Plans from $24.99/mo, fall detection +$9.99/mo, device $119.99",
-      "verified": "2026-09-24"
+      "price": "Plans from $24.99/mo, fall detection +$9.99/mo, device $119.99 (on sale $89.99)",
+      "verified": "2026-10-19"
     },
     "Medical Guardian MGHome Cellular": {
       "method": "fetch",
       "url": "https://www.medicalguardian.com/medical-alert-systems/cellular-home-alert",
       "price": "$34.95/mo, fall detection +$10/mo",
-      "verified": "2026-09-24"
+      "verified": "2026-10-19"
     },
     "Bay Alarm Medical plans": {
       "method": "fetch",
-      "url": "https://www.bayalarmmedical.com/free-quote/",
-      "price": "SOS Home $27.95, All-In-One 2 $34.95, Micro $34.95, Smartwatch $39.95/mo",
-      "verified": "2026-09-23"
+      "url": "https://www.bayalarmmedical.com/pricing/",
+      "price": "$34.95/mo, fall detection +$10/mo, device $149 list, no activation fee",
+      "verified": "2026-10-19"
     },
     "TELUS Health / LivingWell (Canada)": {
       "method": "fetch",
@@ -264,7 +264,7 @@
       "method": "fetch",
       "url": "https://www.epill.com/medsmart.html",
       "price": "$589.95 (list $695)",
-      "verified": "2026-09-24"
+      "verified": "2026-10-19"
     },
     "LiveFine 28-Day dispenser": {
       "method": "fetch",
@@ -275,63 +275,63 @@
     "Omron Platinum BP5465": {
       "method": "fetch",
       "url": "https://omronhealthcare.com/products/platinum-upper-arm-blood-pressure-monitor-bp5465",
-      "price": "MSRP $90.99 (page uses ~Amazon street price)",
-      "verified": "2026-09-24"
+      "price": "MSRP $90.99 (page uses ~$79 Amazon street price)",
+      "verified": "2026-10-19"
     },
     "Omron Gold": {
       "method": "fetch",
       "url": "https://omronhealthcare.com/products/gold-wireless-upper-arm-blood-pressure-monitor-bp5350",
-      "price": "Page now shows BP5360, MSRP $84.99",
-      "verified": "2026-09-24"
+      "price": "BP5360 MSRP $84.99",
+      "verified": "2026-10-19"
     },
     "Omron 3 Series": {
       "method": "fetch",
       "url": "https://omronhealthcare.com/products/3-series-upper-arm-blood-pressure-monitor-bp7100",
-      "price": "Page now shows BP7150, MSRP $59.99",
-      "verified": "2026-09-24"
+      "price": "BP7150 MSRP $59.99",
+      "verified": "2026-10-19"
     },
     "Jabra Enhance Select M2": {
       "method": "fetch",
       "url": "https://www.jabraenhance.com/product/enhanceselectm2",
       "price": "$1,695/pair",
-      "verified": "2026-09-23"
+      "verified": "2026-10-19"
     },
     "ELEHEAR Beyond Pro": {
       "method": "fetch",
       "url": "https://elehear.com/products/beyond-pro",
-      "price": "$599/pair",
-      "verified": "2026-09-24"
+      "price": "$599/pair (sale $539)",
+      "verified": "2026-10-19"
     },
     "Audien Atom Pro 2": {
       "method": "fetch",
       "url": "https://audienhearing.com/collections/atom-pro-2",
-      "price": "$289/pair",
-      "verified": "2026-09-24"
+      "price": "$289/pair (sale $229)",
+      "verified": "2026-10-19"
     },
     "MDHearing NEO XS PRO": {
       "method": "fetch",
       "url": "https://www.mdhearingaid.com/hearing-aids/mdhearing-neo-xs-pro/",
       "price": "$597/pair",
-      "verified": "2026-09-24"
+      "verified": "2026-10-19"
     },
     "Oura Ring 5": {
       "method": "news",
-      "url": "https://techcrunch.com/2026/05/28/oura-unveils-its-ring-5-with-a-thinner-lighter-design-starting-at-399/",
-      "price": "$399 / $499 premium; membership $5.99/mo",
-      "verified": "2026-09-24",
+      "url": "https://www.bgr.com/2253429/oura-ring-5-smart-ring-review/",
+      "price": "$399 / $499; membership $5.99/mo (BGR, Sam's Club)",
+      "verified": "2026-10-19",
       "note": "Membership: https://ouraring.com/store/rings/oura-ring-4"
     },
     "Logitech Wave Keys": {
       "method": "fetch",
       "url": "https://www.logitech.com/en-us/shop/p/wave-keys-ergonomic-wireless",
       "price": "$69.99",
-      "verified": "2026-09-24"
+      "verified": "2026-10-19"
     },
     "Flipper Big Button Remote": {
       "method": "fetch",
-      "url": "https://flipperremote.com/products/flipper",
-      "price": "$44.95",
-      "verified": "2026-09-24"
+      "url": "https://www.amazon.com/dp/B0CR5S1BCN",
+      "price": "$39.95 (Amazon listing, 2026-10-19)",
+      "verified": "2026-10-19"
     },
     "GE BigEZ 84666 / UltraPro 85053": {
       "method": "fetch",
@@ -343,19 +343,19 @@
       "method": "fetch",
       "url": "https://shop.panasonic.com/products/amplified-cordless-phone-kx-tgm420",
       "price": "$135.99",
-      "verified": "2026-09-24"
+      "verified": "2026-10-19"
     },
     "Tracki GPS": {
       "method": "fetch",
-      "url": "https://tracki.com/collections/gps-trackers",
-      "price": "Device $14.90",
+      "url": "https://tracki.com/products/tracki-2025-4g-model-mini-real-time-gps-tracker-2-years-subscription-included",
+      "price": "page ~$14.90 device + $19.95/mo; tracki.com now sells subscription bundles ($142.29 with 2 yrs)",
       "verified": "2026-09-24"
     },
     "LandAirSea 54": {
       "method": "fetch",
       "url": "https://landairsea.com/pricing/",
       "price": "Device $39.95 list ($29.95 sale)",
-      "verified": "2026-09-24"
+      "verified": "2026-10-19"
     },
     "AngelSense / Jiobit": {
       "method": "unverifiable",
@@ -371,28 +371,28 @@
     },
     "Large-print keyboards (KOPJIPPOM, BOOGIIO, SABLUTE, Nuklz)": {
       "method": "unverifiable",
-      "url": "",
-      "price": "Amazon-only; can't be fetched",
+      "url": "https://www.amazon.com/",
+      "price": "Amazon-only listings; can't be fetched",
       "verified": "2026-09-24"
     },
     "MedicAlert Foundation Canada": {
       "method": "fetch",
       "url": "https://www.medicalert.ca/subscription-plans/ExSP_Annually",
-      "price": "$129.99/year membership + $75 one-time registration fee",
-      "verified": "2026-09-30"
+      "price": "$129.99/year + $75 registration fee",
+      "verified": "2026-10-19"
     },
     "Telus LivingWell Companion": {
       "method": "fetch",
       "url": "https://www.telus.com/en/personal-health/medical-alert-systems",
-      "price": "LivingWell Companion Home from $45/mo CAD; mobile pendant from $65/mo CAD (1-yr term, $35 activation)",
-      "verified": "2026-09-30",
+      "price": "Home from $45/mo CAD; pendant from $65/mo CAD (1-yr term, $35 activation, $10 off existing customers)",
+      "verified": "2026-10-19",
       "note": "Matches the existing 'TELUS Health / LivingWell (Canada)' entry."
     },
     "Medical Alert Classic": {
       "method": "fetch",
       "url": "https://www.medicalalert.com/product/home-system-cellular/",
       "price": "From $29.95/mo",
-      "verified": "2026-09-30"
+      "verified": "2026-10-19"
     },
     "Chipolo ONE Point": {
       "method": "news",
@@ -403,21 +403,21 @@
     "ASUS VivoBook 16": {
       "method": "news",
       "url": "https://www.asus.com/us/laptops/for-home/vivobook/vivobook-16-laptop-f1605/",
-      "price": "$549.99 (F1605 base config)",
+      "price": "page from $549; ASUS page shows no price",
       "verified": "2026-09-30",
       "note": "Config-dependent; higher-spec models run to $999+."
     },
     "Hero Automatic Pill Dispenser": {
       "method": "fetch",
       "url": "https://www.herohealth.com/pricing",
-      "price": "$99.99 device + $29.99/mo (prepaid annual) / $44.99/mo (12-month) / $59.99/mo (no commitment)",
+      "price": "$29.99-$59.99/mo by commitment; pricing page no longer shows a $99.99 device fee; homepage says from $39.99/mo prepaid",
       "verified": "2026-09-30",
       "note": "Price tiers changed from the $39.99-$59.99 range previously shown; site text fixed."
     },
     "Jiobit Smart Tag": {
       "method": "news",
-      "url": "https://www.jiobit.com/product?prod=adults",
-      "price": "Device $99.99 (promo, list $149.99); plans $8.33/mo (1-yr prepay) or $16.99/mo (no contract)",
+      "url": "https://hotairtag.com/jiobit-alternative/",
+      "price": "Discontinued? jiobit.com adult page redirects to Life360 pet GPS; reports (Mar, Jul 2026) say Life360 no longer sells new Jiobits",
       "verified": "2026-09-30",
       "note": "Close to the site's existing $99.99 / $8.99/mo figures; left as-is."
     },
@@ -430,27 +430,27 @@
     },
     "HP 17.3-inch Laptop AMD Ryzen 5 7430U": {
       "method": "news",
-      "url": "https://www.bestbuy.com/product/hp-17-3-fhd-ips-laptop-amd-ryzen-5-7430u-16gb-ram-512gb-ssd-windows-11-pro-natural-silver/J3X7ZPP8QW/sku/12514922",
-      "price": "$669.99 list (Best Buy), exact match",
+      "url": "https://www.neweggbusiness.com/hp-17-0-16gb-memory-512-gb-ssd-silver/p/9B-36B-0007-00F13",
+      "price": "page from $669; listings $489-$813 by config",
       "verified": "2026-09-30"
     },
     "Lenovo IdeaPad 5 15.6-inch": {
       "method": "news",
-      "url": "https://gizmodo.com/lenovos-2026-ideapad-gets-another-price-drop-to-43-off-pre-installed-with-windows-11-laptop-priced-like-budget-tablet-2000750373",
-      "price": "Configs range ~$370-$650+ depending on spec; site's $499 is plausible but not pinned to one exact config",
+      "url": "https://www.lenovo.com/",
+      "price": "page from $499; configs ~$370-$650",
       "verified": "2026-09-30",
       "note": "Needs a 2nd source matching the exact configuration before calling it confirmed."
     },
     "Lifeline Canada": {
       "method": "unverifiable",
       "url": "https://www.lifeline.ca/",
-      "price": "No CAD pricing published; quote-only by phone",
+      "price": "No CAD pricing published; quote-only",
       "verified": "2026-09-30"
     },
     "MedMinder Automatic Pill Dispenser": {
       "method": "unverifiable",
-      "url": "https://medminder.com/pricing/",
-      "price": "Pricing page unreachable; site's $125/mo figure unconfirmed this pass",
+      "url": "https://medminder.com/",
+      "price": "page from $125/mo; pricing page 404; sources $49.99-$125/mo",
       "verified": "2026-09-30"
     },
     "Lil Tracker 4G Senior GPS Watch": {
@@ -462,7 +462,7 @@
     "Telus SmartHome Security (formerly ADT Canada)": {
       "method": "unverifiable",
       "url": "https://www.telus.com/en/smart-home-security",
-      "price": "Page unreachable this pass (server error)",
+      "price": "page from ~$55/mo CAD; telus.com 502 this pass",
       "verified": "2026-09-30"
     },
     "SimpliSafe Home Security": {
@@ -508,9 +508,9 @@
       "verified": "2026-09-30"
     },
     "VTech SN5147 Amplified Cordless Phone": {
-      "method": "fetch",
-      "url": "https://www.vtechphones.com/store/pd/4143/SN5147-Amplified-Corded-Cordless-Phone-with-Answering-System-Big-Buttons-Extra-Loud-Ringer-Smart-Call-Blocker",
-      "price": "$114.95 (VTech official)",
+      "method": "news",
+      "url": "https://www.vtechphones.com/",
+      "price": "page ~$114.95; retailers $110-$158",
       "verified": "2026-09-30"
     },
     "VTech CS6224-11 DECT 6.0 Cordless Phone (Canada)": {
@@ -520,9 +520,9 @@
       "verified": "2026-09-30"
     },
     "AT&T CL82407 4-Handset System": {
-      "method": "fetch",
+      "method": "news",
       "url": "https://telephones.att.com/pd/3738/CL82407-4-handset-cordless-answering-system-with-smart-call-blocker",
-      "price": "$114.95 (AT&T official)",
+      "price": "page ~$114.95; AT&T store not fetchable; only resellers found",
       "verified": "2026-09-30"
     },
     "AT&T EL52303 3-Handset Cordless Phone System (Canada)": {
@@ -534,8 +534,8 @@
     },
     "Doro 7050": {
       "method": "news",
-      "url": "https://www.bestbuy.com/site/reviews/doro-7050-with-512mb-memory-cell-phone-black-white-consumer-cellular/6293310",
-      "price": "$49.99 (Best Buy)",
+      "url": "https://www.consumercellular.com/",
+      "price": "page ~$49.99; no current official price found",
       "verified": "2026-09-30"
     },
     "Artfone C1+ 4G Senior Cell Phone (Canada)": {
@@ -559,8 +559,8 @@
     "Greater Goods 0602": {
       "method": "fetch",
       "url": "https://shop.greatergoods.com/products/greater-goods-blood-pressure-monitor-cuff-kit-by-balance-digital-bp-meter-with-large-display-upper-arm-cuff-set-also-comes-with-tubing-and-device-bag-bp-monitor-new",
-      "price": "$39.99 (official store)",
-      "verified": "2026-09-30"
+      "price": "$39.99",
+      "verified": "2026-10-19"
     },
     "Omron 10 Series Wireless (BP7450CAN)": {
       "method": "fetch",
@@ -577,21 +577,21 @@
     },
     "Amazon Kindle Scribe (2026, 32GB with front light)": {
       "method": "news",
-      "url": "https://templacity.com/kindle-scribe/kindle-scribe-pricing/",
-      "price": "$499 (32GB with front light)",
-      "verified": "2026-09-30"
+      "url": "https://blog.the-ebook-reader.com/2026/08/21/amazon-has-just-raised-the-price-of-kindles-by-40-50-each/",
+      "price": "$499.99 (unchanged by the hike)",
+      "verified": "2026-10-19"
     },
     "Lenovo Tab M11 (Canada)": {
       "method": "news",
-      "url": "https://www.bestbuy.ca/en-ca/product/lenovo-tab-m11-11-64gb-android-13-tablet-with-mediatek-helio-g88-8-core-processor-luna-grey/17744707",
-      "price": "Retailer spread $149.88 (Canada Computers) to $294.96 (Walmart, OOS); Best Buy $189.97. Site's $249 sits above two of three sources.",
+      "url": "https://www.bestbuy.ca/",
+      "price": "page ~$189.97 CAD; no current Canadian listing found",
       "verified": "2026-09-30",
       "note": "Possibly stale (site may be too high); needs a cleaner 2nd source before editing the live page."
     },
     "AngelSense GPS Tracker (US)": {
       "method": "news",
-      "url": "https://neurolaunch.com/angelsense-review/",
-      "price": "From $39.99/mo (US base plan)",
+      "url": "https://www.angelsense.com/pricing/",
+      "price": "page from $39.99/mo; angelsense.com pricing page shows no figures",
       "verified": "2026-09-30"
     },
     "AngelSense Guardian Kit (Canada)": {
@@ -617,15 +617,15 @@
     "UltraPro BigEZ OneTouch Universal TV Remote (Model 85053)": {
       "method": "fetch",
       "url": "https://byjasco.com/products/ultrapro-2-device-onetouch-replacement-universal-remote-backlit-with-big-button",
-      "price": "~$17 (manufacturer $16.99, retail list $16.98)",
-      "verified": "2026-09-30",
+      "price": "$16.99",
+      "verified": "2026-10-19",
       "note": "Fixed on site: was quoting an occasional sale price ($10.99-$11) as the regular price."
     },
     "Medcenter Monthly Pill Organizer with Talking Alarm": {
       "method": "fetch",
       "url": "https://www.epill.com/medcenter.html",
-      "price": "$149.95 (epill.com, list $164); other retailers cluster $77-170",
-      "verified": "2026-09-30",
+      "price": "$149.95 (list $164)",
+      "verified": "2026-10-19",
       "note": "Fixed on site: was shown as $25-35, a large and consistent error across 6+ sources."
     },
     "Withings Sleep Analyzer": {
@@ -636,10 +636,10 @@
       "note": "Site's $169.95 sits within the commonly cited range."
     },
     "OZI Sleep": {
-      "method": "news",
+      "method": "fetch",
       "url": "https://ozisleep.com/",
-      "price": "$199 one-time; no monthly fee for standard features per manufacturer",
-      "verified": "2026-09-30",
+      "price": "$199 one-time, no monthly subscription",
+      "verified": "2026-10-19",
       "note": "Site's cautious 'may require a plan' hedge isn't contradicted; left as-is."
     },
     "Garmin Vivosmart 5": {
@@ -650,9 +650,9 @@
     },
     "Garmin Venu 4 (US)": {
       "method": "news",
-      "url": "https://www.bestbuy.com/product/garmin-venu-4-gps-smartwatch-41-mm-fiber-reinforced-polymer-silver-2025/JXF9YF5FRC",
-      "price": "$499.99 (41mm)",
-      "verified": "2026-09-30"
+      "url": "https://the-gadgeteer.com/2026/06/22/garmin-venu-4-lowest-price-prime-day-2026/",
+      "price": "$549.99 regular (launch MSRP); often $499.99 on sale (Android Authority, The Gadgeteer Jun 2026)",
+      "verified": "2026-10-19"
     },
     "Garmin Venu 4 (Canada)": {
       "method": "news",
@@ -681,9 +681,9 @@
     },
     "WYZE Cam v4": {
       "method": "fetch",
-      "url": "https://www.wyze.com/products/wyze-cam",
-      "price": "$44.98 (official Wyze store)",
-      "verified": "2026-09-30"
+      "url": "https://www.wyze.com/products/wyze-cam-v4",
+      "price": "$44.98",
+      "verified": "2026-10-19"
     },
     "eufy Indoor Cam S350 (4K)": {
       "method": "news",
@@ -694,15 +694,15 @@
     },
     "Fire TV Stick HD": {
       "method": "news",
-      "url": "https://www.pocket-lint.com/amazon-just-quietly-raised-the-price-of-all-its-fire-sticks/",
-      "price": "$40 (raised from $35, Aug 21 2026)",
-      "verified": "2026-09-30",
+      "url": "https://www.iclarified.com/101850/amazon-raises-prices-on-echo-kindle-fire-tv-and-eero-devices",
+      "price": "$39.99 (raised from $34.99 Aug 2026)",
+      "verified": "2026-10-19",
       "note": "2nd source confirms the site was correct all along."
     },
     "Lenovo Chromebook Plus 14": {
       "method": "news",
-      "url": "https://www.dealnews.com/products/Lenovo/Lenovo-Chromebook-Plus-14-inch-2-in-1-Touchscreen-Laptop/517314.html",
-      "price": "Standard model $650-$749; a 2-in-1 variant at $429. Site's $349 wasn't found anywhere.",
+      "url": "https://www.tomsguide.com/computing/chromebooks/lenovo-chromebook-plus-14-review",
+      "price": "page from $649; sources give $649 start, $999 MSRP, $599-$699 sales",
       "verified": "2026-09-30",
       "note": "Suspicious: $349 not matched by any source found. Needs a closer look, possibly wrong model/config."
     },
@@ -780,42 +780,42 @@
       "verified": "2026-09-30"
     },
     "Avantree Ensemble TV headphones": {
-      "method": "news",
-      "url": "https://www.amazon.com/Avantree-Ensemble-Earpads-Headphones-Comfortable/dp/B0DZBWTV74",
-      "price": "$109.99",
-      "verified": "2026-09-30"
+      "method": "fetch",
+      "url": "https://www.amazon.com/dp/B08629PFFQ",
+      "price": "$109.99 (Amazon listing, 2026-10-19)",
+      "verified": "2026-10-19"
     },
     "AINFTIME day and date clock": {
-      "method": "news",
-      "url": "https://www.amazon.com/AINFTIME-Elderly-3-Calendar-Dementia-Alzheimers/dp/B0BKV7TVNL",
-      "price": "$26.99-$39.99 depending on size/color variant",
-      "verified": "2026-09-30",
+      "method": "fetch",
+      "url": "https://www.amazon.com/dp/B0BKV7TVNL",
+      "price": "$26.99 (Amazon listing, 2026-10-19)",
+      "verified": "2026-10-19",
       "note": "Site's $29.99 falls within this spread."
     },
     "Ember Mug 2 (10 oz)": {
-      "method": "news",
-      "url": "https://www.bestbuy.com/product/ember-temperature-control-smart-mug2-10-oz-black/J3GTZXXQ2P",
-      "price": "$129.95 regular; sale ~$90",
-      "verified": "2026-09-30",
+      "method": "fetch",
+      "url": "https://www.amazon.com/dp/B07NQPYGYD",
+      "price": "$89.99 (Amazon listing, 2026-10-19)",
+      "verified": "2026-10-19",
       "note": "Site's $89.99 matches sale pricing, not the $129.95 regular price."
     },
     "Click & Grow indoor herb garden": {
-      "method": "news",
-      "url": "https://www.amazon.com/Click-Grow-Smart-Garden-Indoor/dp/B01MRVMKQH",
-      "price": "$99.95 (3-pod model)",
-      "verified": "2026-09-30"
+      "method": "fetch",
+      "url": "https://www.amazon.com/dp/B01MRVMKQH",
+      "price": "$112.49 (Amazon listing, 2026-10-19)",
+      "verified": "2026-10-19"
     },
     "Nazano lighted magnifier": {
-      "method": "news",
-      "url": "https://us.amazon.com/Magnifying-Illuminated-Magnifier-Inspection-Degeneration/dp/B08PP4RJ5J",
-      "price": "$14.89 list ($9.35 typical sale)",
-      "verified": "2026-09-30"
+      "method": "fetch",
+      "url": "https://www.amazon.com/dp/B08PP4RJ5J",
+      "price": "$9.89 (Amazon listing, 2026-10-19)",
+      "verified": "2026-10-19"
     },
     "American Lifetime dementia clock": {
-      "method": "news",
-      "url": "https://www.amazon.com/American-Lifetime-Dementia-Digital-Seniors/dp/B01N47H0IG",
-      "price": "$54.95-$59.95 (8-inch)",
-      "verified": "2026-09-30"
+      "method": "fetch",
+      "url": "https://www.amazon.com/dp/B019G79V1Q",
+      "price": "$59.95 (Amazon listing, 2026-10-19)",
+      "verified": "2026-10-19"
     },
     "EZVALO 6-pack rechargeable motion-sensor night lights": {
       "method": "news",
@@ -840,9 +840,9 @@
     },
     "Sennheiser All-Day Clear": {
       "method": "news",
-      "url": "https://www.hearingtracker.com/hearing-aids/sennheiser-all-day-clear",
-      "price": "$999.95/pair list; sale $799.95/pair",
-      "verified": "2026-09-30"
+      "url": "https://www.hearingtracker.com/hearing-aids/sennheiser",
+      "price": "$999.95/pair (HearingTracker Jun 2026, Walmart)",
+      "verified": "2026-10-19"
     },
     "Tracki 4G Mini GPS Tracker (Canada)": {
       "method": "news",
@@ -860,16 +860,16 @@
     },
     "Clarity XLC8 Amplified Bluetooth Cordless Phone (Canada)": {
       "method": "fetch",
-      "url": "https://shop.omnihearing.ca/products/clarity-xlc8-amplified-bluetooth-cordless-phone",
-      "price": "$280-$290 CAD",
-      "verified": "2026-09-30",
+      "url": "https://www.chs.ca/product/clarity-xlc8",
+      "price": "$309.89 CAD (CHS); $279.99 CAD sold out (Omni Hearing)",
+      "verified": "2026-10-19",
       "note": "Fixed on site: was $150-200 CAD, roughly half the real price."
     },
     "Clarity XLC3.4+": {
-      "method": "news",
+      "method": "fetch",
       "url": "https://www.diglo.com/clarity-professional-xlc34-amplified-phone;sku=CL-XLC3.4+;s=221;p=CL-XLC3.4+",
-      "price": "$159.95 list (Diglo, exact match); sale range $117-$140",
-      "verified": "2026-09-30"
+      "price": "$159.95 list ($117.95 sale)",
+      "verified": "2026-10-19"
     },
     "Doro PhoneEasy 626 (Canada)": {
       "method": "news",
@@ -893,9 +893,9 @@
     },
     "Amazon Kindle Paperwhite (16 GB, post-hike)": {
       "method": "news",
-      "url": "https://blog.the-ebook-reader.com/2026/08/21/amazon-has-just-raised-the-price-of-kindles-by-40-50-each/",
-      "price": "$199.99 (raised from $159.99 on Aug 21, 2026)",
-      "verified": "2026-09-30",
+      "url": "https://blog.the-ebook-reader.com/2026/10/02/are-the-new-kindles-and-new-accessories-too-expensive/",
+      "price": "$199.99; Paperwhite 7 announced Oct 1 at $199.99, ships end of Oct; Canada $279.99 CAD (ebookfriendly)",
+      "verified": "2026-10-19",
       "note": "Exact match to site's figure; up to 52% hikes in Canada, consistent with the higher CAD figure."
     },
     "Ring Alarm Security Kit (Canada)": {
@@ -908,8 +908,56 @@
       "method": "fetch",
       "url": "https://www.samsung.com/us/tablets/galaxy-tab-a11-plus/buy/",
       "price": "$299.99 (128GB) / $379.99 (256GB)",
-      "verified": "2026-10-05",
+      "verified": "2026-10-19",
       "note": "Replaces the Galaxy Tab A9+ (discontinued late 2025). Specs (4 speakers, 7,040 mAh, Android 16, up to 7 OS updates, released 2025-11-02) from the GSMArena spec sheet. Used on blog/best-tablets-for-seniors.html."
+    },
+    "Bay Alarm Medical SOS Smartwatch": {
+      "method": "fetch",
+      "url": "https://www.bayalarmmedical.com/pricing/",
+      "price": "$39.95/mo, fall detection +$10/mo, device $199 list",
+      "verified": "2026-10-19"
+    },
+    "Medical Guardian MGMove": {
+      "method": "news",
+      "url": "https://www.theseniorlist.com/medical-alert-systems/medical-guardian/mgmove/",
+      "price": "page: $199.95 device + from $39.95/mo; 2026 sources disagree ($39.95 vs $42.95/mo)",
+      "verified": "2026-10-19"
+    },
+    "Life Alert": {
+      "method": "news",
+      "url": "https://www.ncoa.org/product-resources/medical-alert-systems/life-alert-review/",
+      "price": "$69-$109.85/mo, $248 activation (base system) per NCOA, page dated 2026-10-07",
+      "verified": "2026-10-19"
+    },
+    "Bay Alarm Medical SOS Home (in-home)": {
+      "method": "fetch",
+      "url": "https://www.bayalarmmedical.com/medical-alert-system/in-home/",
+      "price": "As low as $27.95/mo",
+      "verified": "2026-10-19"
+    },
+    "Samsung Galaxy A36 5G (Canada)": {
+      "method": "news",
+      "url": "https://mobilesyrup.com/2025/03/28/samsung-galaxy-a36-canada-pricing/",
+      "price": "page: from ~$499 CAD; launch $529.99 CAD, carriers ~$528-530",
+      "verified": "2026-10-19"
+    },
+    "Panasonic KX-TGM470W (Canada)": {
+      "method": "unverifiable",
+      "url": "https://www.panasonic.com/ca/",
+      "price": "page ~$189.99 CAD; Panasonic Canada store 403, no Canadian listing found",
+      "verified": "2026-10-19"
+    },
+    "Amazon Kindle (2024 basic)": {
+      "method": "news",
+      "url": "https://blog.the-ebook-reader.com/2026/08/21/amazon-has-just-raised-the-price-of-kindles-by-40-50-each/",
+      "price": "$149.99 (post Aug 21 hike); Kindle 2026 announced Oct 1 at the same price",
+      "verified": "2026-10-19"
+    },
+    "Samsung Galaxy Ring": {
+      "method": "news",
+      "url": "https://www.bgr.com/2226551/is-a-samsung-galaxy-ring-worth-it-in-2026/",
+      "price": "$399 list (Amazon $399.99 Jul 2026)",
+      "verified": "2026-10-19"
     }
   }
 }

@@ -17,14 +17,14 @@ import re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "gift-guides")
 TAG = "techfordad-gifts-20"
-PRICE_DATE = "September 30, 2026"   # date prices were last checked; change with --checked, never by hand
-UPDATED_LABEL = "September 2026"    # shown as "Updated ..." on the pages; follows PRICE_DATE
+PRICE_DATE = "October 19, 2026"   # date prices were last checked; change with --checked, never by hand
+UPDATED_LABEL = "October 2026"    # shown as "Updated ..." on the pages; follows PRICE_DATE
 PUBLISHED = "2026-09-29"            # first publish date (structured data)
-MODIFIED = "2026-09-30"             # last modified date (structured data); follows PRICE_DATE
+MODIFIED = "2026-10-19"             # last modified date (structured data); follows PRICE_DATE
 SITE = "https://www.techfordad.com"
 
 
-SHORT_LABEL = "Sep 2026"            # short form used in price notes such as "(Amazon, checked Sep 2026)"
+SHORT_LABEL = "Oct 2026"            # short form used in price notes such as "(Amazon, checked Sep 2026)"
 
 
 def stamp(s):
@@ -58,7 +58,7 @@ GUIDES = [
         ],
         "products": [
             {"name": "Skylight Frame, 10-inch", "asin": "B01N7ENHO6", "badge": "Easiest for a parent who avoids apps",
-             "price": "about $139 to $160 (retail listings, Sep 2026)",
+             "price": "about $139 to $160 (retail listings, September 2026)",
              "why": "Family members email photos to the frame's own address and the pictures appear. Your parent does nothing except look at it.",
              "best": "Parents who do not use smartphones or apps",
              "watch": "Skylight says the mobile app and cloud features need Skylight Plus at $39 a year. Sending photos by email stays free."},
@@ -78,7 +78,7 @@ GUIDES = [
              "best": "A first tablet on a budget",
              "watch": "Amazon sells versions with and without lock-screen ads, so check which one you are buying."},
             {"name": "Kindle Paperwhite (16GB)", "asin": "B0CFPJYX7P", "badge": "For readers",
-             "price": "about $159.99 (Amazon, 16GB)",
+             "price": "about $199.99 (Amazon's Aug 2026 price list, 16GB)",
              "why": "Text size can be enlarged, and the screen is glare-free in bright rooms.",
              "best": "Parents who read every day",
              "watch": "The 32GB Signature Edition costs more, about $199.99. Books need Wi-Fi to download."},
@@ -97,7 +97,7 @@ GUIDES = [
         "addons": [
             {"name": "Joywell armchair caddy", "asin": "B07GDBWNXW", "price": "about $9.98",
              "why": "Keeps the remote, phone and glasses within reach of the favorite chair."},
-            {"name": "Nazano lighted magnifier", "asin": "B08PP4RJ5J", "price": "about $14.89",
+            {"name": "Nazano lighted magnifier", "asin": "B08PP4RJ5J", "price": "about $9.89",
              "why": "Helps with pill labels, menus and small print. Uses AA batteries."},
         ],
         "sections": [
@@ -150,7 +150,7 @@ GUIDES = [
              "best": "Parents who already use an iPhone and will wear a watch",
              "watch": "It needs an iPhone. The GPS model relies on the phone or Wi-Fi for calls; cellular models add a monthly plan. It must be worn and charged daily."},
             {"name": "Samsung Galaxy Watch9 (40mm Bluetooth)", "asin": "B0H9BPZXZC", "badge": "For Android families",
-             "price": "$379.99 (Amazon, Sep 2026)",
+             "price": "$379.99 (Samsung, Oct 2026)",
              "why": "The Android counterpart. Samsung's watches include fall detection for people who use an Android phone.",
              "best": "Parents on Android phones",
              "watch": "The Amazon listing is a bundle that includes a gift card, so check the exact variant before you buy. Confirm fall detection is switched on in the watch settings."},
@@ -175,7 +175,7 @@ GUIDES = [
              "best": "iPhone owners who misplace things",
              "watch": "It is for items. For a person who wanders, use a purpose-built GPS tracker (see our GPS tracker review)."},
             {"name": "Blink Mini 2 indoor camera", "asin": "B0BWWZXWPL", "badge": "Easiest camera with Alexa",
-             "price": "about $40 (Security.org, Sep 2026)",
+             "price": "about $40 (Security.org, September 2026)",
              "why": "A plug-in camera with two-way audio. With an Echo Show it can show the living room on request.",
              "best": "Families who want a quick check-in view",
              "watch": "Blink cloud plans start at $3.99 a month. Check what live view and recording need before you buy."},
@@ -255,7 +255,7 @@ GUIDES = [
              "best": "Any stage where routine helps",
              "watch": "Set the alarm labels for your parent's routine before you give it. It plugs in, so place it where it can stay."},
             {"name": "AINFTIME day and date clock", "asin": "B0BKV7TVNL", "badge": "Lower-cost clock",
-             "price": "about $29.99 (Amazon, checked Sep 2026)",
+             "price": "about $26.99 (Amazon, checked Oct 2026)",
              "why": "The same idea at half the price, with a large 7-inch display showing day and date.",
              "best": "A second clock for the kitchen or bedroom",
              "watch": "Fewer reviews than the American Lifetime clock."},
@@ -265,7 +265,7 @@ GUIDES = [
              "best": "Someone who still enjoys television but cannot use a standard remote",
              "watch": "It works with the TV and cable box only, not streaming apps."},
             {"name": "Skylight Frame, 10-inch", "asin": "B01N7ENHO6", "badge": "Photos of family and friends",
-             "price": "about $139 to $160 (retail listings, Sep 2026)",
+             "price": "about $139 to $160 (retail listings, September 2026)",
              "why": "Family emails photos to the frame. Photographs are a gentle way to prompt memories and conversation.",
              "best": "Any stage; add names to the photo files if you can",
              "watch": "Skylight Plus ($39 a year) is optional and adds app and cloud features."},
@@ -332,7 +332,7 @@ GUIDES = [
              "price": "about $28 (Chipolo)", "why": "The same idea for Android phones, using Google's Find My Device network.",
              "best": "Android owners", "watch": "Check which phones it works with before you buy; iPhone owners are usually better served by the AirTag."},
             {"name": "AINFTIME day and date clock", "asin": "B0BKV7TVNL", "badge": "Knows what day it is",
-             "price": "about $29.99", "why": "A large display that spells out the day and date, useful for anyone who loses track of days.",
+             "price": "about $26.99", "why": "A large display that spells out the day and date, useful for anyone who loses track of days.",
              "best": "A parent who often asks what day it is", "watch": "Plugs in."},
             {"name": "Flipper big-button TV remote", "asin": "B0CR5S1BCN", "badge": "Simple TV control",
              "price": "about $39.95", "why": "Large color-coded buttons for power, volume and channels.",
@@ -353,7 +353,7 @@ GUIDES = [
              "price": "about $15.99", "why": "Lights the hallway, bathroom and kitchen automatically, battery powered.",
              "best": "Any parent who gets up at night", "watch": "Batteries need replacing eventually."},
             {"name": "Nazano lighted magnifier", "asin": "B08PP4RJ5J", "badge": "Read small print",
-             "price": "about $14.89", "why": "12 LEDs for reading labels, menus and small print.",
+             "price": "about $9.89", "why": "12 LEDs for reading labels, menus and small print.",
              "best": "Pill labels and recipes", "watch": "Uses AA batteries."},
         ],
         "addons_title": "Small extras (not tech)",
@@ -404,7 +404,7 @@ GUIDES = [
              "best": "Slow coffee or tea drinkers",
              "watch": "Hand wash only, and about 90 minutes of heat off the coaster. Ember's own site now sells the newer Mug 3 at $149.95."},
             {"name": "Click & Grow indoor herb garden", "asin": "B01MRVMKQH", "badge": "Fresh herbs on the counter",
-             "price": "about $101.60 (Amazon, checked Sep 2026)",
+             "price": "about $112.49 (Amazon, checked Oct 2026)",
              "why": "Self-watering and lit by built-in LEDs, so there is no gardening skill required.",
              "best": "Cooks who like fresh basil or mint",
              "watch": "Plant pods are a recurring purchase."},
@@ -822,7 +822,7 @@ def hub_page():
 CHIPS = {
     "tech-gifts-for-elderly-parents": "From about $40",
     "safety-tech-for-elderly-parents-who-live-alone": "From $29",
-    "tech-gifts-for-someone-with-dementia": "From about $30",
+    "tech-gifts-for-someone-with-dementia": "From about $27",
     "tech-gifts-for-seniors-under-50": "All under $50",
     "gifts-for-elderly-parents-who-have-everything": "From about $70",
 }
