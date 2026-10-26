@@ -35,13 +35,27 @@
   } catch (e) { /* keep default */ }
   root.setAttribute('data-gifts', gifts);
 
-  // The gift announcement bar stays hidden for 14 days after a visitor dismisses it.
+  // Sale window: the announcement bar shows the sale message instead of the gift one.
+  //   Black Friday: Nov 10 - Nov 30 (through Cyber Monday)
+  // Preview: ?sale=blackfriday or ?sale=off
+  var saleStart = 0;
+  try {
+    var s = new URLSearchParams(location.search).get('sale');
+    var d3 = new Date(), m3 = d3.getMonth() + 1, day3 = d3.getDate();
+    if (s === 'blackfriday' || (s !== 'off' && m3 === 11 && day3 >= 10)) {
+      root.setAttribute('data-sale', 'blackfriday');
+      saleStart = new Date(d3.getFullYear(), 10, 10).getTime();
+    }
+  } catch (e) { /* no sale message */ }
+
+  // The announcement bar stays hidden for 14 days after a visitor dismisses it, except that a sale
+  // message shows again to someone who only dismissed the gift message before the sale began.
   // Set here, before first paint, so a dismissed bar never flashes back in.
   // Preview the bar again with ?giftbar=show.
   try {
     var closedAt = parseInt(localStorage.getItem('giftBarClosed') || '0', 10);
     var forceShow = new URLSearchParams(location.search).get('giftbar') === 'show';
     if (forceShow) localStorage.removeItem('giftBarClosed');
-    else if (closedAt && Date.now() - closedAt < 14 * 24 * 60 * 60 * 1000) root.setAttribute('data-gift-bar', 'closed');
+    else if (closedAt && closedAt >= saleStart && Date.now() - closedAt < 14 * 24 * 60 * 60 * 1000) root.setAttribute('data-gift-bar', 'closed');
   } catch (e) { /* storage blocked: the bar simply stays visible */ }
 })();

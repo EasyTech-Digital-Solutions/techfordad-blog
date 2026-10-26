@@ -72,6 +72,10 @@
     "laptops": {
       "noun": "Laptops",
       "criteria": "screen size, keyboard quality, battery life, the accessibility tools built into the operating system, and price"
+    },
+    "black-friday": {
+      "noun": "Picks",
+      "criteria": "whether the product is already one of our recommendations for older parents, whether it was in stock on Amazon or from the provider when we checked, its regular price from the maker or our monthly price check, any monthly plan it needs, and how easy it is for an older adult to use"
     }
   },
   "pages": {
@@ -103,6 +107,8 @@
     "blog/best-video-doorbells-for-seniors-canada.html": "video-doorbells",
     "blog/best-large-button-keyboards-for-seniors.html": "keyboards",
     "blog/best-laptops-for-seniors.html": "laptops",
-    "blog/best-video-doorbells-for-seniors.html": "video-doorbells"
+    "blog/best-video-doorbells-for-seniors.html": "video-doorbells",
+    "blog/black-friday-deals-for-seniors.html": "black-friday",
+    "blog/black-friday-deals-for-seniors-canada.html": "black-friday"
   }
 }

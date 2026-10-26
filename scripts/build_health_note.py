@@ -18,6 +18,7 @@ MEDICAL_PAGES = [
     "blog/best-pill-organizers-for-seniors.html", "blog/best-sleep-trackers-for-seniors.html",
     "blog/best-smartwatches-for-seniors.html", "blog/best-smartwatches-for-seniors-canada.html",
     "blog/medical-alert-no-monthly-fee.html", "blog/life-alert-vs-medical-guardian.html",
+    "blog/black-friday-deals-for-seniors.html", "blog/black-friday-deals-for-seniors-canada.html",
     "guides/hearing-aids.html", "guides/fall-prevention-tech.html", "guides/gps-trackers.html",
     "guides/home-safety-checklist.html",
 ]

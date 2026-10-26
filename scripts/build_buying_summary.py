@@ -42,6 +42,7 @@ PAGES = {
     "blog/best-sleep-trackers-for-seniors.html": ("us", ["withings", "ozi", "garmin", "oura", "samsung"]),
     "blog/best-smartwatches-for-seniors.html": ("us", ["best-overall", "best-android", "best-battery", "best-monitored", "best-budget"]),
     "blog/best-tv-remotes-for-seniors.html": ("us", ["flipper", "ge-bigeez", "smpl", "ge-4device", "ultrapro"]),
+    "blog/black-friday-deals-for-seniors.html": ("us", ["medical-alert", "apple-watch-se", "airtag", "landairsea", "fire-hd-10", "fire-hd-8", "galaxy-tab", "ring-doorbell", "blink-doorbell", "blink-mini", "fire-tv-stick", "tv-ears", "audien"]),
     # Canada pages with a "Top Picks at a Glance" table
     "blog/best-blood-pressure-monitors-canada.html": ("ca", ["omron-10", "omron-3", "omron-afib", "ad-medical", "withings"]),
     "blog/best-cordless-phones-for-seniors-canada.html": ("ca", ["vtech", "panasonic", "clarity", "att", "budget"]),
@@ -50,6 +51,7 @@ PAGES = {
     "blog/best-home-security-for-seniors-canada.html": ("ca", ["telus", "ring", "abode", "rogers", "local"]),
     "blog/best-smartwatches-for-seniors-canada.html": ("ca", ["apple-watch-series-12", "apple-watch-se", "samsung-galaxy-watch", "lifeline-smartwatch", "garmin-venu"]),
     "blog/best-video-doorbells-for-seniors-canada.html": ("ca", ["ring-battery", "ring-plus", "google-nest", "eufy", "arlo"]),
+    "blog/black-friday-deals-for-seniors-canada.html": ("ca", ["medical-alert", "apple-watch-se", "airtag", "landairsea", "fire-hd-10", "fire-hd-8", "galaxy-tab", "ring-doorbell", "blink-doorbell", "blink-mini", "fire-tv-stick"]),
     # US pages with no Quick Picks list: the section goes just before the first product review
     "blog/best-hearing-aids-for-seniors.html": ("us-insert", ["elehear", "jabra", "lexie", "audien", "eargo"]),
     "blog/best-smart-home-devices-for-seniors.html": ("us-insert", ["echo-show", "ring", "smart-lights", "thermostat", "alexa-together", "robot-vacuum", "smart-lock"]),

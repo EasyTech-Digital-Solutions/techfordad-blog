@@ -359,6 +359,29 @@
         {"kind": "independent", "title": "AARP and National Alliance for Caregiving: Caregiving in the US 2025", "url": "https://www.aarp.org/caregiving/basics/caregiving-in-us-survey-2025/", "used_for": "How many Americans are family caregivers"}
       ],
       "note": "Programs, eligibility and phone numbers change. Confirm with the agency before you rely on them, and check your state or province for local programs."
+    },
+    "blog/black-friday-deals-for-seniors.html": {
+      "sources": [
+        {"kind": "maker", "title": "Apple: Buy AirTag", "url": "https://www.apple.com/shop/buy-airtag/airtag", "used_for": "AirTag 1-pack and 4-pack prices"},
+        {"kind": "maker", "title": "Apple: Buy Apple Watch", "url": "https://www.apple.com/shop/buy-watch/apple-watch", "used_for": "Apple Watch SE 3 starting price"},
+        {"kind": "maker", "title": "Samsung: Galaxy Tab A11+", "url": "https://www.samsung.com/us/tablets/galaxy-tab-a11-plus/buy/", "used_for": "Galaxy Tab A11+ prices by storage size"},
+        {"kind": "maker", "title": "Bay Alarm Medical", "url": "https://www.bayalarmmedical.com/", "used_for": "Bay Alarm Medical's devices, starting monthly prices and current offer"},
+        {"kind": "maker", "title": "Medical Guardian", "url": "https://www.medicalguardian.com/", "used_for": "Medical Guardian's systems and current offers"},
+        {"kind": "maker", "title": "TV Ears: Systems", "url": "https://www.tvears.com/collections/tv-ears", "used_for": "TV Ears systems and their list prices"},
+        {"kind": "maker", "title": "Amazon: Holiday return policy 2025", "url": "https://www.aboutamazon.com/news/retail/amazon-holiday-return-policy-2025", "used_for": "Amazon's 2025 holiday return window, including the shorter window for Apple products"},
+        {"kind": "authority", "title": "NIDCD: Assistive devices for people with hearing, voice, speech, or language disorders", "url": "https://www.nidcd.nih.gov/health/assistive-devices-people-hearing-voice-speech-or-language-disorders", "used_for": "What assistive listening devices are, how infrared systems work, and that they can be used with or without hearing aids"},
+        {"kind": "official", "title": "FDA: OTC hearing aids, what you should know", "url": "https://www.fda.gov/medical-devices/hearing-aids/otc-hearing-aids-what-you-should-know", "used_for": "Who over-the-counter hearing aids are for, and the warning signs that need a doctor first"}
+      ],
+      "note": "Prices, plans and offers change quickly around Black Friday. Confirm them on the maker's or provider's own page before you buy."
+    },
+    "blog/black-friday-deals-for-seniors-canada.html": {
+      "sources": [
+        {"kind": "maker", "title": "Apple Canada: Buy AirTag", "url": "https://www.apple.com/ca/shop/buy-airtag/airtag", "used_for": "AirTag 1-pack and 4-pack prices in Canada"},
+        {"kind": "maker", "title": "Apple Canada: Buy Apple Watch", "url": "https://www.apple.com/ca/shop/buy-watch/apple-watch", "used_for": "Apple Watch SE 3 starting price in Canada, and its Fall Detection and Emergency SOS features"},
+        {"kind": "maker", "title": "TELUS: LivingWell Companion Home", "url": "https://www.telus.com/en/personal-health/livingwell-companion", "used_for": "LivingWell Companion Home monthly prices, term and activation fee"},
+        {"kind": "maker", "title": "Lifeline Canada", "url": "https://www.lifeline.ca/en/", "used_for": "Lifeline's home and mobile services, fall detection limits and current offer"}
+      ],
+      "note": "Prices, plans and offers change quickly around Black Friday. Confirm them on the maker's or provider's own page before you buy."
     }
   }
 }

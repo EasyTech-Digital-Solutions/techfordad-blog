@@ -86,6 +86,22 @@ def test_reviews_dropdown_opens_on_desktop(sample_page, sessions):
     pg.close()
 
 
+@pytest.mark.parametrize("rel,target", [("blog/best-tablets-for-seniors.html", "black-friday-deals-for-seniors.html"),
+                                        ("blog/best-tablets-for-seniors-canada.html", "black-friday-deals-for-seniors-canada.html")])
+def test_announcement_bar_switches_to_the_sale_message(rel, target, sessions):
+    """One bar, two messages (js/season.js, css/style.css): the gift message outside a sale, the Black Friday message
+    in the sale window, linking to the page's own country. Both links stay in the HTML so search engines can follow them."""
+    pg = _open(sessions, rel + "?gifts=peak&sale=off&giftbar=show")
+    assert pg.locator(".gift-bar .bar-gifts").first.is_visible() and not pg.locator(".gift-bar .bar-sale").first.is_visible()
+    assert pg.locator(f'.gift-bar a.bar-sale[href$="{target}"]').count() == 1, "the sale link should be in the HTML all year"
+    pg.close()
+    pg = _open(sessions, rel + "?gifts=off&sale=blackfriday&giftbar=show")
+    sale = pg.locator(".gift-bar a.bar-sale").first
+    assert sale.is_visible() and not pg.locator(".gift-bar .bar-gifts").first.is_visible(), "the sale message should replace the gift one"
+    assert sale.get_attribute("href").endswith(target)
+    pg.close()
+
+
 # ------------------------------------------------------------------ share and copy
 
 def test_copy_link_copies_the_canonical_address(page, toolbar_page, sessions):

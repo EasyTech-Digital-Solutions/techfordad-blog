@@ -26,7 +26,32 @@
       "asin": "B0BL66884Q",
       "price": null,
       "used_in": [
-        "blog/best-tablets-for-seniors-canada.html"
+        "blog/best-tablets-for-seniors-canada.html",
+        "blog/black-friday-deals-for-seniors-canada.html"
+      ]
+    },
+    {
+      "id": "ca-amazon-fire-hd-8",
+      "name": "Amazon Fire HD 8",
+      "country": "ca",
+      "url": "https://www.amazon.ca/dp/B0CVDNLYYS",
+      "kind": "product",
+      "asin": "B0CVDNLYYS",
+      "price": null,
+      "used_in": [
+        "blog/black-friday-deals-for-seniors-canada.html"
+      ]
+    },
+    {
+      "id": "ca-amazon-fire-tv-stick-hd",
+      "name": "Amazon Fire TV Stick HD",
+      "country": "ca",
+      "url": "https://www.amazon.ca/dp/B0F7K67DY2",
+      "kind": "product",
+      "asin": "B0F7K67DY2",
+      "price": null,
+      "used_in": [
+        "blog/black-friday-deals-for-seniors-canada.html"
       ]
     },
     {
@@ -64,7 +89,20 @@
       "used_in": [
         "blog/best-home-security-for-seniors-canada.html",
         "blog/best-tablets-for-seniors-canada.html",
-        "blog/best-video-doorbells-for-seniors-canada.html"
+        "blog/best-video-doorbells-for-seniors-canada.html",
+        "blog/black-friday-deals-for-seniors-canada.html"
+      ]
+    },
+    {
+      "id": "ca-apple-airtag-2nd-generation-4-pack",
+      "name": "Apple AirTag (2nd Generation) 4-Pack",
+      "country": "ca",
+      "url": "https://www.amazon.ca/dp/B0GJTKTLKQ",
+      "kind": "product",
+      "asin": "B0GJTKTLKQ",
+      "price": null,
+      "used_in": [
+        "blog/black-friday-deals-for-seniors-canada.html"
       ]
     },
     {
@@ -120,6 +158,18 @@
       "id": "ca-apple-watch-se-3",
       "name": "Apple Watch SE 3",
       "country": "ca",
+      "url": "https://www.amazon.ca/dp/B0FQFTB8JX",
+      "kind": "product",
+      "asin": "B0FQFTB8JX",
+      "price": null,
+      "used_in": [
+        "blog/black-friday-deals-for-seniors-canada.html"
+      ]
+    },
+    {
+      "id": "ca-apple-watch-se-3-2",
+      "name": "Apple Watch SE 3",
+      "country": "ca",
       "url": "https://www.amazon.ca/s?k=Apple+Watch+SE+3",
       "kind": "search",
       "asin": null,
@@ -162,6 +212,30 @@
       "price": null,
       "used_in": [
         "blog/best-cell-phones-for-seniors-canada.html"
+      ]
+    },
+    {
+      "id": "ca-blink-mini-indoor-camera",
+      "name": "Blink Mini Indoor Camera",
+      "country": "ca",
+      "url": "https://www.amazon.ca/dp/B07X4BT8C9",
+      "kind": "product",
+      "asin": "B07X4BT8C9",
+      "price": null,
+      "used_in": [
+        "blog/black-friday-deals-for-seniors-canada.html"
+      ]
+    },
+    {
+      "id": "ca-blink-video-doorbell-outdoor-4-bundle",
+      "name": "Blink Video Doorbell + Outdoor 4 Bundle",
+      "country": "ca",
+      "url": "https://www.amazon.ca/dp/B0F1BXM2YJ",
+      "kind": "product",
+      "asin": "B0F1BXM2YJ",
+      "price": null,
+      "used_in": [
+        "blog/black-friday-deals-for-seniors-canada.html"
       ]
     },
     {
@@ -274,6 +348,18 @@
       ]
     },
     {
+      "id": "ca-landairsea-54-gps-tracker",
+      "name": "LandAirSea 54 GPS Tracker",
+      "country": "ca",
+      "url": "https://www.amazon.ca/dp/B06XVZ6Y4T",
+      "kind": "product",
+      "asin": "B06XVZ6Y4T",
+      "price": null,
+      "used_in": [
+        "blog/black-friday-deals-for-seniors-canada.html"
+      ]
+    },
+    {
       "id": "ca-lenovo-tab-m11",
       "name": "Lenovo Tab M11",
       "country": "ca",
@@ -347,6 +433,18 @@
       ]
     },
     {
+      "id": "ca-ring-battery-doorbell-2k-plus",
+      "name": "Ring Battery Doorbell 2K Plus",
+      "country": "ca",
+      "url": "https://www.amazon.ca/dp/B0F642MFP7",
+      "kind": "product",
+      "asin": "B0F642MFP7",
+      "price": null,
+      "used_in": [
+        "blog/black-friday-deals-for-seniors-canada.html"
+      ]
+    },
+    {
       "id": "ca-ring-battery-video-doorbell-2nd-gen",
       "name": "Ring Battery Video Doorbell (2nd Gen)",
       "country": "ca",
@@ -392,6 +490,18 @@
       "price": null,
       "used_in": [
         "blog/best-cell-phones-for-seniors-canada.html"
+      ]
+    },
+    {
+      "id": "ca-samsung-galaxy-tab-a11",
+      "name": "Samsung Galaxy Tab A11+",
+      "country": "ca",
+      "url": "https://www.amazon.ca/dp/B0FVXMHHRP",
+      "kind": "product",
+      "asin": "B0FVXMHHRP",
+      "price": null,
+      "used_in": [
+        "blog/black-friday-deals-for-seniors-canada.html"
       ]
     },
     {
@@ -598,7 +708,8 @@
       "asin": "B0GVTPKJVT",
       "price": null,
       "used_in": [
-        "blog/best-tablets-for-seniors.html"
+        "blog/best-tablets-for-seniors.html",
+        "blog/black-friday-deals-for-seniors.html"
       ]
     },
     {
@@ -610,7 +721,21 @@
       "asin": "B0CVDN4QS6",
       "price": "$129.99",
       "used_in": [
-        "blog/best-tablets-for-seniors.html"
+        "blog/best-tablets-for-seniors.html",
+        "blog/black-friday-deals-for-seniors.html"
+      ]
+    },
+    {
+      "id": "com-amazon-fire-tv-stick-hd",
+      "name": "Amazon Fire TV Stick HD",
+      "country": "us",
+      "url": "https://www.amazon.com/dp/B0DJGDC3BD",
+      "kind": "product",
+      "asin": "B0DJGDC3BD",
+      "price": null,
+      "used_in": [
+        "blog/black-friday-deals-for-seniors.html",
+        "gift-guides/tech-gifts-for-seniors-under-50.html"
       ]
     },
     {
@@ -677,6 +802,7 @@
         "blog/best-smart-home-devices-for-seniors.html",
         "blog/best-tablets-for-seniors.html",
         "blog/best-video-doorbells-for-seniors.html",
+        "blog/black-friday-deals-for-seniors.html",
         "gift-guides/safety-tech-for-elderly-parents-who-live-alone.html",
         "gift-guides/tech-gifts-for-elderly-parents.html",
         "gift-guides/tech-gifts-for-seniors-under-50.html"
@@ -719,6 +845,18 @@
         "gift-guides/safety-tech-for-elderly-parents-who-live-alone.html",
         "gift-guides/tech-gifts-for-seniors-under-50.html",
         "gift-guides/tech-gifts-for-someone-with-dementia.html"
+      ]
+    },
+    {
+      "id": "com-apple-airtag-2nd-generation-4-pack",
+      "name": "Apple AirTag (2nd Generation) 4-Pack",
+      "country": "us",
+      "url": "https://www.amazon.com/dp/B0GJTXVN9Z",
+      "kind": "product",
+      "asin": "B0GJTXVN9Z",
+      "price": null,
+      "used_in": [
+        "blog/black-friday-deals-for-seniors.html"
       ]
     },
     {
@@ -792,6 +930,7 @@
       "price": null,
       "used_in": [
         "blog/best-medical-alert-systems.html",
+        "blog/black-friday-deals-for-seniors.html",
         "blog/jitterbug-vs-iphone-for-seniors.html",
         "blog/medical-alert-no-monthly-fee.html",
         "gift-guides/safety-tech-for-elderly-parents-who-live-alone.html"
@@ -869,7 +1008,8 @@
       "asin": "B0CJQ95BHX",
       "price": "$289/pair",
       "used_in": [
-        "blog/best-hearing-aids-for-seniors.html"
+        "blog/best-hearing-aids-for-seniors.html",
+        "blog/black-friday-deals-for-seniors.html"
       ]
     },
     {
@@ -1027,12 +1167,25 @@
       "asin": "B0BWWZXWPL",
       "price": null,
       "used_in": [
+        "blog/black-friday-deals-for-seniors.html",
         "gift-guides/safety-tech-for-elderly-parents-who-live-alone.html",
         "gift-guides/tech-gifts-for-seniors-under-50.html"
       ]
     },
     {
       "id": "com-blink-video-doorbell",
+      "name": "Blink Video Doorbell",
+      "country": "us",
+      "url": "https://www.amazon.com/dp/B0DGQZ8JZK",
+      "kind": "product",
+      "asin": "B0DGQZ8JZK",
+      "price": null,
+      "used_in": [
+        "blog/black-friday-deals-for-seniors.html"
+      ]
+    },
+    {
+      "id": "com-blink-video-doorbell-2",
       "name": "Blink Video Doorbell",
       "country": "us",
       "url": "https://www.amazon.com/s?k=Blink+Video+Doorbell",
@@ -1173,18 +1326,6 @@
       "price": null,
       "used_in": [
         "blog/best-video-doorbells-for-seniors.html"
-      ]
-    },
-    {
-      "id": "com-fire-tv-stick-hd",
-      "name": "Fire TV Stick HD",
-      "country": "us",
-      "url": "https://www.amazon.com/dp/B0DJGDC3BD",
-      "kind": "product",
-      "asin": "B0DJGDC3BD",
-      "price": null,
-      "used_in": [
-        "gift-guides/tech-gifts-for-seniors-under-50.html"
       ]
     },
     {
@@ -1536,7 +1677,8 @@
       "asin": "B06XVZ6Y4T",
       "price": null,
       "used_in": [
-        "blog/best-gps-trackers-for-seniors.html"
+        "blog/best-gps-trackers-for-seniors.html",
+        "blog/black-friday-deals-for-seniors.html"
       ]
     },
     {
@@ -1777,7 +1919,8 @@
       "asin": "B0GT669J31",
       "price": null,
       "used_in": [
-        "blog/best-video-doorbells-for-seniors.html"
+        "blog/best-video-doorbells-for-seniors.html",
+        "blog/black-friday-deals-for-seniors.html"
       ]
     },
     {
@@ -1837,7 +1980,8 @@
       "asin": "B0FVXMHHRP",
       "price": "$299.99",
       "used_in": [
-        "blog/best-tablets-for-seniors.html"
+        "blog/best-tablets-for-seniors.html",
+        "blog/black-friday-deals-for-seniors.html"
       ]
     },
     {
@@ -1947,6 +2091,18 @@
       "price": null,
       "used_in": [
         "blog/best-gps-trackers-for-seniors.html"
+      ]
+    },
+    {
+      "id": "com-tv-ears-dual-digital-wireless-headset-system",
+      "name": "TV Ears Dual Digital Wireless Headset System",
+      "country": "us",
+      "url": "https://www.amazon.com/dp/B00E4JWL50",
+      "kind": "product",
+      "asin": "B00E4JWL50",
+      "price": null,
+      "used_in": [
+        "blog/black-friday-deals-for-seniors.html"
       ]
     },
     {

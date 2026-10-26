@@ -47,6 +47,7 @@ TOPICS = {
     "sleep": ("blog/best-sleep-trackers-for-seniors.html", None, "Best Sleep Trackers for Seniors", None, "Simple ways to track sleep without a wearable"),
     "pills": ("blog/best-pill-organizers-for-seniors.html", None, "Best Pill Organizers for Seniors", None, "Organizers and reminders that help medication get taken"),
     "caregiver": ("guides/caregiver-resources.html", "guides/caregiver-resources.html", "Caregiver Resources & Support Tools", "Caregiver Resources & Support Tools", "Tools and support for the family doing the caring"),
+    "black-friday": ("blog/black-friday-deals-for-seniors.html", "blog/black-friday-deals-for-seniors-canada.html", "Black Friday Tech for Seniors 2026", "Black Friday Tech for Seniors in Canada 2026", "Products worth buying if the price drops this year"),
     "checklist": ("guides/7-tech-essentials-checklist.html", "guides/7-tech-essentials-checklist.html", "7 Tech Essentials for a Senior Home", "7 Tech Essentials for a Senior Home", "A short list to start with"),
 }
 
@@ -58,9 +59,9 @@ RELATED = {
     "gps": ["medical-alert", "gps-guide", "smartwatches", "fall", "caregiver"],
     "gps-guide": ["gps", "medical-alert", "caregiver", "fall"],
     "home-security": ["doorbells", "safety-checklist", "smart-home", "medical-alert", "fall"],
-    "doorbells": ["home-security", "safety-checklist", "medical-alert", "alexa"],
-    "smart-home": ["alexa", "home-security", "tablets", "medical-alert"],
-    "alexa": ["smart-home", "tablets", "home-security", "ipad-guide"],
+    "doorbells": ["home-security", "safety-checklist", "medical-alert", "alexa", "black-friday"],
+    "smart-home": ["alexa", "home-security", "tablets", "medical-alert", "black-friday"],
+    "alexa": ["smart-home", "tablets", "home-security", "ipad-guide", "black-friday"],
     "fall": ["medical-alert", "smartwatches", "safety-checklist", "no-fee", "home-security"],
     "safety-checklist": ["home-security", "fall", "medical-alert", "checklist", "pills"],
     "cell-phones": ["plans", "jitterbug", "cordless", "tablets", "ipad-guide", "hearing"],
@@ -68,9 +69,9 @@ RELATED = {
     "jitterbug": ["cell-phones", "tablets", "ipad-guide", "medical-alert"],
     "cordless": ["cell-phones", "hearing", "medical-alert", "tv-remotes"],
     "tablets": ["ipad-guide", "e-readers", "cell-phones", "alexa", "plans", "jitterbug"],
-    "e-readers": ["tablets", "ipad-guide", "cell-phones", "hearing"],
+    "e-readers": ["tablets", "ipad-guide", "cell-phones", "hearing", "black-friday"],
     "ipad-guide": ["tablets", "cell-phones", "e-readers", "caregiver", "checklist"],
-    "tv-remotes": ["smart-home", "alexa", "hearing", "tablets"],
+    "tv-remotes": ["smart-home", "alexa", "hearing", "tablets", "black-friday"],
     "bp": ["smartwatches", "sleep", "pills", "medical-alert"],
     "hearing": ["hearing-guide", "cordless", "cell-phones", "tv-remotes"],
     "hearing-guide": ["hearing", "cordless", "tv-remotes", "caregiver"],
@@ -79,6 +80,7 @@ RELATED = {
     "pills": ["bp", "sleep", "smartwatches", "caregiver"],
     "caregiver": ["ipad-guide", "medical-alert", "gps-guide", "pills", "checklist"],
     "checklist": ["medical-alert", "cell-phones", "tablets", "home-security", "gps", "pills"],
+    "black-friday": ["medical-alert", "tablets", "smartwatches", "gps", "hearing"],
 }
 MAX_LINKS = 5
 BLOCK_RE = re.compile(r"[ \t]*<!-- related -->.*?<!-- /related -->[ \t]*\n?", re.S)

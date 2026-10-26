@@ -1,0 +1,53 @@
+{
+  "title": "TechForDad, Black Friday 2026",
+  "subject": "Black Friday: what's worth buying for your parents (and how to spot a fake deal)",
+  "preview": "A short list of things we already recommend, with the usual price of each.",
+  "intro": [
+    "Hello,",
+    "Black Friday is this Friday, November 27. The sales are loud, and most of what is advertised is not much use to an older parent. So we have done it the other way round: a short list of things we already recommend, with the usual price of each, so you can tell a real deal from a fake one."
+  ],
+  "blocks": [
+    {
+      "heading": "Tech for seniors worth buying on sale",
+      "paragraphs": [
+        "Thirteen picks from our reviews, from medical alerts and the Apple Watch SE 3 to Fire tablets, video doorbells and a TV headset for when the volume has crept up. Each one shows the usual price and whether it needs a monthly plan.",
+        "We do not list deal prices, because they change by the hour. The page links to the current price instead."
+      ],
+      "button": {"text": "See the Black Friday picks", "url": "https://www.techfordad.com/blog/black-friday-deals-for-seniors.html"},
+      "after": [
+        {"text": "In Canada? ", "link_text": "The Canadian version", "url": "https://www.techfordad.com/blog/black-friday-deals-for-seniors-canada.html", "tail": " lists eleven picks sold here, with regular prices in CAD."}
+      ]
+    },
+    {
+      "heading": "Three checks before you buy",
+      "paragraphs": [
+        "1. Compare with the usual price, not the crossed-out \"was\" price. The seller chooses that number.",
+        "2. Check the exact model. Older models often carry the biggest discounts, and an \"Apple Watch SE\" is not always the SE 3.",
+        "3. Add up the monthly costs. For medical alerts, GPS trackers and cameras, the plan can cost more in a year than the device."
+      ]
+    },
+    {
+      "heading": "If you only buy one thing",
+      "paragraphs": [
+        "If your parent lives alone, a medical alert system matters more than any gadget. These are sold by the providers, not on Amazon, and several run their own holiday offers. Read the terms: some discounts need a yearly plan paid up front."
+      ],
+      "button": {"text": "Compare medical alert systems", "url": "https://www.techfordad.com/blog/best-medical-alert-systems.html"},
+      "after": [
+        {"text": "In Canada? ", "link_text": "Compare Canadian medical alert services", "url": "https://www.techfordad.com/blog/best-medical-alert-systems-canada.html", "tail": "."}
+      ]
+    },
+    {
+      "heading": "Shopping for a gift instead?",
+      "paragraphs": [
+        "Our gift guides cover ideas under $50, safety tech for parents who live alone, and gifts for someone living with dementia."
+      ],
+      "button": {"text": "Browse the Gift Guides", "url": "https://www.techfordad.com/gift-guides/"}
+    },
+    {
+      "heading": "Tell us what you need",
+      "paragraphs": [
+        "Just reply to this email with the product or problem you would like us to cover next. We read every message."
+      ]
+    }
+  ]
+}

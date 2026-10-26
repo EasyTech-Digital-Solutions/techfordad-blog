@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_gift_guides  # noqa: E402  (source of truth for the gift guide list)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ASSET_VERSION = "20261021"
+ASSET_VERSION = "20261025"
 
 # Short menu labels. Anything not listed falls back to a cleaned-up page title.
 LABELS = {
@@ -137,13 +137,18 @@ GIFT_RE = re.compile(r'[ \t]*<a href="[^"]*gift-guides/index\.html">Gift Guides<
 GIFT_BAR_RE = re.compile(r'[ \t]*<!-- gift-bar -->.*?<!-- /gift-bar -->[ \t]*\n?', re.S)
 
 
-def render_gift_bar(base):
+def render_gift_bar(base, canada=False):
+    """The seasonal bar. Both messages are always in the HTML, so search engines can follow both links;
+    js/season.js sets data-sale during a sale window and the CSS then shows the sale message instead of the gift one."""
     href = base.replace("blog/", "gift-guides/") + "index.html"
+    sale = base + ("black-friday-deals-for-seniors-canada.html" if canada else "black-friday-deals-for-seniors.html")
     return f"""<!-- gift-bar -->
-<div class="gift-bar" id="gift-bar" role="region" aria-label="Gift guides announcement">
+<div class="gift-bar" id="gift-bar" role="region" aria-label="Seasonal announcement">
   <div class="gift-bar-inner">
-    <p class="gift-bar-text"><strong>Gift season:</strong> tech gifts your parents will actually use.</p>
-    <a class="gift-bar-link" href="{href}">See the gift guides <span aria-hidden="true">&rarr;</span></a>
+    <p class="gift-bar-text bar-gifts"><strong>Gift season:</strong> tech gifts your parents will actually use.</p>
+    <a class="gift-bar-link bar-gifts" href="{href}">See the gift guides <span aria-hidden="true">&rarr;</span></a>
+    <p class="gift-bar-text bar-sale"><strong>Black Friday:</strong> tech for parents worth buying on sale.</p>
+    <a class="gift-bar-link bar-sale" href="{sale}">See the picks <span aria-hidden="true">&rarr;</span></a>
     <button type="button" class="gift-bar-close" aria-label="Dismiss this announcement">&times;</button>
   </div>
 </div>
@@ -296,7 +301,7 @@ def process(path, usa, canada):
     if "gift-guides" not in os.path.relpath(path, ROOT).replace("\\", "/").split("/")[0]:
         hm = re.search(r"\n<header>", new)
         if hm:
-            new = new[:hm.start() + 1] + render_gift_bar(base) + new[hm.start() + 1:]
+            new = new[:hm.start() + 1] + render_gift_bar(base, os.path.basename(path).endswith("canada.html")) + new[hm.start() + 1:]
     new = re.sub(r'(css/style\.css)(\?v=\d+)?"', rf'\1?v={ASSET_VERSION}"', new)
     new = re.sub(r'(js/main\.js)(\?v=\d+)?"', rf'\1?v={ASSET_VERSION}"', new)
     new = inject_season_script(new)
