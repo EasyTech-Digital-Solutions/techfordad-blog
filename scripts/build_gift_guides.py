@@ -787,6 +787,8 @@ def hub_page():
 
     <p>Older parents are hard to shop for. They often have what they need, and a gift that adds a new device to manage can end up in a drawer. These guides focus on gifts that solve a real problem, and on setting them up so they get used.</p>
 
+    <p class="perk-line"><strong>Shopping the Black Friday sales?</strong> Our <a href="../blog/black-friday-deals-for-seniors.html">Black Friday list</a> shows which of our picks are worth buying on sale, with the usual price of each (<a href="../blog/black-friday-deals-for-seniors-canada.html">Canada version</a>).</p>
+
     <div class="cards-grid" style="margin:28px 0">
 {''.join(cards)}    </div>
 

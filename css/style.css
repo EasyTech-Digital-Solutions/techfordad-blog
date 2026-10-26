@@ -1225,7 +1225,10 @@ html[data-season] .article-disclaimer a { color: var(--navy); text-decoration: u
 
 /* ===== Gift season: announcement bar, homepage picture tiles, menu dot ===== */
 .gift-bar { display: none; background: var(--navy); color: var(--white); }
-html[data-gifts="peak"]:not([data-gift-bar="closed"]) .gift-bar { display: block; }
+html[data-gifts="peak"]:not([data-gift-bar="closed"]) .gift-bar,
+html[data-sale]:not([data-gift-bar="closed"]) .gift-bar { display: block; }
+/* One bar, two messages: the sale message replaces the gift one while js/season.js sets data-sale */
+html:not([data-sale]) .gift-bar .bar-sale, html[data-sale] .gift-bar .bar-gifts { display: none; }
 .gift-bar-inner {
   max-width: 1140px; margin: 0 auto; padding: 9px 48px 9px 24px; position: relative;
   display: flex; align-items: center; justify-content: center; gap: 8px 18px; flex-wrap: wrap; text-align: center;

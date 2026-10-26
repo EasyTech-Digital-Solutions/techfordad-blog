@@ -30,6 +30,7 @@ FAMILY = {
     "bp": "health", "pills": "health", "sleep": "health", "smartwatches": "health",
     "fall": "safety", "safety-checklist": "safety", "checklist": "safety",
     "caregiver": "caregiving",
+    "black-friday": "gifts",
 }
 
 # pages that build_related.TOPICS does not list (parked, noindex): their topic family

@@ -25,6 +25,7 @@ PAIRS = [
     ("best-cordless-phones-for-seniors.html", "best-cordless-phones-for-seniors-canada.html"),
     ("best-e-readers-for-seniors.html", "best-e-readers-for-seniors-canada.html"),
     ("best-gps-trackers-for-seniors.html", "best-gps-trackers-for-seniors-canada.html"),
+    ("black-friday-deals-for-seniors.html", "black-friday-deals-for-seniors-canada.html"),
     ("best-hearing-aids-for-seniors.html", "best-hearing-aids-canada.html"),
     ("best-home-security-for-seniors.html", "best-home-security-for-seniors-canada.html"),
     ("best-medical-alert-systems.html", "best-medical-alert-systems-canada.html"),
