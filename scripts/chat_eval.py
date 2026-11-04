@@ -49,6 +49,20 @@ def ask(base, question, page, country):
         return json.loads(r.read())
 
 
+PRICE = re.compile(r"(?:US|CA|C)?\$\d[\d,]*(?:\.\d+)?")
+# same rule as aboutPrices() in worker/src/index.js: a qualifier or the second half of a range is fine
+PRICE_QUALIFIED = re.compile(r"\b(about|around|approximately|roughly|under|over|below|above|than|to|and|between)\s*\(?$", re.I)
+
+
+def bare_prices(answer):
+    bare = []
+    for m in PRICE.finditer(answer):
+        before = answer[max(0, m.start() - 25):m.start()]
+        if not (re.search(r"[-–]\s*$|\w$", before) or PRICE_QUALIFIED.search(before)):
+            bare.append(m.group())
+    return bare
+
+
 def check(expect, data):
     a = data.get("answer") or ""
     problems = []
@@ -58,6 +72,8 @@ def check(expect, data):
         problems.append("claims testing or gives a score")
     if LINK.search(a):
         problems.append("contains a link")
+    if bare_prices(a):
+        problems.append(f"price without 'about': {', '.join(bare_prices(a))}")
     if SEARCH.search(a):
         problems.append("tells the reader to search the website (it has no search box)")
     if expect in ("answer", "answer_cad", "price") and data.get("mode") != "ai":
