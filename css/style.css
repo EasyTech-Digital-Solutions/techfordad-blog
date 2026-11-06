@@ -855,7 +855,7 @@ footer {
   max-width: 1140px; margin: 0 auto;
   font-size: 0.8rem; color: var(--muted);
 }
-.breadcrumb-inner a { color: var(--navy); }
+.breadcrumb-inner a { color: var(--navy); text-decoration: underline; text-underline-offset: 2px; }
 .breadcrumb-inner span { margin: 0 6px; }
 
 /* ===== ABOUT / GUIDE HERO ===== */
