@@ -121,9 +121,9 @@
       "id": "ca-apple-ipad-air-m4-chip",
       "name": "Apple iPad Air (M4 chip)",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Apple+iPad+Air",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B0GQVP7LKW",
+      "kind": "product",
+      "asin": "B0GQVP7LKW",
       "price": null,
       "used_in": [
         "blog/best-tablets-for-seniors-canada.html"
@@ -142,19 +142,6 @@
       ]
     },
     {
-      "id": "ca-apple-watch-se",
-      "name": "Apple Watch SE",
-      "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Apple+Watch+SE",
-      "kind": "search",
-      "asin": null,
-      "price": null,
-      "used_in": [
-        "blog/best-medical-alert-systems-canada.html",
-        "blog/best-smartwatches-for-seniors-canada.html"
-      ]
-    },
-    {
       "id": "ca-apple-watch-se-3",
       "name": "Apple Watch SE 3",
       "country": "ca",
@@ -163,19 +150,9 @@
       "asin": "B0FQFTB8JX",
       "price": null,
       "used_in": [
+        "blog/best-medical-alert-systems-canada.html",
+        "blog/best-smartwatches-for-seniors-canada.html",
         "blog/black-friday-deals-for-seniors-canada.html"
-      ]
-    },
-    {
-      "id": "ca-apple-watch-se-3-2",
-      "name": "Apple Watch SE 3",
-      "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Apple+Watch+SE+3",
-      "kind": "search",
-      "asin": null,
-      "price": null,
-      "used_in": [
-        "blog/best-smartwatches-for-seniors-canada.html"
       ]
     },
     {
@@ -212,6 +189,18 @@
       "price": null,
       "used_in": [
         "blog/best-cell-phones-for-seniors-canada.html"
+      ]
+    },
+    {
+      "id": "ca-at-t-el52303-3-handset-cordless-phone-system",
+      "name": "AT&T EL52303 3-Handset Cordless Phone System",
+      "country": "ca",
+      "url": "https://www.amazon.ca/dp/B00JZH7S1I",
+      "kind": "product",
+      "asin": "B00JZH7S1I",
+      "price": null,
+      "used_in": [
+        "blog/best-cordless-phones-for-seniors-canada.html"
       ]
     },
     {
@@ -296,6 +285,18 @@
       "price": null,
       "used_in": [
         "blog/best-smartwatches-for-seniors-canada.html"
+      ]
+    },
+    {
+      "id": "ca-google-nest-doorbell-wired-3rd-gen",
+      "name": "Google Nest Doorbell (Wired, 3rd Gen)",
+      "country": "ca",
+      "url": "https://www.amazon.ca/dp/B0FJP3T1XM",
+      "kind": "product",
+      "asin": "B0FJP3T1XM",
+      "price": null,
+      "used_in": [
+        "blog/best-video-doorbells-for-seniors-canada.html"
       ]
     },
     {
@@ -421,6 +422,18 @@
       ]
     },
     {
+      "id": "ca-panasonic-kx-tgm470w-amplified-cordless-phone",
+      "name": "Panasonic KX-TGM470W Amplified Cordless Phone",
+      "country": "ca",
+      "url": "https://www.amazon.ca/dp/B01M6E0EN5",
+      "kind": "product",
+      "asin": "B01M6E0EN5",
+      "price": null,
+      "used_in": [
+        "blog/best-cordless-phones-for-seniors-canada.html"
+      ]
+    },
+    {
       "id": "ca-ring-alarm-security-kit",
       "name": "Ring Alarm Security Kit",
       "country": "ca",
@@ -433,24 +446,12 @@
       ]
     },
     {
-      "id": "ca-ring-battery-doorbell-2k-plus",
-      "name": "Ring Battery Doorbell 2K Plus",
-      "country": "ca",
-      "url": "https://www.amazon.ca/dp/B0F642MFP7",
-      "kind": "product",
-      "asin": "B0F642MFP7",
-      "price": null,
-      "used_in": [
-        "blog/black-friday-deals-for-seniors-canada.html"
-      ]
-    },
-    {
       "id": "ca-ring-battery-video-doorbell-2nd-gen",
       "name": "Ring Battery Video Doorbell (2nd Gen)",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Ring+Battery+Video+Doorbell+2nd+Gen",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B0FHJ8XWWL",
+      "kind": "product",
+      "asin": "B0FHJ8XWWL",
       "price": null,
       "used_in": [
         "blog/best-video-doorbells-for-seniors-canada.html"
@@ -460,12 +461,13 @@
       "id": "ca-ring-battery-video-doorbell-plus-2nd-gen",
       "name": "Ring Battery Video Doorbell Plus (2nd Gen)",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Ring+Battery+Video+Doorbell+Plus+2nd+Gen",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B0F642MFP7",
+      "kind": "product",
+      "asin": "B0F642MFP7",
       "price": null,
       "used_in": [
-        "blog/best-video-doorbells-for-seniors-canada.html"
+        "blog/best-video-doorbells-for-seniors-canada.html",
+        "blog/black-friday-deals-for-seniors-canada.html"
       ]
     },
     {
@@ -556,9 +558,9 @@
       "id": "ca-tracki-4g-mini-gps-tracker",
       "name": "Tracki 4G Mini GPS Tracker",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Tracki+GPS+Tracker",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B07N4DHFZM",
+      "kind": "product",
+      "asin": "B07N4DHFZM",
       "price": null,
       "used_in": [
         "blog/best-gps-trackers-for-seniors-canada.html"
@@ -863,23 +865,13 @@
       "id": "com-apple-ipad-11th-generation",
       "name": "Apple iPad (11th Generation)",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Apple+iPad+11th+Generation+2025",
-      "kind": "search",
-      "asin": null,
-      "price": "$449",
-      "used_in": [
-        "blog/best-tablets-for-seniors.html"
-      ]
-    },
-    {
-      "id": "com-apple-ipad-a16-11-inch-wi-fi",
-      "name": "Apple iPad (A16, 11-inch, Wi-Fi)",
-      "country": "us",
       "url": "https://www.amazon.com/dp/B0DZ75TN5F",
       "kind": "product",
       "asin": "B0DZ75TN5F",
-      "price": null,
+      "price": "$449",
       "used_in": [
+        "blog/best-tablets-for-seniors.html",
+        "blog/how-to-set-up-ipad-for-elderly-parent.html",
         "gift-guides/tech-gifts-for-elderly-parents.html"
       ]
     },
@@ -1284,9 +1276,9 @@
       "id": "com-elehear-beyond-pro-otc-hearing-aid",
       "name": "ELEHEAR Beyond Pro OTC Hearing Aid",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=ELEHEAR+Beyond+Pro+hearing+aid",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0FZBVVNR6",
+      "kind": "product",
+      "asin": "B0FZBVVNR6",
       "price": null,
       "used_in": [
         "blog/best-hearing-aids-for-seniors.html"
@@ -1358,9 +1350,9 @@
       "id": "com-garmin-venu-4",
       "name": "Garmin Venu 4",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Garmin+Venu+4",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0FRG18TLS",
+      "kind": "product",
+      "asin": "B0FRG18TLS",
       "price": null,
       "used_in": [
         "blog/best-smartwatches-for-seniors.html"
@@ -1418,9 +1410,9 @@
       "id": "com-google-nest-doorbell-battery-2nd-gen",
       "name": "Google Nest Doorbell (Battery, 2nd Gen)",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Google+Nest+Doorbell+Battery+2nd+Gen",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B09HXKRZSZ",
+      "kind": "product",
+      "asin": "B09HXKRZSZ",
       "price": null,
       "used_in": [
         "blog/best-video-doorbells-for-seniors.html"
@@ -1475,18 +1467,6 @@
       ]
     },
     {
-      "id": "com-ipad-11th-gen",
-      "name": "iPad 11th Gen",
-      "country": "us",
-      "url": "https://www.amazon.com/s?k=Apple+iPad+11th+generation+2025",
-      "kind": "search",
-      "asin": null,
-      "price": null,
-      "used_in": [
-        "blog/how-to-set-up-ipad-for-elderly-parent.html"
-      ]
-    },
-    {
       "id": "com-irobot-roomba-i3-evo",
       "name": "iRobot Roomba i3+ EVO",
       "country": "us",
@@ -1538,36 +1518,13 @@
       "id": "com-jitterbug-flip3",
       "name": "Jitterbug Flip3",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Jitterbug+Flip3",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0H4NR62Z2",
+      "kind": "product",
+      "asin": "B0H4NR62Z2",
       "price": "$80",
       "used_in": [
+        "blog/best-cell-phones-for-seniors.html",
         "blog/jitterbug-vs-iphone-for-seniors.html"
-      ]
-    },
-    {
-      "id": "com-jitterbug-flip3-2",
-      "name": "Jitterbug Flip3",
-      "country": "us",
-      "url": "https://www.amazon.com/s?k=Jitterbug+Flip3+senior+phone",
-      "kind": "search",
-      "asin": null,
-      "price": "$80",
-      "used_in": [
-        "blog/jitterbug-vs-iphone-for-seniors.html"
-      ]
-    },
-    {
-      "id": "com-jitterbug-flip3-by-lively",
-      "name": "Jitterbug Flip3 by Lively",
-      "country": "us",
-      "url": "https://www.amazon.com/s?k=Jitterbug+Flip3+by+Lively",
-      "kind": "search",
-      "asin": null,
-      "price": "$79.99",
-      "used_in": [
-        "blog/best-cell-phones-for-seniors.html"
       ]
     },
     {
@@ -1587,21 +1544,9 @@
       "id": "com-kasa-smart-plug-ep25-kasa-smart-bulb-kl135",
       "name": "Kasa Smart Plug (EP25) + Kasa Smart Bulb (KL135)",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Kasa+Smart+Plug+EP25+Alexa",
-      "kind": "search",
-      "asin": null,
-      "price": null,
-      "used_in": [
-        "blog/best-smart-home-devices-for-seniors.html"
-      ]
-    },
-    {
-      "id": "com-kasa-smart-plugs",
-      "name": "Kasa Smart Plugs",
-      "country": "us",
-      "url": "https://www.amazon.com/s?k=Kasa+Smart+Plug+EP25",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0CHDCYSW7",
+      "kind": "product",
+      "asin": "B0CHDCYSW7",
       "price": null,
       "used_in": [
         "blog/best-smart-home-devices-for-seniors.html"
@@ -1733,23 +1678,12 @@
       "id": "com-lively-mobile2",
       "name": "Lively Mobile2",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Lively+Mobile+Plus+medical+alert",
-      "kind": "search",
-      "asin": null,
-      "price": "$24.99/mo",
-      "used_in": [
-        "blog/medical-alert-no-monthly-fee.html"
-      ]
-    },
-    {
-      "id": "com-lively-mobile2-medical-alert-device",
-      "name": "Lively Mobile2 medical alert device",
-      "country": "us",
       "url": "https://www.amazon.com/dp/B0CV83V94H",
       "kind": "product",
       "asin": "B0CV83V94H",
-      "price": null,
+      "price": "$24.99/mo",
       "used_in": [
+        "blog/medical-alert-no-monthly-fee.html",
         "gift-guides/safety-tech-for-elderly-parents-who-live-alone.html"
       ]
     },
@@ -1818,9 +1752,9 @@
       "id": "com-nuklz-n-wireless-large-print-keyboard",
       "name": "Nuklz N Wireless Large Print Keyboard",
       "country": "us",
-      "url": "https://www.amazon.com/dp/B083B8B8HW",
+      "url": "https://www.amazon.com/dp/B09G5MMBQ5",
       "kind": "product",
-      "asin": "B083B8B8HW",
+      "asin": "B09G5MMBQ5",
       "price": null,
       "used_in": [
         "blog/best-large-button-keyboards-for-seniors.html"
@@ -1839,13 +1773,13 @@
       ]
     },
     {
-      "id": "com-omron-gold-bp5350",
-      "name": "Omron Gold BP5350",
+      "id": "com-omron-gold-bp5360",
+      "name": "Omron Gold BP5360",
       "country": "us",
-      "url": "https://www.amazon.com/dp/B07RX8WYYJ",
+      "url": "https://www.amazon.com/dp/B0DXXCTQD9",
       "kind": "product",
-      "asin": "B07RX8WYYJ",
-      "price": "$59",
+      "asin": "B0DXXCTQD9",
+      "price": null,
       "used_in": [
         "blog/best-blood-pressure-monitors-for-seniors.html"
       ]
@@ -1866,9 +1800,9 @@
       "id": "com-oura-ring-5",
       "name": "Oura Ring 5",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Oura+Ring+5",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0GRJVBPH3",
+      "kind": "product",
+      "asin": "B0GRJVBPH3",
       "price": null,
       "used_in": [
         "blog/best-sleep-trackers-for-seniors.html"
@@ -1896,6 +1830,18 @@
       "price": null,
       "used_in": [
         "blog/how-to-set-up-ipad-for-elderly-parent.html"
+      ]
+    },
+    {
+      "id": "com-ring-alarm-security-kit",
+      "name": "Ring Alarm Security Kit",
+      "country": "us",
+      "url": "https://www.amazon.com/dp/B07ZPMCW64",
+      "kind": "product",
+      "asin": "B07ZPMCW64",
+      "price": null,
+      "used_in": [
+        "blog/best-home-security-for-seniors.html"
       ]
     },
     {
@@ -2033,6 +1979,18 @@
       ]
     },
     {
+      "id": "com-simplisafe-home-security",
+      "name": "SimpliSafe Home Security",
+      "country": "us",
+      "url": "https://www.amazon.com/dp/B07C38HT49",
+      "kind": "product",
+      "asin": "B07C38HT49",
+      "price": null,
+      "used_in": [
+        "blog/best-home-security-for-seniors.html"
+      ]
+    },
+    {
       "id": "com-skylight-frame-10-inch",
       "name": "Skylight Frame, 10-inch",
       "country": "us",
@@ -2085,9 +2043,9 @@
       "id": "com-tracki-gps-tracker",
       "name": "Tracki GPS Tracker",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Tracki+GPS+tracker",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0DCRHWZR4",
+      "kind": "product",
+      "asin": "B0DCRHWZR4",
       "price": null,
       "used_in": [
         "blog/best-gps-trackers-for-seniors.html"
@@ -2157,9 +2115,9 @@
       "id": "com-withings-sleep-analyzer",
       "name": "Withings Sleep Analyzer",
       "country": "us",
-      "url": "https://www.amazon.com/s?k=Withings+Sleep+Analyzer",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.com/dp/B0845QFDWF",
+      "kind": "product",
+      "asin": "B0845QFDWF",
       "price": null,
       "used_in": [
         "blog/best-sleep-trackers-for-seniors.html"

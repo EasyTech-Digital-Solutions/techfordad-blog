@@ -198,13 +198,13 @@
     "products": [
       {
         "name": "Omron Platinum BP5465",
-        "price": "$79",
+        "price": "$97",
         "check_url": "https://www.amazon.com/s?k=Omron+Platinum+BP5450"
       },
       {
-        "name": "Omron Gold BP5350",
-        "price": "$59",
-        "check_url": "https://www.amazon.com/s?k=Omron+Gold+BP5350"
+        "name": "Omron Gold BP5360",
+        "price": "$84.99",
+        "check_url": "https://www.amazon.com/s?k=Omron+Gold+BP5360"
       },
       {
         "name": "Withings BPM Connect",

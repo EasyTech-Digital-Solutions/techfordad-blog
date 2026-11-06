@@ -17,14 +17,14 @@ import re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "gift-guides")
 TAG = "techfordad-gifts-20"
-PRICE_DATE = "October 19, 2026"   # date prices were last checked; change with --checked, never by hand
-UPDATED_LABEL = "October 2026"    # shown as "Updated ..." on the pages; follows PRICE_DATE
+PRICE_DATE = "November 5, 2026"   # date prices were last checked; change with --checked, never by hand
+UPDATED_LABEL = "November 2026"    # shown as "Updated ..." on the pages; follows PRICE_DATE
 PUBLISHED = "2026-09-29"            # first publish date (structured data)
-MODIFIED = "2026-10-19"             # last modified date (structured data); follows PRICE_DATE
+MODIFIED = "2026-11-05"             # last modified date (structured data); follows PRICE_DATE
 SITE = "https://www.techfordad.com"
 
 
-SHORT_LABEL = "Oct 2026"            # short form used in price notes such as "(Amazon, checked Sep 2026)"
+SHORT_LABEL = "Nov 2026"            # short form used in price notes such as "(Amazon, checked Sep 2026)"
 
 
 def stamp(s):
@@ -58,7 +58,7 @@ GUIDES = [
         ],
         "products": [
             {"name": "Skylight Frame, 10-inch", "asin": "B01N7ENHO6", "badge": "Easiest for a parent who avoids apps",
-             "price": "about $139 to $160 (retail listings, September 2026)",
+             "price": "about $139.99 (Amazon, checked Sep 2026)",
              "why": "Family members email photos to the frame's own address and the pictures appear. Your parent does nothing except look at it.",
              "best": "Parents who do not use smartphones or apps",
              "watch": "Skylight says the mobile app and cloud features need Skylight Plus at $39 a year. Sending photos by email stays free."},
@@ -83,7 +83,7 @@ GUIDES = [
              "best": "Parents who read every day",
              "watch": "The 32GB Signature Edition costs more, about $199.99. Books need Wi-Fi to download."},
             {"name": "Avantree Ensemble TV headphones", "asin": "B08629PFFQ", "badge": "Hear the TV without turning it up",
-             "price": "about $109.99 (Amazon, checked Sep 2026)",
+             "price": "about $98.99 (Amazon, checked Sep 2026)",
              "why": "Wireless headphones on a charging dock, so one person can turn up the dialogue without blasting the room.",
              "best": "Parents who keep asking for the TV to be louder",
              "watch": "Check that your parent's TV has an optical or headphone output, or use Bluetooth on a compatible TV. It suits one listener at a time."},
@@ -97,7 +97,7 @@ GUIDES = [
         "addons": [
             {"name": "Joywell armchair caddy", "asin": "B07GDBWNXW", "price": "about $9.98",
              "why": "Keeps the remote, phone and glasses within reach of the favorite chair."},
-            {"name": "Nazano lighted magnifier", "asin": "B08PP4RJ5J", "price": "about $9.89",
+            {"name": "Nazano lighted magnifier", "asin": "B08PP4RJ5J", "price": "about $9.98",
              "why": "Helps with pill labels, menus and small print. Uses AA batteries."},
         ],
         "sections": [
@@ -160,7 +160,7 @@ GUIDES = [
              "best": "Parents without a smartphone who want a person on the other end",
              "watch": "It must be activated with Lively and needs a plan. SafeHome's testers found the pendant battery lasts about a day and a half."},
             {"name": "Bay Alarm Medical SOS Mobile GPS", "asin": "B0C4QTKR83", "badge": "Monitored mobile pendant",
-             "price": "device price varies; fall detection about $10 a month extra (AARP, SafeHome)",
+             "price": "device about $74.95 (Amazon, checked Sep 2026); fall detection about $10 a month extra (AARP, SafeHome)",
              "why": "A 4G GPS pendant with a 24/7 monitoring center. AARP's tests of Bay Alarm's SOS Home detected 9 of 12 falls.",
              "best": "Parents who leave the house and want GPS location too",
              "watch": "The listing says \"call to activate,\" and fall detection is an optional add-on. Confirm the exact model when you order."},
@@ -185,14 +185,14 @@ GUIDES = [
              "best": "Families who want video without a monthly fee",
              "watch": "The microSD card is sold separately."},
             {"name": "eufy Indoor Cam S350 (4K)", "asin": "B0CD7F1M9R", "badge": "Sharpest picture, no subscription",
-             "price": "about $129.99 list (PCWorld, Tom's Guide)",
+             "price": "about $139.99 list (eufy, checked Sep 2026)",
              "why": "Two lenses with zoom, local storage and a physical privacy mode, with no subscription.",
              "best": "A clear view of a room, with privacy controls",
              "watch": "It costs more than the others. Storage needs a microSD card."},
         ],
         "addons_title": "Simple add-ons",
         "addons": [
-            {"name": "EZVALO 6-pack rechargeable motion-sensor night lights", "asin": "B0GHQHXV12", "price": "about $55.99",
+            {"name": "EZVALO 6-pack rechargeable motion-sensor night lights", "asin": "B0GHQHXV12", "price": "about $42.99",
              "why": "Lights the way to the bathroom at night, no wiring or batteries to replace."},
             {"name": "Sukuos extra-large weekly pill organizer", "asin": "B07V1QCJGF", "price": "about $6.99",
              "why": "Big compartments that are easy to open. For automatic reminders, see our pill dispenser review."},
@@ -255,7 +255,7 @@ GUIDES = [
              "best": "Any stage where routine helps",
              "watch": "Set the alarm labels for your parent's routine before you give it. It plugs in, so place it where it can stay."},
             {"name": "AINFTIME day and date clock", "asin": "B0BKV7TVNL", "badge": "Lower-cost clock",
-             "price": "about $26.99 (Amazon, checked Oct 2026)",
+             "price": "about $29.99 (Amazon, checked Sep 2026)",
              "why": "The same idea at half the price, with a large 7-inch display showing day and date.",
              "best": "A second clock for the kitchen or bedroom",
              "watch": "Fewer reviews than the American Lifetime clock."},
@@ -265,7 +265,7 @@ GUIDES = [
              "best": "Someone who still enjoys television but cannot use a standard remote",
              "watch": "It works with the TV and cable box only, not streaming apps."},
             {"name": "Skylight Frame, 10-inch", "asin": "B01N7ENHO6", "badge": "Photos of family and friends",
-             "price": "about $139 to $160 (retail listings, September 2026)",
+             "price": "about $139.99 (Amazon, checked Sep 2026)",
              "why": "Family emails photos to the frame. Photographs are a gentle way to prompt memories and conversation.",
              "best": "Any stage; add names to the photo files if you can",
              "watch": "Skylight Plus ($39 a year) is optional and adds app and cloud features."},
@@ -282,7 +282,7 @@ GUIDES = [
         ],
         "addons_title": "Comfort items (not tech)",
         "addons": [
-            {"name": "18-in-1 fidget blanket", "asin": "B09JBJ7C8W", "price": "about $39.81",
+            {"name": "18-in-1 fidget blanket", "asin": "B09JBJ7C8W", "price": "about $36.99",
              "why": "A lap blanket with zippers, buttons and textures for restless hands. Check with the care team first, and avoid loose small parts."},
         ],
         "sections": [
@@ -332,7 +332,7 @@ GUIDES = [
              "price": "about $28 (Chipolo)", "why": "The same idea for Android phones, using Google's Find My Device network.",
              "best": "Android owners", "watch": "Check which phones it works with before you buy; iPhone owners are usually better served by the AirTag."},
             {"name": "AINFTIME day and date clock", "asin": "B0BKV7TVNL", "badge": "Knows what day it is",
-             "price": "about $26.99", "why": "A large display that spells out the day and date, useful for anyone who loses track of days.",
+             "price": "about $29.99", "why": "A large display that spells out the day and date, useful for anyone who loses track of days.",
              "best": "A parent who often asks what day it is", "watch": "Plugs in."},
             {"name": "Flipper big-button TV remote", "asin": "B0CR5S1BCN", "badge": "Simple TV control",
              "price": "about $39.95", "why": "Large color-coded buttons for power, volume and channels.",
@@ -350,17 +350,17 @@ GUIDES = [
              "price": "$44.98 (Wyze)", "why": "Records to a microSD card, so no required fee.",
              "best": "A no-subscription camera", "watch": "The microSD card is sold separately."},
             {"name": "AMIR 6-pack motion-sensor stair lights", "asin": "B0B8MR5X6Y", "badge": "Safer night walks",
-             "price": "about $15.99", "why": "Lights the hallway, bathroom and kitchen automatically, battery powered.",
+             "price": "about $19.99", "why": "Lights the hallway, bathroom and kitchen automatically, battery powered.",
              "best": "Any parent who gets up at night", "watch": "Batteries need replacing eventually."},
             {"name": "Nazano lighted magnifier", "asin": "B08PP4RJ5J", "badge": "Read small print",
-             "price": "about $9.89", "why": "12 LEDs for reading labels, menus and small print.",
+             "price": "about $9.98", "why": "12 LEDs for reading labels, menus and small print.",
              "best": "Pill labels and recipes", "watch": "Uses AA batteries."},
         ],
         "addons_title": "Small extras (not tech)",
         "addons": [
             {"name": "Joywell armchair caddy", "asin": "B07GDBWNXW", "price": "about $9.98", "why": "Keeps remote, phone and glasses within reach."},
             {"name": "Sukuos extra-large weekly pill organizer", "asin": "B07V1QCJGF", "price": "about $6.99", "why": "Large compartments that are easy to open."},
-            {"name": "Bicycle jumbo-index playing cards, 2 pack", "asin": "B000BUUTJ6", "price": "about $5.63", "why": "Large-print cards for a card game."},
+            {"name": "Bicycle jumbo-index playing cards, 2 pack", "asin": "B000BUUTJ6", "price": "about $5.64", "why": "Large-print cards for a card game."},
         ],
         "sections": [],
         "faq": [
@@ -404,19 +404,19 @@ GUIDES = [
              "best": "Slow coffee or tea drinkers",
              "watch": "Hand wash only, and about 90 minutes of heat off the coaster. Ember's own site now sells the newer Mug 3 at $149.95."},
             {"name": "Click & Grow indoor herb garden", "asin": "B01MRVMKQH", "badge": "Fresh herbs on the counter",
-             "price": "about $112.49 (Amazon, checked Oct 2026)",
+             "price": "about $101.60 (Amazon, checked Sep 2026)",
              "why": "Self-watering and lit by built-in LEDs, so there is no gardening skill required.",
              "best": "Cooks who like fresh basil or mint",
              "watch": "Plant pods are a recurring purchase."},
             {"name": "Birdbuddy Pro smart bird feeder", "asin": "B0DHY6CQBC", "badge": "Bird watching on a phone",
-             "price": "about $279.99 (regular price; frequently discounted, checked Oct 2026)",
+             "price": "about $189 (Amazon, checked Sep 2026)",
              "why": "A feeder with a camera that sends photos of visiting birds to a phone, with species identification.",
              "best": "Parents who watch birds from the window",
              "watch": "It needs a 2.4 GHz Wi-Fi network. A premium membership is optional, around $60 to $70 a year. The pole is not included, and the listing has fewer reviews than most items here."},
         ],
         "addons_title": "Comfort add-ons",
         "addons": [
-            {"name": "Sunbeam Royal Ultra Fleece heated throw", "asin": "B008BF2MFM", "price": "about $69.99",
+            {"name": "Sunbeam Royal Ultra Fleece heated throw", "asin": "B008BF2MFM", "price": "about $42.79",
              "why": "Auto shut-off and four heat settings. Check the current CPSC recall list before you buy any heated blanket."},
             {"name": "Bombas Gripper slippers (women's)", "asin": "B0GQLQL62V", "price": "about $55",
              "why": "Grip soles for tile and hardwood floors. No slipper can guarantee against a fall."},
@@ -824,9 +824,9 @@ def hub_page():
 CHIPS = {
     "tech-gifts-for-elderly-parents": "From about $40",
     "safety-tech-for-elderly-parents-who-live-alone": "From $29",
-    "tech-gifts-for-someone-with-dementia": "From about $27",
+    "tech-gifts-for-someone-with-dementia": "From $29",
     "tech-gifts-for-seniors-under-50": "All under $50",
-    "gifts-for-elderly-parents-who-have-everything": "From about $70",
+    "gifts-for-elderly-parents-who-have-everything": "From about $90",
 }
 HOME_SECTION_RE = re.compile(r'<section class="gift-feature" id="gift-guides">.*?</section>', re.S)
 

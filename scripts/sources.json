@@ -96,7 +96,7 @@
         {"kind": "authority", "title": "Validate BP: US Blood Pressure Validated Device Listing", "url": "https://www.validatebp.org/", "used_for": "The free list to check that a monitor has been clinically validated"},
         {"kind": "authority", "title": "American Medical Association: How BP devices are validated", "url": "https://www.ama-assn.org/public-health/prevention-wellness/validation-bp-measurement-devices-clinical-accuracy", "used_for": "What clinical validation means"}
       ],
-      "note": "The 3 Series section now reflects the current BP7150 model. Omron's page for the Gold monitor shows the newer BP5360, so the BP5350 named on this page may be an older model: check which one you are buying. We could not confirm a current maker page for the Greater Goods 0602."
+      "note": "The 3 Series section now reflects the current BP7150 model. This page now names the Gold BP5360, the model Omron's page shows. We could not confirm a current maker page for the Greater Goods 0602."
     },
     "blog/best-blood-pressure-monitors-canada.html": {
       "sources": [
