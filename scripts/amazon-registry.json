@@ -495,27 +495,16 @@
       ]
     },
     {
-      "id": "ca-samsung-galaxy-tab-a11",
-      "name": "Samsung Galaxy Tab A11+",
-      "country": "ca",
-      "url": "https://www.amazon.ca/dp/B0FVXMHHRP",
-      "kind": "product",
-      "asin": "B0FVXMHHRP",
-      "price": null,
-      "used_in": [
-        "blog/black-friday-deals-for-seniors-canada.html"
-      ]
-    },
-    {
       "id": "ca-samsung-galaxy-tab-a11-11-inch",
       "name": "Samsung Galaxy Tab A11+ (11-inch)",
       "country": "ca",
-      "url": "https://www.amazon.ca/s?k=Samsung+Galaxy+Tab+A11+Plus",
-      "kind": "search",
-      "asin": null,
+      "url": "https://www.amazon.ca/dp/B0FVCSD838",
+      "kind": "product",
+      "asin": "B0FVCSD838",
       "price": null,
       "used_in": [
-        "blog/best-tablets-for-seniors-canada.html"
+        "blog/best-tablets-for-seniors-canada.html",
+        "blog/black-friday-deals-for-seniors-canada.html"
       ]
     },
     {
@@ -643,9 +632,9 @@
       "id": "com-amazon-echo-show-11-2025",
       "name": "Amazon Echo Show 11 (2025)",
       "country": "us",
-      "url": "https://www.amazon.com/dp/B0FKX1M63D",
+      "url": "https://www.amazon.com/dp/B0DC91H3JK",
       "kind": "product",
-      "asin": "B0FKX1M63D",
+      "asin": "B0DC91H3JK",
       "price": null,
       "used_in": [
         "blog/best-alexa-devices-for-seniors.html"
@@ -668,9 +657,9 @@
       "id": "com-amazon-echo-show-8-2025",
       "name": "Amazon Echo Show 8 (2025)",
       "country": "us",
-      "url": "https://www.amazon.com/dp/B0FKX43RC3",
+      "url": "https://www.amazon.com/dp/B0DC93K4NW",
       "kind": "product",
-      "asin": "B0FKX43RC3",
+      "asin": "B0DC93K4NW",
       "price": "$199.99",
       "used_in": [
         "blog/best-alexa-devices-for-seniors.html",
@@ -1168,24 +1157,13 @@
       "id": "com-blink-video-doorbell",
       "name": "Blink Video Doorbell",
       "country": "us",
-      "url": "https://www.amazon.com/dp/B0DGQZ8JZK",
+      "url": "https://www.amazon.com/dp/B0DGQVD8FG",
       "kind": "product",
-      "asin": "B0DGQZ8JZK",
+      "asin": "B0DGQVD8FG",
       "price": null,
       "used_in": [
+        "blog/best-video-doorbells-for-seniors.html",
         "blog/black-friday-deals-for-seniors.html"
-      ]
-    },
-    {
-      "id": "com-blink-video-doorbell-2",
-      "name": "Blink Video Doorbell",
-      "country": "us",
-      "url": "https://www.amazon.com/s?k=Blink+Video+Doorbell",
-      "kind": "search",
-      "asin": null,
-      "price": null,
-      "used_in": [
-        "blog/best-video-doorbells-for-seniors.html"
       ]
     },
     {
@@ -1371,12 +1349,12 @@
       ]
     },
     {
-      "id": "com-ge-4-device-backlit-universal-remote-model-48843",
-      "name": "GE 4-Device Backlit Universal Remote (Model 48843)",
+      "id": "com-ge-4-device-backlit-universal-remote-model-48844",
+      "name": "GE 4-Device Backlit Universal Remote (Model 48844)",
       "country": "us",
-      "url": "https://www.amazon.com/GE-Universal-Panasonic-Streaming-4-Device/dp/B088Y2JFHB",
+      "url": "https://www.amazon.com/dp/B088XR1ZS5",
       "kind": "product",
-      "asin": "B088Y2JFHB",
+      "asin": "B088XR1ZS5",
       "price": null,
       "used_in": [
         "blog/best-tv-remotes-for-seniors.html"
@@ -1422,9 +1400,9 @@
       "id": "com-google-nest-learning-thermostat-4th-gen",
       "name": "Google Nest Learning Thermostat (4th Gen)",
       "country": "us",
-      "url": "https://www.amazon.com/dp/B0DGYVRM5T",
+      "url": "https://www.amazon.com/dp/B0D5BBYRJM",
       "kind": "product",
-      "asin": "B0DGYVRM5T",
+      "asin": "B0D5BBYRJM",
       "price": null,
       "used_in": [
         "blog/best-smart-home-devices-for-seniors.html"
@@ -1779,7 +1757,7 @@
       "url": "https://www.amazon.com/dp/B0DXXCTQD9",
       "kind": "product",
       "asin": "B0DXXCTQD9",
-      "price": null,
+      "price": "$84.99",
       "used_in": [
         "blog/best-blood-pressure-monitors-for-seniors.html"
       ]
@@ -1791,7 +1769,7 @@
       "url": "https://www.amazon.com/dp/B0DXXLYZTL",
       "kind": "product",
       "asin": "B0DXXLYZTL",
-      "price": "$79",
+      "price": "$97",
       "used_in": [
         "blog/best-blood-pressure-monitors-for-seniors.html"
       ]
@@ -1848,9 +1826,9 @@
       "id": "com-ring-battery-doorbell-2k",
       "name": "Ring Battery Doorbell 2K",
       "country": "us",
-      "url": "https://www.amazon.com/dp/B0GT5C485J",
+      "url": "https://www.amazon.com/dp/B0FHJ7TKZM",
       "kind": "product",
-      "asin": "B0GT5C485J",
+      "asin": "B0FHJ7TKZM",
       "price": "$99.99",
       "used_in": [
         "blog/best-smart-home-devices-for-seniors.html"
@@ -1860,9 +1838,9 @@
       "id": "com-ring-battery-doorbell-2k-plus",
       "name": "Ring Battery Doorbell 2K Plus",
       "country": "us",
-      "url": "https://www.amazon.com/dp/B0GT669J31",
+      "url": "https://www.amazon.com/dp/B0F14N7HHH",
       "kind": "product",
-      "asin": "B0GT669J31",
+      "asin": "B0F14N7HHH",
       "price": null,
       "used_in": [
         "blog/best-video-doorbells-for-seniors.html",
@@ -1934,23 +1912,12 @@
       "id": "com-samsung-galaxy-watch-9",
       "name": "Samsung Galaxy Watch 9",
       "country": "us",
-      "url": "https://www.amazon.com/dp/B0H1D828TR",
+      "url": "https://www.amazon.com/dp/B0H1DGNYK2",
       "kind": "product",
-      "asin": "B0H1D828TR",
+      "asin": "B0H1DGNYK2",
       "price": null,
       "used_in": [
-        "blog/best-smartwatches-for-seniors.html"
-      ]
-    },
-    {
-      "id": "com-samsung-galaxy-watch9-40mm-bluetooth",
-      "name": "Samsung Galaxy Watch9 (40mm Bluetooth)",
-      "country": "us",
-      "url": "https://www.amazon.com/dp/B0H9BPZXZC",
-      "kind": "product",
-      "asin": "B0H9BPZXZC",
-      "price": null,
-      "used_in": [
+        "blog/best-smartwatches-for-seniors.html",
         "gift-guides/safety-tech-for-elderly-parents-who-live-alone.html"
       ]
     },

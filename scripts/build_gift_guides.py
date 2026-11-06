@@ -149,7 +149,7 @@ GUIDES = [
              "why": "Apple says Fall Detection turns on automatically for anyone 55 or older who entered their age. If the watch senses a hard fall and the wearer does not respond, it can call emergency services after a countdown.",
              "best": "Parents who already use an iPhone and will wear a watch",
              "watch": "It needs an iPhone. The GPS model relies on the phone or Wi-Fi for calls; cellular models add a monthly plan. It must be worn and charged daily."},
-            {"name": "Samsung Galaxy Watch9 (40mm Bluetooth)", "asin": "B0H9BPZXZC", "badge": "For Android families",
+            {"name": "Samsung Galaxy Watch9 (40mm Bluetooth)", "asin": "B0H1DGNYK2", "badge": "For Android families",
              "price": "$379.99 (Samsung, Oct 2026)",
              "why": "The Android counterpart. Samsung's watches include fall detection for people who use an Android phone.",
              "best": "Parents on Android phones",
