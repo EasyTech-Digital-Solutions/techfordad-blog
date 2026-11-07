@@ -58,9 +58,7 @@
       "sources": [
         {"kind": "maker", "title": "Apple (Canada): iPhone 16", "url": "https://www.apple.com/ca/shop/buy-iphone/iphone-16", "used_for": "Models, storage and Canadian pricing"},
         {"kind": "maker", "title": "Apple (Canada): Accessibility", "url": "https://www.apple.com/ca/accessibility/", "used_for": "Text size, vision and hearing features to set up first"},
-        {"kind": "maker", "title": "Samsung Canada: Galaxy A36 5G support page", "url": "https://www.samsung.com/ca/support/model/SM-A366WZKAXAC/", "used_for": "Manuals and specifications for the A36"},
         {"kind": "maker", "title": "Samsung Canada newsroom: Galaxy A17 5G launch", "url": "https://news.samsung.com/ca/samsung-canada-introduces-the-galaxy-a17-5g-with-everyday-ai-and-essential-performance", "used_for": "Official Canadian pricing and specifications for the A17"},
-        {"kind": "maker", "title": "Doro: PhoneEasy 626 manual (Canadian English)", "url": "https://www.doro.com/globalassets/inriver/resources/manual_doro_phoneeasy_626_en_ca_v30r16650.pdf", "used_for": "Features of the Doro flip phone", "skip_verify": true},
         {"kind": "maker", "title": "TELUS: Mobility for Good for seniors", "url": "https://www.telus.com/en/social-impact/connecting-canada/connecting-for-good-programs/seniors", "used_for": "Who qualifies and what the plan includes"},
         {"kind": "maker", "title": "Rogers: Connected for Success", "url": "https://www.rogers.com/connected-for-success", "used_for": "Who qualifies and what the plan includes"},
         {"kind": "maker", "title": "Chatr: Plans", "url": "https://www.chatrwireless.com/plans", "used_for": "Prepaid plans"},
@@ -68,7 +66,7 @@
         {"kind": "official", "title": "CRTC: Protected by the Wireless Code", "url": "https://crtc.gc.ca/eng/phone/mobile/code.htm", "used_for": "Your rights on phone contracts and free unlocking", "skip_verify": true},
         {"kind": "official", "title": "Government of Canada: Guaranteed Income Supplement", "url": "https://www.canada.ca/en/services/benefits/publicpensions/old-age-security/guaranteed-income-supplement.html", "used_for": "The income benefit that some carrier programs use to decide who qualifies", "skip_verify": true}
       ],
-      "note": "We could not find a maker page for the Artfone C1+ 4G, so its details come from the Amazon.ca listing. Samsung Canada has removed its shopping pages for the Galaxy A36, so it may have been replaced by a newer model. Check availability before buying."
+      "note": "We could not find a maker page for the Artfone C1+ 4G, so its details come from the Amazon.ca listing. Check availability before buying."
     },
     "blog/best-cell-phone-plans-for-seniors-canada.html": {
       "sources": [
@@ -88,7 +86,6 @@
       "sources": [
         {"kind": "maker", "title": "Omron: Platinum Upper Arm Monitor (BP5465)", "url": "https://omronhealthcare.com/products/platinum-upper-arm-blood-pressure-monitor-bp5465", "used_for": "Features, AFib screening and warranty"},
         {"kind": "maker", "title": "Omron: Gold Upper Arm Monitor", "url": "https://omronhealthcare.com/products/gold-upper-arm-blood-pressure-monitor-bp5360", "used_for": "Features of Omron's current Gold monitor"},
-        {"kind": "maker", "title": "Omron: 3 Series Upper Arm Monitor", "url": "https://omronhealthcare.com/products/3-series-upper-arm-blood-pressure-monitor-bp7150", "used_for": "Features of Omron's current 3 Series monitor"},
         {"kind": "maker", "title": "Withings: BPM Connect", "url": "https://www.withings.com/en-us/products/bpm-connect", "used_for": "Wi-Fi syncing, battery and the clinical validation protocol"},
         {"kind": "authority", "title": "CDC: About high blood pressure", "url": "https://www.cdc.gov/high-blood-pressure/about/index.html", "used_for": "High blood pressure raises the risk of heart disease and stroke, and usually has no symptoms", "skip_verify": true},
         {"kind": "authority", "title": "American Heart Association (Eastern States): AFib and stroke risk", "url": "https://easternstates.heart.org/2024/05/23/afib-and-stroke-understanding-the-fivefold-increase-in-risk-during-american-stroke-month/", "used_for": "People with AFib are five times more likely to have a stroke"},
@@ -96,13 +93,10 @@
         {"kind": "authority", "title": "Validate BP: US Blood Pressure Validated Device Listing", "url": "https://www.validatebp.org/", "used_for": "The free list to check that a monitor has been clinically validated"},
         {"kind": "authority", "title": "American Medical Association: How BP devices are validated", "url": "https://www.ama-assn.org/public-health/prevention-wellness/validation-bp-measurement-devices-clinical-accuracy", "used_for": "What clinical validation means"}
       ],
-      "note": "The 3 Series section now reflects the current BP7150 model. This page now names the Gold BP5360, the model Omron's page shows. We could not confirm a current maker page for the Greater Goods 0602."
+      "note": "This page now names the Gold BP5360, the model Omron's page shows. We could not confirm a current maker page for the Greater Goods 0602."
     },
     "blog/best-blood-pressure-monitors-canada.html": {
       "sources": [
-        {"kind": "maker", "title": "Omron (Canada): 10 Series Wireless Upper Arm Monitor (BP7450CAN)", "url": "https://omronhealthcare.com/en-ca/products/10-series-wireless-upper-arm-blood-pressure-monitor-bp7450can", "used_for": "Features, cuff size and warranty"},
-        {"kind": "maker", "title": "Omron (Canada): 3 Series Upper Arm Monitor (BP7100CAN)", "url": "https://omronhealthcare.com/en-ca/products/3-series-upper-arm-blood-pressure-monitor-bp7100can", "used_for": "Features and warranty"},
-        {"kind": "maker", "title": "Omron (Canada): Monitor with AFib Screening (BP7365CAN)", "url": "https://omronhealthcare.com/en-ca/products/blood-pressure-monitor-bp7365can", "used_for": "Features and AFib screening"},
         {"kind": "authority", "title": "Hypertension Canada: Recommended devices (public list)", "url": "https://hypertension.ca/public/recommended-devices", "used_for": "The list to check that a monitor is validated"},
         {"kind": "authority", "title": "Hypertension Canada: Device Recommendation Program", "url": "https://hypertension.ca/device-recommendation-program/", "used_for": "How devices are reviewed and recommended"},
         {"kind": "authority", "title": "Hypertension Canada: Experts concerned over inaccurate blood pressure devices", "url": "https://hypertension.ca/news/experts-concerned-over-inaccurate-blood-pressure-devices/", "used_for": "Hypertension Canada's president on there being no requirement for blood pressure devices to be tested for accuracy"},
@@ -116,10 +110,8 @@
     "blog/best-hearing-aids-for-seniors.html": {
       "sources": [
         {"kind": "maker", "title": "ELEHEAR: Beyond Pro", "url": "https://elehear.com/products/beyond-pro", "used_for": "Features, price and trial period"},
-        {"kind": "maker", "title": "Jabra Enhance: Select M2", "url": "https://www.jabraenhance.com/product/enhanceselectm2", "used_for": "Features and service"},
         {"kind": "maker", "title": "Sennheiser: All-Day Clear", "url": "https://us.sennheiser-hearing.com/products/sennheiser-all-day-clear", "used_for": "Features, battery and trial period"},
         {"kind": "maker", "title": "Audien: Atom Pro 2", "url": "https://audienhearing.com/products/atom-pro-2", "used_for": "Features and price"},
-        {"kind": "maker", "title": "MDHearing: NEO XS PRO", "url": "https://www.mdhearingaid.com/hearing-aids/mdhearing-neo-xs-pro/", "used_for": "Features of the smallest model"},
         {"kind": "official", "title": "NIDCD (NIH): Age-related hearing loss", "url": "https://www.nidcd.nih.gov/health/age-related-hearing-loss", "used_for": "How common hearing loss is among adults 65 and older"},
         {"kind": "official", "title": "IRS: Publication 502, Medical and Dental Expenses", "url": "https://www.irs.gov/publications/p502", "used_for": "That hearing aids and batteries count as medical expenses"},
         {"kind": "official", "title": "FDA: OTC hearing aids, what you should know", "url": "https://www.fda.gov/medical-devices/hearing-aids/otc-hearing-aids-what-you-should-know", "used_for": "Who OTC hearing aids are for and when they start on October 17, 2022"},
@@ -157,10 +149,8 @@
         {"kind": "official", "title": "Medicare: Hearing aid coverage", "url": "https://www.medicare.gov/coverage/hearing-aids", "used_for": "What Original Medicare does and does not cover"},
         {"kind": "official", "title": "VA: Audiology services", "url": "https://www.rehab.va.gov/audiology/", "used_for": "Hearing care for eligible veterans"},
         {"kind": "maker", "title": "ELEHEAR: Beyond Pro", "url": "https://elehear.com/products/beyond-pro", "used_for": "Price, features and trial period"},
-        {"kind": "maker", "title": "Jabra Enhance: Select M2", "url": "https://www.jabraenhance.com/product/enhanceselectm2", "used_for": "Price, trial period and included audiology care"},
         {"kind": "maker", "title": "Sennheiser: All-Day Clear", "url": "https://us.sennheiser-hearing.com/products/sennheiser-all-day-clear", "used_for": "Price and trial period"},
         {"kind": "maker", "title": "Audien: Atom Pro 2", "url": "https://audienhearing.com/products/atom-pro-2", "used_for": "Price and trial period"},
-        {"kind": "maker", "title": "MDHearing: NEO XS PRO", "url": "https://www.mdhearingaid.com/hearing-aids/mdhearing-neo-xs-pro/", "used_for": "Price, size and trial period"},
         {"kind": "independent", "title": "HearingTracker: Sales of Sony hearing aids discontinued", "url": "https://www.hearingtracker.com/news/sales-of-sony-hearing-aids-discontinued-wsa-eyes-next-steps-for-otc-market", "used_for": "That Sony's OTC models were discontinued"},
         {"kind": "independent", "title": "Hearing Review: LXE Hearing wind-down (Eargo, Lexie)", "url": "https://hearingreview.com/hearing-products/hearing-aids/otc/lxe-hearing-announces-wind-down-of-us-operations-affecting-eargo-lexie-and-go-brands", "used_for": "The wind-down of Eargo and Lexie and the support dates"},
         {"kind": "independent", "title": "HearingTracker: Jabra Enhance Plus to be discontinued", "url": "https://www.hearingtracker.com/news/jabra-enhance-plus-otc-hearing-aid-to-be-discontinued", "used_for": "The Jabra Enhance Plus discontinuation and support dates"}
@@ -227,9 +217,9 @@
     },
     "blog/best-gps-trackers-for-seniors.html": {
       "sources": [
+        {"kind": "maker", "title": "Family1st: Trackers for the elderly", "url": "https://family1st.io/best-trackers-for-the-elderly", "used_for": "Monthly plan price, battery life and safe-zone alerts as the company lists them"},
         {"kind": "authority", "title": "Alzheimer Society of Canada: Tracking devices", "url": "https://alzheimer.ca/en/help-information/im-caring-person-living-dementia/ensuring-safety-security/tracking-devices", "used_for": "Respecting the person's wishes and the limits of tracking devices"},
-        {"kind": "maker", "title": "AngelSense", "url": "https://www.angelsense.com/", "used_for": "How the company describes its monitoring and alerting service"},
-        {"kind": "maker", "title": "Jiobit: Smart Tag", "url": "https://www.jiobit.com/", "used_for": "Plan price, update rate and battery life as the company lists them"}
+        {"kind": "maker", "title": "AngelSense", "url": "https://www.angelsense.com/", "used_for": "How the company describes its monitoring and alerting service"}
       ],
       "note": "Prices and features change, so confirm them on each maker's page."
     },
@@ -237,15 +227,14 @@
       "sources": [
         {"kind": "authority", "title": "Alzheimer's Association: Wandering", "url": "https://www.alz.org/help-support/caregiving/stages-behaviors/wandering", "used_for": "How common wandering is and when to call 911", "skip_verify": true},
         {"kind": "authority", "title": "Alzheimer Society of Canada: Tracking devices", "url": "https://alzheimer.ca/en/help-information/im-caring-person-living-dementia/ensuring-safety-security/tracking-devices", "used_for": "Respecting the person's wishes and the limits of tracking devices"},
-        {"kind": "maker", "title": "AngelSense", "url": "https://www.angelsense.com/", "used_for": "How the company describes its monitoring and alerting service"},
-        {"kind": "maker", "title": "Jiobit: Smart Tag", "url": "https://www.jiobit.com/", "used_for": "Plan price, update rate and battery life as the company lists them"}
+        {"kind": "maker", "title": "AngelSense", "url": "https://www.angelsense.com/", "used_for": "How the company describes its monitoring and alerting service"}
       ],
       "note": "Prices and features change, so confirm them on each maker's page."
     },
     "blog/best-cordless-phones-for-seniors.html": {
       "sources": [
+        {"kind": "maker", "title": "Panasonic: KX-TGU430 series features and specifications", "url": "https://help.na.panasonic.com/answers/features-and-specifications-telephone-cordless-models-kx-tgu430-kx-tgu432-kx-tgu433", "used_for": "Features of the KX-TGU433"},
         {"kind": "maker", "title": "VTech: SN5147 Amplified Cordless Phone", "url": "https://www.vtechphones.com/store/pd/4143/SN5147-Amplified-Corded-Cordless-Phone-with-Answering-System-Big-Buttons-Extra-Loud-Ringer-Smart-Call-Blocker", "used_for": "List price and product details", "skip_verify": true},
-        {"kind": "maker", "title": "Panasonic: KX-TGM420W Amplified Cordless Phone", "url": "https://shop.panasonic.com/products/amplified-cordless-phone-kx-tgm420", "used_for": "List price and product details, including the Slow Talk feature"},
         {"kind": "maker", "title": "AT&T: CL82407 4-Handset Cordless System", "url": "https://telephones.att.com/pd/3738/CL82407-4-handset-cordless-answering-system-with-smart-call-blocker", "used_for": "List price and product details", "skip_verify": true}
       ],
       "note": "Prices and features change, so confirm them on the maker's page."
@@ -253,7 +242,6 @@
     "blog/best-pill-organizers-for-seniors.html": {
       "sources": [
         {"kind": "maker", "title": "Hero: Pricing", "url": "https://herohealth.com/pricing/", "used_for": "Device and plan prices for the Hero dispenser"},
-        {"kind": "maker", "title": "e-Pill: MedSmart", "url": "https://www.epill.com/medsmart.html", "used_for": "List price and product details"},
         {"kind": "maker", "title": "e-Pill: Medcenter Monthly Pill Organizer", "url": "https://www.epill.com/medcenter.html", "used_for": "List price and product details"},
         {"kind": "official", "title": "Medicare: Durable medical equipment (DME) coverage", "url": "https://www.medicare.gov/coverage/durable-medical-equipment-dme-coverage", "used_for": "What Original Medicare covers as durable medical equipment"}
       ],
@@ -262,7 +250,6 @@
     "blog/best-smart-home-devices-for-seniors.html": {
       "sources": [
         {"kind": "maker", "title": "Ring: Battery Video Doorbell", "url": "https://ring.com/products/battery-doorbell-2nd-gen", "used_for": "List price and product details"},
-        {"kind": "maker", "title": "iRobot: Roomba i3+ EVO", "url": "https://www.irobot.com/en_US/roomba-i3plus-evo-self-emptying-robot-vacuum/I355020.html", "used_for": "List price and product details"},
         {"kind": "maker", "title": "Schlage: Encode Plus Smart Lock", "url": "https://www.schlage.com/en/home/smart-locks/encode-plus.html", "used_for": "List price and product details"},
         {"kind": "official", "title": "CDC: Older adult fall data", "url": "https://www.cdc.gov/falls/about/index.html", "used_for": "That falls are the leading cause of injury death for adults 65 and older", "skip_verify": true}
       ],
@@ -275,7 +262,7 @@
         {"kind": "maker", "title": "Samsung: Galaxy Tab A11+", "url": "https://www.samsung.com/us/tablets/galaxy-tab-a11-plus/buy/", "used_for": "List price from $299.99, checked Oct 5, 2026"},
         {"kind": "independent", "title": "GSMArena: Samsung Galaxy Tab A11+ specifications", "url": "https://www.gsmarena.com/samsung_galaxy_tab_a11+-14192.php", "used_for": "Speakers, battery, display, software updates and release date"}
       ],
-      "note": "Prices change, so confirm them on the maker's page. Amazon's Fire tablets are not listed because Amazon's pages block automated checks."
+      "note": "Prices change, so confirm them on the maker's page."
     },
     "blog/best-tablets-for-seniors-canada.html": {
       "sources": [
@@ -285,7 +272,7 @@
         {"kind": "independent", "title": "Canada Computers: Samsung Galaxy Tab A11+ 128GB", "url": "https://www.canadacomputers.com/en/android-tablets/283040/samsung-galaxy-tab-a11-11-8-core-fhd-6gb-128gb-wi-fi-5-android-gray-sm-x230nzaaxac.html", "used_for": "A Canadian retail price, checked Oct 5, 2026 (a sale price)"},
         {"kind": "independent", "title": "GSMArena: Samsung Galaxy Tab A11+ specifications", "url": "https://www.gsmarena.com/samsung_galaxy_tab_a11+-14192.php", "used_for": "Software updates and release date"}
       ],
-      "note": "Prices change, so confirm them at the retailer. Amazon's Fire tablets are not listed because Amazon's pages block automated checks."
+      "note": "Prices change, so confirm them at the retailer."
     },
     "blog/best-cell-phones-for-seniors.html": {
       "sources": [
@@ -300,7 +287,6 @@
       "sources": [
         {"kind": "maker", "title": "SimpliSafe: Home security systems", "url": "https://simplisafe.com/", "used_for": "Systems and monitoring plans SimpliSafe offers"},
         {"kind": "maker", "title": "Cove: Self-installed home security systems", "url": "https://www.covesmart.com/", "used_for": "Systems and 24/7 monitoring that Cove offers"},
-        {"kind": "maker", "title": "Abode: DIY home security", "url": "https://goabode.com/", "used_for": "Self-monitoring versus optional professional monitoring, and no long-term contract"},
         {"kind": "independent", "title": "Consumer Reports: Best home security systems", "url": "https://www.consumerreports.org/home-garden/home-security-systems/", "used_for": "An independent, ratings-based comparison of systems (full ratings need a subscription)", "skip_verify": true}
       ],
       "note": "Ring, ADT and Vivint block scripted page checks, so their details come from each maker's own site and should be confirmed there before you buy."
@@ -309,15 +295,13 @@
       "sources": [
         {"kind": "maker", "title": "TELUS: SmartHome", "url": "https://www.telus.com/en/smart-home", "used_for": "Self-monitored versus professionally monitored plans and starting prices"},
         {"kind": "maker", "title": "Rogers: Smart Home Monitoring", "url": "https://www.rogers.com/home-monitoring", "used_for": "What the Rogers plan includes and how it is installed"},
-        {"kind": "maker", "title": "Ring Canada: Home security systems", "url": "https://ring.com/ca/en/collections/home-security-systems", "used_for": "Ring Alarm kits and monitoring plans sold in Canada"},
-        {"kind": "maker", "title": "Abode: DIY home security", "url": "https://goabode.com/", "used_for": "Self-monitoring versus optional professional monitoring, and no long-term contract"}
+        {"kind": "maker", "title": "Ring Canada: Home security systems", "url": "https://ring.com/ca/en/collections/home-security-systems", "used_for": "Ring Alarm kits and monitoring plans sold in Canada"}
       ],
       "note": "Plan prices change often. Confirm the monthly price and contract term with the provider before you sign."
     },
     "blog/best-gps-trackers-for-seniors-canada.html": {
       "sources": [
         {"kind": "authority", "title": "Alzheimer Society of Canada: Tracking devices", "url": "https://alzheimer.ca/en/help-information/im-caring-person-living-dementia/ensuring-safety-security/tracking-devices", "used_for": "Questions to ask before choosing a tracker, and the limits of any device"},
-        {"kind": "maker", "title": "Lil Tracker: GPS trackers for seniors", "url": "https://www.liltracker.ca/collections/devices-for-seniors", "used_for": "Watches and pendants offered, with Canadian-dollar prices and SIM plans"},
         {"kind": "maker", "title": "TELUS Health: Medical alert pendant (LivingWell Companion)", "url": "https://www.telus.com/en/personal-health/livingwell-companion", "used_for": "Features, monthly price and activation fee for the TELUS mobile pendant"},
         {"kind": "maker", "title": "Lifeline Canada: Medical alert systems", "url": "https://www.lifeline.ca/en/", "used_for": "The mobile On the Go system; Lifeline lists no price online"},
         {"kind": "maker", "title": "Tracki: GPS trackers", "url": "https://tracki.com/", "used_for": "Tracki device range and device prices"}
