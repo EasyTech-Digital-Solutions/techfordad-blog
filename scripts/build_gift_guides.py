@@ -17,14 +17,14 @@ import re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "gift-guides")
 TAG = "techfordad-gifts-20"
-PRICE_DATE = "September 30, 2026"   # date prices were last checked; change with --checked, never by hand
-UPDATED_LABEL = "September 2026"    # shown as "Updated ..." on the pages; follows PRICE_DATE
+PRICE_DATE = "November 5, 2026"   # date prices were last checked; change with --checked, never by hand
+UPDATED_LABEL = "November 2026"    # shown as "Updated ..." on the pages; follows PRICE_DATE
 PUBLISHED = "2026-09-29"            # first publish date (structured data)
-MODIFIED = "2026-09-30"             # last modified date (structured data); follows PRICE_DATE
+MODIFIED = "2026-11-05"             # last modified date (structured data); follows PRICE_DATE
 SITE = "https://www.techfordad.com"
 
 
-SHORT_LABEL = "Sep 2026"            # short form used in price notes such as "(Amazon, checked Sep 2026)"
+SHORT_LABEL = "Nov 2026"            # short form used in price notes such as "(Amazon, checked Sep 2026)"
 
 
 def stamp(s):
@@ -58,7 +58,7 @@ GUIDES = [
         ],
         "products": [
             {"name": "Skylight Frame, 10-inch", "asin": "B01N7ENHO6", "badge": "Easiest for a parent who avoids apps",
-             "price": "about $139 to $160 (retail listings, Sep 2026)",
+             "price": "about $139.99 (Amazon, checked Sep 2026)",
              "why": "Family members email photos to the frame's own address and the pictures appear. Your parent does nothing except look at it.",
              "best": "Parents who do not use smartphones or apps",
              "watch": "Skylight says the mobile app and cloud features need Skylight Plus at $39 a year. Sending photos by email stays free."},
@@ -72,18 +72,18 @@ GUIDES = [
              "why": "FaceTime, photos, reading and text that can be enlarged. It does the most of anything here.",
              "best": "Parents who already use an iPhone or are ready to learn",
              "watch": "The most expensive gift on this page. Turn on larger text and Accessibility settings before you wrap it. Our guide to setting up an iPad for an elderly parent walks through it."},
-            {"name": "Amazon Fire HD 10", "asin": "B0BL5XPDR6", "badge": "Lower-cost tablet",
-             "price": "about $155 (reported July 2026, one source)",
+            {"name": "Lenovo Idea Tab 11-inch", "asin": "B0FGYCJ7NJ", "badge": "Lower-cost tablet",
+             "price": "about $214 (Amazon)",
              "why": "A large screen for video calls, photos and streaming at a lower price than an iPad.",
              "best": "A first tablet on a budget",
-             "watch": "Amazon sells versions with and without lock-screen ads, so check which one you are buying."},
-            {"name": "Kindle Paperwhite (16GB)", "asin": "B0CFPJYX7P", "badge": "For readers",
-             "price": "about $159.99 (Amazon, 16GB)",
+             "watch": "It runs Android, so set up large text and the calling apps before you give it."},
+            {"name": "Kindle Paperwhite (16GB, newest model)", "asin": "B0GHTD6Q5C", "badge": "For readers",
+             "price": "about $199.99 (Amazon's Aug 2026 price list, 16GB)",
              "why": "Text size can be enlarged, and the screen is glare-free in bright rooms.",
              "best": "Parents who read every day",
              "watch": "The 32GB Signature Edition costs more, about $199.99. Books need Wi-Fi to download."},
             {"name": "Avantree Ensemble TV headphones", "asin": "B08629PFFQ", "badge": "Hear the TV without turning it up",
-             "price": "about $109.99 (Amazon, checked Sep 2026)",
+             "price": "about $98.99 (Amazon, checked Sep 2026)",
              "why": "Wireless headphones on a charging dock, so one person can turn up the dialogue without blasting the room.",
              "best": "Parents who keep asking for the TV to be louder",
              "watch": "Check that your parent's TV has an optical or headphone output, or use Bluetooth on a compatible TV. It suits one listener at a time."},
@@ -97,7 +97,7 @@ GUIDES = [
         "addons": [
             {"name": "Joywell armchair caddy", "asin": "B07GDBWNXW", "price": "about $9.98",
              "why": "Keeps the remote, phone and glasses within reach of the favorite chair."},
-            {"name": "Nazano lighted magnifier", "asin": "B08PP4RJ5J", "price": "about $14.89",
+            {"name": "Nazano lighted magnifier", "asin": "B08PP4RJ5J", "price": "about $9.98",
              "why": "Helps with pill labels, menus and small print. Uses AA batteries."},
         ],
         "sections": [
@@ -109,7 +109,7 @@ GUIDES = [
             ("What is the easiest tech gift for an elderly parent?",
              "A photo frame that family fills by email, such as the Skylight Frame, needs nothing from your parent. A big-button remote is the easiest for TV. Both work best after you have set them up."),
             ("Do these gifts need Wi-Fi?",
-             "The Skylight Frame, Echo Show, iPad, Fire tablet and Kindle all need Wi-Fi to receive photos, calls or books. The TV headphones and remote do not."),
+             "The Skylight Frame, Echo Show, iPad, Lenovo tablet and Kindle all need Wi-Fi to receive photos, calls or books. The TV headphones and remote do not."),
             ("Are there monthly fees?",
              "Not required. Skylight Plus ($39 a year) and Alexa+ ($19.99 a month without Prime) are optional. Check each product before you buy."),
             ("What if my parent says they do not want technology?",
@@ -149,8 +149,8 @@ GUIDES = [
              "why": "Apple says Fall Detection turns on automatically for anyone 55 or older who entered their age. If the watch senses a hard fall and the wearer does not respond, it can call emergency services after a countdown.",
              "best": "Parents who already use an iPhone and will wear a watch",
              "watch": "It needs an iPhone. The GPS model relies on the phone or Wi-Fi for calls; cellular models add a monthly plan. It must be worn and charged daily."},
-            {"name": "Samsung Galaxy Watch9 (40mm Bluetooth)", "asin": "B0H9BPZXZC", "badge": "For Android families",
-             "price": "$379.99 (Amazon, Sep 2026)",
+            {"name": "Samsung Galaxy Watch9 (40mm Bluetooth)", "asin": "B0H1DGNYK2", "badge": "For Android families",
+             "price": "$379.99 (Samsung, Oct 2026)",
              "why": "The Android counterpart. Samsung's watches include fall detection for people who use an Android phone.",
              "best": "Parents on Android phones",
              "watch": "The Amazon listing is a bundle that includes a gift card, so check the exact variant before you buy. Confirm fall detection is switched on in the watch settings."},
@@ -160,22 +160,22 @@ GUIDES = [
              "best": "Parents without a smartphone who want a person on the other end",
              "watch": "It must be activated with Lively and needs a plan. SafeHome's testers found the pendant battery lasts about a day and a half."},
             {"name": "Bay Alarm Medical SOS Mobile GPS", "asin": "B0C4QTKR83", "badge": "Monitored mobile pendant",
-             "price": "device price varies; fall detection about $10 a month extra (AARP, SafeHome)",
+             "price": "device about $74.95 (Amazon, checked Sep 2026); fall detection about $10 a month extra (AARP, SafeHome)",
              "why": "A 4G GPS pendant with a 24/7 monitoring center. AARP's tests of Bay Alarm's SOS Home detected 9 of 12 falls.",
              "best": "Parents who leave the house and want GPS location too",
              "watch": "The listing says \"call to activate,\" and fall detection is an optional add-on. Confirm the exact model when you order."},
-            {"name": "LifeStation Mobile medical alert system", "asin": "B07G9MTFX8", "badge": "Worth comparing",
-             "price": "plans about $35 to $51 a month; fall detection $8 to $16 extra (SeniorList, NCOA)",
-             "why": "LifeStation devices detected all 12 falls in AARP's tests. The Amazon listing includes one free month of monitoring.",
+            {"name": "Medical Guardian MGMini", "asin": "B0CHHJLTVV", "badge": "Worth comparing",
+             "price": "about $64 for the device (Amazon), plus a monthly monitoring plan",
+             "why": "A small medical alert necklace. Press the button to speak to Medical Guardian's 24/7 team through the device.",
              "best": "Households comparing monitored options",
-             "watch": "AARP tested LifeStation's Pearl and Sidekick models, not necessarily this Mobile pendant. Fall detection is an add-on, so confirm it is included."},
+             "watch": "Monitoring must be activated and paid for separately, so check the plan price before you buy."},
             {"name": "Apple AirTag (2nd generation), 1 pack", "asin": "B0GJTFXNRX", "badge": "Finds keys, not people",
              "price": "$29 (Apple)",
              "why": "Attach it to keys, a wallet or a bag and find it in the Find My app.",
              "best": "iPhone owners who misplace things",
              "watch": "It is for items. For a person who wanders, use a purpose-built GPS tracker (see our GPS tracker review)."},
-            {"name": "Blink Mini 2 indoor camera", "asin": "B0BWWZXWPL", "badge": "Easiest camera with Alexa",
-             "price": "about $40 (Security.org, Sep 2026)",
+            {"name": "Blink Mini 2K+ indoor camera", "asin": "B0F3BC8661", "badge": "Easiest camera with Alexa",
+             "price": "about $40 (Amazon)",
              "why": "A plug-in camera with two-way audio. With an Echo Show it can show the living room on request.",
              "best": "Families who want a quick check-in view",
              "watch": "Blink cloud plans start at $3.99 a month. Check what live view and recording need before you buy."},
@@ -185,14 +185,14 @@ GUIDES = [
              "best": "Families who want video without a monthly fee",
              "watch": "The microSD card is sold separately."},
             {"name": "eufy Indoor Cam S350 (4K)", "asin": "B0CD7F1M9R", "badge": "Sharpest picture, no subscription",
-             "price": "about $129.99 list (PCWorld, Tom's Guide)",
+             "price": "about $139.99 list (eufy, checked Sep 2026)",
              "why": "Two lenses with zoom, local storage and a physical privacy mode, with no subscription.",
              "best": "A clear view of a room, with privacy controls",
              "watch": "It costs more than the others. Storage needs a microSD card."},
         ],
         "addons_title": "Simple add-ons",
         "addons": [
-            {"name": "EZVALO 6-pack rechargeable motion-sensor night lights", "asin": "B0GHQHXV12", "price": "about $55.99",
+            {"name": "EZVALO 6-pack rechargeable motion-sensor night lights", "asin": "B0GHQHXV12", "price": "about $42.99",
              "why": "Lights the way to the bathroom at night, no wiring or batteries to replace."},
             {"name": "Sukuos extra-large weekly pill organizer", "asin": "B07V1QCJGF", "price": "about $6.99",
              "why": "Big compartments that are easy to open. For automatic reminders, see our pill dispenser review."},
@@ -204,8 +204,8 @@ GUIDES = [
                     ["Apple Watch SE 3", "$0, or about $25 for a cellular plan if it must work without the phone"],
                     ["Lively Mobile2", "From $24.99, plus about $9.99 for fall detection"],
                     ["Bay Alarm Medical", "Base plan plus about $10 for fall detection"],
-                    ["LifeStation", "Base plan plus $8 to $16 for fall detection"],
-                    ["Blink Mini 2", "Optional cloud plans from $3.99"],
+                    ["Medical Guardian MGMini", "Monthly plan required"],
+                    ["Blink Mini 2K+", "Optional cloud plans from $3.99"],
                     ["WYZE Cam v4 and eufy S350", "No required fee (microSD card sold separately)"],
                 ])},
             ]),
@@ -219,7 +219,7 @@ GUIDES = [
             ("Does the Apple Watch turn on fall detection by itself?",
              "Apple says it turns on automatically if the wearer is 55 or older and entered their age when setting up the watch. It is available for people 18 and over, and can be switched on in the Watch app."),
             ("Which option has no monthly fee?",
-             "The Apple Watch SE 3 can work with no plan if the iPhone is nearby. The WYZE and eufy cameras need no subscription. Monitored pendants, including Lively, Bay Alarm and LifeStation, all need a monthly plan."),
+             "The Apple Watch SE 3 can work with no plan if the iPhone is nearby. The WYZE and eufy cameras need no subscription. Monitored pendants, including Lively, Bay Alarm and Medical Guardian, all need a monthly plan."),
             ("Should I buy a cheap pendant with automatic fall detection from an unknown brand?",
              "We would not. Several unbranded Amazon pendants promise fall detection and no monthly fee, but none has independent test results that we could find. Choose a known monitoring company."),
         ],
@@ -265,7 +265,7 @@ GUIDES = [
              "best": "Someone who still enjoys television but cannot use a standard remote",
              "watch": "It works with the TV and cable box only, not streaming apps."},
             {"name": "Skylight Frame, 10-inch", "asin": "B01N7ENHO6", "badge": "Photos of family and friends",
-             "price": "about $139 to $160 (retail listings, Sep 2026)",
+             "price": "about $139.99 (Amazon, checked Sep 2026)",
              "why": "Family emails photos to the frame. Photographs are a gentle way to prompt memories and conversation.",
              "best": "Any stage; add names to the photo files if you can",
              "watch": "Skylight Plus ($39 a year) is optional and adds app and cloud features."},
@@ -282,7 +282,7 @@ GUIDES = [
         ],
         "addons_title": "Comfort items (not tech)",
         "addons": [
-            {"name": "18-in-1 fidget blanket", "asin": "B09JBJ7C8W", "price": "about $39.81",
+            {"name": "18-in-1 fidget blanket", "asin": "B09JBJ7C8W", "price": "about $36.99",
              "why": "A lap blanket with zippers, buttons and textures for restless hands. Check with the care team first, and avoid loose small parts."},
         ],
         "sections": [
@@ -328,9 +328,9 @@ GUIDES = [
             {"name": "Apple AirTag (2nd generation), 1 pack", "asin": "B0GJTFXNRX", "badge": "Finds keys and wallets",
              "price": "$29 (Apple)", "why": "Attach it to keys or a wallet and find it in the Find My app.",
              "best": "iPhone owners", "watch": "Works with iPhone and iPad only."},
-            {"name": "Chipolo ONE Point (Android)", "asin": "B0C4W2VGTX", "badge": "Tracker for Android",
-             "price": "about $28 (Chipolo)", "why": "The same idea for Android phones, using Google's Find My Device network.",
-             "best": "Android owners", "watch": "Check which phones it works with before you buy; iPhone owners are usually better served by the AirTag."},
+            {"name": "Chipolo POP", "asin": "B0DZXTLD38", "badge": "Tracker for iPhone or Android",
+             "price": "about $29 (Amazon)", "why": "The same idea for either phone: Chipolo says it works with Apple Find My or Google's Find Hub.",
+             "best": "Android owners", "watch": "Pick one network when you set it up; iPhone owners are usually well served by the AirTag."},
             {"name": "AINFTIME day and date clock", "asin": "B0BKV7TVNL", "badge": "Knows what day it is",
              "price": "about $29.99", "why": "A large display that spells out the day and date, useful for anyone who loses track of days.",
              "best": "A parent who often asks what day it is", "watch": "Plugs in."},
@@ -343,24 +343,24 @@ GUIDES = [
             {"name": "Fire TV Stick HD", "asin": "B0DJGDC3BD", "badge": "Streaming with a voice remote",
              "price": "about $40 (Amazon's Aug 2026 price list)", "why": "Plugs into the TV and lets your parent say what they want to watch.",
              "best": "Parents with a TV that has a free HDMI port", "watch": "Someone needs to set it up first."},
-            {"name": "Blink Mini 2 indoor camera", "asin": "B0BWWZXWPL", "badge": "Easy check-in camera",
+            {"name": "Blink Mini 2K+ indoor camera", "asin": "B0F3BC8661", "badge": "Easy check-in camera",
              "price": "about $40", "why": "Plug-in camera with two-way audio; easy to use with Alexa.",
              "best": "Families who want a quick check-in", "watch": "Cloud plans start at $3.99 a month, and it works best with an agreed placement. Talk to your parent first."},
             {"name": "WYZE Cam v4", "asin": "B0CJ9Z22L5", "badge": "Camera without a subscription",
              "price": "$44.98 (Wyze)", "why": "Records to a microSD card, so no required fee.",
              "best": "A no-subscription camera", "watch": "The microSD card is sold separately."},
             {"name": "AMIR 6-pack motion-sensor stair lights", "asin": "B0B8MR5X6Y", "badge": "Safer night walks",
-             "price": "about $15.99", "why": "Lights the hallway, bathroom and kitchen automatically, battery powered.",
+             "price": "about $19.99", "why": "Lights the hallway, bathroom and kitchen automatically, battery powered.",
              "best": "Any parent who gets up at night", "watch": "Batteries need replacing eventually."},
             {"name": "Nazano lighted magnifier", "asin": "B08PP4RJ5J", "badge": "Read small print",
-             "price": "about $14.89", "why": "12 LEDs for reading labels, menus and small print.",
+             "price": "about $9.98", "why": "12 LEDs for reading labels, menus and small print.",
              "best": "Pill labels and recipes", "watch": "Uses AA batteries."},
         ],
         "addons_title": "Small extras (not tech)",
         "addons": [
             {"name": "Joywell armchair caddy", "asin": "B07GDBWNXW", "price": "about $9.98", "why": "Keeps remote, phone and glasses within reach."},
             {"name": "Sukuos extra-large weekly pill organizer", "asin": "B07V1QCJGF", "price": "about $6.99", "why": "Large compartments that are easy to open."},
-            {"name": "Bicycle jumbo-index playing cards, 2 pack", "asin": "B000BUUTJ6", "price": "about $5.63", "why": "Large-print cards for a card game."},
+            {"name": "Bicycle jumbo-index playing cards, 2 pack", "asin": "B000BUUTJ6", "price": "about $5.64", "why": "Large-print cards for a card game."},
         ],
         "sections": [],
         "faq": [
@@ -409,17 +409,17 @@ GUIDES = [
              "best": "Cooks who like fresh basil or mint",
              "watch": "Plant pods are a recurring purchase."},
             {"name": "Birdbuddy Pro smart bird feeder", "asin": "B0DHY6CQBC", "badge": "Bird watching on a phone",
-             "price": "about $279.99 (regular price; frequently discounted, checked Oct 2026)",
+             "price": "about $189 (Amazon, checked Sep 2026)",
              "why": "A feeder with a camera that sends photos of visiting birds to a phone, with species identification.",
              "best": "Parents who watch birds from the window",
              "watch": "It needs a 2.4 GHz Wi-Fi network. A premium membership is optional, around $60 to $70 a year. The pole is not included, and the listing has fewer reviews than most items here."},
         ],
         "addons_title": "Comfort add-ons",
         "addons": [
-            {"name": "Sunbeam Royal Ultra Fleece heated throw", "asin": "B008BF2MFM", "price": "about $69.99",
+            {"name": "Sunbeam Royal Ultra Fleece heated throw", "asin": "B008BF2MFM", "price": "about $42.79",
              "why": "Auto shut-off and four heat settings. Check the current CPSC recall list before you buy any heated blanket."},
-            {"name": "Bombas Gripper slippers (women's)", "asin": "B0GQLQL62V", "price": "about $55",
-             "why": "Grip soles for tile and hardwood floors. No slipper can guarantee against a fall."},
+            {"name": "EverFoams memory foam slippers (women's)", "asin": "B09JP2TRK4", "price": "about $16",
+             "why": "Soft memory foam house slippers. No slipper can guarantee against a fall."},
         ],
         "sections": [
             ("Gifts that are not in a box", [
@@ -824,9 +824,9 @@ def hub_page():
 CHIPS = {
     "tech-gifts-for-elderly-parents": "From about $40",
     "safety-tech-for-elderly-parents-who-live-alone": "From $29",
-    "tech-gifts-for-someone-with-dementia": "From about $30",
+    "tech-gifts-for-someone-with-dementia": "From $29",
     "tech-gifts-for-seniors-under-50": "All under $50",
-    "gifts-for-elderly-parents-who-have-everything": "From about $70",
+    "gifts-for-elderly-parents-who-have-everything": "From about $90",
 }
 HOME_SECTION_RE = re.compile(r'<section class="gift-feature" id="gift-guides">.*?</section>', re.S)
 
